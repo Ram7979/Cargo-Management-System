@@ -1,0 +1,17 @@
+D:\Files\CMS\CargoManagementSystem\src\Services\Notification\CMS.NotificationService.Application\bin\Debug\net10.0\CMS.NotificationService.Application.deps.json
+D:\Files\CMS\CargoManagementSystem\src\Services\Notification\CMS.NotificationService.Application\bin\Debug\net10.0\CMS.NotificationService.Application.dll
+D:\Files\CMS\CargoManagementSystem\src\Services\Notification\CMS.NotificationService.Application\bin\Debug\net10.0\CMS.NotificationService.Application.pdb
+D:\Files\CMS\CargoManagementSystem\src\Services\Notification\CMS.NotificationService.Application\bin\Debug\net10.0\CMS.NotificationService.Domain.dll
+D:\Files\CMS\CargoManagementSystem\src\Services\Notification\CMS.NotificationService.Application\bin\Debug\net10.0\CMS.Shared.dll
+D:\Files\CMS\CargoManagementSystem\src\Services\Notification\CMS.NotificationService.Application\bin\Debug\net10.0\CMS.NotificationService.Domain.pdb
+D:\Files\CMS\CargoManagementSystem\src\Services\Notification\CMS.NotificationService.Application\bin\Debug\net10.0\CMS.Shared.pdb
+D:\Files\CMS\CargoManagementSystem\src\Services\Notification\CMS.NotificationService.Application\obj\Debug\net10.0\CMS.NotificationService.Application.csproj.AssemblyReference.cache
+D:\Files\CMS\CargoManagementSystem\src\Services\Notification\CMS.NotificationService.Application\obj\Debug\net10.0\CMS.NotificationService.Application.GeneratedMSBuildEditorConfig.editorconfig
+D:\Files\CMS\CargoManagementSystem\src\Services\Notification\CMS.NotificationService.Application\obj\Debug\net10.0\CMS.NotificationService.Application.AssemblyInfoInputs.cache
+D:\Files\CMS\CargoManagementSystem\src\Services\Notification\CMS.NotificationService.Application\obj\Debug\net10.0\CMS.NotificationService.Application.AssemblyInfo.cs
+D:\Files\CMS\CargoManagementSystem\src\Services\Notification\CMS.NotificationService.Application\obj\Debug\net10.0\CMS.NotificationService.Application.csproj.CoreCompileInputs.cache
+D:\Files\CMS\CargoManagementSystem\src\Services\Notification\CMS.NotificationService.Application\obj\Debug\net10.0\CMS.Noti.C0BD153D.Up2Date
+D:\Files\CMS\CargoManagementSystem\src\Services\Notification\CMS.NotificationService.Application\obj\Debug\net10.0\CMS.NotificationService.Application.dll
+D:\Files\CMS\CargoManagementSystem\src\Services\Notification\CMS.NotificationService.Application\obj\Debug\net10.0\refint\CMS.NotificationService.Application.dll
+D:\Files\CMS\CargoManagementSystem\src\Services\Notification\CMS.NotificationService.Application\obj\Debug\net10.0\CMS.NotificationService.Application.pdb
+D:\Files\CMS\CargoManagementSystem\src\Services\Notification\CMS.NotificationService.Application\obj\Debug\net10.0\ref\CMS.NotificationService.Application.dll

@@ -1,0 +1,17 @@
+D:\Files\CMS\CargoManagementSystem\src\Services\Reporting\CMS.ReportingService.Application\bin\Debug\net10.0\CMS.ReportingService.Application.deps.json
+D:\Files\CMS\CargoManagementSystem\src\Services\Reporting\CMS.ReportingService.Application\bin\Debug\net10.0\CMS.ReportingService.Application.dll
+D:\Files\CMS\CargoManagementSystem\src\Services\Reporting\CMS.ReportingService.Application\bin\Debug\net10.0\CMS.ReportingService.Application.pdb
+D:\Files\CMS\CargoManagementSystem\src\Services\Reporting\CMS.ReportingService.Application\bin\Debug\net10.0\CMS.ReportingService.Domain.dll
+D:\Files\CMS\CargoManagementSystem\src\Services\Reporting\CMS.ReportingService.Application\bin\Debug\net10.0\CMS.Shared.dll
+D:\Files\CMS\CargoManagementSystem\src\Services\Reporting\CMS.ReportingService.Application\bin\Debug\net10.0\CMS.ReportingService.Domain.pdb
+D:\Files\CMS\CargoManagementSystem\src\Services\Reporting\CMS.ReportingService.Application\bin\Debug\net10.0\CMS.Shared.pdb
+D:\Files\CMS\CargoManagementSystem\src\Services\Reporting\CMS.ReportingService.Application\obj\Debug\net10.0\CMS.ReportingService.Application.csproj.AssemblyReference.cache
+D:\Files\CMS\CargoManagementSystem\src\Services\Reporting\CMS.ReportingService.Application\obj\Debug\net10.0\CMS.ReportingService.Application.GeneratedMSBuildEditorConfig.editorconfig
+D:\Files\CMS\CargoManagementSystem\src\Services\Reporting\CMS.ReportingService.Application\obj\Debug\net10.0\CMS.ReportingService.Application.AssemblyInfoInputs.cache
+D:\Files\CMS\CargoManagementSystem\src\Services\Reporting\CMS.ReportingService.Application\obj\Debug\net10.0\CMS.ReportingService.Application.AssemblyInfo.cs
+D:\Files\CMS\CargoManagementSystem\src\Services\Reporting\CMS.ReportingService.Application\obj\Debug\net10.0\CMS.ReportingService.Application.csproj.CoreCompileInputs.cache
+D:\Files\CMS\CargoManagementSystem\src\Services\Reporting\CMS.ReportingService.Application\obj\Debug\net10.0\CMS.Repo.6D0C8054.Up2Date
+D:\Files\CMS\CargoManagementSystem\src\Services\Reporting\CMS.ReportingService.Application\obj\Debug\net10.0\CMS.ReportingService.Application.dll
+D:\Files\CMS\CargoManagementSystem\src\Services\Reporting\CMS.ReportingService.Application\obj\Debug\net10.0\refint\CMS.ReportingService.Application.dll
+D:\Files\CMS\CargoManagementSystem\src\Services\Reporting\CMS.ReportingService.Application\obj\Debug\net10.0\CMS.ReportingService.Application.pdb
+D:\Files\CMS\CargoManagementSystem\src\Services\Reporting\CMS.ReportingService.Application\obj\Debug\net10.0\ref\CMS.ReportingService.Application.dll

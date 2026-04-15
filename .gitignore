@@ -1,0 +1,14 @@
+# Visual Studio
+.vs/
+bin/
+obj/
+
+# VS Code
+.vscode/
+
+# Kiro
+.kiro/
+
+# Others
+*.user
+*.suo

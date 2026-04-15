@@ -1,0 +1,15 @@
+D:\Files\CMS\CargoManagementSystem\src\Services\Shipment\CMS.ShipmentService.Domain\bin\Debug\net10.0\CMS.ShipmentService.Domain.deps.json
+D:\Files\CMS\CargoManagementSystem\src\Services\Shipment\CMS.ShipmentService.Domain\bin\Debug\net10.0\CMS.ShipmentService.Domain.dll
+D:\Files\CMS\CargoManagementSystem\src\Services\Shipment\CMS.ShipmentService.Domain\bin\Debug\net10.0\CMS.ShipmentService.Domain.pdb
+D:\Files\CMS\CargoManagementSystem\src\Services\Shipment\CMS.ShipmentService.Domain\bin\Debug\net10.0\CMS.Shared.dll
+D:\Files\CMS\CargoManagementSystem\src\Services\Shipment\CMS.ShipmentService.Domain\bin\Debug\net10.0\CMS.Shared.pdb
+D:\Files\CMS\CargoManagementSystem\src\Services\Shipment\CMS.ShipmentService.Domain\obj\Debug\net10.0\CMS.ShipmentService.Domain.csproj.AssemblyReference.cache
+D:\Files\CMS\CargoManagementSystem\src\Services\Shipment\CMS.ShipmentService.Domain\obj\Debug\net10.0\CMS.ShipmentService.Domain.GeneratedMSBuildEditorConfig.editorconfig
+D:\Files\CMS\CargoManagementSystem\src\Services\Shipment\CMS.ShipmentService.Domain\obj\Debug\net10.0\CMS.ShipmentService.Domain.AssemblyInfoInputs.cache
+D:\Files\CMS\CargoManagementSystem\src\Services\Shipment\CMS.ShipmentService.Domain\obj\Debug\net10.0\CMS.ShipmentService.Domain.AssemblyInfo.cs
+D:\Files\CMS\CargoManagementSystem\src\Services\Shipment\CMS.ShipmentService.Domain\obj\Debug\net10.0\CMS.ShipmentService.Domain.csproj.CoreCompileInputs.cache
+D:\Files\CMS\CargoManagementSystem\src\Services\Shipment\CMS.ShipmentService.Domain\obj\Debug\net10.0\CMS.Ship.FB8712AA.Up2Date
+D:\Files\CMS\CargoManagementSystem\src\Services\Shipment\CMS.ShipmentService.Domain\obj\Debug\net10.0\CMS.ShipmentService.Domain.dll
+D:\Files\CMS\CargoManagementSystem\src\Services\Shipment\CMS.ShipmentService.Domain\obj\Debug\net10.0\refint\CMS.ShipmentService.Domain.dll
+D:\Files\CMS\CargoManagementSystem\src\Services\Shipment\CMS.ShipmentService.Domain\obj\Debug\net10.0\CMS.ShipmentService.Domain.pdb
+D:\Files\CMS\CargoManagementSystem\src\Services\Shipment\CMS.ShipmentService.Domain\obj\Debug\net10.0\ref\CMS.ShipmentService.Domain.dll

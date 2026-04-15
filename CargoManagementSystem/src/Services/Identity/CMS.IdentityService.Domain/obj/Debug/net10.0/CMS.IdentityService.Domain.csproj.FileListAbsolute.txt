@@ -1,0 +1,15 @@
+D:\Files\CMS\CargoManagementSystem\src\Services\Identity\CMS.IdentityService.Domain\bin\Debug\net10.0\CMS.IdentityService.Domain.deps.json
+D:\Files\CMS\CargoManagementSystem\src\Services\Identity\CMS.IdentityService.Domain\bin\Debug\net10.0\CMS.IdentityService.Domain.dll
+D:\Files\CMS\CargoManagementSystem\src\Services\Identity\CMS.IdentityService.Domain\bin\Debug\net10.0\CMS.IdentityService.Domain.pdb
+D:\Files\CMS\CargoManagementSystem\src\Services\Identity\CMS.IdentityService.Domain\bin\Debug\net10.0\CMS.Shared.dll
+D:\Files\CMS\CargoManagementSystem\src\Services\Identity\CMS.IdentityService.Domain\bin\Debug\net10.0\CMS.Shared.pdb
+D:\Files\CMS\CargoManagementSystem\src\Services\Identity\CMS.IdentityService.Domain\obj\Debug\net10.0\CMS.IdentityService.Domain.csproj.AssemblyReference.cache
+D:\Files\CMS\CargoManagementSystem\src\Services\Identity\CMS.IdentityService.Domain\obj\Debug\net10.0\CMS.IdentityService.Domain.GeneratedMSBuildEditorConfig.editorconfig
+D:\Files\CMS\CargoManagementSystem\src\Services\Identity\CMS.IdentityService.Domain\obj\Debug\net10.0\CMS.IdentityService.Domain.AssemblyInfoInputs.cache
+D:\Files\CMS\CargoManagementSystem\src\Services\Identity\CMS.IdentityService.Domain\obj\Debug\net10.0\CMS.IdentityService.Domain.AssemblyInfo.cs
+D:\Files\CMS\CargoManagementSystem\src\Services\Identity\CMS.IdentityService.Domain\obj\Debug\net10.0\CMS.IdentityService.Domain.csproj.CoreCompileInputs.cache
+D:\Files\CMS\CargoManagementSystem\src\Services\Identity\CMS.IdentityService.Domain\obj\Debug\net10.0\CMS.Iden.5557D03C.Up2Date
+D:\Files\CMS\CargoManagementSystem\src\Services\Identity\CMS.IdentityService.Domain\obj\Debug\net10.0\CMS.IdentityService.Domain.dll
+D:\Files\CMS\CargoManagementSystem\src\Services\Identity\CMS.IdentityService.Domain\obj\Debug\net10.0\refint\CMS.IdentityService.Domain.dll
+D:\Files\CMS\CargoManagementSystem\src\Services\Identity\CMS.IdentityService.Domain\obj\Debug\net10.0\CMS.IdentityService.Domain.pdb
+D:\Files\CMS\CargoManagementSystem\src\Services\Identity\CMS.IdentityService.Domain\obj\Debug\net10.0\ref\CMS.IdentityService.Domain.dll

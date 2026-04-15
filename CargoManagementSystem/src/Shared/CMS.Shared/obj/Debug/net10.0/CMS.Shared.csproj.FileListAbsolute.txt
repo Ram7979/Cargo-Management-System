@@ -1,0 +1,12 @@
+D:\Files\CMS\CargoManagementSystem\src\Shared\CMS.Shared\bin\Debug\net10.0\CMS.Shared.deps.json
+D:\Files\CMS\CargoManagementSystem\src\Shared\CMS.Shared\bin\Debug\net10.0\CMS.Shared.dll
+D:\Files\CMS\CargoManagementSystem\src\Shared\CMS.Shared\bin\Debug\net10.0\CMS.Shared.pdb
+D:\Files\CMS\CargoManagementSystem\src\Shared\CMS.Shared\obj\Debug\net10.0\CMS.Shared.csproj.AssemblyReference.cache
+D:\Files\CMS\CargoManagementSystem\src\Shared\CMS.Shared\obj\Debug\net10.0\CMS.Shared.GeneratedMSBuildEditorConfig.editorconfig
+D:\Files\CMS\CargoManagementSystem\src\Shared\CMS.Shared\obj\Debug\net10.0\CMS.Shared.AssemblyInfoInputs.cache
+D:\Files\CMS\CargoManagementSystem\src\Shared\CMS.Shared\obj\Debug\net10.0\CMS.Shared.AssemblyInfo.cs
+D:\Files\CMS\CargoManagementSystem\src\Shared\CMS.Shared\obj\Debug\net10.0\CMS.Shared.csproj.CoreCompileInputs.cache
+D:\Files\CMS\CargoManagementSystem\src\Shared\CMS.Shared\obj\Debug\net10.0\CMS.Shared.dll
+D:\Files\CMS\CargoManagementSystem\src\Shared\CMS.Shared\obj\Debug\net10.0\refint\CMS.Shared.dll
+D:\Files\CMS\CargoManagementSystem\src\Shared\CMS.Shared\obj\Debug\net10.0\CMS.Shared.pdb
+D:\Files\CMS\CargoManagementSystem\src\Shared\CMS.Shared\obj\Debug\net10.0\ref\CMS.Shared.dll

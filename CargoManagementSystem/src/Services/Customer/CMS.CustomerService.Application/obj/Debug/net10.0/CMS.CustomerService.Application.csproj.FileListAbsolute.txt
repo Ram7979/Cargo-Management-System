@@ -1,0 +1,17 @@
+D:\Files\CMS\CargoManagementSystem\src\Services\Customer\CMS.CustomerService.Application\bin\Debug\net10.0\CMS.CustomerService.Application.deps.json
+D:\Files\CMS\CargoManagementSystem\src\Services\Customer\CMS.CustomerService.Application\bin\Debug\net10.0\CMS.CustomerService.Application.dll
+D:\Files\CMS\CargoManagementSystem\src\Services\Customer\CMS.CustomerService.Application\bin\Debug\net10.0\CMS.CustomerService.Application.pdb
+D:\Files\CMS\CargoManagementSystem\src\Services\Customer\CMS.CustomerService.Application\bin\Debug\net10.0\CMS.CustomerService.Domain.dll
+D:\Files\CMS\CargoManagementSystem\src\Services\Customer\CMS.CustomerService.Application\bin\Debug\net10.0\CMS.Shared.dll
+D:\Files\CMS\CargoManagementSystem\src\Services\Customer\CMS.CustomerService.Application\bin\Debug\net10.0\CMS.CustomerService.Domain.pdb
+D:\Files\CMS\CargoManagementSystem\src\Services\Customer\CMS.CustomerService.Application\bin\Debug\net10.0\CMS.Shared.pdb
+D:\Files\CMS\CargoManagementSystem\src\Services\Customer\CMS.CustomerService.Application\obj\Debug\net10.0\CMS.CustomerService.Application.csproj.AssemblyReference.cache
+D:\Files\CMS\CargoManagementSystem\src\Services\Customer\CMS.CustomerService.Application\obj\Debug\net10.0\CMS.CustomerService.Application.GeneratedMSBuildEditorConfig.editorconfig
+D:\Files\CMS\CargoManagementSystem\src\Services\Customer\CMS.CustomerService.Application\obj\Debug\net10.0\CMS.CustomerService.Application.AssemblyInfoInputs.cache
+D:\Files\CMS\CargoManagementSystem\src\Services\Customer\CMS.CustomerService.Application\obj\Debug\net10.0\CMS.CustomerService.Application.AssemblyInfo.cs
+D:\Files\CMS\CargoManagementSystem\src\Services\Customer\CMS.CustomerService.Application\obj\Debug\net10.0\CMS.CustomerService.Application.csproj.CoreCompileInputs.cache
+D:\Files\CMS\CargoManagementSystem\src\Services\Customer\CMS.CustomerService.Application\obj\Debug\net10.0\CMS.Cust.ADC50DD5.Up2Date
+D:\Files\CMS\CargoManagementSystem\src\Services\Customer\CMS.CustomerService.Application\obj\Debug\net10.0\CMS.CustomerService.Application.dll
+D:\Files\CMS\CargoManagementSystem\src\Services\Customer\CMS.CustomerService.Application\obj\Debug\net10.0\refint\CMS.CustomerService.Application.dll
+D:\Files\CMS\CargoManagementSystem\src\Services\Customer\CMS.CustomerService.Application\obj\Debug\net10.0\CMS.CustomerService.Application.pdb
+D:\Files\CMS\CargoManagementSystem\src\Services\Customer\CMS.CustomerService.Application\obj\Debug\net10.0\ref\CMS.CustomerService.Application.dll

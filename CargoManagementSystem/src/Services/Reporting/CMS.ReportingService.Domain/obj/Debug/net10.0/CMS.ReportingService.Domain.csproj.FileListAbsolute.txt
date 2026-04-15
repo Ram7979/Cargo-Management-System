@@ -1,0 +1,15 @@
+D:\Files\CMS\CargoManagementSystem\src\Services\Reporting\CMS.ReportingService.Domain\bin\Debug\net10.0\CMS.ReportingService.Domain.deps.json
+D:\Files\CMS\CargoManagementSystem\src\Services\Reporting\CMS.ReportingService.Domain\bin\Debug\net10.0\CMS.ReportingService.Domain.dll
+D:\Files\CMS\CargoManagementSystem\src\Services\Reporting\CMS.ReportingService.Domain\bin\Debug\net10.0\CMS.ReportingService.Domain.pdb
+D:\Files\CMS\CargoManagementSystem\src\Services\Reporting\CMS.ReportingService.Domain\bin\Debug\net10.0\CMS.Shared.dll
+D:\Files\CMS\CargoManagementSystem\src\Services\Reporting\CMS.ReportingService.Domain\bin\Debug\net10.0\CMS.Shared.pdb
+D:\Files\CMS\CargoManagementSystem\src\Services\Reporting\CMS.ReportingService.Domain\obj\Debug\net10.0\CMS.ReportingService.Domain.csproj.AssemblyReference.cache
+D:\Files\CMS\CargoManagementSystem\src\Services\Reporting\CMS.ReportingService.Domain\obj\Debug\net10.0\CMS.ReportingService.Domain.GeneratedMSBuildEditorConfig.editorconfig
+D:\Files\CMS\CargoManagementSystem\src\Services\Reporting\CMS.ReportingService.Domain\obj\Debug\net10.0\CMS.ReportingService.Domain.AssemblyInfoInputs.cache
+D:\Files\CMS\CargoManagementSystem\src\Services\Reporting\CMS.ReportingService.Domain\obj\Debug\net10.0\CMS.ReportingService.Domain.AssemblyInfo.cs
+D:\Files\CMS\CargoManagementSystem\src\Services\Reporting\CMS.ReportingService.Domain\obj\Debug\net10.0\CMS.ReportingService.Domain.csproj.CoreCompileInputs.cache
+D:\Files\CMS\CargoManagementSystem\src\Services\Reporting\CMS.ReportingService.Domain\obj\Debug\net10.0\CMS.Repo.A5DE0953.Up2Date
+D:\Files\CMS\CargoManagementSystem\src\Services\Reporting\CMS.ReportingService.Domain\obj\Debug\net10.0\CMS.ReportingService.Domain.dll
+D:\Files\CMS\CargoManagementSystem\src\Services\Reporting\CMS.ReportingService.Domain\obj\Debug\net10.0\refint\CMS.ReportingService.Domain.dll
+D:\Files\CMS\CargoManagementSystem\src\Services\Reporting\CMS.ReportingService.Domain\obj\Debug\net10.0\CMS.ReportingService.Domain.pdb
+D:\Files\CMS\CargoManagementSystem\src\Services\Reporting\CMS.ReportingService.Domain\obj\Debug\net10.0\ref\CMS.ReportingService.Domain.dll

@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: cms-config
+  namespace: default
+data:
+  ASPNETCORE_ENVIRONMENT: "Production"
+  Jwt__Issuer: "CMS.IdentityService"
+  Jwt__Audience: "CMS.Clients"
+  Seq__Url: "http://seq-service:80"
+  CustomerService__BaseUrl: "http://customer-service:8080"
+  ShipmentService__BaseUrl: "http://shipment-service:8080"
+  NotificationService__BaseUrl: "http://notification-service:8080"
+  BillingService__BaseUrl: "http://billing-service:8080"
+  SendGrid__FromEmail: "noreply@cms.local"

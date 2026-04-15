@@ -1,0 +1,15 @@
+D:\Files\CMS\CargoManagementSystem\src\Services\Customer\CMS.CustomerService.Domain\bin\Debug\net10.0\CMS.CustomerService.Domain.deps.json
+D:\Files\CMS\CargoManagementSystem\src\Services\Customer\CMS.CustomerService.Domain\bin\Debug\net10.0\CMS.CustomerService.Domain.dll
+D:\Files\CMS\CargoManagementSystem\src\Services\Customer\CMS.CustomerService.Domain\bin\Debug\net10.0\CMS.CustomerService.Domain.pdb
+D:\Files\CMS\CargoManagementSystem\src\Services\Customer\CMS.CustomerService.Domain\bin\Debug\net10.0\CMS.Shared.dll
+D:\Files\CMS\CargoManagementSystem\src\Services\Customer\CMS.CustomerService.Domain\bin\Debug\net10.0\CMS.Shared.pdb
+D:\Files\CMS\CargoManagementSystem\src\Services\Customer\CMS.CustomerService.Domain\obj\Debug\net10.0\CMS.CustomerService.Domain.csproj.AssemblyReference.cache
+D:\Files\CMS\CargoManagementSystem\src\Services\Customer\CMS.CustomerService.Domain\obj\Debug\net10.0\CMS.CustomerService.Domain.GeneratedMSBuildEditorConfig.editorconfig
+D:\Files\CMS\CargoManagementSystem\src\Services\Customer\CMS.CustomerService.Domain\obj\Debug\net10.0\CMS.CustomerService.Domain.AssemblyInfoInputs.cache
+D:\Files\CMS\CargoManagementSystem\src\Services\Customer\CMS.CustomerService.Domain\obj\Debug\net10.0\CMS.CustomerService.Domain.AssemblyInfo.cs
+D:\Files\CMS\CargoManagementSystem\src\Services\Customer\CMS.CustomerService.Domain\obj\Debug\net10.0\CMS.CustomerService.Domain.csproj.CoreCompileInputs.cache
+D:\Files\CMS\CargoManagementSystem\src\Services\Customer\CMS.CustomerService.Domain\obj\Debug\net10.0\CMS.Cust.E0FCA537.Up2Date
+D:\Files\CMS\CargoManagementSystem\src\Services\Customer\CMS.CustomerService.Domain\obj\Debug\net10.0\CMS.CustomerService.Domain.dll
+D:\Files\CMS\CargoManagementSystem\src\Services\Customer\CMS.CustomerService.Domain\obj\Debug\net10.0\refint\CMS.CustomerService.Domain.dll
+D:\Files\CMS\CargoManagementSystem\src\Services\Customer\CMS.CustomerService.Domain\obj\Debug\net10.0\CMS.CustomerService.Domain.pdb
+D:\Files\CMS\CargoManagementSystem\src\Services\Customer\CMS.CustomerService.Domain\obj\Debug\net10.0\ref\CMS.CustomerService.Domain.dll
