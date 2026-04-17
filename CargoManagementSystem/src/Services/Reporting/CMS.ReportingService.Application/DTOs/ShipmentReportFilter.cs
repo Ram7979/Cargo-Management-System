@@ -8,4 +8,9 @@ public class ShipmentReportFilter
     public string? Destination { get; set; }
     public DateTime? FromDate { get; set; }
     public DateTime? ToDate { get; set; }
+    public string? DriverId { get; set; }
+    public string? VehicleId { get; set; }
+    public string? ServiceType { get; set; }
+    public string? SortBy { get; set; }
+    public string? SortDir { get; set; }
 }

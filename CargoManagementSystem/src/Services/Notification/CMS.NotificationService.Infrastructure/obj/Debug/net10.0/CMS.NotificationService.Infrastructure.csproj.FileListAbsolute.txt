@@ -19,3 +19,4 @@ D:\Files\CMS\CargoManagementSystem\src\Services\Notification\CMS.NotificationSer
 D:\Files\CMS\CargoManagementSystem\src\Services\Notification\CMS.NotificationService.Infrastructure\obj\Debug\net10.0\CMS.NotificationService.Infrastructure.pdb
 D:\Files\CMS\CargoManagementSystem\src\Services\Notification\CMS.NotificationService.Infrastructure\obj\Debug\net10.0\CMS.NotificationService.Infrastructure.genruntimeconfig.cache
 D:\Files\CMS\CargoManagementSystem\src\Services\Notification\CMS.NotificationService.Infrastructure\obj\Debug\net10.0\ref\CMS.NotificationService.Infrastructure.dll
+D:\Files\CMS\CargoManagementSystem\src\Services\Notification\CMS.NotificationService.Infrastructure\obj\Debug\net10.0\CMS.NotificationService.Infrastructure.sourcelink.json

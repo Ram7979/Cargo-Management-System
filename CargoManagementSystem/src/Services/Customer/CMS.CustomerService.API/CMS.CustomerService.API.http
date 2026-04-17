@@ -1,6 +1,294 @@
-@CMS.CustomerService.API_HostAddress = http://localhost:5251
+@CMS.CustomerService.API_HostAddress = http://localhost:5003
+@AuthToken = your_jwt_token_here
 
-GET {{CMS.CustomerService.API_HostAddress}}/weatherforecast/
-Accept: application/json
+### ========================================
+### CREATING MULTIPLE CUSTOMERS (NO PREDEFINED DATA)
+### Each POST creates a new unique customer - Unlimited!
+### ========================================
+
+### Customer 1: Individual - John Smith
+POST {{CMS.CustomerService.API_HostAddress}}/api/v1/customers
+Content-Type: application/json
+
+{
+  "fullName": "John Smith",
+  "companyName": "Smith Trading Company",
+  "contactPerson": "John Smith",
+  "email": "john.smith@example.com",
+  "phone": "+1-212-555-0100",
+  "address": "123 Main Street",
+  "city": "New York",
+  "state": "NY",
+  "zipCode": "10001",
+  "country": "USA",
+  "taxId": "12-3456789",
+  "type": "Individual",
+  "creditLimit": 50000,
+  "paymentTerms": "Net 30"
+}
 
 ###
+
+### Customer 2: Corporate - Acme Corporation
+POST {{CMS.CustomerService.API_HostAddress}}/api/v1/customers
+Content-Type: application/json
+
+{
+  "fullName": "Acme Corporation",
+  "companyName": "Acme Corporation Inc",
+  "contactPerson": "Sarah Johnson",
+  "email": "sarah.johnson@acmecorp.com",
+  "phone": "+1-213-555-0101",
+  "address": "456 Business Avenue",
+  "city": "Los Angeles",
+  "state": "CA",
+  "zipCode": "90001",
+  "country": "USA",
+  "taxId": "98-7654321",
+  "type": "Corporate",
+  "creditLimit": 100000,
+  "paymentTerms": "Net 60"
+}
+
+###
+
+### Customer 3: Freight Forwarder - Global Logistics
+POST {{CMS.CustomerService.API_HostAddress}}/api/v1/customers
+Content-Type: application/json
+
+{
+  "fullName": "Global Logistics Solutions",
+  "companyName": "Global Logistics Solutions Ltd",
+  "contactPerson": "Mike Chen",
+  "email": "mike.chen@globallogistics.com",
+  "phone": "+1-312-555-0102",
+  "address": "789 Logistics Way",
+  "city": "Chicago",
+  "state": "IL",
+  "zipCode": "60601",
+  "country": "USA",
+  "taxId": "55-1234567",
+  "type": "FreightForwarder",
+  "creditLimit": 250000,
+  "paymentTerms": "Net 45"
+}
+
+###
+
+### Customer 4: Individual - Maria Garcia
+POST {{CMS.CustomerService.API_HostAddress}}/api/v1/customers
+Content-Type: application/json
+
+{
+  "fullName": "Maria Garcia",
+  "companyName": "Garcia Import Export",
+  "contactPerson": "Maria Garcia",
+  "email": "maria.garcia@import-export.mx",
+  "phone": "+52-1-555-0103",
+  "address": "999 Commercial Street",
+  "city": "Mexico City",
+  "state": "CDMX",
+  "zipCode": "06500",
+  "country": "Mexico",
+  "taxId": "GMX-9876543",
+  "type": "Individual",
+  "creditLimit": 75000,
+  "paymentTerms": "Net 30"
+}
+
+###
+
+### Customer 5: Corporate - Tech Solutions Europe
+POST {{CMS.CustomerService.API_HostAddress}}/api/v1/customers
+Content-Type: application/json
+
+{
+  "fullName": "Tech Solutions Europe",
+  "companyName": "Tech Solutions Europe GmbH",
+  "contactPerson": "Klaus Weber",
+  "email": "klaus.weber@techsolutions-eu.de",
+  "phone": "+49-30-555-0104",
+  "address": "12 Bismarck Square",
+  "city": "Berlin",
+  "state": "Berlin",
+  "zipCode": "10785",
+  "country": "Germany",
+  "taxId": "DE123456789",
+  "type": "Corporate",
+  "creditLimit": 150000,
+  "paymentTerms": "Net 45"
+}
+
+###
+
+### Customer 6: Freight Forwarder - Asia Express
+POST {{CMS.CustomerService.API_HostAddress}}/api/v1/customers
+Content-Type: application/json
+
+{
+  "fullName": "Asia Express Logistics",
+  "companyName": "Asia Express Logistics PTE",
+  "contactPerson": "Raj Patel",
+  "email": "raj.patel@asiaexpress.sg",
+  "phone": "+65-6555-0105",
+  "address": "Block 123, Shipping Lane",
+  "city": "Singapore",
+  "state": "Singapore",
+  "zipCode": "018935",
+  "country": "Singapore",
+  "taxId": "SG-555-123-X",
+  "type": "FreightForwarder",
+  "creditLimit": 200000,
+  "paymentTerms": "Net 30"
+}
+
+###
+
+### Customer 7: Individual - David Thompson
+POST {{CMS.CustomerService.API_HostAddress}}/api/v1/customers
+Content-Type: application/json
+
+{
+  "fullName": "David Thompson",
+  "companyName": "Thompson Enterprises",
+  "contactPerson": "David Thompson",
+  "email": "david.thompson@thompson-ent.co.uk",
+  "phone": "+44-20-555-0106",
+  "address": "42 Oxford Street",
+  "city": "London",
+  "state": "England",
+  "zipCode": "W1D 1AL",
+  "country": "United Kingdom",
+  "taxId": "GB123456789",
+  "type": "Individual",
+  "creditLimit": 60000,
+  "paymentTerms": "Net 45"
+}
+
+###
+
+### Customer 8: Corporate - Sydney Trade Hub
+POST {{CMS.CustomerService.API_HostAddress}}/api/v1/customers
+Content-Type: application/json
+
+{
+  "fullName": "Sydney Trade Hub",
+  "companyName": "Sydney Trade Hub Pty Ltd",
+  "contactPerson": "Emma Wilson",
+  "email": "emma.wilson@sydneytradehub.com.au",
+  "phone": "+61-2-555-0107",
+  "address": "100 Customs House",
+  "city": "Sydney",
+  "state": "NSW",
+  "zipCode": "2000",
+  "country": "Australia",
+  "taxId": "AU123456789",
+  "type": "Corporate",
+  "creditLimit": 120000,
+  "paymentTerms": "Net 60"
+}
+
+###
+
+### ========================================
+### RETRIEVE & QUERY MULTIPLE CUSTOMERS
+### ========================================
+
+### Get All Customers (Requires JWT Token)
+GET {{CMS.CustomerService.API_HostAddress}}/api/v1/customers
+Authorization: Bearer {{AuthToken}}
+
+###
+
+### Get Customers - Page 1 (20 per page)
+GET {{CMS.CustomerService.API_HostAddress}}/api/v1/customers?page=1&pageSize=20
+Authorization: Bearer {{AuthToken}}
+
+###
+
+### Get Customers - Page 2 (10 per page)
+GET {{CMS.CustomerService.API_HostAddress}}/api/v1/customers?page=2&pageSize=10
+Authorization: Bearer {{AuthToken}}
+
+###
+
+### Filter: Get Only Corporate Customers
+GET {{CMS.CustomerService.API_HostAddress}}/api/v1/customers?type=Corporate
+Authorization: Bearer {{AuthToken}}
+
+###
+
+### Filter: Get Only Individual Customers
+GET {{CMS.CustomerService.API_HostAddress}}/api/v1/customers?type=Individual
+Authorization: Bearer {{AuthToken}}
+
+###
+
+### Filter: Get Only FreightForwarder Customers
+GET {{CMS.CustomerService.API_HostAddress}}/api/v1/customers?type=FreightForwarder
+Authorization: Bearer {{AuthToken}}
+
+###
+
+### Search: Find Customer by Name
+GET {{CMS.CustomerService.API_HostAddress}}/api/v1/customers?search=john
+Authorization: Bearer {{AuthToken}}
+
+###
+
+### Search: Find Customer by Email
+GET {{CMS.CustomerService.API_HostAddress}}/api/v1/customers?search=maria.garcia
+Authorization: Bearer {{AuthToken}}
+
+###
+
+### Search: Find Customer by Customer Code
+GET {{CMS.CustomerService.API_HostAddress}}/api/v1/customers?search=CUST-2026
+Authorization: Bearer {{AuthToken}}
+
+###
+
+### Combined Filters: Corporate Customers with Search
+GET {{CMS.CustomerService.API_HostAddress}}/api/v1/customers?type=Corporate&search=tech
+Authorization: Bearer {{AuthToken}}
+
+###
+
+### Filter: Get Only Active Customers
+GET {{CMS.CustomerService.API_HostAddress}}/api/v1/customers?isActive=true
+Authorization: Bearer {{AuthToken}}
+
+###
+
+### Filter: Get Deactivated Customers
+GET {{CMS.CustomerService.API_HostAddress}}/api/v1/customers?isActive=false
+Authorization: Bearer {{AuthToken}}
+
+###
+
+### ========================================
+### GET SPECIFIC CUSTOMER DETAILS
+### ========================================
+### Copy customer ID from previous list response
+### Format: GET /api/v1/customers/{customerId}
+### ========================================
+
+### Get Customer Details by ID (Replace with actual ID)
+GET {{CMS.CustomerService.API_HostAddress}}/api/v1/customers/550e8400-e29b-41d4-a716-446655440000
+Authorization: Bearer {{AuthToken}}
+
+###
+
+### ========================================
+### KEY FEATURES - NO PREDEFINED CUSTOMERS
+### ========================================
+### ✓ Each POST creates a NEW customer
+### ✓ Auto-generated unique customer codes (CUST-2026-001, CUST-2026-002, etc.)
+### ✓ Email must be unique per customer
+### ✓ Unlimited customers can be created
+### ✓ Pagination support (page, pageSize)
+### ✓ Filtering by type: Individual | Corporate | FreightForwarder
+### ✓ Search by: FullName, Email, CustomerCode, CompanyName
+### ✓ Soft-delete with IsActive flag
+### ✓ All data stored in database - no seed data
+### ========================================

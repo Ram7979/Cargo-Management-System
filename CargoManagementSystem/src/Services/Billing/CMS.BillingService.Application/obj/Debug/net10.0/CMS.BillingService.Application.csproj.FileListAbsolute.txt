@@ -15,3 +15,4 @@ D:\Files\CMS\CargoManagementSystem\src\Services\Billing\CMS.BillingService.Appli
 D:\Files\CMS\CargoManagementSystem\src\Services\Billing\CMS.BillingService.Application\obj\Debug\net10.0\refint\CMS.BillingService.Application.dll
 D:\Files\CMS\CargoManagementSystem\src\Services\Billing\CMS.BillingService.Application\obj\Debug\net10.0\CMS.BillingService.Application.pdb
 D:\Files\CMS\CargoManagementSystem\src\Services\Billing\CMS.BillingService.Application\obj\Debug\net10.0\ref\CMS.BillingService.Application.dll
+D:\Files\CMS\CargoManagementSystem\src\Services\Billing\CMS.BillingService.Application\obj\Debug\net10.0\CMS.BillingService.Application.sourcelink.json

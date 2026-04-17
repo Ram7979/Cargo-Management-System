@@ -114,7 +114,6 @@ D:\Files\CMS\CargoManagementSystem\src\Services\Notification\CMS.NotificationSer
 D:\Files\CMS\CargoManagementSystem\src\Services\Notification\CMS.NotificationService.API\obj\Debug\net10.0\staticwebassets.development.json
 D:\Files\CMS\CargoManagementSystem\src\Services\Notification\CMS.NotificationService.API\obj\Debug\net10.0\staticwebassets.build.endpoints.json
 D:\Files\CMS\CargoManagementSystem\src\Services\Notification\CMS.NotificationService.API\obj\Debug\net10.0\swae.build.ex.cache
-D:\Files\CMS\CargoManagementSystem\src\Services\Notification\CMS.NotificationService.API\obj\Debug\net10.0\staticwebassets.upToDateCheck.txt
 D:\Files\CMS\CargoManagementSystem\src\Services\Notification\CMS.NotificationService.API\obj\Debug\net10.0\CMS.Noti.E5F047CC.Up2Date
 D:\Files\CMS\CargoManagementSystem\src\Services\Notification\CMS.NotificationService.API\obj\Debug\net10.0\CMS.NotificationService.API.dll
 D:\Files\CMS\CargoManagementSystem\src\Services\Notification\CMS.NotificationService.API\obj\Debug\net10.0\refint\CMS.NotificationService.API.dll
@@ -202,3 +201,4 @@ D:\Files\CMS\CargoManagementSystem\src\Services\Notification\CMS.NotificationSer
 D:\Files\CMS\CargoManagementSystem\src\Services\Notification\CMS.NotificationService.API\bin\Debug\net10.0\tr\Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll
 D:\Files\CMS\CargoManagementSystem\src\Services\Notification\CMS.NotificationService.API\bin\Debug\net10.0\zh-Hans\Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll
 D:\Files\CMS\CargoManagementSystem\src\Services\Notification\CMS.NotificationService.API\bin\Debug\net10.0\zh-Hant\Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll
+D:\Files\CMS\CargoManagementSystem\src\Services\Notification\CMS.NotificationService.API\obj\Debug\net10.0\CMS.NotificationService.API.sourcelink.json

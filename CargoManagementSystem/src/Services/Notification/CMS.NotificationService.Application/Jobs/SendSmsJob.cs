@@ -44,7 +44,7 @@ public class SendSmsJob
         {
             if (record.RetryCount >= 5)
             {
-                record.MarkFailed();
+                record.MarkFailed("SMS delivery failed after maximum retries.");
                 _logger.LogWarning("SMS notification {Id} marked Failed after {RetryCount} attempts", notificationId, record.RetryCount);
             }
             else

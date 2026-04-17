@@ -11,5 +11,8 @@ public class NotificationMappingProfile : Profile
         CreateMap<NotificationRecord, NotificationDto>()
             .ForMember(d => d.Channel, opt => opt.MapFrom(s => s.Channel.ToString()))
             .ForMember(d => d.Status, opt => opt.MapFrom(s => s.Status.ToString()));
+
+        CreateMap<NotificationPreference, NotificationPreferenceDto>()
+            .ForMember(d => d.OptedOutEventTypes, opt => opt.MapFrom(s => s.GetOptedOutEventTypes()));
     }
 }

@@ -15,13 +15,23 @@ public class WarehouseRepository : IWarehouseRepository
     public async Task<Domain.Entities.Warehouse?> GetByIdAsync(Guid id)
         => await _context.Warehouses
             .Include(w => w.Bins)
+            .Include(w => w.Receipts)
             .FirstOrDefaultAsync(w => w.Id == id);
 
-    public async Task<IEnumerable<Domain.Entities.Warehouse>> GetAllAsync()
-        => await _context.Warehouses
+    public async Task<IEnumerable<Domain.Entities.Warehouse>> GetAllAsync(string? city = null, string? country = null)
+    {
+        var query = _context.Warehouses
             .Include(w => w.Bins)
-            .OrderBy(w => w.Name)
-            .ToListAsync();
+            .AsQueryable();
+
+        if (!string.IsNullOrWhiteSpace(city))
+            query = query.Where(w => w.City.ToLower().Contains(city.ToLower()));
+
+        if (!string.IsNullOrWhiteSpace(country))
+            query = query.Where(w => w.Country.ToLower().Contains(country.ToLower()));
+
+        return await query.OrderBy(w => w.Name).ToListAsync();
+    }
 
     public async Task AddAsync(Domain.Entities.Warehouse warehouse)
     {

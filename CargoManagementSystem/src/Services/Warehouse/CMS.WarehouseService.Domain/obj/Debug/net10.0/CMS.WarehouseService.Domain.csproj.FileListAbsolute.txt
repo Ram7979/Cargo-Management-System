@@ -13,3 +13,4 @@ D:\Files\CMS\CargoManagementSystem\src\Services\Warehouse\CMS.WarehouseService.D
 D:\Files\CMS\CargoManagementSystem\src\Services\Warehouse\CMS.WarehouseService.Domain\obj\Debug\net10.0\refint\CMS.WarehouseService.Domain.dll
 D:\Files\CMS\CargoManagementSystem\src\Services\Warehouse\CMS.WarehouseService.Domain\obj\Debug\net10.0\CMS.WarehouseService.Domain.pdb
 D:\Files\CMS\CargoManagementSystem\src\Services\Warehouse\CMS.WarehouseService.Domain\obj\Debug\net10.0\ref\CMS.WarehouseService.Domain.dll
+D:\Files\CMS\CargoManagementSystem\src\Services\Warehouse\CMS.WarehouseService.Domain\obj\Debug\net10.0\CMS.WarehouseService.Domain.sourcelink.json

@@ -15,3 +15,4 @@ D:\Files\CMS\CargoManagementSystem\src\Services\Warehouse\CMS.WarehouseService.A
 D:\Files\CMS\CargoManagementSystem\src\Services\Warehouse\CMS.WarehouseService.Application\obj\Debug\net10.0\refint\CMS.WarehouseService.Application.dll
 D:\Files\CMS\CargoManagementSystem\src\Services\Warehouse\CMS.WarehouseService.Application\obj\Debug\net10.0\CMS.WarehouseService.Application.pdb
 D:\Files\CMS\CargoManagementSystem\src\Services\Warehouse\CMS.WarehouseService.Application\obj\Debug\net10.0\ref\CMS.WarehouseService.Application.dll
+D:\Files\CMS\CargoManagementSystem\src\Services\Warehouse\CMS.WarehouseService.Application\obj\Debug\net10.0\CMS.WarehouseService.Application.sourcelink.json

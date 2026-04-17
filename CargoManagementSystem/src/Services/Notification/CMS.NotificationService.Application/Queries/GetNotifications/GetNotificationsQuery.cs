@@ -4,14 +4,13 @@ using MediatR;
 
 namespace CMS.NotificationService.Application.Queries.GetNotifications;
 
-public class GetNotificationsQuery : IRequest<PagedResponse<NotificationDto>>
-{
-    public int Page { get; }
-    public int PageSize { get; }
-
-    public GetNotificationsQuery(int page, int pageSize)
-    {
-        Page = page;
-        PageSize = pageSize;
-    }
-}
+public record GetNotificationsQuery(
+    int Page,
+    int PageSize,
+    string? Status = null,
+    string? Channel = null,
+    string? RecipientId = null,
+    string? EventType = null,
+    DateTime? FromDate = null,
+    DateTime? ToDate = null)
+    : IRequest<ApiResponse<PagedResponse<NotificationDto>>>;

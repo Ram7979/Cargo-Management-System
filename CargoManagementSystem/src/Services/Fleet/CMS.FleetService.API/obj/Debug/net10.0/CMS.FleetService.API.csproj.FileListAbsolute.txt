@@ -181,3 +181,5 @@ D:\Files\CMS\CargoManagementSystem\src\Services\Fleet\CMS.FleetService.API\bin\D
 D:\Files\CMS\CargoManagementSystem\src\Services\Fleet\CMS.FleetService.API\bin\Debug\net10.0\tr\Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll
 D:\Files\CMS\CargoManagementSystem\src\Services\Fleet\CMS.FleetService.API\bin\Debug\net10.0\zh-Hans\Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll
 D:\Files\CMS\CargoManagementSystem\src\Services\Fleet\CMS.FleetService.API\bin\Debug\net10.0\zh-Hant\Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll
+D:\Files\CMS\CargoManagementSystem\src\Services\Fleet\CMS.FleetService.API\obj\Debug\net10.0\CMS.FleetService.API.sourcelink.json
+D:\Files\CMS\CargoManagementSystem\src\Services\Fleet\CMS.FleetService.API\obj\Debug\net10.0\staticwebassets.upToDateCheck.txt

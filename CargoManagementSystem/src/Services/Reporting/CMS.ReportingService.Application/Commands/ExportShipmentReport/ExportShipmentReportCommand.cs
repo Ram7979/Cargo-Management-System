@@ -6,4 +6,5 @@ namespace CMS.ReportingService.Application.Commands.ExportShipmentReport;
 
 public record ExportShipmentReportCommand(
     ShipmentReportFilter Filter,
-    string Format) : IRequest<ApiResponse<string>>;
+    string Format,
+    string RequestingUserId) : IRequest<ApiResponse<AsyncExportStatusDto>>;

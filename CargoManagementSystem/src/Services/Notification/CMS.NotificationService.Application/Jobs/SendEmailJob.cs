@@ -44,7 +44,7 @@ public class SendEmailJob
         {
             if (record.RetryCount >= 5)
             {
-                record.MarkFailed();
+                record.MarkFailed("Email delivery failed after maximum retries.");
                 _logger.LogWarning("Email notification {Id} marked Failed after {RetryCount} attempts", notificationId, record.RetryCount);
             }
             else

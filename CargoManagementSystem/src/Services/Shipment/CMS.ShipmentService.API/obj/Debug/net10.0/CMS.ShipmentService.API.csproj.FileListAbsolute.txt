@@ -182,3 +182,4 @@ D:\Files\CMS\CargoManagementSystem\src\Services\Shipment\CMS.ShipmentService.API
 D:\Files\CMS\CargoManagementSystem\src\Services\Shipment\CMS.ShipmentService.API\bin\Debug\net10.0\zh-Hans\Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll
 D:\Files\CMS\CargoManagementSystem\src\Services\Shipment\CMS.ShipmentService.API\bin\Debug\net10.0\zh-Hant\Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll
 D:\Files\CMS\CargoManagementSystem\src\Services\Shipment\CMS.ShipmentService.API\obj\Debug\net10.0\staticwebassets.upToDateCheck.txt
+D:\Files\CMS\CargoManagementSystem\src\Services\Shipment\CMS.ShipmentService.API\obj\Debug\net10.0\CMS.ShipmentService.API.sourcelink.json

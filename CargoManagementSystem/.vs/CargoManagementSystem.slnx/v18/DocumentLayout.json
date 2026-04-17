@@ -3,6 +3,14 @@
   "WorkspaceRootPath": "D:\\Files\\CMS\\CargoManagementSystem\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{09129433-9286-0DB0-41BE-9A004AFD89DF}|src\\Shared\\CMS.Shared\\CMS.Shared.csproj|d:\\files\\cms\\cargomanagementsystem\\src\\shared\\cms.shared\\exceptions\\validationexception.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{09129433-9286-0DB0-41BE-9A004AFD89DF}|src\\Shared\\CMS.Shared\\CMS.Shared.csproj|solutionrelative:src\\shared\\cms.shared\\exceptions\\validationexception.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{26770053-52FE-619D-17AC-94A4CEE6C033}|src\\Services\\Identity\\CMS.IdentityService.Application\\CMS.IdentityService.Application.csproj|d:\\files\\cms\\cargomanagementsystem\\src\\services\\identity\\cms.identityservice.application\\behaviors\\validationbehavior.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{26770053-52FE-619D-17AC-94A4CEE6C033}|src\\Services\\Identity\\CMS.IdentityService.Application\\CMS.IdentityService.Application.csproj|solutionrelative:src\\services\\identity\\cms.identityservice.application\\behaviors\\validationbehavior.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{A1B425FD-F83F-18E5-6C38-61EFDB310AF8}|src\\Services\\Shipment\\CMS.ShipmentService.Application\\CMS.ShipmentService.Application.csproj|d:\\files\\cms\\cargomanagementsystem\\src\\services\\shipment\\cms.shipmentservice.application\\commands\\createshipment\\createshipmentcommandhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{A1B425FD-F83F-18E5-6C38-61EFDB310AF8}|src\\Services\\Shipment\\CMS.ShipmentService.Application\\CMS.ShipmentService.Application.csproj|solutionrelative:src\\services\\shipment\\cms.shipmentservice.application\\commands\\createshipment\\createshipmentcommandhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -13,10 +21,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{7A7DAF4C-E003-9322-6359-716D2F384FE8}|src\\Services\\Shipment\\CMS.ShipmentService.Domain\\CMS.ShipmentService.Domain.csproj|d:\\files\\cms\\cargomanagementsystem\\src\\services\\shipment\\cms.shipmentservice.domain\\entities\\shipment.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{7A7DAF4C-E003-9322-6359-716D2F384FE8}|src\\Services\\Shipment\\CMS.ShipmentService.Domain\\CMS.ShipmentService.Domain.csproj|solutionrelative:src\\services\\shipment\\cms.shipmentservice.domain\\entities\\shipment.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{20A84D0A-0716-E749-DF69-A4CC49DA92A1}|src\\Services\\Shipment\\CMS.ShipmentService.Infrastructure\\CMS.ShipmentService.Infrastructure.csproj|d:\\files\\cms\\cargomanagementsystem\\src\\services\\shipment\\cms.shipmentservice.infrastructure\\migrations\\20260414182126_updateddata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{20A84D0A-0716-E749-DF69-A4CC49DA92A1}|src\\Services\\Shipment\\CMS.ShipmentService.Infrastructure\\CMS.ShipmentService.Infrastructure.csproj|solutionrelative:src\\services\\shipment\\cms.shipmentservice.infrastructure\\migrations\\20260414182126_updateddata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{A1B425FD-F83F-18E5-6C38-61EFDB310AF8}|src\\Services\\Shipment\\CMS.ShipmentService.Application\\CMS.ShipmentService.Application.csproj|d:\\files\\cms\\cargomanagementsystem\\src\\services\\shipment\\cms.shipmentservice.application\\commands\\createshipment\\createshipmentcommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -61,6 +65,10 @@
     {
       "AbsoluteMoniker": "D:0:0:{20A84D0A-0716-E749-DF69-A4CC49DA92A1}|src\\Services\\Shipment\\CMS.ShipmentService.Infrastructure\\CMS.ShipmentService.Infrastructure.csproj|d:\\files\\cms\\cargomanagementsystem\\src\\services\\shipment\\cms.shipmentservice.infrastructure\\migrations\\20260414161232_bicreate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{20A84D0A-0716-E749-DF69-A4CC49DA92A1}|src\\Services\\Shipment\\CMS.ShipmentService.Infrastructure\\CMS.ShipmentService.Infrastructure.csproj|solutionrelative:src\\services\\shipment\\cms.shipmentservice.infrastructure\\migrations\\20260414161232_bicreate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{92B3EAEC-A124-9F58-8CBA-E70824B34E0B}|src\\Services\\Customer\\CMS.CustomerService.Infrastructure\\CMS.CustomerService.Infrastructure.csproj|d:\\files\\cms\\cargomanagementsystem\\src\\services\\customer\\cms.customerservice.infrastructure\\migrations\\20260415163927_initialcreate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{92B3EAEC-A124-9F58-8CBA-E70824B34E0B}|src\\Services\\Customer\\CMS.CustomerService.Infrastructure\\CMS.CustomerService.Infrastructure.csproj|solutionrelative:src\\services\\customer\\cms.customerservice.infrastructure\\migrations\\20260415163927_initialcreate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -70,7 +78,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 4,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Bookmark",
@@ -78,19 +86,44 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "20260414182126_UpdatedData.cs",
-              "DocumentMoniker": "D:\\Files\\CMS\\CargoManagementSystem\\src\\Services\\Shipment\\CMS.ShipmentService.Infrastructure\\Migrations\\20260414182126_UpdatedData.cs",
-              "RelativeDocumentMoniker": "src\\Services\\Shipment\\CMS.ShipmentService.Infrastructure\\Migrations\\20260414182126_UpdatedData.cs",
-              "ToolTip": "D:\\Files\\CMS\\CargoManagementSystem\\src\\Services\\Shipment\\CMS.ShipmentService.Infrastructure\\Migrations\\20260414182126_UpdatedData.cs",
-              "RelativeToolTip": "src\\Services\\Shipment\\CMS.ShipmentService.Infrastructure\\Migrations\\20260414182126_UpdatedData.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "DocumentIndex": 0,
+              "Title": "ValidationException.cs",
+              "DocumentMoniker": "D:\\Files\\CMS\\CargoManagementSystem\\src\\Shared\\CMS.Shared\\Exceptions\\ValidationException.cs",
+              "RelativeDocumentMoniker": "src\\Shared\\CMS.Shared\\Exceptions\\ValidationException.cs",
+              "ToolTip": "D:\\Files\\CMS\\CargoManagementSystem\\src\\Shared\\CMS.Shared\\Exceptions\\ValidationException.cs",
+              "RelativeToolTip": "src\\Shared\\CMS.Shared\\Exceptions\\ValidationException.cs",
+              "ViewState": "AgIAAAUAAAAAAAAAAAAAwA8AAAAhAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-14T18:21:26.484Z"
+              "WhenOpened": "2026-04-15T17:25:21.934Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 1,
+              "Title": "ValidationBehavior.cs",
+              "DocumentMoniker": "D:\\Files\\CMS\\CargoManagementSystem\\src\\Services\\Identity\\CMS.IdentityService.Application\\Behaviors\\ValidationBehavior.cs",
+              "RelativeDocumentMoniker": "src\\Services\\Identity\\CMS.IdentityService.Application\\Behaviors\\ValidationBehavior.cs",
+              "ToolTip": "D:\\Files\\CMS\\CargoManagementSystem\\src\\Services\\Identity\\CMS.IdentityService.Application\\Behaviors\\ValidationBehavior.cs",
+              "RelativeToolTip": "src\\Services\\Identity\\CMS.IdentityService.Application\\Behaviors\\ValidationBehavior.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAnAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-15T16:56:26.519Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "20260415163927_initialCreate.cs",
+              "DocumentMoniker": "D:\\Files\\CMS\\CargoManagementSystem\\src\\Services\\Customer\\CMS.CustomerService.Infrastructure\\Migrations\\20260415163927_initialCreate.cs",
+              "RelativeDocumentMoniker": "src\\Services\\Customer\\CMS.CustomerService.Infrastructure\\Migrations\\20260415163927_initialCreate.cs",
+              "ToolTip": "D:\\Files\\CMS\\CargoManagementSystem\\src\\Services\\Customer\\CMS.CustomerService.Infrastructure\\Migrations\\20260415163927_initialCreate.cs",
+              "RelativeToolTip": "src\\Services\\Customer\\CMS.CustomerService.Infrastructure\\Migrations\\20260415163927_initialCreate.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-15T16:39:28.3Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
               "Title": "Shipment.cs",
               "DocumentMoniker": "D:\\Files\\CMS\\CargoManagementSystem\\src\\Services\\Shipment\\CMS.ShipmentService.Domain\\Entities\\Shipment.cs",
               "RelativeDocumentMoniker": "src\\Services\\Shipment\\CMS.ShipmentService.Domain\\Entities\\Shipment.cs",
@@ -102,7 +135,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 3,
               "Title": "CreateShipmentCommandValidator.cs",
               "DocumentMoniker": "D:\\Files\\CMS\\CargoManagementSystem\\src\\Services\\Shipment\\CMS.ShipmentService.Application\\Commands\\CreateShipment\\CreateShipmentCommandValidator.cs",
               "RelativeDocumentMoniker": "src\\Services\\Shipment\\CMS.ShipmentService.Application\\Commands\\CreateShipment\\CreateShipmentCommandValidator.cs",
@@ -114,7 +147,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 2,
               "Title": "CreateShipmentCommandHandler.cs",
               "DocumentMoniker": "D:\\Files\\CMS\\CargoManagementSystem\\src\\Services\\Shipment\\CMS.ShipmentService.Application\\Commands\\CreateShipment\\CreateShipmentCommandHandler.cs",
               "RelativeDocumentMoniker": "src\\Services\\Shipment\\CMS.ShipmentService.Application\\Commands\\CreateShipment\\CreateShipmentCommandHandler.cs",
@@ -122,12 +155,11 @@
               "RelativeToolTip": "src\\Services\\Shipment\\CMS.ShipmentService.Application\\Commands\\CreateShipment\\CreateShipmentCommandHandler.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAAAbAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-14T16:19:16.655Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-04-14T16:19:16.655Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 5,
               "Title": "CreateShipmentCommand.cs",
               "DocumentMoniker": "D:\\Files\\CMS\\CargoManagementSystem\\src\\Services\\Shipment\\CMS.ShipmentService.Application\\Commands\\CreateShipment\\CreateShipmentCommand.cs",
               "RelativeDocumentMoniker": "src\\Services\\Shipment\\CMS.ShipmentService.Application\\Commands\\CreateShipment\\CreateShipmentCommand.cs",
@@ -139,7 +171,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 6,
               "Title": "ShipmentsController.cs",
               "DocumentMoniker": "D:\\Files\\CMS\\CargoManagementSystem\\src\\Services\\Shipment\\CMS.ShipmentService.API\\Controllers\\ShipmentsController.cs",
               "RelativeDocumentMoniker": "src\\Services\\Shipment\\CMS.ShipmentService.API\\Controllers\\ShipmentsController.cs",
@@ -151,7 +183,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 15,
               "Title": "20260414161232_biCreate.cs",
               "DocumentMoniker": "D:\\Files\\CMS\\CargoManagementSystem\\src\\Services\\Shipment\\CMS.ShipmentService.Infrastructure\\Migrations\\20260414161232_biCreate.cs",
               "RelativeDocumentMoniker": "src\\Services\\Shipment\\CMS.ShipmentService.Infrastructure\\Migrations\\20260414161232_biCreate.cs",
@@ -163,7 +195,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 7,
               "Title": "appsettings.json",
               "DocumentMoniker": "D:\\Files\\CMS\\CargoManagementSystem\\src\\Services\\Customer\\CMS.CustomerService.API\\appsettings.json",
               "RelativeDocumentMoniker": "src\\Services\\Customer\\CMS.CustomerService.API\\appsettings.json",
@@ -175,7 +207,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 8,
               "Title": "appsettings.json",
               "DocumentMoniker": "D:\\Files\\CMS\\CargoManagementSystem\\src\\Services\\Fleet\\CMS.FleetService.API\\appsettings.json",
               "RelativeDocumentMoniker": "src\\Services\\Fleet\\CMS.FleetService.API\\appsettings.json",
@@ -187,7 +219,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 9,
               "Title": "appsettings.json",
               "DocumentMoniker": "D:\\Files\\CMS\\CargoManagementSystem\\src\\Services\\Billing\\CMS.BillingService.API\\appsettings.json",
               "RelativeDocumentMoniker": "src\\Services\\Billing\\CMS.BillingService.API\\appsettings.json",
@@ -199,7 +231,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 10,
               "Title": "appsettings.json",
               "DocumentMoniker": "D:\\Files\\CMS\\CargoManagementSystem\\src\\Services\\Warehouse\\CMS.WarehouseService.API\\appsettings.json",
               "RelativeDocumentMoniker": "src\\Services\\Warehouse\\CMS.WarehouseService.API\\appsettings.json",
@@ -211,7 +243,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 11,
               "Title": "appsettings.json",
               "DocumentMoniker": "D:\\Files\\CMS\\CargoManagementSystem\\src\\Services\\Reporting\\CMS.ReportingService.API\\appsettings.json",
               "RelativeDocumentMoniker": "src\\Services\\Reporting\\CMS.ReportingService.API\\appsettings.json",
@@ -223,7 +255,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 12,
               "Title": "appsettings.json",
               "DocumentMoniker": "D:\\Files\\CMS\\CargoManagementSystem\\src\\Services\\Notification\\CMS.NotificationService.API\\appsettings.json",
               "RelativeDocumentMoniker": "src\\Services\\Notification\\CMS.NotificationService.API\\appsettings.json",
@@ -235,7 +267,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 13,
               "Title": "appsettings.json",
               "DocumentMoniker": "D:\\Files\\CMS\\CargoManagementSystem\\src\\Services\\Shipment\\CMS.ShipmentService.API\\appsettings.json",
               "RelativeDocumentMoniker": "src\\Services\\Shipment\\CMS.ShipmentService.API\\appsettings.json",
@@ -247,7 +279,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 14,
               "Title": "appsettings.json",
               "DocumentMoniker": "D:\\Files\\CMS\\CargoManagementSystem\\src\\Services\\Identity\\CMS.IdentityService.API\\appsettings.json",
               "RelativeDocumentMoniker": "src\\Services\\Identity\\CMS.IdentityService.API\\appsettings.json",

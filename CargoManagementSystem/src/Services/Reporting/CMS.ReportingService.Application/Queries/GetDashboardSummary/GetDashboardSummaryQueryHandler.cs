@@ -9,14 +9,7 @@ namespace CMS.ReportingService.Application.Queries.GetDashboardSummary;
 public class GetDashboardSummaryQueryHandler
     : IRequestHandler<GetDashboardSummaryQuery, ApiResponse<DashboardSummaryDto>>
 {
-    private const string CacheKey = "dashboard:summary";
     private static readonly TimeSpan CacheTtl = TimeSpan.FromSeconds(60);
-
-    private static readonly string[] AllStatuses =
-    [
-        "Pending", "Assigned", "PickedUp", "InTransit", "AtWarehouse",
-        "OutForDelivery", "Delivered", "FailedDelivery", "ReturnedToWarehouse", "Cancelled"
-    ];
 
     private readonly IShipmentReadModelRepository _repository;
     private readonly ICacheService _cache;
@@ -36,33 +29,56 @@ public class GetDashboardSummaryQueryHandler
         GetDashboardSummaryQuery request,
         CancellationToken cancellationToken)
     {
-        var cached = await _cache.GetAsync<DashboardSummaryDto>(CacheKey);
+        // Cache key incorporates date range so different ranges don't collide
+        var fromStr = request.FromDate?.ToString("yyyyMMdd") ?? "all";
+        var toStr = request.ToDate?.ToString("yyyyMMdd") ?? "all";
+        var cacheKey = $"dashboard:summary:{fromStr}:{toStr}";
+
+        var cached = await _cache.GetAsync<DashboardSummaryDto>(cacheKey);
         if (cached is not null)
             return ApiResponse<DashboardSummaryDto>.Ok(cached);
 
-        var shipmentsByStatus = new Dictionary<string, int>();
-        foreach (var status in AllStatuses)
-        {
-            var count = await _repository.CountByStatusAsync(status);
-            shipmentsByStatus[status] = count;
-        }
-
-        var totalActive = await _repository.CountActiveAsync();
-        var pendingInvoices = await _invoiceClient.GetPendingInvoicesCountAsync();
-
         var today = DateTime.UtcNow.Date;
-        var (todayItems, todayCount) = await _repository.GetPagedAsync(
-            1, int.MaxValue, null, null, null, null, today, today.AddDays(1).AddTicks(-1));
+        var monthStart = new DateTime(today.Year, today.Month, 1, 0, 0, 0, DateTimeKind.Utc);
+
+        // Run all DB counts in parallel using a single GROUP BY query
+        var statusCountsTask = _repository.GetStatusCountsAsync(request.FromDate, request.ToDate);
+        var activeCountTask = _repository.CountActiveAsync();
+        var todayCountTask = _repository.CountByStatusAsync(string.Empty, today, today.AddDays(1).AddTicks(-1));
+        var deliveredTodayTask = _repository.CountByStatusAsync("Delivered", today, today.AddDays(1).AddTicks(-1));
+        var pendingInvoicesTask = _invoiceClient.GetPendingInvoicesCountAsync();
+        var revenueTask = _invoiceClient.GetRevenueAsync(monthStart, today.AddDays(1).AddTicks(-1));
+
+        await Task.WhenAll(statusCountsTask, activeCountTask, todayCountTask,
+            deliveredTodayTask, pendingInvoicesTask, revenueTask);
+
+        var statusCounts = await statusCountsTask;
+        var totalActive = await activeCountTask;
+        var totalToday = await todayCountTask;
+        var deliveredToday = await deliveredTodayTask;
+        var pendingInvoices = await pendingInvoicesTask;
+        var revenueThisMonth = await revenueTask;
+
+        statusCounts.TryGetValue("Pending", out var pendingPickups);
+        statusCounts.TryGetValue("InTransit", out var inTransit);
+        statusCounts.TryGetValue("FailedDelivery", out var failedDeliveries);
 
         var dto = new DashboardSummaryDto
         {
             TotalActiveShipments = totalActive,
-            ShipmentsByStatus = shipmentsByStatus,
+            ShipmentsByStatus = statusCounts,
             PendingInvoicesCount = pendingInvoices,
-            TotalShipmentsToday = todayCount
+            TotalShipmentsToday = totalToday,
+            DeliveredToday = deliveredToday,
+            PendingPickups = pendingPickups,
+            InTransitCount = inTransit,
+            FailedDeliveries = failedDeliveries,
+            RevenueThisMonth = revenueThisMonth,
+            FromDate = request.FromDate,
+            ToDate = request.ToDate
         };
 
-        await _cache.SetAsync(CacheKey, dto, CacheTtl);
+        await _cache.SetAsync(cacheKey, dto, CacheTtl);
 
         return ApiResponse<DashboardSummaryDto>.Ok(dto);
     }

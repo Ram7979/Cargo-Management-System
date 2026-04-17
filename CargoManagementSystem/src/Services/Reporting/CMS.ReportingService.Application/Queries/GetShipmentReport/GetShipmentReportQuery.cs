@@ -7,4 +7,4 @@ namespace CMS.ReportingService.Application.Queries.GetShipmentReport;
 public record GetShipmentReportQuery(
     int Page,
     int PageSize,
-    ShipmentReportFilter Filter) : IRequest<PagedResponse<ShipmentReportDto>>;
+    ShipmentReportFilter Filter) : IRequest<ApiResponse<PagedResponse<ShipmentReportDto>>>;

@@ -13,3 +13,4 @@ D:\Files\CMS\CargoManagementSystem\src\Services\Customer\CMS.CustomerService.Dom
 D:\Files\CMS\CargoManagementSystem\src\Services\Customer\CMS.CustomerService.Domain\obj\Debug\net10.0\refint\CMS.CustomerService.Domain.dll
 D:\Files\CMS\CargoManagementSystem\src\Services\Customer\CMS.CustomerService.Domain\obj\Debug\net10.0\CMS.CustomerService.Domain.pdb
 D:\Files\CMS\CargoManagementSystem\src\Services\Customer\CMS.CustomerService.Domain\obj\Debug\net10.0\ref\CMS.CustomerService.Domain.dll
+D:\Files\CMS\CargoManagementSystem\src\Services\Customer\CMS.CustomerService.Domain\obj\Debug\net10.0\CMS.CustomerService.Domain.sourcelink.json

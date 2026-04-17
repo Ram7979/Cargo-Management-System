@@ -1,6 +1,7 @@
 using System.Text;
 using CMS.NotificationService.Application;
 using CMS.NotificationService.Infrastructure;
+using CMS.NotificationService.Infrastructure.Auth;
 using CMS.Shared.Middleware;
 using Hangfire;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
@@ -8,7 +9,6 @@ using Microsoft.IdentityModel.Tokens;
 using Microsoft.OpenApi.Models;
 using Serilog;
 
-// Bootstrap logger — catches errors before full Serilog is configured
 Log.Logger = new LoggerConfiguration()
     .WriteTo.Console()
     .CreateBootstrapLogger();
@@ -19,7 +19,6 @@ try
 
     var builder = WebApplication.CreateBuilder(args);
 
-    // Full Serilog configuration
     builder.Host.UseSerilog((ctx, lc) => lc
         .ReadFrom.Configuration(ctx.Configuration)
         .Enrich.FromLogContext()
@@ -32,79 +31,76 @@ try
             ctx.Configuration["Seq:Url"] ?? "http://localhost:5341",
             restrictedToMinimumLevel: Serilog.Events.LogEventLevel.Information));
 
-    // Add services
     builder.Services.AddControllers();
     builder.Services.AddEndpointsApiExplorer();
 
-// Swagger with JWT Bearer
-builder.Services.AddSwaggerGen(c =>
-{
-    c.SwaggerDoc("v1", new OpenApiInfo { Title = "CMS Notification Service", Version = "v1" });
-    c.AddSecurityDefinition("Bearer", new OpenApiSecurityScheme
+    // Swagger — always enabled, using Http/Bearer scheme (consistent with other services)
+    builder.Services.AddSwaggerGen(c =>
     {
-        Description = "JWT Authorization header using the Bearer scheme. Enter 'Bearer {token}'",
-        Name = "Authorization",
-        In = ParameterLocation.Header,
-        Type = SecuritySchemeType.ApiKey,
-        Scheme = "Bearer"
-    });
-    c.AddSecurityRequirement(new OpenApiSecurityRequirement
-    {
+        c.SwaggerDoc("v1", new OpenApiInfo { Title = "CMS Notification Service", Version = "v1" });
+        c.AddSecurityDefinition("Bearer", new OpenApiSecurityScheme
         {
-            new OpenApiSecurityScheme
+            Description = "JWT Bearer token. Enter your token below.",
+            Name = "Authorization",
+            In = ParameterLocation.Header,
+            Type = SecuritySchemeType.Http,
+            Scheme = "bearer",
+            BearerFormat = "JWT"
+        });
+        c.AddSecurityRequirement(new OpenApiSecurityRequirement
+        {
             {
-                Reference = new OpenApiReference
+                new OpenApiSecurityScheme
                 {
-                    Type = ReferenceType.SecurityScheme,
-                    Id = "Bearer"
-                }
-            },
-            Array.Empty<string>()
-        }
+                    Reference = new OpenApiReference { Type = ReferenceType.SecurityScheme, Id = "Bearer" }
+                },
+                Array.Empty<string>()
+            }
+        });
     });
-});
 
-// JWT Authentication
-builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
-    .AddJwtBearer(options =>
-    {
-        options.TokenValidationParameters = new TokenValidationParameters
+    // JWT Authentication
+    builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
+        .AddJwtBearer(options =>
         {
-            ValidateIssuerSigningKey = true,
-            IssuerSigningKey = new SymmetricSecurityKey(
-                Encoding.UTF8.GetBytes(builder.Configuration["Jwt:Secret"]!)),
-            ValidateIssuer = true,
-            ValidIssuer = builder.Configuration["Jwt:Issuer"],
-            ValidateAudience = true,
-            ValidAudience = builder.Configuration["Jwt:Audience"],
-            ClockSkew = TimeSpan.Zero
-        };
-    });
+            options.TokenValidationParameters = new TokenValidationParameters
+            {
+                ValidateIssuerSigningKey = true,
+                IssuerSigningKey = new SymmetricSecurityKey(
+                    Encoding.UTF8.GetBytes(builder.Configuration["Jwt:Secret"]!)),
+                ValidateIssuer = true,
+                ValidIssuer = builder.Configuration["Jwt:Issuer"],
+                ValidateAudience = true,
+                ValidAudience = builder.Configuration["Jwt:Audience"],
+                ClockSkew = TimeSpan.Zero
+            };
+        });
 
-builder.Services.AddAuthorization();
-builder.Services.AddHttpContextAccessor();
+    builder.Services.AddAuthorization();
+    builder.Services.AddHttpContextAccessor();
 
-// Register application and infrastructure layers
-builder.Services.AddNotificationApplication();
-builder.Services.AddNotificationInfrastructure(builder.Configuration);
+    builder.Services.AddNotificationApplication();
+    builder.Services.AddNotificationInfrastructure(builder.Configuration);
 
-var app = builder.Build();
+    var app = builder.Build();
 
-// Middleware pipeline
-app.UseMiddleware<GlobalExceptionMiddleware>();
-app.UseMiddleware<CorrelationIdMiddleware>();
+    app.UseMiddleware<GlobalExceptionMiddleware>();
+    app.UseMiddleware<CorrelationIdMiddleware>();
 
-if (app.Environment.IsDevelopment())
-{
+    // Swagger always enabled
     app.UseSwagger();
     app.UseSwaggerUI();
-}
 
-app.UseHangfireDashboard("/hangfire");
+    app.UseAuthentication();
+    app.UseAuthorization();
 
-app.UseAuthentication();
-app.UseAuthorization();
-app.MapControllers();
+    // Hangfire dashboard — restricted to SuperAdmin and OpsManager
+    app.UseHangfireDashboard("/hangfire", new DashboardOptions
+    {
+        Authorization = new[] { new HangfireAuthFilter() }
+    });
+
+    app.MapControllers();
 
     Log.Information("CMS Notification Service started. Swagger: http://localhost:5007/swagger");
 

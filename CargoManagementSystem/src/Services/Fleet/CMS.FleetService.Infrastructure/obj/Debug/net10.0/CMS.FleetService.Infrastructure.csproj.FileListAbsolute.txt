@@ -19,3 +19,4 @@ D:\Files\CMS\CargoManagementSystem\src\Services\Fleet\CMS.FleetService.Infrastru
 D:\Files\CMS\CargoManagementSystem\src\Services\Fleet\CMS.FleetService.Infrastructure\obj\Debug\net10.0\CMS.FleetService.Infrastructure.pdb
 D:\Files\CMS\CargoManagementSystem\src\Services\Fleet\CMS.FleetService.Infrastructure\obj\Debug\net10.0\CMS.FleetService.Infrastructure.genruntimeconfig.cache
 D:\Files\CMS\CargoManagementSystem\src\Services\Fleet\CMS.FleetService.Infrastructure\obj\Debug\net10.0\ref\CMS.FleetService.Infrastructure.dll
+D:\Files\CMS\CargoManagementSystem\src\Services\Fleet\CMS.FleetService.Infrastructure\obj\Debug\net10.0\CMS.FleetService.Infrastructure.sourcelink.json

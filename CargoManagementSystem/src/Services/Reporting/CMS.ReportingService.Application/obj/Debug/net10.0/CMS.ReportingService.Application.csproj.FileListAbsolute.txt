@@ -15,3 +15,4 @@ D:\Files\CMS\CargoManagementSystem\src\Services\Reporting\CMS.ReportingService.A
 D:\Files\CMS\CargoManagementSystem\src\Services\Reporting\CMS.ReportingService.Application\obj\Debug\net10.0\refint\CMS.ReportingService.Application.dll
 D:\Files\CMS\CargoManagementSystem\src\Services\Reporting\CMS.ReportingService.Application\obj\Debug\net10.0\CMS.ReportingService.Application.pdb
 D:\Files\CMS\CargoManagementSystem\src\Services\Reporting\CMS.ReportingService.Application\obj\Debug\net10.0\ref\CMS.ReportingService.Application.dll
+D:\Files\CMS\CargoManagementSystem\src\Services\Reporting\CMS.ReportingService.Application\obj\Debug\net10.0\CMS.ReportingService.Application.sourcelink.json

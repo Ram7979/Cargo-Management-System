@@ -182,3 +182,5 @@ D:\Files\CMS\CargoManagementSystem\src\Services\Billing\CMS.BillingService.API\b
 D:\Files\CMS\CargoManagementSystem\src\Services\Billing\CMS.BillingService.API\bin\Debug\net10.0\tr\Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll
 D:\Files\CMS\CargoManagementSystem\src\Services\Billing\CMS.BillingService.API\bin\Debug\net10.0\zh-Hans\Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll
 D:\Files\CMS\CargoManagementSystem\src\Services\Billing\CMS.BillingService.API\bin\Debug\net10.0\zh-Hant\Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll
+D:\Files\CMS\CargoManagementSystem\src\Services\Billing\CMS.BillingService.API\obj\Debug\net10.0\CMS.BillingService.API.sourcelink.json
+D:\Files\CMS\CargoManagementSystem\src\Services\Billing\CMS.BillingService.API\obj\Debug\net10.0\staticwebassets.upToDateCheck.txt

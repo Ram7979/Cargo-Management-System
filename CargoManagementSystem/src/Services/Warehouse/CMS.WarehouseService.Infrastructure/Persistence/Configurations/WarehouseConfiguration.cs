@@ -14,10 +14,16 @@ public class WarehouseConfiguration : IEntityTypeConfiguration<Domain.Entities.W
         builder.Property(w => w.Address).IsRequired().HasMaxLength(500);
         builder.Property(w => w.City).IsRequired().HasMaxLength(100);
         builder.Property(w => w.Country).IsRequired().HasMaxLength(100);
+        builder.Property(w => w.CapacityKg).HasColumnType("decimal(18,2)");
 
         builder.HasMany(w => w.Bins)
             .WithOne()
             .HasForeignKey(b => b.WarehouseId)
             .OnDelete(DeleteBehavior.Cascade);
+
+        builder.HasMany(w => w.Receipts)
+            .WithOne()
+            .HasForeignKey(r => r.WarehouseId)
+            .OnDelete(DeleteBehavior.Restrict);
     }
 }

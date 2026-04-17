@@ -14,6 +14,11 @@ public class NotificationRecord : BaseEntity
     public int RetryCount { get; private set; }
     public DateTime? LastAttemptAt { get; private set; }
     public string EventType { get; private set; } = string.Empty;
+    public bool IsRead { get; private set; }
+    public DateTime? ReadAt { get; private set; }
+    public string? ErrorMessage { get; private set; }
+    public bool IsDeleted { get; private set; }
+    public DateTime? DeletedAt { get; private set; }
 
     private NotificationRecord() { }
 
@@ -34,7 +39,9 @@ public class NotificationRecord : BaseEntity
             Body = body,
             EventType = eventType,
             Status = NotificationStatus.Pending,
-            RetryCount = 0
+            RetryCount = 0,
+            IsRead = false,
+            IsDeleted = false
         };
     }
 
@@ -45,10 +52,11 @@ public class NotificationRecord : BaseEntity
         UpdatedAt = DateTime.UtcNow;
     }
 
-    public void MarkFailed()
+    public void MarkFailed(string? errorMessage = null)
     {
         Status = NotificationStatus.Failed;
         LastAttemptAt = DateTime.UtcNow;
+        ErrorMessage = errorMessage;
         UpdatedAt = DateTime.UtcNow;
     }
 
@@ -56,6 +64,20 @@ public class NotificationRecord : BaseEntity
     {
         RetryCount++;
         LastAttemptAt = DateTime.UtcNow;
+        UpdatedAt = DateTime.UtcNow;
+    }
+
+    public void MarkAsRead()
+    {
+        IsRead = true;
+        ReadAt = DateTime.UtcNow;
+        UpdatedAt = DateTime.UtcNow;
+    }
+
+    public void SoftDelete()
+    {
+        IsDeleted = true;
+        DeletedAt = DateTime.UtcNow;
         UpdatedAt = DateTime.UtcNow;
     }
 }

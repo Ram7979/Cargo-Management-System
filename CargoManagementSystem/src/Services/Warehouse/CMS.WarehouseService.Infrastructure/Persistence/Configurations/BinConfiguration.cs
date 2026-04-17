@@ -12,8 +12,11 @@ public class BinConfiguration : IEntityTypeConfiguration<Bin>
         builder.HasKey(b => b.Id);
 
         builder.Property(b => b.BinCode).IsRequired().HasMaxLength(50);
+        builder.Property(b => b.Zone).HasMaxLength(100);
+        builder.Property(b => b.Level).HasMaxLength(50);
         builder.Property(b => b.CapacityKg).HasColumnType("decimal(18,2)");
 
+        // BinCode must be unique within a warehouse
         builder.HasIndex(b => new { b.WarehouseId, b.BinCode }).IsUnique();
     }
 }

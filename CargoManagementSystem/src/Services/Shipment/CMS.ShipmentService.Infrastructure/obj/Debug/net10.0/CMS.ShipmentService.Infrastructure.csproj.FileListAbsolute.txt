@@ -19,3 +19,4 @@ D:\Files\CMS\CargoManagementSystem\src\Services\Shipment\CMS.ShipmentService.Inf
 D:\Files\CMS\CargoManagementSystem\src\Services\Shipment\CMS.ShipmentService.Infrastructure\obj\Debug\net10.0\CMS.ShipmentService.Infrastructure.pdb
 D:\Files\CMS\CargoManagementSystem\src\Services\Shipment\CMS.ShipmentService.Infrastructure\obj\Debug\net10.0\CMS.ShipmentService.Infrastructure.genruntimeconfig.cache
 D:\Files\CMS\CargoManagementSystem\src\Services\Shipment\CMS.ShipmentService.Infrastructure\obj\Debug\net10.0\ref\CMS.ShipmentService.Infrastructure.dll
+D:\Files\CMS\CargoManagementSystem\src\Services\Shipment\CMS.ShipmentService.Infrastructure\obj\Debug\net10.0\CMS.ShipmentService.Infrastructure.sourcelink.json

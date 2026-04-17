@@ -13,3 +13,4 @@ D:\Files\CMS\CargoManagementSystem\src\Services\Fleet\CMS.FleetService.Domain\ob
 D:\Files\CMS\CargoManagementSystem\src\Services\Fleet\CMS.FleetService.Domain\obj\Debug\net10.0\refint\CMS.FleetService.Domain.dll
 D:\Files\CMS\CargoManagementSystem\src\Services\Fleet\CMS.FleetService.Domain\obj\Debug\net10.0\CMS.FleetService.Domain.pdb
 D:\Files\CMS\CargoManagementSystem\src\Services\Fleet\CMS.FleetService.Domain\obj\Debug\net10.0\ref\CMS.FleetService.Domain.dll
+D:\Files\CMS\CargoManagementSystem\src\Services\Fleet\CMS.FleetService.Domain\obj\Debug\net10.0\CMS.FleetService.Domain.sourcelink.json

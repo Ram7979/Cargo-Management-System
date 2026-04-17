@@ -8,6 +8,7 @@ using CMS.WarehouseService.Domain.Entities;
 using CMS.WarehouseService.Domain.Exceptions;
 using CMS.WarehouseService.Domain.Interfaces;
 using MediatR;
+using Microsoft.Extensions.Logging;
 
 namespace CMS.WarehouseService.Application.Commands.ReceiveCargo;
 
@@ -17,63 +18,87 @@ public class ReceiveCargoCommandHandler : IRequestHandler<ReceiveCargoCommand, A
     private readonly IBinRepository _binRepository;
     private readonly ICargoReceiptRepository _receiptRepository;
     private readonly IShipmentServiceClient _shipmentServiceClient;
+    private readonly INotificationServiceClient _notificationClient;
     private readonly IMediator _mediator;
     private readonly IMapper _mapper;
+    private readonly ILogger<ReceiveCargoCommandHandler> _logger;
 
     public ReceiveCargoCommandHandler(
         IWarehouseRepository warehouseRepository,
         IBinRepository binRepository,
         ICargoReceiptRepository receiptRepository,
         IShipmentServiceClient shipmentServiceClient,
+        INotificationServiceClient notificationClient,
         IMediator mediator,
-        IMapper mapper)
+        IMapper mapper,
+        ILogger<ReceiveCargoCommandHandler> logger)
     {
         _warehouseRepository = warehouseRepository;
         _binRepository = binRepository;
         _receiptRepository = receiptRepository;
         _shipmentServiceClient = shipmentServiceClient;
+        _notificationClient = notificationClient;
         _mediator = mediator;
         _mapper = mapper;
+        _logger = logger;
     }
 
     public async Task<ApiResponse<CargoReceiptDto>> Handle(ReceiveCargoCommand command, CancellationToken cancellationToken)
     {
-        // 1. Get warehouse by id
+        // 1. Resolve shipment by tracking number
+        var shipmentDetail = await _shipmentServiceClient.GetShipmentByTrackingNumberAsync(command.Request.TrackingNumber)
+            ?? throw new NotFoundException("Shipment", command.Request.TrackingNumber);
+
+        // 2. Get warehouse
         var warehouse = await _warehouseRepository.GetByIdAsync(command.Request.WarehouseId)
             ?? throw new NotFoundException("Warehouse", command.Request.WarehouseId);
 
-        // 2. Validate shipment status
-        var shipmentStatus = await _shipmentServiceClient.GetShipmentStatusAsync(command.Request.ShipmentId);
-        if (shipmentStatus != "PickedUp" && shipmentStatus != "InTransit")
+        // 3. Validate shipment status
+        if (shipmentDetail.Status != "PickedUp" && shipmentDetail.Status != "InTransit")
             throw new UnprocessableException(
-                $"Shipment is in status '{shipmentStatus}'. Only 'PickedUp' or 'InTransit' shipments can be received at warehouse.");
+                $"Shipment is in status '{shipmentDetail.Status}'. Only 'PickedUp' or 'InTransit' shipments can be received.");
 
-        // 3. Get available bin
-        var bin = await _binRepository.GetAvailableAsync(command.Request.WarehouseId)
-            ?? throw new NoBinAvailableException($"No available bin in warehouse '{command.Request.WarehouseId}'.");
+        // 4. Resolve bin — operator-selected or auto-assign
+        Bin bin;
+        if (command.Request.BinId.HasValue)
+        {
+            bin = await _binRepository.GetByIdAsync(command.Request.BinId.Value)
+                ?? throw new NotFoundException("Bin", command.Request.BinId.Value);
+            if (bin.IsOccupied)
+                throw new UnprocessableException($"Bin '{bin.BinCode}' is already occupied.");
+            if (!bin.IsActive)
+                throw new UnprocessableException($"Bin '{bin.BinCode}' is not active.");
+            if (bin.WarehouseId != command.Request.WarehouseId)
+                throw new UnprocessableException("Selected bin does not belong to this warehouse.");
+        }
+        else
+        {
+            bin = await _binRepository.GetAvailableAsync(command.Request.WarehouseId, shipmentDetail.WeightKg)
+                ?? throw new NoBinAvailableException($"No available bin with sufficient capacity in warehouse '{command.Request.WarehouseId}'.");
+        }
 
-        // 4. Mark bin as occupied
         bin.Occupy();
 
         // 5. Create CargoReceipt
         var receipt = CargoReceipt.Create(
-            command.Request.ShipmentId,
+            shipmentDetail.ShipmentId,
+            command.Request.TrackingNumber,
             command.Request.WarehouseId,
             bin.Id,
             command.ActorUserId,
             command.Request.HasDamageReport,
-            command.Request.DamageNotes ?? string.Empty);
+            command.Request.DamageNotes ?? string.Empty,
+            command.Request.Remarks ?? string.Empty);
 
-        // 6. Save receipt and update bin
         await _receiptRepository.AddAsync(receipt);
         await _binRepository.UpdateAsync(bin);
 
-        // 7. Publish CargoReceivedEvent (triggers shipment status → AtWarehouse)
+        // 6. Publish CargoReceivedEvent → updates shipment status to AtWarehouse
         await _mediator.Publish(
             new CargoReceivedEvent(receipt.ShipmentId, receipt.WarehouseId, receipt.BinId, receipt.Id),
             cancellationToken);
 
-        // 8. If HasDamageReport, publish DamageReportedEvent
+        // 7. Publish DamageReportedEvent if damaged
         if (command.Request.HasDamageReport)
         {
             await _mediator.Publish(
@@ -81,7 +106,20 @@ public class ReceiveCargoCommandHandler : IRequestHandler<ReceiveCargoCommand, A
                 cancellationToken);
         }
 
-        // 9. Return CargoReceiptDto
+        // 8. Notify dispatcher and customer
+        try
+        {
+            await _notificationClient.SendWarehouseArrivalNotificationAsync(
+                shipmentDetail.ShipmentId.ToString(),
+                shipmentDetail.ShipmentId,
+                command.Request.TrackingNumber,
+                warehouse.Name);
+        }
+        catch (Exception ex)
+        {
+            _logger.LogWarning(ex, "Failed to send warehouse arrival notification for {TrackingNumber}", command.Request.TrackingNumber);
+        }
+
         var dto = _mapper.Map<CargoReceiptDto>(receipt);
         return ApiResponse<CargoReceiptDto>.Ok(dto, "Cargo received successfully.");
     }

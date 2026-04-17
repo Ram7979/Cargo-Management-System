@@ -19,7 +19,12 @@ public class GetBinsQueryHandler : IRequestHandler<GetBinsQuery, ApiResponse<IEn
 
     public async Task<ApiResponse<IEnumerable<BinDto>>> Handle(GetBinsQuery request, CancellationToken cancellationToken)
     {
-        var bins = await _binRepository.GetAllByWarehouseAsync(request.WarehouseId);
+        var bins = await _binRepository.GetAllByWarehouseAsync(
+            request.WarehouseId,
+            request.Available,
+            request.Zone,
+            request.Level);
+
         var dtos = _mapper.Map<IEnumerable<BinDto>>(bins);
         return ApiResponse<IEnumerable<BinDto>>.Ok(dtos);
     }

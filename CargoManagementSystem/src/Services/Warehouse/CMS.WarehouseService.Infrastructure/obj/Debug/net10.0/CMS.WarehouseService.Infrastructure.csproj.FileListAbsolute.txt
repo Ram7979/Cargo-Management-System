@@ -19,3 +19,4 @@ D:\Files\CMS\CargoManagementSystem\src\Services\Warehouse\CMS.WarehouseService.I
 D:\Files\CMS\CargoManagementSystem\src\Services\Warehouse\CMS.WarehouseService.Infrastructure\obj\Debug\net10.0\CMS.WarehouseService.Infrastructure.pdb
 D:\Files\CMS\CargoManagementSystem\src\Services\Warehouse\CMS.WarehouseService.Infrastructure\obj\Debug\net10.0\CMS.WarehouseService.Infrastructure.genruntimeconfig.cache
 D:\Files\CMS\CargoManagementSystem\src\Services\Warehouse\CMS.WarehouseService.Infrastructure\obj\Debug\net10.0\ref\CMS.WarehouseService.Infrastructure.dll
+D:\Files\CMS\CargoManagementSystem\src\Services\Warehouse\CMS.WarehouseService.Infrastructure\obj\Debug\net10.0\CMS.WarehouseService.Infrastructure.sourcelink.json

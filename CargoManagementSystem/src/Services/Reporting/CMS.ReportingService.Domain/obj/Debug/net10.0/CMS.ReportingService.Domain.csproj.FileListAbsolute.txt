@@ -13,3 +13,4 @@ D:\Files\CMS\CargoManagementSystem\src\Services\Reporting\CMS.ReportingService.D
 D:\Files\CMS\CargoManagementSystem\src\Services\Reporting\CMS.ReportingService.Domain\obj\Debug\net10.0\refint\CMS.ReportingService.Domain.dll
 D:\Files\CMS\CargoManagementSystem\src\Services\Reporting\CMS.ReportingService.Domain\obj\Debug\net10.0\CMS.ReportingService.Domain.pdb
 D:\Files\CMS\CargoManagementSystem\src\Services\Reporting\CMS.ReportingService.Domain\obj\Debug\net10.0\ref\CMS.ReportingService.Domain.dll
+D:\Files\CMS\CargoManagementSystem\src\Services\Reporting\CMS.ReportingService.Domain\obj\Debug\net10.0\CMS.ReportingService.Domain.sourcelink.json

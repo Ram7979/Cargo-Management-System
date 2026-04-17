@@ -1,5 +1,5 @@
+using CMS.ReportingService.Application.Interfaces;
 using CMS.ReportingService.Domain.Interfaces;
-using CMS.ReportingService.Domain.ReadModels;
 using Hangfire;
 using Microsoft.Extensions.Logging;
 
@@ -8,13 +8,16 @@ namespace CMS.ReportingService.Application.Jobs;
 public class SyncShipmentReadModelsJob
 {
     private readonly IShipmentReadModelRepository _repository;
+    private readonly IShipmentServiceClient _shipmentServiceClient;
     private readonly ILogger<SyncShipmentReadModelsJob> _logger;
 
     public SyncShipmentReadModelsJob(
         IShipmentReadModelRepository repository,
+        IShipmentServiceClient shipmentServiceClient,
         ILogger<SyncShipmentReadModelsJob> logger)
     {
         _repository = repository;
+        _shipmentServiceClient = shipmentServiceClient;
         _logger = logger;
     }
 
@@ -23,13 +26,39 @@ public class SyncShipmentReadModelsJob
     {
         _logger.LogInformation("SyncShipmentReadModelsJob started at {Time}", DateTime.UtcNow);
 
-        // Registration: RecurringJob.AddOrUpdate<SyncShipmentReadModelsJob>(
-        //   "sync-shipments", j => j.Execute(), "*/5 * * * *")
-        // The actual HTTP call to Shipment Service is handled by IShipmentServiceClient
-        // injected in the Infrastructure layer implementation.
+        int page = 1;
+        const int pageSize = 100;
+        int totalSynced = 0;
 
-        _logger.LogInformation("SyncShipmentReadModelsJob completed at {Time}", DateTime.UtcNow);
+        while (true)
+        {
+            var shipments = (await _shipmentServiceClient.GetRecentShipmentsAsync(page, pageSize)).ToList();
 
-        await Task.CompletedTask;
+            if (!shipments.Any())
+                break;
+
+            foreach (var shipment in shipments)
+            {
+                try
+                {
+                    await _repository.AddOrUpdateAsync(shipment);
+                    totalSynced++;
+                }
+                catch (Exception ex)
+                {
+                    _logger.LogWarning(ex,
+                        "Failed to sync shipment {TrackingNumber}", shipment.TrackingNumber);
+                }
+            }
+
+            if (shipments.Count < pageSize)
+                break;
+
+            page++;
+        }
+
+        _logger.LogInformation(
+            "SyncShipmentReadModelsJob completed at {Time}. Synced {Count} records.",
+            DateTime.UtcNow, totalSynced);
     }
 }

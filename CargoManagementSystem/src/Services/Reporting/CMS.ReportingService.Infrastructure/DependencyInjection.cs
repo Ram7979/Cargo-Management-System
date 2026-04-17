@@ -19,27 +19,43 @@ public static class DependencyInjection
         IConfiguration configuration)
     {
         services.AddDbContext<ReportingDbContext>(options =>
-            options.UseSqlServer(configuration.GetConnectionString("ReportingDb")));
+            options.UseSqlServer(
+                configuration.GetConnectionString("ReportingDb"),
+                sqlOptions => sqlOptions.EnableRetryOnFailure(
+                    maxRetryCount: 5,
+                    maxRetryDelay: TimeSpan.FromSeconds(10),
+                    errorNumbersToAdd: null)));
 
         services.AddSingleton<IConnectionMultiplexer>(
             ConnectionMultiplexer.Connect(configuration.GetConnectionString("Redis")!));
 
+        // Repositories
         services.AddScoped<IShipmentReadModelRepository, ShipmentReadModelRepository>();
+
+        // Services
         services.AddScoped<ICacheService, RedisCacheService>();
         services.AddScoped<IBlobService, AzureBlobService>();
 
+        // HTTP clients
         services.AddHttpClient<IInvoiceServiceClient, InvoiceServiceClient>(client =>
         {
             client.BaseAddress = new Uri(configuration["BillingService:BaseUrl"]!);
             client.Timeout = TimeSpan.FromSeconds(5);
         });
 
-        services.AddHttpClient<ShipmentServiceClient>(client =>
+        services.AddHttpClient<IShipmentServiceClient, ShipmentServiceClient>(client =>
         {
             client.BaseAddress = new Uri(configuration["ShipmentService:BaseUrl"]!);
+            client.Timeout = TimeSpan.FromSeconds(10);
+        });
+
+        services.AddHttpClient<INotificationServiceClient, NotificationServiceClient>(client =>
+        {
+            client.BaseAddress = new Uri(configuration["NotificationService:BaseUrl"]!);
             client.Timeout = TimeSpan.FromSeconds(5);
         });
 
+        // Hangfire
         services.AddHangfire(config => config
             .SetDataCompatibilityLevel(CompatibilityLevel.Version_180)
             .UseSimpleAssemblyNameTypeSerializer()

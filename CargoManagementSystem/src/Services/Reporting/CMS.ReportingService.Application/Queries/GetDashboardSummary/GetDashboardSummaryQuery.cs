@@ -4,4 +4,5 @@ using MediatR;
 
 namespace CMS.ReportingService.Application.Queries.GetDashboardSummary;
 
-public record GetDashboardSummaryQuery : IRequest<ApiResponse<DashboardSummaryDto>>;
+public record GetDashboardSummaryQuery(DateTime? FromDate = null, DateTime? ToDate = null)
+    : IRequest<ApiResponse<DashboardSummaryDto>>;

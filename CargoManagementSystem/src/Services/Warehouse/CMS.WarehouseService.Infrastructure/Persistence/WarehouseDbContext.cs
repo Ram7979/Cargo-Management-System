@@ -11,6 +11,7 @@ public class WarehouseDbContext : DbContext
     public DbSet<Domain.Entities.Warehouse> Warehouses { get; set; } = null!;
     public DbSet<Bin> Bins { get; set; } = null!;
     public DbSet<CargoReceipt> CargoReceipts { get; set; } = null!;
+    public DbSet<DamageReport> DamageReports { get; set; } = null!;
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {

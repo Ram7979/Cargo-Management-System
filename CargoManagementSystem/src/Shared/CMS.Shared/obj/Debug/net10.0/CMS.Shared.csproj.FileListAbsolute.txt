@@ -10,3 +10,4 @@ D:\Files\CMS\CargoManagementSystem\src\Shared\CMS.Shared\obj\Debug\net10.0\CMS.S
 D:\Files\CMS\CargoManagementSystem\src\Shared\CMS.Shared\obj\Debug\net10.0\refint\CMS.Shared.dll
 D:\Files\CMS\CargoManagementSystem\src\Shared\CMS.Shared\obj\Debug\net10.0\CMS.Shared.pdb
 D:\Files\CMS\CargoManagementSystem\src\Shared\CMS.Shared\obj\Debug\net10.0\ref\CMS.Shared.dll
+D:\Files\CMS\CargoManagementSystem\src\Shared\CMS.Shared\obj\Debug\net10.0\CMS.Shared.sourcelink.json
