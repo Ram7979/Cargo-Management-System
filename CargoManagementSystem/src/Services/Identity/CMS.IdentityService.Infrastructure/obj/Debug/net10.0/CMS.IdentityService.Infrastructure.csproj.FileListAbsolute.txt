@@ -19,3 +19,4 @@ D:\Files\CMS\CargoManagementSystem\src\Services\Identity\CMS.IdentityService.Inf
 D:\Files\CMS\CargoManagementSystem\src\Services\Identity\CMS.IdentityService.Infrastructure\obj\Debug\net10.0\CMS.IdentityService.Infrastructure.pdb
 D:\Files\CMS\CargoManagementSystem\src\Services\Identity\CMS.IdentityService.Infrastructure\obj\Debug\net10.0\CMS.IdentityService.Infrastructure.genruntimeconfig.cache
 D:\Files\CMS\CargoManagementSystem\src\Services\Identity\CMS.IdentityService.Infrastructure\obj\Debug\net10.0\ref\CMS.IdentityService.Infrastructure.dll
+D:\Files\CMS\CargoManagementSystem\src\Services\Identity\CMS.IdentityService.Infrastructure\obj\Debug\net10.0\CMS.IdentityService.Infrastructure.sourcelink.json

@@ -71,3 +71,4 @@ D:\Files\CMS\CargoManagementSystem\src\Gateway\CMS.ApiGateway\obj\Debug\net10.0\
 D:\Files\CMS\CargoManagementSystem\src\Gateway\CMS.ApiGateway\obj\Debug\net10.0\CMS.ApiGateway.pdb
 D:\Files\CMS\CargoManagementSystem\src\Gateway\CMS.ApiGateway\obj\Debug\net10.0\CMS.ApiGateway.genruntimeconfig.cache
 D:\Files\CMS\CargoManagementSystem\src\Gateway\CMS.ApiGateway\obj\Debug\net10.0\ref\CMS.ApiGateway.dll
+D:\Files\CMS\CargoManagementSystem\src\Gateway\CMS.ApiGateway\obj\Debug\net10.0\CMS.ApiGateway.sourcelink.json

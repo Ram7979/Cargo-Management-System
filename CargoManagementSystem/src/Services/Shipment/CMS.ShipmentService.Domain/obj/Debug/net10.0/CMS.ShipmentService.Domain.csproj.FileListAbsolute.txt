@@ -13,3 +13,4 @@ D:\Files\CMS\CargoManagementSystem\src\Services\Shipment\CMS.ShipmentService.Dom
 D:\Files\CMS\CargoManagementSystem\src\Services\Shipment\CMS.ShipmentService.Domain\obj\Debug\net10.0\refint\CMS.ShipmentService.Domain.dll
 D:\Files\CMS\CargoManagementSystem\src\Services\Shipment\CMS.ShipmentService.Domain\obj\Debug\net10.0\CMS.ShipmentService.Domain.pdb
 D:\Files\CMS\CargoManagementSystem\src\Services\Shipment\CMS.ShipmentService.Domain\obj\Debug\net10.0\ref\CMS.ShipmentService.Domain.dll
+D:\Files\CMS\CargoManagementSystem\src\Services\Shipment\CMS.ShipmentService.Domain\obj\Debug\net10.0\CMS.ShipmentService.Domain.sourcelink.json

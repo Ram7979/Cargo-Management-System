@@ -15,3 +15,4 @@ D:\Files\CMS\CargoManagementSystem\src\Services\Identity\CMS.IdentityService.App
 D:\Files\CMS\CargoManagementSystem\src\Services\Identity\CMS.IdentityService.Application\obj\Debug\net10.0\refint\CMS.IdentityService.Application.dll
 D:\Files\CMS\CargoManagementSystem\src\Services\Identity\CMS.IdentityService.Application\obj\Debug\net10.0\CMS.IdentityService.Application.pdb
 D:\Files\CMS\CargoManagementSystem\src\Services\Identity\CMS.IdentityService.Application\obj\Debug\net10.0\ref\CMS.IdentityService.Application.dll
+D:\Files\CMS\CargoManagementSystem\src\Services\Identity\CMS.IdentityService.Application\obj\Debug\net10.0\CMS.IdentityService.Application.sourcelink.json

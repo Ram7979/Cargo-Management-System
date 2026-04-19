@@ -2,14 +2,15 @@ using System.Text;
 using CMS.ReportingService.Application;
 using CMS.ReportingService.Application.Jobs;
 using CMS.ReportingService.Infrastructure;
+using CMS.ReportingService.Infrastructure.Persistence;
 using CMS.Shared.Middleware;
 using Hangfire;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
 using Microsoft.OpenApi.Models;
 using Serilog;
 
-// Bootstrap logger — catches errors before full Serilog is configured
 Log.Logger = new LoggerConfiguration()
     .WriteTo.Console()
     .CreateBootstrapLogger();
@@ -20,7 +21,6 @@ try
 
     var builder = WebApplication.CreateBuilder(args);
 
-    // Full Serilog configuration
     builder.Host.UseSerilog((ctx, lc) => lc
         .ReadFrom.Configuration(ctx.Configuration)
         .Enrich.FromLogContext()
@@ -33,87 +33,89 @@ try
             ctx.Configuration["Seq:Url"] ?? "http://localhost:5341",
             restrictedToMinimumLevel: Serilog.Events.LogEventLevel.Information));
 
-    // Add services
     builder.Services.AddControllers();
     builder.Services.AddEndpointsApiExplorer();
 
-// Swagger with JWT Bearer
-builder.Services.AddSwaggerGen(c =>
-{
-    c.SwaggerDoc("v1", new OpenApiInfo { Title = "CMS Reporting Service", Version = "v1" });
-    c.AddSecurityDefinition("Bearer", new OpenApiSecurityScheme
+    // Swagger — always enabled, Http/Bearer scheme
+    builder.Services.AddSwaggerGen(c =>
     {
-        Description = "JWT Authorization header using the Bearer scheme. Enter 'Bearer {token}'",
-        Name = "Authorization",
-        In = ParameterLocation.Header,
-        Type = SecuritySchemeType.ApiKey,
-        Scheme = "Bearer"
-    });
-    c.AddSecurityRequirement(new OpenApiSecurityRequirement
-    {
+        c.SwaggerDoc("v1", new OpenApiInfo { Title = "CMS Reporting Service", Version = "v1" });
+        c.AddSecurityDefinition("Bearer", new OpenApiSecurityScheme
         {
-            new OpenApiSecurityScheme
+            Description = "JWT Bearer token. Enter your token below.",
+            Name = "Authorization",
+            In = ParameterLocation.Header,
+            Type = SecuritySchemeType.Http,
+            Scheme = "bearer",
+            BearerFormat = "JWT"
+        });
+        c.AddSecurityRequirement(new OpenApiSecurityRequirement
+        {
             {
-                Reference = new OpenApiReference
+                new OpenApiSecurityScheme
                 {
-                    Type = ReferenceType.SecurityScheme,
-                    Id = "Bearer"
-                }
-            },
-            Array.Empty<string>()
-        }
+                    Reference = new OpenApiReference { Type = ReferenceType.SecurityScheme, Id = "Bearer" }
+                },
+                Array.Empty<string>()
+            }
+        });
     });
-});
 
-// JWT Authentication
-builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
-    .AddJwtBearer(options =>
-    {
-        options.TokenValidationParameters = new TokenValidationParameters
+    // JWT Authentication
+    builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
+        .AddJwtBearer(options =>
         {
-            ValidateIssuerSigningKey = true,
-            IssuerSigningKey = new SymmetricSecurityKey(
-                Encoding.UTF8.GetBytes(builder.Configuration["Jwt:Secret"]!)),
-            ValidateIssuer = true,
-            ValidIssuer = builder.Configuration["Jwt:Issuer"],
-            ValidateAudience = true,
-            ValidAudience = builder.Configuration["Jwt:Audience"],
-            ClockSkew = TimeSpan.Zero
-        };
-    });
+            options.TokenValidationParameters = new TokenValidationParameters
+            {
+                ValidateIssuerSigningKey = true,
+                IssuerSigningKey = new SymmetricSecurityKey(
+                    Encoding.UTF8.GetBytes(builder.Configuration["Jwt:Secret"]!)),
+                ValidateIssuer = true,
+                ValidIssuer = builder.Configuration["Jwt:Issuer"],
+                ValidateAudience = true,
+                ValidAudience = builder.Configuration["Jwt:Audience"],
+                ClockSkew = TimeSpan.Zero
+            };
+        });
 
-builder.Services.AddAuthorization();
-builder.Services.AddHttpContextAccessor();
+    builder.Services.AddAuthorization();
+    builder.Services.AddHttpContextAccessor();
 
-// Register application and infrastructure layers
-builder.Services.AddReportingApplication();
-builder.Services.AddReportingInfrastructure(builder.Configuration);
+    builder.Services.AddReportingApplication();
+    builder.Services.AddReportingInfrastructure(builder.Configuration);
 
-var app = builder.Build();
+    var app = builder.Build();
 
-// Middleware pipeline
-app.UseMiddleware<GlobalExceptionMiddleware>();
-app.UseMiddleware<CorrelationIdMiddleware>();
+    // ── Ensure DB exists BEFORE Hangfire tries to connect ──────────────────
+    // EnsureCreated creates CMS_Reporting if it doesn't exist yet.
+    // Hangfire then installs its HangFire.* schema tables into the same DB.
+    using (var scope = app.Services.CreateScope())
+    {
+        var db = scope.ServiceProvider.GetRequiredService<ReportingDbContext>();
+        db.Database.EnsureCreated();
+    }
 
-if (app.Environment.IsDevelopment())
-{
+    // Middleware pipeline
+    app.UseMiddleware<GlobalExceptionMiddleware>();
+    app.UseMiddleware<CorrelationIdMiddleware>();
+
+    // Swagger always enabled
     app.UseSwagger();
     app.UseSwaggerUI();
-}
 
-app.UseAuthentication();
-app.UseAuthorization();
+    app.UseAuthentication();
+    app.UseAuthorization();
 
-// Hangfire dashboard
-app.UseHangfireDashboard("/hangfire");
+    // Hangfire dashboard
+    app.UseHangfireDashboard("/hangfire");
 
-// Register recurring sync job
-RecurringJob.AddOrUpdate<SyncShipmentReadModelsJob>(
-    "sync-shipments",
-    j => j.Execute(),
-    "*/5 * * * *");
+    // Register recurring sync job — runs every 5 minutes
+    RecurringJob.AddOrUpdate<SyncShipmentReadModelsJob>(
+        "sync-shipments",
+        j => j.Execute(),
+        "*/5 * * * *");
 
-app.MapControllers();
+    app.MapControllers();
 
     Log.Information("CMS Reporting Service started. Swagger: http://localhost:5008/swagger");
 

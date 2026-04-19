@@ -180,3 +180,4 @@ D:\Files\CMS\CargoManagementSystem\src\Services\Warehouse\CMS.WarehouseService.A
 D:\Files\CMS\CargoManagementSystem\src\Services\Warehouse\CMS.WarehouseService.API\bin\Debug\net10.0\zh-Hans\Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll
 D:\Files\CMS\CargoManagementSystem\src\Services\Warehouse\CMS.WarehouseService.API\bin\Debug\net10.0\zh-Hant\Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll
 D:\Files\CMS\CargoManagementSystem\src\Services\Warehouse\CMS.WarehouseService.API\obj\Debug\net10.0\CMS.WarehouseService.API.sourcelink.json
+D:\Files\CMS\CargoManagementSystem\src\Services\Warehouse\CMS.WarehouseService.API\obj\Debug\net10.0\staticwebassets.upToDateCheck.txt

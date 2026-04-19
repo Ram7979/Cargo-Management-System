@@ -3,72 +3,56 @@
   "WorkspaceRootPath": "D:\\Files\\CMS\\CargoManagementSystem\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{09129433-9286-0DB0-41BE-9A004AFD89DF}|src\\Shared\\CMS.Shared\\CMS.Shared.csproj|d:\\files\\cms\\cargomanagementsystem\\src\\shared\\cms.shared\\exceptions\\validationexception.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{09129433-9286-0DB0-41BE-9A004AFD89DF}|src\\Shared\\CMS.Shared\\CMS.Shared.csproj|solutionrelative:src\\shared\\cms.shared\\exceptions\\validationexception.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{DF186C73-987F-D804-02CA-664287D94FF6}|src\\Services\\Warehouse\\CMS.WarehouseService.API\\CMS.WarehouseService.API.csproj|d:\\files\\cms\\cargomanagementsystem\\src\\services\\warehouse\\cms.warehouseservice.api\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{DF186C73-987F-D804-02CA-664287D94FF6}|src\\Services\\Warehouse\\CMS.WarehouseService.API\\CMS.WarehouseService.API.csproj|solutionrelative:src\\services\\warehouse\\cms.warehouseservice.api\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{26770053-52FE-619D-17AC-94A4CEE6C033}|src\\Services\\Identity\\CMS.IdentityService.Application\\CMS.IdentityService.Application.csproj|d:\\files\\cms\\cargomanagementsystem\\src\\services\\identity\\cms.identityservice.application\\behaviors\\validationbehavior.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{26770053-52FE-619D-17AC-94A4CEE6C033}|src\\Services\\Identity\\CMS.IdentityService.Application\\CMS.IdentityService.Application.csproj|solutionrelative:src\\services\\identity\\cms.identityservice.application\\behaviors\\validationbehavior.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{85B9C094-A654-179F-99AF-311EF21D53A3}|src\\Services\\Shipment\\CMS.ShipmentService.API\\CMS.ShipmentService.API.csproj|d:\\files\\cms\\cargomanagementsystem\\src\\services\\shipment\\cms.shipmentservice.api\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{85B9C094-A654-179F-99AF-311EF21D53A3}|src\\Services\\Shipment\\CMS.ShipmentService.API\\CMS.ShipmentService.API.csproj|solutionrelative:src\\services\\shipment\\cms.shipmentservice.api\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A1B425FD-F83F-18E5-6C38-61EFDB310AF8}|src\\Services\\Shipment\\CMS.ShipmentService.Application\\CMS.ShipmentService.Application.csproj|d:\\files\\cms\\cargomanagementsystem\\src\\services\\shipment\\cms.shipmentservice.application\\commands\\createshipment\\createshipmentcommandhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A1B425FD-F83F-18E5-6C38-61EFDB310AF8}|src\\Services\\Shipment\\CMS.ShipmentService.Application\\CMS.ShipmentService.Application.csproj|solutionrelative:src\\services\\shipment\\cms.shipmentservice.application\\commands\\createshipment\\createshipmentcommandhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A1B425FD-F83F-18E5-6C38-61EFDB310AF8}|src\\Services\\Shipment\\CMS.ShipmentService.Application\\CMS.ShipmentService.Application.csproj|d:\\files\\cms\\cargomanagementsystem\\src\\services\\shipment\\cms.shipmentservice.application\\commands\\createshipment\\createshipmentcommandvalidator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A1B425FD-F83F-18E5-6C38-61EFDB310AF8}|src\\Services\\Shipment\\CMS.ShipmentService.Application\\CMS.ShipmentService.Application.csproj|solutionrelative:src\\services\\shipment\\cms.shipmentservice.application\\commands\\createshipment\\createshipmentcommandvalidator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7A7DAF4C-E003-9322-6359-716D2F384FE8}|src\\Services\\Shipment\\CMS.ShipmentService.Domain\\CMS.ShipmentService.Domain.csproj|d:\\files\\cms\\cargomanagementsystem\\src\\services\\shipment\\cms.shipmentservice.domain\\entities\\shipment.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7A7DAF4C-E003-9322-6359-716D2F384FE8}|src\\Services\\Shipment\\CMS.ShipmentService.Domain\\CMS.ShipmentService.Domain.csproj|solutionrelative:src\\services\\shipment\\cms.shipmentservice.domain\\entities\\shipment.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A1B425FD-F83F-18E5-6C38-61EFDB310AF8}|src\\Services\\Shipment\\CMS.ShipmentService.Application\\CMS.ShipmentService.Application.csproj|d:\\files\\cms\\cargomanagementsystem\\src\\services\\shipment\\cms.shipmentservice.application\\commands\\createshipment\\createshipmentcommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A1B425FD-F83F-18E5-6C38-61EFDB310AF8}|src\\Services\\Shipment\\CMS.ShipmentService.Application\\CMS.ShipmentService.Application.csproj|solutionrelative:src\\services\\shipment\\cms.shipmentservice.application\\commands\\createshipment\\createshipmentcommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{85B9C094-A654-179F-99AF-311EF21D53A3}|src\\Services\\Shipment\\CMS.ShipmentService.API\\CMS.ShipmentService.API.csproj|d:\\files\\cms\\cargomanagementsystem\\src\\services\\shipment\\cms.shipmentservice.api\\controllers\\shipmentscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{85B9C094-A654-179F-99AF-311EF21D53A3}|src\\Services\\Shipment\\CMS.ShipmentService.API\\CMS.ShipmentService.API.csproj|solutionrelative:src\\services\\shipment\\cms.shipmentservice.api\\controllers\\shipmentscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{34ED822B-0742-0362-2C97-A460CE37BF34}|src\\Services\\Customer\\CMS.CustomerService.API\\CMS.CustomerService.API.csproj|d:\\files\\cms\\cargomanagementsystem\\src\\services\\customer\\cms.customerservice.api\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{34ED822B-0742-0362-2C97-A460CE37BF34}|src\\Services\\Customer\\CMS.CustomerService.API\\CMS.CustomerService.API.csproj|solutionrelative:src\\services\\customer\\cms.customerservice.api\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{1E0B2C37-7D21-3FA9-7FDD-C3D473D8CDCF}|src\\Services\\Fleet\\CMS.FleetService.API\\CMS.FleetService.API.csproj|d:\\files\\cms\\cargomanagementsystem\\src\\services\\fleet\\cms.fleetservice.api\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{1E0B2C37-7D21-3FA9-7FDD-C3D473D8CDCF}|src\\Services\\Fleet\\CMS.FleetService.API\\CMS.FleetService.API.csproj|solutionrelative:src\\services\\fleet\\cms.fleetservice.api\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D583269F-3A22-44A1-01E7-0ACDEADD551D}|src\\Services\\Billing\\CMS.BillingService.API\\CMS.BillingService.API.csproj|d:\\files\\cms\\cargomanagementsystem\\src\\services\\billing\\cms.billingservice.api\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{D583269F-3A22-44A1-01E7-0ACDEADD551D}|src\\Services\\Billing\\CMS.BillingService.API\\CMS.BillingService.API.csproj|solutionrelative:src\\services\\billing\\cms.billingservice.api\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{DF186C73-987F-D804-02CA-664287D94FF6}|src\\Services\\Warehouse\\CMS.WarehouseService.API\\CMS.WarehouseService.API.csproj|d:\\files\\cms\\cargomanagementsystem\\src\\services\\warehouse\\cms.warehouseservice.api\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{DF186C73-987F-D804-02CA-664287D94FF6}|src\\Services\\Warehouse\\CMS.WarehouseService.API\\CMS.WarehouseService.API.csproj|solutionrelative:src\\services\\warehouse\\cms.warehouseservice.api\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+      "AbsoluteMoniker": "D:0:0:{A6A44BEB-2E5E-019D-AD79-2CAAD3172BB8}|src\\Services\\Reporting\\CMS.ReportingService.API\\CMS.ReportingService.API.csproj|d:\\files\\cms\\cargomanagementsystem\\src\\services\\reporting\\cms.reportingservice.api\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{A6A44BEB-2E5E-019D-AD79-2CAAD3172BB8}|src\\Services\\Reporting\\CMS.ReportingService.API\\CMS.ReportingService.API.csproj|solutionrelative:src\\services\\reporting\\cms.reportingservice.api\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{A6A44BEB-2E5E-019D-AD79-2CAAD3172BB8}|src\\Services\\Reporting\\CMS.ReportingService.API\\CMS.ReportingService.API.csproj|d:\\files\\cms\\cargomanagementsystem\\src\\services\\reporting\\cms.reportingservice.api\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
       "RelativeMoniker": "D:0:0:{A6A44BEB-2E5E-019D-AD79-2CAAD3172BB8}|src\\Services\\Reporting\\CMS.ReportingService.API\\CMS.ReportingService.API.csproj|solutionrelative:src\\services\\reporting\\cms.reportingservice.api\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{764F303E-B04E-BF00-5AD9-8B135150ECBB}|src\\Services\\Notification\\CMS.NotificationService.API\\CMS.NotificationService.API.csproj|d:\\files\\cms\\cargomanagementsystem\\src\\services\\notification\\cms.notificationservice.api\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{764F303E-B04E-BF00-5AD9-8B135150ECBB}|src\\Services\\Notification\\CMS.NotificationService.API\\CMS.NotificationService.API.csproj|solutionrelative:src\\services\\notification\\cms.notificationservice.api\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+      "AbsoluteMoniker": "D:0:0:{764F303E-B04E-BF00-5AD9-8B135150ECBB}|src\\Services\\Notification\\CMS.NotificationService.API\\CMS.NotificationService.API.csproj|d:\\files\\cms\\cargomanagementsystem\\src\\services\\notification\\cms.notificationservice.api\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{764F303E-B04E-BF00-5AD9-8B135150ECBB}|src\\Services\\Notification\\CMS.NotificationService.API\\CMS.NotificationService.API.csproj|solutionrelative:src\\services\\notification\\cms.notificationservice.api\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{85B9C094-A654-179F-99AF-311EF21D53A3}|src\\Services\\Shipment\\CMS.ShipmentService.API\\CMS.ShipmentService.API.csproj|d:\\files\\cms\\cargomanagementsystem\\src\\services\\shipment\\cms.shipmentservice.api\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{85B9C094-A654-179F-99AF-311EF21D53A3}|src\\Services\\Shipment\\CMS.ShipmentService.API\\CMS.ShipmentService.API.csproj|solutionrelative:src\\services\\shipment\\cms.shipmentservice.api\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+      "AbsoluteMoniker": "D:0:0:{1E0B2C37-7D21-3FA9-7FDD-C3D473D8CDCF}|src\\Services\\Fleet\\CMS.FleetService.API\\CMS.FleetService.API.csproj|d:\\files\\cms\\cargomanagementsystem\\src\\services\\fleet\\cms.fleetservice.api\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{1E0B2C37-7D21-3FA9-7FDD-C3D473D8CDCF}|src\\Services\\Fleet\\CMS.FleetService.API\\CMS.FleetService.API.csproj|solutionrelative:src\\services\\fleet\\cms.fleetservice.api\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{5F80D0F0-73B7-D25D-B806-4B96A2BFFD07}|src\\Services\\Identity\\CMS.IdentityService.API\\CMS.IdentityService.API.csproj|d:\\files\\cms\\cargomanagementsystem\\src\\services\\identity\\cms.identityservice.api\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{5F80D0F0-73B7-D25D-B806-4B96A2BFFD07}|src\\Services\\Identity\\CMS.IdentityService.API\\CMS.IdentityService.API.csproj|solutionrelative:src\\services\\identity\\cms.identityservice.api\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+      "AbsoluteMoniker": "D:0:0:{20A84D0A-0716-E749-DF69-A4CC49DA92A1}|src\\Services\\Shipment\\CMS.ShipmentService.Infrastructure\\CMS.ShipmentService.Infrastructure.csproj|d:\\files\\cms\\cargomanagementsystem\\src\\services\\shipment\\cms.shipmentservice.infrastructure\\migrations\\20260418093547_newdataupdated.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{20A84D0A-0716-E749-DF69-A4CC49DA92A1}|src\\Services\\Shipment\\CMS.ShipmentService.Infrastructure\\CMS.ShipmentService.Infrastructure.csproj|solutionrelative:src\\services\\shipment\\cms.shipmentservice.infrastructure\\migrations\\20260418093547_newdataupdated.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{20A84D0A-0716-E749-DF69-A4CC49DA92A1}|src\\Services\\Shipment\\CMS.ShipmentService.Infrastructure\\CMS.ShipmentService.Infrastructure.csproj|d:\\files\\cms\\cargomanagementsystem\\src\\services\\shipment\\cms.shipmentservice.infrastructure\\migrations\\20260414161232_bicreate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{20A84D0A-0716-E749-DF69-A4CC49DA92A1}|src\\Services\\Shipment\\CMS.ShipmentService.Infrastructure\\CMS.ShipmentService.Infrastructure.csproj|solutionrelative:src\\services\\shipment\\cms.shipmentservice.infrastructure\\migrations\\20260414161232_bicreate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{D583269F-3A22-44A1-01E7-0ACDEADD551D}|src\\Services\\Billing\\CMS.BillingService.API\\CMS.BillingService.API.csproj|d:\\files\\cms\\cargomanagementsystem\\src\\services\\billing\\cms.billingservice.api\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{D583269F-3A22-44A1-01E7-0ACDEADD551D}|src\\Services\\Billing\\CMS.BillingService.API\\CMS.BillingService.API.csproj|solutionrelative:src\\services\\billing\\cms.billingservice.api\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{92B3EAEC-A124-9F58-8CBA-E70824B34E0B}|src\\Services\\Customer\\CMS.CustomerService.Infrastructure\\CMS.CustomerService.Infrastructure.csproj|d:\\files\\cms\\cargomanagementsystem\\src\\services\\customer\\cms.customerservice.infrastructure\\migrations\\20260415163927_initialcreate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{92B3EAEC-A124-9F58-8CBA-E70824B34E0B}|src\\Services\\Customer\\CMS.CustomerService.Infrastructure\\CMS.CustomerService.Infrastructure.csproj|solutionrelative:src\\services\\customer\\cms.customerservice.infrastructure\\migrations\\20260415163927_initialcreate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{34ED822B-0742-0362-2C97-A460CE37BF34}|src\\Services\\Customer\\CMS.CustomerService.API\\CMS.CustomerService.API.csproj|d:\\files\\cms\\cargomanagementsystem\\src\\services\\customer\\cms.customerservice.api\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{34ED822B-0742-0362-2C97-A460CE37BF34}|src\\Services\\Customer\\CMS.CustomerService.API\\CMS.CustomerService.API.csproj|solutionrelative:src\\services\\customer\\cms.customerservice.api\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0285C12B-124F-4CAF-F628-254C79556986}|src\\Services\\Warehouse\\CMS.WarehouseService.Infrastructure\\CMS.WarehouseService.Infrastructure.csproj|d:\\files\\cms\\cargomanagementsystem\\src\\services\\warehouse\\cms.warehouseservice.infrastructure\\migrations\\20260419122043_intialcreate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0285C12B-124F-4CAF-F628-254C79556986}|src\\Services\\Warehouse\\CMS.WarehouseService.Infrastructure\\CMS.WarehouseService.Infrastructure.csproj|solutionrelative:src\\services\\warehouse\\cms.warehouseservice.infrastructure\\migrations\\20260419122043_intialcreate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{370ACB62-FCD7-4035-B5EA-252EE5607DE1}|src\\Services\\Reporting\\CMS.ReportingService.Infrastructure\\CMS.ReportingService.Infrastructure.csproj|d:\\files\\cms\\cargomanagementsystem\\src\\services\\reporting\\cms.reportingservice.infrastructure\\migrations\\20260419121841_dataupdate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{370ACB62-FCD7-4035-B5EA-252EE5607DE1}|src\\Services\\Reporting\\CMS.ReportingService.Infrastructure\\CMS.ReportingService.Infrastructure.csproj|solutionrelative:src\\services\\reporting\\cms.reportingservice.infrastructure\\migrations\\20260419121841_dataupdate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2105301D-0C16-23D6-D418-305D879FE43E}|src\\Services\\Notification\\CMS.NotificationService.Infrastructure\\CMS.NotificationService.Infrastructure.csproj|d:\\files\\cms\\cargomanagementsystem\\src\\services\\notification\\cms.notificationservice.infrastructure\\migrations\\20260419121709_updatedata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2105301D-0C16-23D6-D418-305D879FE43E}|src\\Services\\Notification\\CMS.NotificationService.Infrastructure\\CMS.NotificationService.Infrastructure.csproj|solutionrelative:src\\services\\notification\\cms.notificationservice.infrastructure\\migrations\\20260419121709_updatedata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C5B0E4D1-6F75-65FC-CEC3-B430A0EFC115}|src\\Services\\Fleet\\CMS.FleetService.Infrastructure\\CMS.FleetService.Infrastructure.csproj|d:\\files\\cms\\cargomanagementsystem\\src\\services\\fleet\\cms.fleetservice.infrastructure\\migrations\\20260419121525_initialcreate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C5B0E4D1-6F75-65FC-CEC3-B430A0EFC115}|src\\Services\\Fleet\\CMS.FleetService.Infrastructure\\CMS.FleetService.Infrastructure.csproj|solutionrelative:src\\services\\fleet\\cms.fleetservice.infrastructure\\migrations\\20260419121525_initialcreate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -87,207 +71,162 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "ValidationException.cs",
-              "DocumentMoniker": "D:\\Files\\CMS\\CargoManagementSystem\\src\\Shared\\CMS.Shared\\Exceptions\\ValidationException.cs",
-              "RelativeDocumentMoniker": "src\\Shared\\CMS.Shared\\Exceptions\\ValidationException.cs",
-              "ToolTip": "D:\\Files\\CMS\\CargoManagementSystem\\src\\Shared\\CMS.Shared\\Exceptions\\ValidationException.cs",
-              "RelativeToolTip": "src\\Shared\\CMS.Shared\\Exceptions\\ValidationException.cs",
-              "ViewState": "AgIAAAUAAAAAAAAAAAAAwAwAAAAsAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-15T17:25:21.934Z",
+              "Title": "launchSettings.json",
+              "DocumentMoniker": "D:\\Files\\CMS\\CargoManagementSystem\\src\\Services\\Warehouse\\CMS.WarehouseService.API\\Properties\\launchSettings.json",
+              "RelativeDocumentMoniker": "src\\Services\\Warehouse\\CMS.WarehouseService.API\\Properties\\launchSettings.json",
+              "ToolTip": "D:\\Files\\CMS\\CargoManagementSystem\\src\\Services\\Warehouse\\CMS.WarehouseService.API\\Properties\\launchSettings.json",
+              "RelativeToolTip": "src\\Services\\Warehouse\\CMS.WarehouseService.API\\Properties\\launchSettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAbAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2026-04-19T13:13:29.307Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "ValidationBehavior.cs",
-              "DocumentMoniker": "D:\\Files\\CMS\\CargoManagementSystem\\src\\Services\\Identity\\CMS.IdentityService.Application\\Behaviors\\ValidationBehavior.cs",
-              "RelativeDocumentMoniker": "src\\Services\\Identity\\CMS.IdentityService.Application\\Behaviors\\ValidationBehavior.cs",
-              "ToolTip": "D:\\Files\\CMS\\CargoManagementSystem\\src\\Services\\Identity\\CMS.IdentityService.Application\\Behaviors\\ValidationBehavior.cs",
-              "RelativeToolTip": "src\\Services\\Identity\\CMS.IdentityService.Application\\Behaviors\\ValidationBehavior.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAnAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-15T16:56:26.519Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 16,
-              "Title": "20260415163927_initialCreate.cs",
-              "DocumentMoniker": "D:\\Files\\CMS\\CargoManagementSystem\\src\\Services\\Customer\\CMS.CustomerService.Infrastructure\\Migrations\\20260415163927_initialCreate.cs",
-              "RelativeDocumentMoniker": "src\\Services\\Customer\\CMS.CustomerService.Infrastructure\\Migrations\\20260415163927_initialCreate.cs",
-              "ToolTip": "D:\\Files\\CMS\\CargoManagementSystem\\src\\Services\\Customer\\CMS.CustomerService.Infrastructure\\Migrations\\20260415163927_initialCreate.cs",
-              "RelativeToolTip": "src\\Services\\Customer\\CMS.CustomerService.Infrastructure\\Migrations\\20260415163927_initialCreate.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-15T16:39:28.3Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "Shipment.cs",
-              "DocumentMoniker": "D:\\Files\\CMS\\CargoManagementSystem\\src\\Services\\Shipment\\CMS.ShipmentService.Domain\\Entities\\Shipment.cs",
-              "RelativeDocumentMoniker": "src\\Services\\Shipment\\CMS.ShipmentService.Domain\\Entities\\Shipment.cs",
-              "ToolTip": "D:\\Files\\CMS\\CargoManagementSystem\\src\\Services\\Shipment\\CMS.ShipmentService.Domain\\Entities\\Shipment.cs",
-              "RelativeToolTip": "src\\Services\\Shipment\\CMS.ShipmentService.Domain\\Entities\\Shipment.cs",
-              "ViewState": "AgIAABYAAAAAAAAAAAAAwCEAAAAuAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-14T16:20:08.228Z"
+              "Title": "launchSettings.json",
+              "DocumentMoniker": "D:\\Files\\CMS\\CargoManagementSystem\\src\\Services\\Shipment\\CMS.ShipmentService.API\\Properties\\launchSettings.json",
+              "RelativeDocumentMoniker": "src\\Services\\Shipment\\CMS.ShipmentService.API\\Properties\\launchSettings.json",
+              "ToolTip": "D:\\Files\\CMS\\CargoManagementSystem\\src\\Services\\Shipment\\CMS.ShipmentService.API\\Properties\\launchSettings.json",
+              "RelativeToolTip": "src\\Services\\Shipment\\CMS.ShipmentService.API\\Properties\\launchSettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAGAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2026-04-19T13:11:06.254Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 3,
-              "Title": "CreateShipmentCommandValidator.cs",
-              "DocumentMoniker": "D:\\Files\\CMS\\CargoManagementSystem\\src\\Services\\Shipment\\CMS.ShipmentService.Application\\Commands\\CreateShipment\\CreateShipmentCommandValidator.cs",
-              "RelativeDocumentMoniker": "src\\Services\\Shipment\\CMS.ShipmentService.Application\\Commands\\CreateShipment\\CreateShipmentCommandValidator.cs",
-              "ToolTip": "D:\\Files\\CMS\\CargoManagementSystem\\src\\Services\\Shipment\\CMS.ShipmentService.Application\\Commands\\CreateShipment\\CreateShipmentCommandValidator.cs",
-              "RelativeToolTip": "src\\Services\\Shipment\\CMS.ShipmentService.Application\\Commands\\CreateShipment\\CreateShipmentCommandValidator.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-14T16:19:37.073Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "CreateShipmentCommandHandler.cs",
-              "DocumentMoniker": "D:\\Files\\CMS\\CargoManagementSystem\\src\\Services\\Shipment\\CMS.ShipmentService.Application\\Commands\\CreateShipment\\CreateShipmentCommandHandler.cs",
-              "RelativeDocumentMoniker": "src\\Services\\Shipment\\CMS.ShipmentService.Application\\Commands\\CreateShipment\\CreateShipmentCommandHandler.cs",
-              "ToolTip": "D:\\Files\\CMS\\CargoManagementSystem\\src\\Services\\Shipment\\CMS.ShipmentService.Application\\Commands\\CreateShipment\\CreateShipmentCommandHandler.cs",
-              "RelativeToolTip": "src\\Services\\Shipment\\CMS.ShipmentService.Application\\Commands\\CreateShipment\\CreateShipmentCommandHandler.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAAAbAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-14T16:19:16.655Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "CreateShipmentCommand.cs",
-              "DocumentMoniker": "D:\\Files\\CMS\\CargoManagementSystem\\src\\Services\\Shipment\\CMS.ShipmentService.Application\\Commands\\CreateShipment\\CreateShipmentCommand.cs",
-              "RelativeDocumentMoniker": "src\\Services\\Shipment\\CMS.ShipmentService.Application\\Commands\\CreateShipment\\CreateShipmentCommand.cs",
-              "ToolTip": "D:\\Files\\CMS\\CargoManagementSystem\\src\\Services\\Shipment\\CMS.ShipmentService.Application\\Commands\\CreateShipment\\CreateShipmentCommand.cs",
-              "RelativeToolTip": "src\\Services\\Shipment\\CMS.ShipmentService.Application\\Commands\\CreateShipment\\CreateShipmentCommand.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-14T16:19:13.637Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "ShipmentsController.cs",
-              "DocumentMoniker": "D:\\Files\\CMS\\CargoManagementSystem\\src\\Services\\Shipment\\CMS.ShipmentService.API\\Controllers\\ShipmentsController.cs",
-              "RelativeDocumentMoniker": "src\\Services\\Shipment\\CMS.ShipmentService.API\\Controllers\\ShipmentsController.cs",
-              "ToolTip": "D:\\Files\\CMS\\CargoManagementSystem\\src\\Services\\Shipment\\CMS.ShipmentService.API\\Controllers\\ShipmentsController.cs",
-              "RelativeToolTip": "src\\Services\\Shipment\\CMS.ShipmentService.API\\Controllers\\ShipmentsController.cs",
-              "ViewState": "AgIAACYAAAAAAAAAAAAgwAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-14T16:18:25.064Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 15,
-              "Title": "20260414161232_biCreate.cs",
-              "DocumentMoniker": "D:\\Files\\CMS\\CargoManagementSystem\\src\\Services\\Shipment\\CMS.ShipmentService.Infrastructure\\Migrations\\20260414161232_biCreate.cs",
-              "RelativeDocumentMoniker": "src\\Services\\Shipment\\CMS.ShipmentService.Infrastructure\\Migrations\\20260414161232_biCreate.cs",
-              "ToolTip": "D:\\Files\\CMS\\CargoManagementSystem\\src\\Services\\Shipment\\CMS.ShipmentService.Infrastructure\\Migrations\\20260414161232_biCreate.cs",
-              "RelativeToolTip": "src\\Services\\Shipment\\CMS.ShipmentService.Infrastructure\\Migrations\\20260414161232_biCreate.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-14T16:12:32.994Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "appsettings.json",
-              "DocumentMoniker": "D:\\Files\\CMS\\CargoManagementSystem\\src\\Services\\Customer\\CMS.CustomerService.API\\appsettings.json",
-              "RelativeDocumentMoniker": "src\\Services\\Customer\\CMS.CustomerService.API\\appsettings.json",
-              "ToolTip": "D:\\Files\\CMS\\CargoManagementSystem\\src\\Services\\Customer\\CMS.CustomerService.API\\appsettings.json",
-              "RelativeToolTip": "src\\Services\\Customer\\CMS.CustomerService.API\\appsettings.json",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAEAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2026-04-14T13:59:01.585Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "appsettings.json",
-              "DocumentMoniker": "D:\\Files\\CMS\\CargoManagementSystem\\src\\Services\\Fleet\\CMS.FleetService.API\\appsettings.json",
-              "RelativeDocumentMoniker": "src\\Services\\Fleet\\CMS.FleetService.API\\appsettings.json",
-              "ToolTip": "D:\\Files\\CMS\\CargoManagementSystem\\src\\Services\\Fleet\\CMS.FleetService.API\\appsettings.json",
-              "RelativeToolTip": "src\\Services\\Fleet\\CMS.FleetService.API\\appsettings.json",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAuAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2026-04-14T13:58:30.392Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "appsettings.json",
-              "DocumentMoniker": "D:\\Files\\CMS\\CargoManagementSystem\\src\\Services\\Billing\\CMS.BillingService.API\\appsettings.json",
-              "RelativeDocumentMoniker": "src\\Services\\Billing\\CMS.BillingService.API\\appsettings.json",
-              "ToolTip": "D:\\Files\\CMS\\CargoManagementSystem\\src\\Services\\Billing\\CMS.BillingService.API\\appsettings.json",
-              "RelativeToolTip": "src\\Services\\Billing\\CMS.BillingService.API\\appsettings.json",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAABbAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2026-04-14T13:57:52.551Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "appsettings.json",
-              "DocumentMoniker": "D:\\Files\\CMS\\CargoManagementSystem\\src\\Services\\Warehouse\\CMS.WarehouseService.API\\appsettings.json",
-              "RelativeDocumentMoniker": "src\\Services\\Warehouse\\CMS.WarehouseService.API\\appsettings.json",
-              "ToolTip": "D:\\Files\\CMS\\CargoManagementSystem\\src\\Services\\Warehouse\\CMS.WarehouseService.API\\appsettings.json",
-              "RelativeToolTip": "src\\Services\\Warehouse\\CMS.WarehouseService.API\\appsettings.json",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAwAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2026-04-14T13:57:25.368Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
               "Title": "appsettings.json",
               "DocumentMoniker": "D:\\Files\\CMS\\CargoManagementSystem\\src\\Services\\Reporting\\CMS.ReportingService.API\\appsettings.json",
               "RelativeDocumentMoniker": "src\\Services\\Reporting\\CMS.ReportingService.API\\appsettings.json",
               "ToolTip": "D:\\Files\\CMS\\CargoManagementSystem\\src\\Services\\Reporting\\CMS.ReportingService.API\\appsettings.json",
               "RelativeToolTip": "src\\Services\\Reporting\\CMS.ReportingService.API\\appsettings.json",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAABnAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2026-04-14T13:56:27.034Z"
+              "WhenOpened": "2026-04-19T13:02:11.445Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "launchSettings.json",
+              "DocumentMoniker": "D:\\Files\\CMS\\CargoManagementSystem\\src\\Services\\Reporting\\CMS.ReportingService.API\\Properties\\launchSettings.json",
+              "RelativeDocumentMoniker": "src\\Services\\Reporting\\CMS.ReportingService.API\\Properties\\launchSettings.json",
+              "ToolTip": "D:\\Files\\CMS\\CargoManagementSystem\\src\\Services\\Reporting\\CMS.ReportingService.API\\Properties\\launchSettings.json",
+              "RelativeToolTip": "src\\Services\\Reporting\\CMS.ReportingService.API\\Properties\\launchSettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAGAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2026-04-19T13:02:23.158Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "launchSettings.json",
+              "DocumentMoniker": "D:\\Files\\CMS\\CargoManagementSystem\\src\\Services\\Notification\\CMS.NotificationService.API\\Properties\\launchSettings.json",
+              "RelativeDocumentMoniker": "src\\Services\\Notification\\CMS.NotificationService.API\\Properties\\launchSettings.json",
+              "ToolTip": "D:\\Files\\CMS\\CargoManagementSystem\\src\\Services\\Notification\\CMS.NotificationService.API\\Properties\\launchSettings.json",
+              "RelativeToolTip": "src\\Services\\Notification\\CMS.NotificationService.API\\Properties\\launchSettings.json",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAABEAAAAGAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2026-04-19T12:29:27.43Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "launchSettings.json",
+              "DocumentMoniker": "D:\\Files\\CMS\\CargoManagementSystem\\src\\Services\\Fleet\\CMS.FleetService.API\\Properties\\launchSettings.json",
+              "RelativeDocumentMoniker": "src\\Services\\Fleet\\CMS.FleetService.API\\Properties\\launchSettings.json",
+              "ToolTip": "D:\\Files\\CMS\\CargoManagementSystem\\src\\Services\\Fleet\\CMS.FleetService.API\\Properties\\launchSettings.json",
+              "RelativeToolTip": "src\\Services\\Fleet\\CMS.FleetService.API\\Properties\\launchSettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAfAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2026-04-19T12:25:50.086Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "20260419122043_IntialCreate.cs",
+              "DocumentMoniker": "D:\\Files\\CMS\\CargoManagementSystem\\src\\Services\\Warehouse\\CMS.WarehouseService.Infrastructure\\Migrations\\20260419122043_IntialCreate.cs",
+              "RelativeDocumentMoniker": "src\\Services\\Warehouse\\CMS.WarehouseService.Infrastructure\\Migrations\\20260419122043_IntialCreate.cs",
+              "ToolTip": "D:\\Files\\CMS\\CargoManagementSystem\\src\\Services\\Warehouse\\CMS.WarehouseService.Infrastructure\\Migrations\\20260419122043_IntialCreate.cs",
+              "RelativeToolTip": "src\\Services\\Warehouse\\CMS.WarehouseService.Infrastructure\\Migrations\\20260419122043_IntialCreate.cs",
+              "ViewState": "AgIAAE8AAAAAAAAAAAAQwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-19T12:20:43.339Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "20260419121841_dataUpdate.cs",
+              "DocumentMoniker": "D:\\Files\\CMS\\CargoManagementSystem\\src\\Services\\Reporting\\CMS.ReportingService.Infrastructure\\Migrations\\20260419121841_dataUpdate.cs",
+              "RelativeDocumentMoniker": "src\\Services\\Reporting\\CMS.ReportingService.Infrastructure\\Migrations\\20260419121841_dataUpdate.cs",
+              "ToolTip": "D:\\Files\\CMS\\CargoManagementSystem\\src\\Services\\Reporting\\CMS.ReportingService.Infrastructure\\Migrations\\20260419121841_dataUpdate.cs",
+              "RelativeToolTip": "src\\Services\\Reporting\\CMS.ReportingService.Infrastructure\\Migrations\\20260419121841_dataUpdate.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-19T12:18:41.162Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "20260419121709_updatedata.cs",
+              "DocumentMoniker": "D:\\Files\\CMS\\CargoManagementSystem\\src\\Services\\Notification\\CMS.NotificationService.Infrastructure\\Migrations\\20260419121709_updatedata.cs",
+              "RelativeDocumentMoniker": "src\\Services\\Notification\\CMS.NotificationService.Infrastructure\\Migrations\\20260419121709_updatedata.cs",
+              "ToolTip": "D:\\Files\\CMS\\CargoManagementSystem\\src\\Services\\Notification\\CMS.NotificationService.Infrastructure\\Migrations\\20260419121709_updatedata.cs",
+              "RelativeToolTip": "src\\Services\\Notification\\CMS.NotificationService.Infrastructure\\Migrations\\20260419121709_updatedata.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-19T12:17:09.547Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 12,
-              "Title": "appsettings.json",
-              "DocumentMoniker": "D:\\Files\\CMS\\CargoManagementSystem\\src\\Services\\Notification\\CMS.NotificationService.API\\appsettings.json",
-              "RelativeDocumentMoniker": "src\\Services\\Notification\\CMS.NotificationService.API\\appsettings.json",
-              "ToolTip": "D:\\Files\\CMS\\CargoManagementSystem\\src\\Services\\Notification\\CMS.NotificationService.API\\appsettings.json",
-              "RelativeToolTip": "src\\Services\\Notification\\CMS.NotificationService.API\\appsettings.json",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAABdAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2026-04-14T13:55:27.402Z"
+              "Title": "20260419121525_InitialCreate.cs",
+              "DocumentMoniker": "D:\\Files\\CMS\\CargoManagementSystem\\src\\Services\\Fleet\\CMS.FleetService.Infrastructure\\Migrations\\20260419121525_InitialCreate.cs",
+              "RelativeDocumentMoniker": "src\\Services\\Fleet\\CMS.FleetService.Infrastructure\\Migrations\\20260419121525_InitialCreate.cs",
+              "ToolTip": "D:\\Files\\CMS\\CargoManagementSystem\\src\\Services\\Fleet\\CMS.FleetService.Infrastructure\\Migrations\\20260419121525_InitialCreate.cs",
+              "RelativeToolTip": "src\\Services\\Fleet\\CMS.FleetService.Infrastructure\\Migrations\\20260419121525_InitialCreate.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-19T12:15:25.66Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
-              "Title": "appsettings.json",
-              "DocumentMoniker": "D:\\Files\\CMS\\CargoManagementSystem\\src\\Services\\Shipment\\CMS.ShipmentService.API\\appsettings.json",
-              "RelativeDocumentMoniker": "src\\Services\\Shipment\\CMS.ShipmentService.API\\appsettings.json",
-              "ToolTip": "D:\\Files\\CMS\\CargoManagementSystem\\src\\Services\\Shipment\\CMS.ShipmentService.API\\appsettings.json",
-              "RelativeToolTip": "src\\Services\\Shipment\\CMS.ShipmentService.API\\appsettings.json",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAKAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2026-04-14T13:51:25.954Z"
+              "DocumentIndex": 6,
+              "Title": "20260418093547_newdataupdated.cs",
+              "DocumentMoniker": "D:\\Files\\CMS\\CargoManagementSystem\\src\\Services\\Shipment\\CMS.ShipmentService.Infrastructure\\Migrations\\20260418093547_newdataupdated.cs",
+              "RelativeDocumentMoniker": "src\\Services\\Shipment\\CMS.ShipmentService.Infrastructure\\Migrations\\20260418093547_newdataupdated.cs",
+              "ToolTip": "D:\\Files\\CMS\\CargoManagementSystem\\src\\Services\\Shipment\\CMS.ShipmentService.Infrastructure\\Migrations\\20260418093547_newdataupdated.cs",
+              "RelativeToolTip": "src\\Services\\Shipment\\CMS.ShipmentService.Infrastructure\\Migrations\\20260418093547_newdataupdated.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-18T09:35:47.542Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
-              "Title": "appsettings.json",
-              "DocumentMoniker": "D:\\Files\\CMS\\CargoManagementSystem\\src\\Services\\Identity\\CMS.IdentityService.API\\appsettings.json",
-              "RelativeDocumentMoniker": "src\\Services\\Identity\\CMS.IdentityService.API\\appsettings.json",
-              "ToolTip": "D:\\Files\\CMS\\CargoManagementSystem\\src\\Services\\Identity\\CMS.IdentityService.API\\appsettings.json",
-              "RelativeToolTip": "src\\Services\\Identity\\CMS.IdentityService.API\\appsettings.json",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAABGAAAAAAAAAA==",
+              "DocumentIndex": 7,
+              "Title": "launchSettings.json",
+              "DocumentMoniker": "D:\\Files\\CMS\\CargoManagementSystem\\src\\Services\\Billing\\CMS.BillingService.API\\Properties\\launchSettings.json",
+              "RelativeDocumentMoniker": "src\\Services\\Billing\\CMS.BillingService.API\\Properties\\launchSettings.json",
+              "ToolTip": "D:\\Files\\CMS\\CargoManagementSystem\\src\\Services\\Billing\\CMS.BillingService.API\\Properties\\launchSettings.json",
+              "RelativeToolTip": "src\\Services\\Billing\\CMS.BillingService.API\\Properties\\launchSettings.json",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAABAAAAAcAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2026-04-14T13:28:02.21Z"
+              "WhenOpened": "2026-04-18T09:28:59.183Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "launchSettings.json",
+              "DocumentMoniker": "D:\\Files\\CMS\\CargoManagementSystem\\src\\Services\\Customer\\CMS.CustomerService.API\\Properties\\launchSettings.json",
+              "RelativeDocumentMoniker": "src\\Services\\Customer\\CMS.CustomerService.API\\Properties\\launchSettings.json",
+              "ToolTip": "D:\\Files\\CMS\\CargoManagementSystem\\src\\Services\\Customer\\CMS.CustomerService.API\\Properties\\launchSettings.json",
+              "RelativeToolTip": "src\\Services\\Customer\\CMS.CustomerService.API\\Properties\\launchSettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAGAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2026-04-18T09:28:44.894Z"
             }
           ]
         }

@@ -32,6 +32,31 @@
         "Name": "pageSize",
         "Type": "System.Int32",
         "IsRequired": false
+      },
+      {
+        "Name": "customerId",
+        "Type": "System.Nullable\u00601[[System.Guid, System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "status",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "dateFrom",
+        "Type": "System.Nullable\u00601[[System.DateTime, System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "dateTo",
+        "Type": "System.Nullable\u00601[[System.DateTime, System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "shipmentId",
+        "Type": "System.Nullable\u00601[[System.Guid, System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
       }
     ],
     "ReturnTypes": []
@@ -53,6 +78,90 @@
     "ReturnTypes": []
   },
   {
+    "ContainingType": "CMS.BillingService.API.Controllers.InvoicesController",
+    "Method": "MarkPaid",
+    "RelativePath": "api/v1/invoices/{invoiceId}/mark-paid",
+    "HttpMethod": "PATCH",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "invoiceId",
+        "Type": "System.Guid",
+        "IsRequired": true
+      },
+      {
+        "Name": "request",
+        "Type": "CMS.BillingService.Application.DTOs.MarkPaidRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CMS.BillingService.API.Controllers.InvoicesController",
+    "Method": "GetInvoicePayments",
+    "RelativePath": "api/v1/invoices/{invoiceId}/payments",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "invoiceId",
+        "Type": "System.Guid",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CMS.BillingService.API.Controllers.InvoicesController",
+    "Method": "GetInvoicePdf",
+    "RelativePath": "api/v1/invoices/{invoiceId}/pdf",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "invoiceId",
+        "Type": "System.Guid",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CMS.BillingService.API.Controllers.InvoicesController",
+    "Method": "VoidInvoice",
+    "RelativePath": "api/v1/invoices/{invoiceId}/void",
+    "HttpMethod": "PATCH",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "invoiceId",
+        "Type": "System.Guid",
+        "IsRequired": true
+      },
+      {
+        "Name": "request",
+        "Type": "CMS.BillingService.Application.DTOs.VoidInvoiceRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CMS.BillingService.API.Controllers.InvoicesController",
+    "Method": "GetOverdueInvoices",
+    "RelativePath": "api/v1/invoices/overdue",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "CMS.BillingService.API.Controllers.PaymentsController",
     "Method": "RecordPayment",
     "RelativePath": "api/v1/payments",
@@ -70,6 +179,47 @@
   },
   {
     "ContainingType": "CMS.BillingService.API.Controllers.PaymentsController",
+    "Method": "GetPayments",
+    "RelativePath": "api/v1/payments",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "page",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "pageSize",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "invoiceId",
+        "Type": "System.Nullable\u00601[[System.Guid, System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "method",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "dateFrom",
+        "Type": "System.Nullable\u00601[[System.DateTime, System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "dateTo",
+        "Type": "System.Nullable\u00601[[System.DateTime, System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CMS.BillingService.API.Controllers.PaymentsController",
     "Method": "GetPayment",
     "RelativePath": "api/v1/payments/{paymentId}",
     "HttpMethod": "GET",
@@ -80,6 +230,126 @@
         "Name": "paymentId",
         "Type": "System.Guid",
         "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CMS.BillingService.API.Controllers.PaymentsController",
+    "Method": "GetReceipt",
+    "RelativePath": "api/v1/payments/{paymentId}/receipt",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "paymentId",
+        "Type": "System.Guid",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CMS.BillingService.API.Controllers.PaymentsController",
+    "Method": "RefundPayment",
+    "RelativePath": "api/v1/payments/refund",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "CMS.BillingService.Application.DTOs.RefundPaymentRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CMS.BillingService.API.Controllers.PaymentsController",
+    "Method": "Webhook",
+    "RelativePath": "api/v1/payments/webhook",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CMS.BillingService.API.Controllers.RatesController",
+    "Method": "GetRateCards",
+    "RelativePath": "api/v1/rates",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "serviceType",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "activeOnly",
+        "Type": "System.Boolean",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CMS.BillingService.API.Controllers.RatesController",
+    "Method": "CreateRateCard",
+    "RelativePath": "api/v1/rates",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "CMS.BillingService.Application.DTOs.CreateRateCardRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CMS.BillingService.API.Controllers.RatesController",
+    "Method": "Calculate",
+    "RelativePath": "api/v1/rates/calculate",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "weightKg",
+        "Type": "System.Decimal",
+        "IsRequired": false
+      },
+      {
+        "Name": "volumeCbm",
+        "Type": "System.Decimal",
+        "IsRequired": false
+      },
+      {
+        "Name": "serviceType",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "originCountry",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "destinationCountry",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "cargoType",
+        "Type": "System.String",
+        "IsRequired": false
       }
     ],
     "ReturnTypes": []

@@ -84,6 +84,14 @@ try
 
     var app = builder.Build();
 
+    // Auto-create / migrate the database on startup so Hangfire can connect to it
+    using (var scope = app.Services.CreateScope())
+    {
+        var db = scope.ServiceProvider
+            .GetRequiredService<CMS.NotificationService.Infrastructure.Persistence.NotificationDbContext>();
+        db.Database.EnsureCreated();
+    }
+
     app.UseMiddleware<GlobalExceptionMiddleware>();
     app.UseMiddleware<CorrelationIdMiddleware>();
 
