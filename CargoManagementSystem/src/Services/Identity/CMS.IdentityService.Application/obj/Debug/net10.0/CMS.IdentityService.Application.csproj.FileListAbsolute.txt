@@ -10,9 +10,9 @@ D:\Files\CMS\CargoManagementSystem\src\Services\Identity\CMS.IdentityService.App
 D:\Files\CMS\CargoManagementSystem\src\Services\Identity\CMS.IdentityService.Application\obj\Debug\net10.0\CMS.IdentityService.Application.AssemblyInfoInputs.cache
 D:\Files\CMS\CargoManagementSystem\src\Services\Identity\CMS.IdentityService.Application\obj\Debug\net10.0\CMS.IdentityService.Application.AssemblyInfo.cs
 D:\Files\CMS\CargoManagementSystem\src\Services\Identity\CMS.IdentityService.Application\obj\Debug\net10.0\CMS.IdentityService.Application.csproj.CoreCompileInputs.cache
+D:\Files\CMS\CargoManagementSystem\src\Services\Identity\CMS.IdentityService.Application\obj\Debug\net10.0\CMS.IdentityService.Application.sourcelink.json
 D:\Files\CMS\CargoManagementSystem\src\Services\Identity\CMS.IdentityService.Application\obj\Debug\net10.0\CMS.Iden.06695D5C.Up2Date
 D:\Files\CMS\CargoManagementSystem\src\Services\Identity\CMS.IdentityService.Application\obj\Debug\net10.0\CMS.IdentityService.Application.dll
 D:\Files\CMS\CargoManagementSystem\src\Services\Identity\CMS.IdentityService.Application\obj\Debug\net10.0\refint\CMS.IdentityService.Application.dll
 D:\Files\CMS\CargoManagementSystem\src\Services\Identity\CMS.IdentityService.Application\obj\Debug\net10.0\CMS.IdentityService.Application.pdb
 D:\Files\CMS\CargoManagementSystem\src\Services\Identity\CMS.IdentityService.Application\obj\Debug\net10.0\ref\CMS.IdentityService.Application.dll
-D:\Files\CMS\CargoManagementSystem\src\Services\Identity\CMS.IdentityService.Application\obj\Debug\net10.0\CMS.IdentityService.Application.sourcelink.json

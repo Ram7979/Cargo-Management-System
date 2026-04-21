@@ -10,9 +10,9 @@ D:\Files\CMS\CargoManagementSystem\src\Services\Customer\CMS.CustomerService.App
 D:\Files\CMS\CargoManagementSystem\src\Services\Customer\CMS.CustomerService.Application\obj\Debug\net10.0\CMS.CustomerService.Application.AssemblyInfoInputs.cache
 D:\Files\CMS\CargoManagementSystem\src\Services\Customer\CMS.CustomerService.Application\obj\Debug\net10.0\CMS.CustomerService.Application.AssemblyInfo.cs
 D:\Files\CMS\CargoManagementSystem\src\Services\Customer\CMS.CustomerService.Application\obj\Debug\net10.0\CMS.CustomerService.Application.csproj.CoreCompileInputs.cache
+D:\Files\CMS\CargoManagementSystem\src\Services\Customer\CMS.CustomerService.Application\obj\Debug\net10.0\CMS.CustomerService.Application.sourcelink.json
 D:\Files\CMS\CargoManagementSystem\src\Services\Customer\CMS.CustomerService.Application\obj\Debug\net10.0\CMS.Cust.ADC50DD5.Up2Date
 D:\Files\CMS\CargoManagementSystem\src\Services\Customer\CMS.CustomerService.Application\obj\Debug\net10.0\CMS.CustomerService.Application.dll
 D:\Files\CMS\CargoManagementSystem\src\Services\Customer\CMS.CustomerService.Application\obj\Debug\net10.0\refint\CMS.CustomerService.Application.dll
 D:\Files\CMS\CargoManagementSystem\src\Services\Customer\CMS.CustomerService.Application\obj\Debug\net10.0\CMS.CustomerService.Application.pdb
 D:\Files\CMS\CargoManagementSystem\src\Services\Customer\CMS.CustomerService.Application\obj\Debug\net10.0\ref\CMS.CustomerService.Application.dll
-D:\Files\CMS\CargoManagementSystem\src\Services\Customer\CMS.CustomerService.Application\obj\Debug\net10.0\CMS.CustomerService.Application.sourcelink.json

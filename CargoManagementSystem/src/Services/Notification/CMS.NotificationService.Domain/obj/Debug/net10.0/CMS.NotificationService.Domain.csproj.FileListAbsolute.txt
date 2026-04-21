@@ -8,9 +8,9 @@ D:\Files\CMS\CargoManagementSystem\src\Services\Notification\CMS.NotificationSer
 D:\Files\CMS\CargoManagementSystem\src\Services\Notification\CMS.NotificationService.Domain\obj\Debug\net10.0\CMS.NotificationService.Domain.AssemblyInfoInputs.cache
 D:\Files\CMS\CargoManagementSystem\src\Services\Notification\CMS.NotificationService.Domain\obj\Debug\net10.0\CMS.NotificationService.Domain.AssemblyInfo.cs
 D:\Files\CMS\CargoManagementSystem\src\Services\Notification\CMS.NotificationService.Domain\obj\Debug\net10.0\CMS.NotificationService.Domain.csproj.CoreCompileInputs.cache
+D:\Files\CMS\CargoManagementSystem\src\Services\Notification\CMS.NotificationService.Domain\obj\Debug\net10.0\CMS.NotificationService.Domain.sourcelink.json
 D:\Files\CMS\CargoManagementSystem\src\Services\Notification\CMS.NotificationService.Domain\obj\Debug\net10.0\CMS.Noti.EC981656.Up2Date
 D:\Files\CMS\CargoManagementSystem\src\Services\Notification\CMS.NotificationService.Domain\obj\Debug\net10.0\CMS.NotificationService.Domain.dll
 D:\Files\CMS\CargoManagementSystem\src\Services\Notification\CMS.NotificationService.Domain\obj\Debug\net10.0\refint\CMS.NotificationService.Domain.dll
 D:\Files\CMS\CargoManagementSystem\src\Services\Notification\CMS.NotificationService.Domain\obj\Debug\net10.0\CMS.NotificationService.Domain.pdb
 D:\Files\CMS\CargoManagementSystem\src\Services\Notification\CMS.NotificationService.Domain\obj\Debug\net10.0\ref\CMS.NotificationService.Domain.dll
-D:\Files\CMS\CargoManagementSystem\src\Services\Notification\CMS.NotificationService.Domain\obj\Debug\net10.0\CMS.NotificationService.Domain.sourcelink.json

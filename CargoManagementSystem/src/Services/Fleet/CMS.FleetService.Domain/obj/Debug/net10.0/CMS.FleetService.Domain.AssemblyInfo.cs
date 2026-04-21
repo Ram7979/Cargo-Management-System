@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("CMS.FleetService.Domain")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+89fab4930dad9457d6218308620b05b8f27cdcd2")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+12aeed8bcc26dd8fc434835b8de49ece931d6857")]
 [assembly: System.Reflection.AssemblyProductAttribute("CMS.FleetService.Domain")]
 [assembly: System.Reflection.AssemblyTitleAttribute("CMS.FleetService.Domain")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

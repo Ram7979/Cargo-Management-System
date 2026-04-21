@@ -10,9 +10,9 @@ D:\Files\CMS\CargoManagementSystem\src\Services\Shipment\CMS.ShipmentService.App
 D:\Files\CMS\CargoManagementSystem\src\Services\Shipment\CMS.ShipmentService.Application\obj\Debug\net10.0\CMS.ShipmentService.Application.AssemblyInfoInputs.cache
 D:\Files\CMS\CargoManagementSystem\src\Services\Shipment\CMS.ShipmentService.Application\obj\Debug\net10.0\CMS.ShipmentService.Application.AssemblyInfo.cs
 D:\Files\CMS\CargoManagementSystem\src\Services\Shipment\CMS.ShipmentService.Application\obj\Debug\net10.0\CMS.ShipmentService.Application.csproj.CoreCompileInputs.cache
+D:\Files\CMS\CargoManagementSystem\src\Services\Shipment\CMS.ShipmentService.Application\obj\Debug\net10.0\CMS.ShipmentService.Application.sourcelink.json
 D:\Files\CMS\CargoManagementSystem\src\Services\Shipment\CMS.ShipmentService.Application\obj\Debug\net10.0\CMS.Ship.014DECDB.Up2Date
 D:\Files\CMS\CargoManagementSystem\src\Services\Shipment\CMS.ShipmentService.Application\obj\Debug\net10.0\CMS.ShipmentService.Application.dll
 D:\Files\CMS\CargoManagementSystem\src\Services\Shipment\CMS.ShipmentService.Application\obj\Debug\net10.0\refint\CMS.ShipmentService.Application.dll
 D:\Files\CMS\CargoManagementSystem\src\Services\Shipment\CMS.ShipmentService.Application\obj\Debug\net10.0\CMS.ShipmentService.Application.pdb
 D:\Files\CMS\CargoManagementSystem\src\Services\Shipment\CMS.ShipmentService.Application\obj\Debug\net10.0\ref\CMS.ShipmentService.Application.dll
-D:\Files\CMS\CargoManagementSystem\src\Services\Shipment\CMS.ShipmentService.Application\obj\Debug\net10.0\CMS.ShipmentService.Application.sourcelink.json

@@ -10,9 +10,9 @@ D:\Files\CMS\CargoManagementSystem\src\Services\Fleet\CMS.FleetService.Applicati
 D:\Files\CMS\CargoManagementSystem\src\Services\Fleet\CMS.FleetService.Application\obj\Debug\net10.0\CMS.FleetService.Application.AssemblyInfoInputs.cache
 D:\Files\CMS\CargoManagementSystem\src\Services\Fleet\CMS.FleetService.Application\obj\Debug\net10.0\CMS.FleetService.Application.AssemblyInfo.cs
 D:\Files\CMS\CargoManagementSystem\src\Services\Fleet\CMS.FleetService.Application\obj\Debug\net10.0\CMS.FleetService.Application.csproj.CoreCompileInputs.cache
+D:\Files\CMS\CargoManagementSystem\src\Services\Fleet\CMS.FleetService.Application\obj\Debug\net10.0\CMS.FleetService.Application.sourcelink.json
 D:\Files\CMS\CargoManagementSystem\src\Services\Fleet\CMS.FleetService.Application\obj\Debug\net10.0\CMS.Flee.9F4CE3EB.Up2Date
 D:\Files\CMS\CargoManagementSystem\src\Services\Fleet\CMS.FleetService.Application\obj\Debug\net10.0\CMS.FleetService.Application.dll
 D:\Files\CMS\CargoManagementSystem\src\Services\Fleet\CMS.FleetService.Application\obj\Debug\net10.0\refint\CMS.FleetService.Application.dll
 D:\Files\CMS\CargoManagementSystem\src\Services\Fleet\CMS.FleetService.Application\obj\Debug\net10.0\CMS.FleetService.Application.pdb
 D:\Files\CMS\CargoManagementSystem\src\Services\Fleet\CMS.FleetService.Application\obj\Debug\net10.0\ref\CMS.FleetService.Application.dll
-D:\Files\CMS\CargoManagementSystem\src\Services\Fleet\CMS.FleetService.Application\obj\Debug\net10.0\CMS.FleetService.Application.sourcelink.json

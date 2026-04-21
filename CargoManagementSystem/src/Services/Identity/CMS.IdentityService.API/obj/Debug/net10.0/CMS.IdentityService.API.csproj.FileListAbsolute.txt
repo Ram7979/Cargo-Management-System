@@ -168,6 +168,7 @@ D:\Files\CMS\CargoManagementSystem\src\Services\Identity\CMS.IdentityService.API
 D:\Files\CMS\CargoManagementSystem\src\Services\Identity\CMS.IdentityService.API\obj\Debug\net10.0\CMS.IdentityService.API.csproj.CoreCompileInputs.cache
 D:\Files\CMS\CargoManagementSystem\src\Services\Identity\CMS.IdentityService.API\obj\Debug\net10.0\CMS.IdentityService.API.MvcApplicationPartsAssemblyInfo.cs
 D:\Files\CMS\CargoManagementSystem\src\Services\Identity\CMS.IdentityService.API\obj\Debug\net10.0\CMS.IdentityService.API.MvcApplicationPartsAssemblyInfo.cache
+D:\Files\CMS\CargoManagementSystem\src\Services\Identity\CMS.IdentityService.API\obj\Debug\net10.0\CMS.IdentityService.API.sourcelink.json
 D:\Files\CMS\CargoManagementSystem\src\Services\Identity\CMS.IdentityService.API\obj\Debug\net10.0\rjimswa.dswa.cache.json
 D:\Files\CMS\CargoManagementSystem\src\Services\Identity\CMS.IdentityService.API\obj\Debug\net10.0\rjsmrazor.dswa.cache.json
 D:\Files\CMS\CargoManagementSystem\src\Services\Identity\CMS.IdentityService.API\obj\Debug\net10.0\rjsmcshtml.dswa.cache.json
@@ -177,11 +178,10 @@ D:\Files\CMS\CargoManagementSystem\src\Services\Identity\CMS.IdentityService.API
 D:\Files\CMS\CargoManagementSystem\src\Services\Identity\CMS.IdentityService.API\obj\Debug\net10.0\staticwebassets.development.json
 D:\Files\CMS\CargoManagementSystem\src\Services\Identity\CMS.IdentityService.API\obj\Debug\net10.0\staticwebassets.build.endpoints.json
 D:\Files\CMS\CargoManagementSystem\src\Services\Identity\CMS.IdentityService.API\obj\Debug\net10.0\swae.build.ex.cache
+D:\Files\CMS\CargoManagementSystem\src\Services\Identity\CMS.IdentityService.API\obj\Debug\net10.0\staticwebassets.upToDateCheck.txt
 D:\Files\CMS\CargoManagementSystem\src\Services\Identity\CMS.IdentityService.API\obj\Debug\net10.0\CMS.Iden.892B1602.Up2Date
 D:\Files\CMS\CargoManagementSystem\src\Services\Identity\CMS.IdentityService.API\obj\Debug\net10.0\CMS.IdentityService.API.dll
 D:\Files\CMS\CargoManagementSystem\src\Services\Identity\CMS.IdentityService.API\obj\Debug\net10.0\refint\CMS.IdentityService.API.dll
 D:\Files\CMS\CargoManagementSystem\src\Services\Identity\CMS.IdentityService.API\obj\Debug\net10.0\CMS.IdentityService.API.pdb
 D:\Files\CMS\CargoManagementSystem\src\Services\Identity\CMS.IdentityService.API\obj\Debug\net10.0\CMS.IdentityService.API.genruntimeconfig.cache
 D:\Files\CMS\CargoManagementSystem\src\Services\Identity\CMS.IdentityService.API\obj\Debug\net10.0\ref\CMS.IdentityService.API.dll
-D:\Files\CMS\CargoManagementSystem\src\Services\Identity\CMS.IdentityService.API\obj\Debug\net10.0\staticwebassets.upToDateCheck.txt
-D:\Files\CMS\CargoManagementSystem\src\Services\Identity\CMS.IdentityService.API\obj\Debug\net10.0\CMS.IdentityService.API.sourcelink.json

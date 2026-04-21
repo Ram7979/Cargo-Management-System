@@ -93,12 +93,11 @@ var app = builder.Build();
 // Middleware pipeline
 app.UseMiddleware<GlobalExceptionMiddleware>();
 app.UseMiddleware<CorrelationIdMiddleware>();
-
-if (app.Environment.IsDevelopment())
-{
-    app.UseSwagger();
-    app.UseSwaggerUI();
-}
+    // CORS — allows gateway Swagger UI to fetch swagger.json
+    app.UseCors();
+// Swagger always enabled — required for gateway aggregation
+app.UseSwagger();
+app.UseSwaggerUI();
 
 app.UseAuthentication();
 app.UseAuthorization();

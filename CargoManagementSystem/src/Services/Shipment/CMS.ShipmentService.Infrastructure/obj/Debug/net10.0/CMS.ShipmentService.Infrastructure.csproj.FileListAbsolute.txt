@@ -13,10 +13,10 @@ D:\Files\CMS\CargoManagementSystem\src\Services\Shipment\CMS.ShipmentService.Inf
 D:\Files\CMS\CargoManagementSystem\src\Services\Shipment\CMS.ShipmentService.Infrastructure\obj\Debug\net10.0\CMS.ShipmentService.Infrastructure.AssemblyInfoInputs.cache
 D:\Files\CMS\CargoManagementSystem\src\Services\Shipment\CMS.ShipmentService.Infrastructure\obj\Debug\net10.0\CMS.ShipmentService.Infrastructure.AssemblyInfo.cs
 D:\Files\CMS\CargoManagementSystem\src\Services\Shipment\CMS.ShipmentService.Infrastructure\obj\Debug\net10.0\CMS.ShipmentService.Infrastructure.csproj.CoreCompileInputs.cache
+D:\Files\CMS\CargoManagementSystem\src\Services\Shipment\CMS.ShipmentService.Infrastructure\obj\Debug\net10.0\CMS.ShipmentService.Infrastructure.sourcelink.json
 D:\Files\CMS\CargoManagementSystem\src\Services\Shipment\CMS.ShipmentService.Infrastructure\obj\Debug\net10.0\CMS.Ship.287A5E5F.Up2Date
 D:\Files\CMS\CargoManagementSystem\src\Services\Shipment\CMS.ShipmentService.Infrastructure\obj\Debug\net10.0\CMS.ShipmentService.Infrastructure.dll
 D:\Files\CMS\CargoManagementSystem\src\Services\Shipment\CMS.ShipmentService.Infrastructure\obj\Debug\net10.0\refint\CMS.ShipmentService.Infrastructure.dll
 D:\Files\CMS\CargoManagementSystem\src\Services\Shipment\CMS.ShipmentService.Infrastructure\obj\Debug\net10.0\CMS.ShipmentService.Infrastructure.pdb
 D:\Files\CMS\CargoManagementSystem\src\Services\Shipment\CMS.ShipmentService.Infrastructure\obj\Debug\net10.0\CMS.ShipmentService.Infrastructure.genruntimeconfig.cache
 D:\Files\CMS\CargoManagementSystem\src\Services\Shipment\CMS.ShipmentService.Infrastructure\obj\Debug\net10.0\ref\CMS.ShipmentService.Infrastructure.dll
-D:\Files\CMS\CargoManagementSystem\src\Services\Shipment\CMS.ShipmentService.Infrastructure\obj\Debug\net10.0\CMS.ShipmentService.Infrastructure.sourcelink.json

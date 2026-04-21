@@ -81,6 +81,18 @@ try
     builder.Services.AddAuthorization();
     builder.Services.AddHttpContextAccessor();
 
+    // CORS — allows gateway Swagger UI to fetch swagger.json
+    builder.Services.AddCors(options =>
+    {
+        options.AddDefaultPolicy(policy =>
+        {
+            policy.AllowAnyOrigin()
+                  .AllowAnyMethod()
+                  .AllowAnyHeader()
+                  .WithExposedHeaders("*");
+        });
+    });
+
     builder.Services.AddReportingApplication();
     builder.Services.AddReportingInfrastructure(builder.Configuration);
 
@@ -98,6 +110,8 @@ try
     // Middleware pipeline
     app.UseMiddleware<GlobalExceptionMiddleware>();
     app.UseMiddleware<CorrelationIdMiddleware>();
+
+    app.UseCors();
 
     // Swagger always enabled
     app.UseSwagger();

@@ -13,10 +13,10 @@ D:\Files\CMS\CargoManagementSystem\src\Services\Customer\CMS.CustomerService.Inf
 D:\Files\CMS\CargoManagementSystem\src\Services\Customer\CMS.CustomerService.Infrastructure\obj\Debug\net10.0\CMS.CustomerService.Infrastructure.AssemblyInfoInputs.cache
 D:\Files\CMS\CargoManagementSystem\src\Services\Customer\CMS.CustomerService.Infrastructure\obj\Debug\net10.0\CMS.CustomerService.Infrastructure.AssemblyInfo.cs
 D:\Files\CMS\CargoManagementSystem\src\Services\Customer\CMS.CustomerService.Infrastructure\obj\Debug\net10.0\CMS.CustomerService.Infrastructure.csproj.CoreCompileInputs.cache
+D:\Files\CMS\CargoManagementSystem\src\Services\Customer\CMS.CustomerService.Infrastructure\obj\Debug\net10.0\CMS.CustomerService.Infrastructure.sourcelink.json
 D:\Files\CMS\CargoManagementSystem\src\Services\Customer\CMS.CustomerService.Infrastructure\obj\Debug\net10.0\CMS.Cust.8B28ADB8.Up2Date
 D:\Files\CMS\CargoManagementSystem\src\Services\Customer\CMS.CustomerService.Infrastructure\obj\Debug\net10.0\CMS.CustomerService.Infrastructure.dll
 D:\Files\CMS\CargoManagementSystem\src\Services\Customer\CMS.CustomerService.Infrastructure\obj\Debug\net10.0\refint\CMS.CustomerService.Infrastructure.dll
 D:\Files\CMS\CargoManagementSystem\src\Services\Customer\CMS.CustomerService.Infrastructure\obj\Debug\net10.0\CMS.CustomerService.Infrastructure.pdb
 D:\Files\CMS\CargoManagementSystem\src\Services\Customer\CMS.CustomerService.Infrastructure\obj\Debug\net10.0\CMS.CustomerService.Infrastructure.genruntimeconfig.cache
 D:\Files\CMS\CargoManagementSystem\src\Services\Customer\CMS.CustomerService.Infrastructure\obj\Debug\net10.0\ref\CMS.CustomerService.Infrastructure.dll
-D:\Files\CMS\CargoManagementSystem\src\Services\Customer\CMS.CustomerService.Infrastructure\obj\Debug\net10.0\CMS.CustomerService.Infrastructure.sourcelink.json

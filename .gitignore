@@ -12,3 +12,10 @@ obj/
 # Others
 *.user
 *.suo
+
+# Ignore documentation files
+CargoManagementSystem/*.md
+
+# Ignore scripts
+CargoManagementSystem/*.bat
+CargoManagementSystem/*.ps1

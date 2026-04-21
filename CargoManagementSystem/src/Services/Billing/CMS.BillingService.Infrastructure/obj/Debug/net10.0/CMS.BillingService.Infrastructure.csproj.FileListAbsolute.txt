@@ -13,10 +13,10 @@ D:\Files\CMS\CargoManagementSystem\src\Services\Billing\CMS.BillingService.Infra
 D:\Files\CMS\CargoManagementSystem\src\Services\Billing\CMS.BillingService.Infrastructure\obj\Debug\net10.0\CMS.BillingService.Infrastructure.AssemblyInfoInputs.cache
 D:\Files\CMS\CargoManagementSystem\src\Services\Billing\CMS.BillingService.Infrastructure\obj\Debug\net10.0\CMS.BillingService.Infrastructure.AssemblyInfo.cs
 D:\Files\CMS\CargoManagementSystem\src\Services\Billing\CMS.BillingService.Infrastructure\obj\Debug\net10.0\CMS.BillingService.Infrastructure.csproj.CoreCompileInputs.cache
+D:\Files\CMS\CargoManagementSystem\src\Services\Billing\CMS.BillingService.Infrastructure\obj\Debug\net10.0\CMS.BillingService.Infrastructure.sourcelink.json
 D:\Files\CMS\CargoManagementSystem\src\Services\Billing\CMS.BillingService.Infrastructure\obj\Debug\net10.0\CMS.Bill.2EDD8077.Up2Date
 D:\Files\CMS\CargoManagementSystem\src\Services\Billing\CMS.BillingService.Infrastructure\obj\Debug\net10.0\CMS.BillingService.Infrastructure.dll
 D:\Files\CMS\CargoManagementSystem\src\Services\Billing\CMS.BillingService.Infrastructure\obj\Debug\net10.0\refint\CMS.BillingService.Infrastructure.dll
 D:\Files\CMS\CargoManagementSystem\src\Services\Billing\CMS.BillingService.Infrastructure\obj\Debug\net10.0\CMS.BillingService.Infrastructure.pdb
 D:\Files\CMS\CargoManagementSystem\src\Services\Billing\CMS.BillingService.Infrastructure\obj\Debug\net10.0\CMS.BillingService.Infrastructure.genruntimeconfig.cache
 D:\Files\CMS\CargoManagementSystem\src\Services\Billing\CMS.BillingService.Infrastructure\obj\Debug\net10.0\ref\CMS.BillingService.Infrastructure.dll
-D:\Files\CMS\CargoManagementSystem\src\Services\Billing\CMS.BillingService.Infrastructure\obj\Debug\net10.0\CMS.BillingService.Infrastructure.sourcelink.json

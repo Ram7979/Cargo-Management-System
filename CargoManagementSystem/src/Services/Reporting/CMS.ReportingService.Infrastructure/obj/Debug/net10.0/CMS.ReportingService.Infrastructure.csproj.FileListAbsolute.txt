@@ -13,10 +13,10 @@ D:\Files\CMS\CargoManagementSystem\src\Services\Reporting\CMS.ReportingService.I
 D:\Files\CMS\CargoManagementSystem\src\Services\Reporting\CMS.ReportingService.Infrastructure\obj\Debug\net10.0\CMS.ReportingService.Infrastructure.AssemblyInfoInputs.cache
 D:\Files\CMS\CargoManagementSystem\src\Services\Reporting\CMS.ReportingService.Infrastructure\obj\Debug\net10.0\CMS.ReportingService.Infrastructure.AssemblyInfo.cs
 D:\Files\CMS\CargoManagementSystem\src\Services\Reporting\CMS.ReportingService.Infrastructure\obj\Debug\net10.0\CMS.ReportingService.Infrastructure.csproj.CoreCompileInputs.cache
+D:\Files\CMS\CargoManagementSystem\src\Services\Reporting\CMS.ReportingService.Infrastructure\obj\Debug\net10.0\CMS.ReportingService.Infrastructure.sourcelink.json
 D:\Files\CMS\CargoManagementSystem\src\Services\Reporting\CMS.ReportingService.Infrastructure\obj\Debug\net10.0\CMS.Repo.A04ACD0B.Up2Date
 D:\Files\CMS\CargoManagementSystem\src\Services\Reporting\CMS.ReportingService.Infrastructure\obj\Debug\net10.0\CMS.ReportingService.Infrastructure.dll
 D:\Files\CMS\CargoManagementSystem\src\Services\Reporting\CMS.ReportingService.Infrastructure\obj\Debug\net10.0\refint\CMS.ReportingService.Infrastructure.dll
 D:\Files\CMS\CargoManagementSystem\src\Services\Reporting\CMS.ReportingService.Infrastructure\obj\Debug\net10.0\CMS.ReportingService.Infrastructure.pdb
 D:\Files\CMS\CargoManagementSystem\src\Services\Reporting\CMS.ReportingService.Infrastructure\obj\Debug\net10.0\CMS.ReportingService.Infrastructure.genruntimeconfig.cache
 D:\Files\CMS\CargoManagementSystem\src\Services\Reporting\CMS.ReportingService.Infrastructure\obj\Debug\net10.0\ref\CMS.ReportingService.Infrastructure.dll
-D:\Files\CMS\CargoManagementSystem\src\Services\Reporting\CMS.ReportingService.Infrastructure\obj\Debug\net10.0\CMS.ReportingService.Infrastructure.sourcelink.json

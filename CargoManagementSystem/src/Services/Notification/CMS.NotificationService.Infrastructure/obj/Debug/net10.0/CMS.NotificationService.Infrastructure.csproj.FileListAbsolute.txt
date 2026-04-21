@@ -13,10 +13,10 @@ D:\Files\CMS\CargoManagementSystem\src\Services\Notification\CMS.NotificationSer
 D:\Files\CMS\CargoManagementSystem\src\Services\Notification\CMS.NotificationService.Infrastructure\obj\Debug\net10.0\CMS.NotificationService.Infrastructure.AssemblyInfoInputs.cache
 D:\Files\CMS\CargoManagementSystem\src\Services\Notification\CMS.NotificationService.Infrastructure\obj\Debug\net10.0\CMS.NotificationService.Infrastructure.AssemblyInfo.cs
 D:\Files\CMS\CargoManagementSystem\src\Services\Notification\CMS.NotificationService.Infrastructure\obj\Debug\net10.0\CMS.NotificationService.Infrastructure.csproj.CoreCompileInputs.cache
+D:\Files\CMS\CargoManagementSystem\src\Services\Notification\CMS.NotificationService.Infrastructure\obj\Debug\net10.0\CMS.NotificationService.Infrastructure.sourcelink.json
 D:\Files\CMS\CargoManagementSystem\src\Services\Notification\CMS.NotificationService.Infrastructure\obj\Debug\net10.0\CMS.Noti.256DE781.Up2Date
 D:\Files\CMS\CargoManagementSystem\src\Services\Notification\CMS.NotificationService.Infrastructure\obj\Debug\net10.0\CMS.NotificationService.Infrastructure.dll
 D:\Files\CMS\CargoManagementSystem\src\Services\Notification\CMS.NotificationService.Infrastructure\obj\Debug\net10.0\refint\CMS.NotificationService.Infrastructure.dll
 D:\Files\CMS\CargoManagementSystem\src\Services\Notification\CMS.NotificationService.Infrastructure\obj\Debug\net10.0\CMS.NotificationService.Infrastructure.pdb
 D:\Files\CMS\CargoManagementSystem\src\Services\Notification\CMS.NotificationService.Infrastructure\obj\Debug\net10.0\CMS.NotificationService.Infrastructure.genruntimeconfig.cache
 D:\Files\CMS\CargoManagementSystem\src\Services\Notification\CMS.NotificationService.Infrastructure\obj\Debug\net10.0\ref\CMS.NotificationService.Infrastructure.dll
-D:\Files\CMS\CargoManagementSystem\src\Services\Notification\CMS.NotificationService.Infrastructure\obj\Debug\net10.0\CMS.NotificationService.Infrastructure.sourcelink.json

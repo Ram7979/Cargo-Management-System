@@ -10,9 +10,9 @@ D:\Files\CMS\CargoManagementSystem\src\Services\Warehouse\CMS.WarehouseService.A
 D:\Files\CMS\CargoManagementSystem\src\Services\Warehouse\CMS.WarehouseService.Application\obj\Debug\net10.0\CMS.WarehouseService.Application.AssemblyInfoInputs.cache
 D:\Files\CMS\CargoManagementSystem\src\Services\Warehouse\CMS.WarehouseService.Application\obj\Debug\net10.0\CMS.WarehouseService.Application.AssemblyInfo.cs
 D:\Files\CMS\CargoManagementSystem\src\Services\Warehouse\CMS.WarehouseService.Application\obj\Debug\net10.0\CMS.WarehouseService.Application.csproj.CoreCompileInputs.cache
+D:\Files\CMS\CargoManagementSystem\src\Services\Warehouse\CMS.WarehouseService.Application\obj\Debug\net10.0\CMS.WarehouseService.Application.sourcelink.json
 D:\Files\CMS\CargoManagementSystem\src\Services\Warehouse\CMS.WarehouseService.Application\obj\Debug\net10.0\CMS.Ware.E78FBD0D.Up2Date
 D:\Files\CMS\CargoManagementSystem\src\Services\Warehouse\CMS.WarehouseService.Application\obj\Debug\net10.0\CMS.WarehouseService.Application.dll
 D:\Files\CMS\CargoManagementSystem\src\Services\Warehouse\CMS.WarehouseService.Application\obj\Debug\net10.0\refint\CMS.WarehouseService.Application.dll
 D:\Files\CMS\CargoManagementSystem\src\Services\Warehouse\CMS.WarehouseService.Application\obj\Debug\net10.0\CMS.WarehouseService.Application.pdb
 D:\Files\CMS\CargoManagementSystem\src\Services\Warehouse\CMS.WarehouseService.Application\obj\Debug\net10.0\ref\CMS.WarehouseService.Application.dll
-D:\Files\CMS\CargoManagementSystem\src\Services\Warehouse\CMS.WarehouseService.Application\obj\Debug\net10.0\CMS.WarehouseService.Application.sourcelink.json
