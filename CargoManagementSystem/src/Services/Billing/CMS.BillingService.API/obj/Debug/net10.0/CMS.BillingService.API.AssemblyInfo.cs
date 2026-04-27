@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("CMS.BillingService.API")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+12aeed8bcc26dd8fc434835b8de49ece931d6857")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+eb0f3bb16347f3bf2e016e2df8bd46f5f4893c5a")]
 [assembly: System.Reflection.AssemblyProductAttribute("CMS.BillingService.API")]
 [assembly: System.Reflection.AssemblyTitleAttribute("CMS.BillingService.API")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

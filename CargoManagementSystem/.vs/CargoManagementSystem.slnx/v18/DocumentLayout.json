@@ -3,24 +3,80 @@
   "WorkspaceRootPath": "D:\\Files\\CMS\\CargoManagementSystem\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{09129433-9286-0DB0-41BE-9A004AFD89DF}|src\\Shared\\CMS.Shared\\CMS.Shared.csproj|d:\\files\\cms\\cargomanagementsystem\\src\\shared\\cms.shared\\middleware\\correlationidmiddleware.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{09129433-9286-0DB0-41BE-9A004AFD89DF}|src\\Shared\\CMS.Shared\\CMS.Shared.csproj|solutionrelative:src\\shared\\cms.shared\\middleware\\correlationidmiddleware.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{723127FB-1A9D-2952-47C4-01A0A4B39ACD}|src\\Services\\Identity\\CMS.IdentityService.Infrastructure\\CMS.IdentityService.Infrastructure.csproj|d:\\files\\cms\\cargomanagementsystem\\src\\services\\identity\\cms.identityservice.infrastructure\\services\\jwtservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{723127FB-1A9D-2952-47C4-01A0A4B39ACD}|src\\Services\\Identity\\CMS.IdentityService.Infrastructure\\CMS.IdentityService.Infrastructure.csproj|solutionrelative:src\\services\\identity\\cms.identityservice.infrastructure\\services\\jwtservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{723127FB-1A9D-2952-47C4-01A0A4B39ACD}|src\\Services\\Identity\\CMS.IdentityService.Infrastructure\\CMS.IdentityService.Infrastructure.csproj|d:\\files\\cms\\cargomanagementsystem\\src\\services\\identity\\cms.identityservice.infrastructure\\services\\rediscacheservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{723127FB-1A9D-2952-47C4-01A0A4B39ACD}|src\\Services\\Identity\\CMS.IdentityService.Infrastructure\\CMS.IdentityService.Infrastructure.csproj|solutionrelative:src\\services\\identity\\cms.identityservice.infrastructure\\services\\rediscacheservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{723127FB-1A9D-2952-47C4-01A0A4B39ACD}|src\\Services\\Identity\\CMS.IdentityService.Infrastructure\\CMS.IdentityService.Infrastructure.csproj|d:\\files\\cms\\cargomanagementsystem\\src\\services\\identity\\cms.identityservice.infrastructure\\persistence\\identitydbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{723127FB-1A9D-2952-47C4-01A0A4B39ACD}|src\\Services\\Identity\\CMS.IdentityService.Infrastructure\\CMS.IdentityService.Infrastructure.csproj|solutionrelative:src\\services\\identity\\cms.identityservice.infrastructure\\persistence\\identitydbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{723127FB-1A9D-2952-47C4-01A0A4B39ACD}|src\\Services\\Identity\\CMS.IdentityService.Infrastructure\\CMS.IdentityService.Infrastructure.csproj|d:\\files\\cms\\cargomanagementsystem\\src\\services\\identity\\cms.identityservice.infrastructure\\persistence\\repositories\\userrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{723127FB-1A9D-2952-47C4-01A0A4B39ACD}|src\\Services\\Identity\\CMS.IdentityService.Infrastructure\\CMS.IdentityService.Infrastructure.csproj|solutionrelative:src\\services\\identity\\cms.identityservice.infrastructure\\persistence\\repositories\\userrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{723127FB-1A9D-2952-47C4-01A0A4B39ACD}|src\\Services\\Identity\\CMS.IdentityService.Infrastructure\\CMS.IdentityService.Infrastructure.csproj|d:\\files\\cms\\cargomanagementsystem\\src\\services\\identity\\cms.identityservice.infrastructure\\persistence\\repositories\\refreshtokenrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{723127FB-1A9D-2952-47C4-01A0A4B39ACD}|src\\Services\\Identity\\CMS.IdentityService.Infrastructure\\CMS.IdentityService.Infrastructure.csproj|solutionrelative:src\\services\\identity\\cms.identityservice.infrastructure\\persistence\\repositories\\refreshtokenrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{723127FB-1A9D-2952-47C4-01A0A4B39ACD}|src\\Services\\Identity\\CMS.IdentityService.Infrastructure\\CMS.IdentityService.Infrastructure.csproj|d:\\files\\cms\\cargomanagementsystem\\src\\services\\identity\\cms.identityservice.infrastructure\\persistence\\configurations\\auditlogconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{723127FB-1A9D-2952-47C4-01A0A4B39ACD}|src\\Services\\Identity\\CMS.IdentityService.Infrastructure\\CMS.IdentityService.Infrastructure.csproj|solutionrelative:src\\services\\identity\\cms.identityservice.infrastructure\\persistence\\configurations\\auditlogconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{723127FB-1A9D-2952-47C4-01A0A4B39ACD}|src\\Services\\Identity\\CMS.IdentityService.Infrastructure\\CMS.IdentityService.Infrastructure.csproj|d:\\files\\cms\\cargomanagementsystem\\src\\services\\identity\\cms.identityservice.infrastructure\\persistence\\configurations\\refreshtokenconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{723127FB-1A9D-2952-47C4-01A0A4B39ACD}|src\\Services\\Identity\\CMS.IdentityService.Infrastructure\\CMS.IdentityService.Infrastructure.csproj|solutionrelative:src\\services\\identity\\cms.identityservice.infrastructure\\persistence\\configurations\\refreshtokenconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{723127FB-1A9D-2952-47C4-01A0A4B39ACD}|src\\Services\\Identity\\CMS.IdentityService.Infrastructure\\CMS.IdentityService.Infrastructure.csproj|d:\\files\\cms\\cargomanagementsystem\\src\\services\\identity\\cms.identityservice.infrastructure\\persistence\\configurations\\userconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{723127FB-1A9D-2952-47C4-01A0A4B39ACD}|src\\Services\\Identity\\CMS.IdentityService.Infrastructure\\CMS.IdentityService.Infrastructure.csproj|solutionrelative:src\\services\\identity\\cms.identityservice.infrastructure\\persistence\\configurations\\userconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{723127FB-1A9D-2952-47C4-01A0A4B39ACD}|src\\Services\\Identity\\CMS.IdentityService.Infrastructure\\CMS.IdentityService.Infrastructure.csproj|d:\\files\\cms\\cargomanagementsystem\\src\\services\\identity\\cms.identityservice.infrastructure\\persistence\\configurations\\userroleconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{723127FB-1A9D-2952-47C4-01A0A4B39ACD}|src\\Services\\Identity\\CMS.IdentityService.Infrastructure\\CMS.IdentityService.Infrastructure.csproj|solutionrelative:src\\services\\identity\\cms.identityservice.infrastructure\\persistence\\configurations\\userroleconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{723127FB-1A9D-2952-47C4-01A0A4B39ACD}|src\\Services\\Identity\\CMS.IdentityService.Infrastructure\\CMS.IdentityService.Infrastructure.csproj|d:\\files\\cms\\cargomanagementsystem\\src\\services\\identity\\cms.identityservice.infrastructure\\persistence\\repositories\\auditlogrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{723127FB-1A9D-2952-47C4-01A0A4B39ACD}|src\\Services\\Identity\\CMS.IdentityService.Infrastructure\\CMS.IdentityService.Infrastructure.csproj|solutionrelative:src\\services\\identity\\cms.identityservice.infrastructure\\persistence\\repositories\\auditlogrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F1598869-6FF8-F303-37C7-139453577826}|src\\Gateway\\CMS.ApiGateway\\CMS.ApiGateway.csproj|d:\\files\\cms\\cargomanagementsystem\\src\\gateway\\cms.apigateway\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F1598869-6FF8-F303-37C7-139453577826}|src\\Gateway\\CMS.ApiGateway\\CMS.ApiGateway.csproj|solutionrelative:src\\gateway\\cms.apigateway\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F1598869-6FF8-F303-37C7-139453577826}|src\\Gateway\\CMS.ApiGateway\\CMS.ApiGateway.csproj|d:\\files\\cms\\cargomanagementsystem\\src\\gateway\\cms.apigateway\\dockerfile||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{F1598869-6FF8-F303-37C7-139453577826}|src\\Gateway\\CMS.ApiGateway\\CMS.ApiGateway.csproj|solutionrelative:src\\gateway\\cms.apigateway\\dockerfile||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F1598869-6FF8-F303-37C7-139453577826}|src\\Gateway\\CMS.ApiGateway\\CMS.ApiGateway.csproj|d:\\files\\cms\\cargomanagementsystem\\src\\gateway\\cms.apigateway\\cms.apigateway.http||{5703B403-55E7-4C63-8C88-A8F52C7A45C5}",
+      "RelativeMoniker": "D:0:0:{F1598869-6FF8-F303-37C7-139453577826}|src\\Gateway\\CMS.ApiGateway\\CMS.ApiGateway.csproj|solutionrelative:src\\gateway\\cms.apigateway\\cms.apigateway.http||{5703B403-55E7-4C63-8C88-A8F52C7A45C5}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F1598869-6FF8-F303-37C7-139453577826}|src\\Gateway\\CMS.ApiGateway\\CMS.ApiGateway.csproj|d:\\files\\cms\\cargomanagementsystem\\src\\gateway\\cms.apigateway\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{F1598869-6FF8-F303-37C7-139453577826}|src\\Gateway\\CMS.ApiGateway\\CMS.ApiGateway.csproj|solutionrelative:src\\gateway\\cms.apigateway\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{F1598869-6FF8-F303-37C7-139453577826}|src\\Gateway\\CMS.ApiGateway\\CMS.ApiGateway.csproj|d:\\files\\cms\\cargomanagementsystem\\src\\gateway\\cms.apigateway\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
       "RelativeMoniker": "D:0:0:{F1598869-6FF8-F303-37C7-139453577826}|src\\Gateway\\CMS.ApiGateway\\CMS.ApiGateway.csproj|solutionrelative:src\\gateway\\cms.apigateway\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F1598869-6FF8-F303-37C7-139453577826}|src\\Gateway\\CMS.ApiGateway\\CMS.ApiGateway.csproj|d:\\files\\cms\\cargomanagementsystem\\src\\gateway\\cms.apigateway\\cms.apigateway.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{F1598869-6FF8-F303-37C7-139453577826}|src\\Gateway\\CMS.ApiGateway\\CMS.ApiGateway.csproj|solutionrelative:src\\gateway\\cms.apigateway\\cms.apigateway.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
     },
     {
       "AbsoluteMoniker": "D:0:0:{5F80D0F0-73B7-D25D-B806-4B96A2BFFD07}|src\\Services\\Identity\\CMS.IdentityService.API\\CMS.IdentityService.API.csproj|d:\\files\\cms\\cargomanagementsystem\\src\\services\\identity\\cms.identityservice.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{5F80D0F0-73B7-D25D-B806-4B96A2BFFD07}|src\\Services\\Identity\\CMS.IdentityService.API\\CMS.IdentityService.API.csproj|solutionrelative:src\\services\\identity\\cms.identityservice.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{09129433-9286-0DB0-41BE-9A004AFD89DF}|src\\Shared\\CMS.Shared\\CMS.Shared.csproj|d:\\files\\cms\\cargomanagementsystem\\src\\shared\\cms.shared\\middleware\\correlationidmiddleware.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{09129433-9286-0DB0-41BE-9A004AFD89DF}|src\\Shared\\CMS.Shared\\CMS.Shared.csproj|solutionrelative:src\\shared\\cms.shared\\middleware\\correlationidmiddleware.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{5F80D0F0-73B7-D25D-B806-4B96A2BFFD07}|src\\Services\\Identity\\CMS.IdentityService.API\\CMS.IdentityService.API.csproj|d:\\files\\cms\\cargomanagementsystem\\src\\services\\identity\\cms.identityservice.api\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
       "RelativeMoniker": "D:0:0:{5F80D0F0-73B7-D25D-B806-4B96A2BFFD07}|src\\Services\\Identity\\CMS.IdentityService.API\\CMS.IdentityService.API.csproj|solutionrelative:src\\services\\identity\\cms.identityservice.api\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{723127FB-1A9D-2952-47C4-01A0A4B39ACD}|src\\Services\\Identity\\CMS.IdentityService.Infrastructure\\CMS.IdentityService.Infrastructure.csproj|d:\\files\\cms\\cargomanagementsystem\\src\\services\\identity\\cms.identityservice.infrastructure\\services\\jwtservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{723127FB-1A9D-2952-47C4-01A0A4B39ACD}|src\\Services\\Identity\\CMS.IdentityService.Infrastructure\\CMS.IdentityService.Infrastructure.csproj|solutionrelative:src\\services\\identity\\cms.identityservice.infrastructure\\services\\jwtservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{5F80D0F0-73B7-D25D-B806-4B96A2BFFD07}|src\\Services\\Identity\\CMS.IdentityService.API\\CMS.IdentityService.API.csproj|d:\\files\\cms\\cargomanagementsystem\\src\\services\\identity\\cms.identityservice.api\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
@@ -37,10 +93,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{5F80D0F0-73B7-D25D-B806-4B96A2BFFD07}|src\\Services\\Identity\\CMS.IdentityService.API\\CMS.IdentityService.API.csproj|d:\\files\\cms\\cargomanagementsystem\\src\\services\\identity\\cms.identityservice.api\\cms.identityservice.api.http||{5703B403-55E7-4C63-8C88-A8F52C7A45C5}",
       "RelativeMoniker": "D:0:0:{5F80D0F0-73B7-D25D-B806-4B96A2BFFD07}|src\\Services\\Identity\\CMS.IdentityService.API\\CMS.IdentityService.API.csproj|solutionrelative:src\\services\\identity\\cms.identityservice.api\\cms.identityservice.api.http||{5703B403-55E7-4C63-8C88-A8F52C7A45C5}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{723127FB-1A9D-2952-47C4-01A0A4B39ACD}|src\\Services\\Identity\\CMS.IdentityService.Infrastructure\\CMS.IdentityService.Infrastructure.csproj|d:\\files\\cms\\cargomanagementsystem\\src\\services\\identity\\cms.identityservice.infrastructure\\persistence\\repositories\\refreshtokenrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{723127FB-1A9D-2952-47C4-01A0A4B39ACD}|src\\Services\\Identity\\CMS.IdentityService.Infrastructure\\CMS.IdentityService.Infrastructure.csproj|solutionrelative:src\\services\\identity\\cms.identityservice.infrastructure\\persistence\\repositories\\refreshtokenrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{FA18D20E-3A41-4BDD-40B3-A21A52EC7F73}|src\\Services\\Identity\\CMS.IdentityService.Domain\\CMS.IdentityService.Domain.csproj|d:\\files\\cms\\cargomanagementsystem\\src\\services\\identity\\cms.identityservice.domain\\exceptions\\invalidcredentialsexception.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -107,14 +159,6 @@
       "RelativeMoniker": "D:0:0:{D583269F-3A22-44A1-01E7-0ACDEADD551D}|src\\Services\\Billing\\CMS.BillingService.API\\CMS.BillingService.API.csproj|solutionrelative:src\\services\\billing\\cms.billingservice.api\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F1598869-6FF8-F303-37C7-139453577826}|src\\Gateway\\CMS.ApiGateway\\CMS.ApiGateway.csproj|d:\\files\\cms\\cargomanagementsystem\\src\\gateway\\cms.apigateway\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F1598869-6FF8-F303-37C7-139453577826}|src\\Gateway\\CMS.ApiGateway\\CMS.ApiGateway.csproj|solutionrelative:src\\gateway\\cms.apigateway\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F1598869-6FF8-F303-37C7-139453577826}|src\\Gateway\\CMS.ApiGateway\\CMS.ApiGateway.csproj|d:\\files\\cms\\cargomanagementsystem\\src\\gateway\\cms.apigateway\\cms.apigateway.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
-      "RelativeMoniker": "D:0:0:{F1598869-6FF8-F303-37C7-139453577826}|src\\Gateway\\CMS.ApiGateway\\CMS.ApiGateway.csproj|solutionrelative:src\\gateway\\cms.apigateway\\cms.apigateway.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{764F303E-B04E-BF00-5AD9-8B135150ECBB}|src\\Services\\Notification\\CMS.NotificationService.API\\CMS.NotificationService.API.csproj|d:\\files\\cms\\cargomanagementsystem\\src\\services\\notification\\cms.notificationservice.api\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
       "RelativeMoniker": "D:0:0:{764F303E-B04E-BF00-5AD9-8B135150ECBB}|src\\Services\\Notification\\CMS.NotificationService.API\\CMS.NotificationService.API.csproj|solutionrelative:src\\services\\notification\\cms.notificationservice.api\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     },
@@ -166,11 +210,11 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 4,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 23,
+              "DocumentIndex": 36,
               "Title": "Dockerfile",
               "DocumentMoniker": "D:\\Files\\CMS\\CargoManagementSystem\\src\\Services\\Identity\\CMS.IdentityService.API\\Dockerfile",
               "RelativeDocumentMoniker": "src\\Services\\Identity\\CMS.IdentityService.API\\Dockerfile",
@@ -179,8 +223,7 @@
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
               "WhenOpened": "2026-04-21T10:12:25.368Z",
-              "IsPinned": true,
-              "EditorCaption": ""
+              "IsPinned": true
             },
             {
               "$type": "Bookmark",
@@ -188,46 +231,200 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "launchSettings.json",
-              "DocumentMoniker": "D:\\Files\\CMS\\CargoManagementSystem\\src\\Gateway\\CMS.ApiGateway\\Properties\\launchSettings.json",
-              "RelativeDocumentMoniker": "src\\Gateway\\CMS.ApiGateway\\Properties\\launchSettings.json",
-              "ToolTip": "D:\\Files\\CMS\\CargoManagementSystem\\src\\Gateway\\CMS.ApiGateway\\Properties\\launchSettings.json",
-              "RelativeToolTip": "src\\Gateway\\CMS.ApiGateway\\Properties\\launchSettings.json",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAcAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2026-04-21T06:30:56.998Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "appsettings.Development.json",
-              "DocumentMoniker": "D:\\Files\\CMS\\CargoManagementSystem\\src\\Services\\Identity\\CMS.IdentityService.API\\appsettings.Development.json",
-              "RelativeDocumentMoniker": "src\\Services\\Identity\\CMS.IdentityService.API\\appsettings.Development.json",
-              "ToolTip": "D:\\Files\\CMS\\CargoManagementSystem\\src\\Services\\Identity\\CMS.IdentityService.API\\appsettings.Development.json",
-              "RelativeToolTip": "src\\Services\\Identity\\CMS.IdentityService.API\\appsettings.Development.json",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2026-04-21T12:45:01.717Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 1,
               "Title": "JwtService.cs",
               "DocumentMoniker": "D:\\Files\\CMS\\CargoManagementSystem\\src\\Services\\Identity\\CMS.IdentityService.Infrastructure\\Services\\JwtService.cs",
               "RelativeDocumentMoniker": "src\\Services\\Identity\\CMS.IdentityService.Infrastructure\\Services\\JwtService.cs",
               "ToolTip": "D:\\Files\\CMS\\CargoManagementSystem\\src\\Services\\Identity\\CMS.IdentityService.Infrastructure\\Services\\JwtService.cs",
               "RelativeToolTip": "src\\Services\\Identity\\CMS.IdentityService.Infrastructure\\Services\\JwtService.cs",
-              "ViewState": "AgIAADsAAAAAAAAAAAAgwEIAAAAyAAAAAAAAAA==",
+              "ViewState": "AgIAAC0AAAAAAAAAAAAYwDIAAAA0AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-21T12:53:04.396Z",
+              "WhenOpened": "2026-04-21T12:53:04.396Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "RefreshTokenConfiguration.cs",
+              "DocumentMoniker": "D:\\Files\\CMS\\CargoManagementSystem\\src\\Services\\Identity\\CMS.IdentityService.Infrastructure\\Persistence\\Configurations\\RefreshTokenConfiguration.cs",
+              "RelativeDocumentMoniker": "src\\Services\\Identity\\CMS.IdentityService.Infrastructure\\Persistence\\Configurations\\RefreshTokenConfiguration.cs",
+              "ToolTip": "D:\\Files\\CMS\\CargoManagementSystem\\src\\Services\\Identity\\CMS.IdentityService.Infrastructure\\Persistence\\Configurations\\RefreshTokenConfiguration.cs",
+              "RelativeToolTip": "src\\Services\\Identity\\CMS.IdentityService.Infrastructure\\Persistence\\Configurations\\RefreshTokenConfiguration.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-22T06:35:33.716Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "CorrelationIdMiddleware.cs",
+              "DocumentMoniker": "D:\\Files\\CMS\\CargoManagementSystem\\src\\Shared\\CMS.Shared\\Middleware\\CorrelationIdMiddleware.cs",
+              "RelativeDocumentMoniker": "src\\Shared\\CMS.Shared\\Middleware\\CorrelationIdMiddleware.cs",
+              "ToolTip": "D:\\Files\\CMS\\CargoManagementSystem\\src\\Shared\\CMS.Shared\\Middleware\\CorrelationIdMiddleware.cs",
+              "RelativeToolTip": "src\\Shared\\CMS.Shared\\Middleware\\CorrelationIdMiddleware.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-21T12:20:52.341Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 4,
+              "Title": "UserRepository.cs",
+              "DocumentMoniker": "D:\\Files\\CMS\\CargoManagementSystem\\src\\Services\\Identity\\CMS.IdentityService.Infrastructure\\Persistence\\Repositories\\UserRepository.cs",
+              "RelativeDocumentMoniker": "src\\Services\\Identity\\CMS.IdentityService.Infrastructure\\Persistence\\Repositories\\UserRepository.cs",
+              "ToolTip": "D:\\Files\\CMS\\CargoManagementSystem\\src\\Services\\Identity\\CMS.IdentityService.Infrastructure\\Persistence\\Repositories\\UserRepository.cs",
+              "RelativeToolTip": "src\\Services\\Identity\\CMS.IdentityService.Infrastructure\\Persistence\\Repositories\\UserRepository.cs",
+              "ViewState": "AgIAAC8AAAAAAAAAAAAswAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-25T05:32:53.107Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "IdentityDbContext.cs",
+              "DocumentMoniker": "D:\\Files\\CMS\\CargoManagementSystem\\src\\Services\\Identity\\CMS.IdentityService.Infrastructure\\Persistence\\IdentityDbContext.cs",
+              "RelativeDocumentMoniker": "src\\Services\\Identity\\CMS.IdentityService.Infrastructure\\Persistence\\IdentityDbContext.cs",
+              "ToolTip": "D:\\Files\\CMS\\CargoManagementSystem\\src\\Services\\Identity\\CMS.IdentityService.Infrastructure\\Persistence\\IdentityDbContext.cs",
+              "RelativeToolTip": "src\\Services\\Identity\\CMS.IdentityService.Infrastructure\\Persistence\\IdentityDbContext.cs",
+              "ViewState": "AgIAAAoAAAAAAAAAAAAQwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-25T05:33:00.255Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "AuditLogConfiguration.cs",
+              "DocumentMoniker": "D:\\Files\\CMS\\CargoManagementSystem\\src\\Services\\Identity\\CMS.IdentityService.Infrastructure\\Persistence\\Configurations\\AuditLogConfiguration.cs",
+              "RelativeDocumentMoniker": "src\\Services\\Identity\\CMS.IdentityService.Infrastructure\\Persistence\\Configurations\\AuditLogConfiguration.cs",
+              "ToolTip": "D:\\Files\\CMS\\CargoManagementSystem\\src\\Services\\Identity\\CMS.IdentityService.Infrastructure\\Persistence\\Configurations\\AuditLogConfiguration.cs",
+              "RelativeToolTip": "src\\Services\\Identity\\CMS.IdentityService.Infrastructure\\Persistence\\Configurations\\AuditLogConfiguration.cs",
+              "ViewState": "AgIAABkAAAAAAAAAAAAQwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-22T06:32:30.737Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "RefreshTokenRepository.cs",
+              "DocumentMoniker": "D:\\Files\\CMS\\CargoManagementSystem\\src\\Services\\Identity\\CMS.IdentityService.Infrastructure\\Persistence\\Repositories\\RefreshTokenRepository.cs",
+              "RelativeDocumentMoniker": "src\\Services\\Identity\\CMS.IdentityService.Infrastructure\\Persistence\\Repositories\\RefreshTokenRepository.cs",
+              "ToolTip": "D:\\Files\\CMS\\CargoManagementSystem\\src\\Services\\Identity\\CMS.IdentityService.Infrastructure\\Persistence\\Repositories\\RefreshTokenRepository.cs",
+              "RelativeToolTip": "src\\Services\\Identity\\CMS.IdentityService.Infrastructure\\Persistence\\Repositories\\RefreshTokenRepository.cs",
+              "ViewState": "AgIAAA0AAAAAAAAAAAAQwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-21T12:18:01.479Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "RedisCacheService.cs",
+              "DocumentMoniker": "D:\\Files\\CMS\\CargoManagementSystem\\src\\Services\\Identity\\CMS.IdentityService.Infrastructure\\Services\\RedisCacheService.cs",
+              "RelativeDocumentMoniker": "src\\Services\\Identity\\CMS.IdentityService.Infrastructure\\Services\\RedisCacheService.cs",
+              "ToolTip": "D:\\Files\\CMS\\CargoManagementSystem\\src\\Services\\Identity\\CMS.IdentityService.Infrastructure\\Services\\RedisCacheService.cs",
+              "RelativeToolTip": "src\\Services\\Identity\\CMS.IdentityService.Infrastructure\\Services\\RedisCacheService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-25T05:33:12.734Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "UserConfiguration.cs",
+              "DocumentMoniker": "D:\\Files\\CMS\\CargoManagementSystem\\src\\Services\\Identity\\CMS.IdentityService.Infrastructure\\Persistence\\Configurations\\UserConfiguration.cs",
+              "RelativeDocumentMoniker": "src\\Services\\Identity\\CMS.IdentityService.Infrastructure\\Persistence\\Configurations\\UserConfiguration.cs",
+              "ToolTip": "D:\\Files\\CMS\\CargoManagementSystem\\src\\Services\\Identity\\CMS.IdentityService.Infrastructure\\Persistence\\Configurations\\UserConfiguration.cs",
+              "RelativeToolTip": "src\\Services\\Identity\\CMS.IdentityService.Infrastructure\\Persistence\\Configurations\\UserConfiguration.cs",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-25T05:32:24.769Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "UserRoleConfiguration.cs",
+              "DocumentMoniker": "D:\\Files\\CMS\\CargoManagementSystem\\src\\Services\\Identity\\CMS.IdentityService.Infrastructure\\Persistence\\Configurations\\UserRoleConfiguration.cs",
+              "RelativeDocumentMoniker": "src\\Services\\Identity\\CMS.IdentityService.Infrastructure\\Persistence\\Configurations\\UserRoleConfiguration.cs",
+              "ToolTip": "D:\\Files\\CMS\\CargoManagementSystem\\src\\Services\\Identity\\CMS.IdentityService.Infrastructure\\Persistence\\Configurations\\UserRoleConfiguration.cs",
+              "RelativeToolTip": "src\\Services\\Identity\\CMS.IdentityService.Infrastructure\\Persistence\\Configurations\\UserRoleConfiguration.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-22T06:35:40.87Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "AuditLogRepository.cs",
+              "DocumentMoniker": "D:\\Files\\CMS\\CargoManagementSystem\\src\\Services\\Identity\\CMS.IdentityService.Infrastructure\\Persistence\\Repositories\\AuditLogRepository.cs",
+              "RelativeDocumentMoniker": "src\\Services\\Identity\\CMS.IdentityService.Infrastructure\\Persistence\\Repositories\\AuditLogRepository.cs",
+              "ToolTip": "D:\\Files\\CMS\\CargoManagementSystem\\src\\Services\\Identity\\CMS.IdentityService.Infrastructure\\Persistence\\Repositories\\AuditLogRepository.cs",
+              "RelativeToolTip": "src\\Services\\Identity\\CMS.IdentityService.Infrastructure\\Persistence\\Repositories\\AuditLogRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-22T06:35:54.754Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "Dockerfile",
+              "DocumentMoniker": "D:\\Files\\CMS\\CargoManagementSystem\\src\\Gateway\\CMS.ApiGateway\\Dockerfile",
+              "RelativeDocumentMoniker": "src\\Gateway\\CMS.ApiGateway\\Dockerfile",
+              "ToolTip": "D:\\Files\\CMS\\CargoManagementSystem\\src\\Gateway\\CMS.ApiGateway\\Dockerfile",
+              "RelativeToolTip": "src\\Gateway\\CMS.ApiGateway\\Dockerfile",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2026-04-22T06:29:46.24Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "CMS.ApiGateway.http",
+              "DocumentMoniker": "D:\\Files\\CMS\\CargoManagementSystem\\src\\Gateway\\CMS.ApiGateway\\CMS.ApiGateway.http",
+              "RelativeDocumentMoniker": "src\\Gateway\\CMS.ApiGateway\\CMS.ApiGateway.http",
+              "ToolTip": "D:\\Files\\CMS\\CargoManagementSystem\\src\\Gateway\\CMS.ApiGateway\\CMS.ApiGateway.http",
+              "RelativeToolTip": "src\\Gateway\\CMS.ApiGateway\\CMS.ApiGateway.http",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003502|",
+              "WhenOpened": "2026-04-22T06:29:41.166Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "D:\\Files\\CMS\\CargoManagementSystem\\src\\Gateway\\CMS.ApiGateway\\appsettings.json",
+              "RelativeDocumentMoniker": "src\\Gateway\\CMS.ApiGateway\\appsettings.json",
+              "ToolTip": "D:\\Files\\CMS\\CargoManagementSystem\\src\\Gateway\\CMS.ApiGateway\\appsettings.json",
+              "RelativeToolTip": "src\\Gateway\\CMS.ApiGateway\\appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2026-04-22T06:29:35.435Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "Program.cs",
+              "DocumentMoniker": "D:\\Files\\CMS\\CargoManagementSystem\\src\\Gateway\\CMS.ApiGateway\\Program.cs",
+              "RelativeDocumentMoniker": "src\\Gateway\\CMS.ApiGateway\\Program.cs",
+              "ToolTip": "D:\\Files\\CMS\\CargoManagementSystem\\src\\Gateway\\CMS.ApiGateway\\Program.cs",
+              "RelativeToolTip": "src\\Gateway\\CMS.ApiGateway\\Program.cs",
+              "ViewState": "AgIAAHUAAAAAAAAAAAAAAIMAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-21T06:31:18.311Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "launchSettings.json",
+              "DocumentMoniker": "D:\\Files\\CMS\\CargoManagementSystem\\src\\Gateway\\CMS.ApiGateway\\Properties\\launchSettings.json",
+              "RelativeDocumentMoniker": "src\\Gateway\\CMS.ApiGateway\\Properties\\launchSettings.json",
+              "ToolTip": "D:\\Files\\CMS\\CargoManagementSystem\\src\\Gateway\\CMS.ApiGateway\\Properties\\launchSettings.json",
+              "RelativeToolTip": "src\\Gateway\\CMS.ApiGateway\\Properties\\launchSettings.json",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAA8AAAAcAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2026-04-21T06:30:56.998Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
               "Title": "Program.cs",
               "DocumentMoniker": "D:\\Files\\CMS\\CargoManagementSystem\\src\\Services\\Identity\\CMS.IdentityService.API\\Program.cs",
               "RelativeDocumentMoniker": "src\\Services\\Identity\\CMS.IdentityService.API\\Program.cs",
@@ -235,295 +432,11 @@
               "RelativeToolTip": "src\\Services\\Identity\\CMS.IdentityService.API\\Program.cs",
               "ViewState": "AgIAAHUAAAAAAAAAAAAAAH8AAAAEAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-21T10:10:18.124Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "launchSettings.json",
-              "DocumentMoniker": "D:\\Files\\CMS\\CargoManagementSystem\\src\\Services\\Identity\\CMS.IdentityService.API\\Properties\\launchSettings.json",
-              "RelativeDocumentMoniker": "src\\Services\\Identity\\CMS.IdentityService.API\\Properties\\launchSettings.json",
-              "ToolTip": "D:\\Files\\CMS\\CargoManagementSystem\\src\\Services\\Identity\\CMS.IdentityService.API\\Properties\\launchSettings.json",
-              "RelativeToolTip": "src\\Services\\Identity\\CMS.IdentityService.API\\Properties\\launchSettings.json",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAAABAAAAAcAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2026-04-21T06:24:36.301Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "CorrelationIdMiddleware.cs",
-              "DocumentMoniker": "D:\\Files\\CMS\\CargoManagementSystem\\src\\Shared\\CMS.Shared\\Middleware\\CorrelationIdMiddleware.cs",
-              "RelativeDocumentMoniker": "src\\Shared\\CMS.Shared\\Middleware\\CorrelationIdMiddleware.cs",
-              "ToolTip": "D:\\Files\\CMS\\CargoManagementSystem\\src\\Shared\\CMS.Shared\\Middleware\\CorrelationIdMiddleware.cs",
-              "RelativeToolTip": "src\\Shared\\CMS.Shared\\Middleware\\CorrelationIdMiddleware.cs",
-              "ViewState": "AgIAABQAAAAAAAAAAAAuwBoAAAAMAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-21T12:20:52.341Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "MiddlewareExtensions.cs",
-              "DocumentMoniker": "D:\\Files\\CMS\\CargoManagementSystem\\src\\Shared\\CMS.Shared\\Extensions\\MiddlewareExtensions.cs",
-              "RelativeDocumentMoniker": "src\\Shared\\CMS.Shared\\Extensions\\MiddlewareExtensions.cs",
-              "ToolTip": "D:\\Files\\CMS\\CargoManagementSystem\\src\\Shared\\CMS.Shared\\Extensions\\MiddlewareExtensions.cs",
-              "RelativeToolTip": "src\\Shared\\CMS.Shared\\Extensions\\MiddlewareExtensions.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-21T12:20:47.656Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "appsettings.json",
-              "DocumentMoniker": "D:\\Files\\CMS\\CargoManagementSystem\\src\\Services\\Identity\\CMS.IdentityService.API\\appsettings.json",
-              "RelativeDocumentMoniker": "src\\Services\\Identity\\CMS.IdentityService.API\\appsettings.json",
-              "ToolTip": "D:\\Files\\CMS\\CargoManagementSystem\\src\\Services\\Identity\\CMS.IdentityService.API\\appsettings.json",
-              "RelativeToolTip": "src\\Services\\Identity\\CMS.IdentityService.API\\appsettings.json",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2026-04-21T12:19:59.971Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "CMS.IdentityService.API.http",
-              "DocumentMoniker": "D:\\Files\\CMS\\CargoManagementSystem\\src\\Services\\Identity\\CMS.IdentityService.API\\CMS.IdentityService.API.http",
-              "RelativeDocumentMoniker": "src\\Services\\Identity\\CMS.IdentityService.API\\CMS.IdentityService.API.http",
-              "ToolTip": "D:\\Files\\CMS\\CargoManagementSystem\\src\\Services\\Identity\\CMS.IdentityService.API\\CMS.IdentityService.API.http",
-              "RelativeToolTip": "src\\Services\\Identity\\CMS.IdentityService.API\\CMS.IdentityService.API.http",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003502|",
-              "WhenOpened": "2026-04-21T12:20:05.756Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "RefreshTokenRepository.cs",
-              "DocumentMoniker": "D:\\Files\\CMS\\CargoManagementSystem\\src\\Services\\Identity\\CMS.IdentityService.Infrastructure\\Persistence\\Repositories\\RefreshTokenRepository.cs",
-              "RelativeDocumentMoniker": "src\\Services\\Identity\\CMS.IdentityService.Infrastructure\\Persistence\\Repositories\\RefreshTokenRepository.cs",
-              "ToolTip": "D:\\Files\\CMS\\CargoManagementSystem\\src\\Services\\Identity\\CMS.IdentityService.Infrastructure\\Persistence\\Repositories\\RefreshTokenRepository.cs",
-              "RelativeToolTip": "src\\Services\\Identity\\CMS.IdentityService.Infrastructure\\Persistence\\Repositories\\RefreshTokenRepository.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-21T12:18:01.479Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "InvalidCredentialsException.cs",
-              "DocumentMoniker": "D:\\Files\\CMS\\CargoManagementSystem\\src\\Services\\Identity\\CMS.IdentityService.Domain\\Exceptions\\InvalidCredentialsException.cs",
-              "RelativeDocumentMoniker": "src\\Services\\Identity\\CMS.IdentityService.Domain\\Exceptions\\InvalidCredentialsException.cs",
-              "ToolTip": "D:\\Files\\CMS\\CargoManagementSystem\\src\\Services\\Identity\\CMS.IdentityService.Domain\\Exceptions\\InvalidCredentialsException.cs",
-              "RelativeToolTip": "src\\Services\\Identity\\CMS.IdentityService.Domain\\Exceptions\\InvalidCredentialsException.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-21T12:17:43.568Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "TokenExpiredException.cs",
-              "DocumentMoniker": "D:\\Files\\CMS\\CargoManagementSystem\\src\\Services\\Identity\\CMS.IdentityService.Domain\\Exceptions\\TokenExpiredException.cs",
-              "RelativeDocumentMoniker": "src\\Services\\Identity\\CMS.IdentityService.Domain\\Exceptions\\TokenExpiredException.cs",
-              "ToolTip": "D:\\Files\\CMS\\CargoManagementSystem\\src\\Services\\Identity\\CMS.IdentityService.Domain\\Exceptions\\TokenExpiredException.cs",
-              "RelativeToolTip": "src\\Services\\Identity\\CMS.IdentityService.Domain\\Exceptions\\TokenExpiredException.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-21T12:17:37.743Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "IRefreshTokenRepository.cs",
-              "DocumentMoniker": "D:\\Files\\CMS\\CargoManagementSystem\\src\\Services\\Identity\\CMS.IdentityService.Domain\\Interfaces\\IRefreshTokenRepository.cs",
-              "RelativeDocumentMoniker": "src\\Services\\Identity\\CMS.IdentityService.Domain\\Interfaces\\IRefreshTokenRepository.cs",
-              "ToolTip": "D:\\Files\\CMS\\CargoManagementSystem\\src\\Services\\Identity\\CMS.IdentityService.Domain\\Interfaces\\IRefreshTokenRepository.cs",
-              "RelativeToolTip": "src\\Services\\Identity\\CMS.IdentityService.Domain\\Interfaces\\IRefreshTokenRepository.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-21T12:17:29.905Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 13,
-              "Title": "UserRegisteredEventHandler.cs",
-              "DocumentMoniker": "D:\\Files\\CMS\\CargoManagementSystem\\src\\Services\\Identity\\CMS.IdentityService.Application\\EventHandlers\\UserRegisteredEventHandler.cs",
-              "RelativeDocumentMoniker": "src\\Services\\Identity\\CMS.IdentityService.Application\\EventHandlers\\UserRegisteredEventHandler.cs",
-              "ToolTip": "D:\\Files\\CMS\\CargoManagementSystem\\src\\Services\\Identity\\CMS.IdentityService.Application\\EventHandlers\\UserRegisteredEventHandler.cs",
-              "RelativeToolTip": "src\\Services\\Identity\\CMS.IdentityService.Application\\EventHandlers\\UserRegisteredEventHandler.cs",
-              "ViewState": "AgIAAA0AAAAAAAAAAAAQwAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-21T12:17:08.771Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 14,
-              "Title": "RegisterUserRequest.cs",
-              "DocumentMoniker": "D:\\Files\\CMS\\CargoManagementSystem\\src\\Services\\Identity\\CMS.IdentityService.Application\\DTOs\\RegisterUserRequest.cs",
-              "RelativeDocumentMoniker": "src\\Services\\Identity\\CMS.IdentityService.Application\\DTOs\\RegisterUserRequest.cs",
-              "ToolTip": "D:\\Files\\CMS\\CargoManagementSystem\\src\\Services\\Identity\\CMS.IdentityService.Application\\DTOs\\RegisterUserRequest.cs",
-              "RelativeToolTip": "src\\Services\\Identity\\CMS.IdentityService.Application\\DTOs\\RegisterUserRequest.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-21T12:17:00.108Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-04-21T10:10:18.124Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 16,
-              "Title": "LoginResponse.cs",
-              "DocumentMoniker": "D:\\Files\\CMS\\CargoManagementSystem\\src\\Services\\Identity\\CMS.IdentityService.Application\\DTOs\\LoginResponse.cs",
-              "RelativeDocumentMoniker": "src\\Services\\Identity\\CMS.IdentityService.Application\\DTOs\\LoginResponse.cs",
-              "ToolTip": "D:\\Files\\CMS\\CargoManagementSystem\\src\\Services\\Identity\\CMS.IdentityService.Application\\DTOs\\LoginResponse.cs",
-              "RelativeToolTip": "src\\Services\\Identity\\CMS.IdentityService.Application\\DTOs\\LoginResponse.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-21T12:16:54.638Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 17,
-              "Title": "LoginRequest.cs",
-              "DocumentMoniker": "D:\\Files\\CMS\\CargoManagementSystem\\src\\Services\\Identity\\CMS.IdentityService.Application\\DTOs\\LoginRequest.cs",
-              "RelativeDocumentMoniker": "src\\Services\\Identity\\CMS.IdentityService.Application\\DTOs\\LoginRequest.cs",
-              "ToolTip": "D:\\Files\\CMS\\CargoManagementSystem\\src\\Services\\Identity\\CMS.IdentityService.Application\\DTOs\\LoginRequest.cs",
-              "RelativeToolTip": "src\\Services\\Identity\\CMS.IdentityService.Application\\DTOs\\LoginRequest.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-21T12:16:52.396Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 15,
-              "Title": "RefreshTokenRequest.cs",
-              "DocumentMoniker": "D:\\Files\\CMS\\CargoManagementSystem\\src\\Services\\Identity\\CMS.IdentityService.Application\\DTOs\\RefreshTokenRequest.cs",
-              "RelativeDocumentMoniker": "src\\Services\\Identity\\CMS.IdentityService.Application\\DTOs\\RefreshTokenRequest.cs",
-              "ToolTip": "D:\\Files\\CMS\\CargoManagementSystem\\src\\Services\\Identity\\CMS.IdentityService.Application\\DTOs\\RefreshTokenRequest.cs",
-              "RelativeToolTip": "src\\Services\\Identity\\CMS.IdentityService.Application\\DTOs\\RefreshTokenRequest.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-21T12:16:46.655Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 18,
-              "Title": "RefreshTokenCommandValidator.cs",
-              "DocumentMoniker": "D:\\Files\\CMS\\CargoManagementSystem\\src\\Services\\Identity\\CMS.IdentityService.Application\\Commands\\RefreshToken\\RefreshTokenCommandValidator.cs",
-              "RelativeDocumentMoniker": "src\\Services\\Identity\\CMS.IdentityService.Application\\Commands\\RefreshToken\\RefreshTokenCommandValidator.cs",
-              "ToolTip": "D:\\Files\\CMS\\CargoManagementSystem\\src\\Services\\Identity\\CMS.IdentityService.Application\\Commands\\RefreshToken\\RefreshTokenCommandValidator.cs",
-              "RelativeToolTip": "src\\Services\\Identity\\CMS.IdentityService.Application\\Commands\\RefreshToken\\RefreshTokenCommandValidator.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-21T12:16:36.727Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 19,
-              "Title": "RefreshTokenCommandHandler.cs",
-              "DocumentMoniker": "D:\\Files\\CMS\\CargoManagementSystem\\src\\Services\\Identity\\CMS.IdentityService.Application\\Commands\\RefreshToken\\RefreshTokenCommandHandler.cs",
-              "RelativeDocumentMoniker": "src\\Services\\Identity\\CMS.IdentityService.Application\\Commands\\RefreshToken\\RefreshTokenCommandHandler.cs",
-              "ToolTip": "D:\\Files\\CMS\\CargoManagementSystem\\src\\Services\\Identity\\CMS.IdentityService.Application\\Commands\\RefreshToken\\RefreshTokenCommandHandler.cs",
-              "RelativeToolTip": "src\\Services\\Identity\\CMS.IdentityService.Application\\Commands\\RefreshToken\\RefreshTokenCommandHandler.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-21T12:16:05.882Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 20,
-              "Title": "RefreshTokenCommand.cs",
-              "DocumentMoniker": "D:\\Files\\CMS\\CargoManagementSystem\\src\\Services\\Identity\\CMS.IdentityService.Application\\Commands\\RefreshToken\\RefreshTokenCommand.cs",
-              "RelativeDocumentMoniker": "src\\Services\\Identity\\CMS.IdentityService.Application\\Commands\\RefreshToken\\RefreshTokenCommand.cs",
-              "ToolTip": "D:\\Files\\CMS\\CargoManagementSystem\\src\\Services\\Identity\\CMS.IdentityService.Application\\Commands\\RefreshToken\\RefreshTokenCommand.cs",
-              "RelativeToolTip": "src\\Services\\Identity\\CMS.IdentityService.Application\\Commands\\RefreshToken\\RefreshTokenCommand.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-21T12:16:02.662Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 21,
-              "Title": "ValidationBehavior.cs",
-              "DocumentMoniker": "D:\\Files\\CMS\\CargoManagementSystem\\src\\Services\\Identity\\CMS.IdentityService.Application\\Behaviors\\ValidationBehavior.cs",
-              "RelativeDocumentMoniker": "src\\Services\\Identity\\CMS.IdentityService.Application\\Behaviors\\ValidationBehavior.cs",
-              "ToolTip": "D:\\Files\\CMS\\CargoManagementSystem\\src\\Services\\Identity\\CMS.IdentityService.Application\\Behaviors\\ValidationBehavior.cs",
-              "RelativeToolTip": "src\\Services\\Identity\\CMS.IdentityService.Application\\Behaviors\\ValidationBehavior.cs",
-              "ViewState": "AgIAABUAAAAAAAAAAAAYwAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-21T12:15:44.972Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 22,
-              "Title": "LoggingBehavior.cs",
-              "DocumentMoniker": "D:\\Files\\CMS\\CargoManagementSystem\\src\\Services\\Identity\\CMS.IdentityService.Application\\Behaviors\\LoggingBehavior.cs",
-              "RelativeDocumentMoniker": "src\\Services\\Identity\\CMS.IdentityService.Application\\Behaviors\\LoggingBehavior.cs",
-              "ToolTip": "D:\\Files\\CMS\\CargoManagementSystem\\src\\Services\\Identity\\CMS.IdentityService.Application\\Behaviors\\LoggingBehavior.cs",
-              "RelativeToolTip": "src\\Services\\Identity\\CMS.IdentityService.Application\\Behaviors\\LoggingBehavior.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-21T12:15:34.455Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 29,
-              "Title": "launchSettings.json",
-              "DocumentMoniker": "D:\\Files\\CMS\\CargoManagementSystem\\src\\Services\\Customer\\CMS.CustomerService.API\\Properties\\launchSettings.json",
-              "RelativeDocumentMoniker": "src\\Services\\Customer\\CMS.CustomerService.API\\Properties\\launchSettings.json",
-              "ToolTip": "D:\\Files\\CMS\\CargoManagementSystem\\src\\Services\\Customer\\CMS.CustomerService.API\\Properties\\launchSettings.json",
-              "RelativeToolTip": "src\\Services\\Customer\\CMS.CustomerService.API\\Properties\\launchSettings.json",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAcAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2026-04-18T09:28:44.894Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 24,
-              "Title": "launchSettings.json",
-              "DocumentMoniker": "D:\\Files\\CMS\\CargoManagementSystem\\src\\Services\\Fleet\\CMS.FleetService.API\\Properties\\launchSettings.json",
-              "RelativeDocumentMoniker": "src\\Services\\Fleet\\CMS.FleetService.API\\Properties\\launchSettings.json",
-              "ToolTip": "D:\\Files\\CMS\\CargoManagementSystem\\src\\Services\\Fleet\\CMS.FleetService.API\\Properties\\launchSettings.json",
-              "RelativeToolTip": "src\\Services\\Fleet\\CMS.FleetService.API\\Properties\\launchSettings.json",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAABAAAAAcAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2026-04-19T12:25:50.086Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 25,
-              "Title": "launchSettings.json",
-              "DocumentMoniker": "D:\\Files\\CMS\\CargoManagementSystem\\src\\Services\\Billing\\CMS.BillingService.API\\Properties\\launchSettings.json",
-              "RelativeDocumentMoniker": "src\\Services\\Billing\\CMS.BillingService.API\\Properties\\launchSettings.json",
-              "ToolTip": "D:\\Files\\CMS\\CargoManagementSystem\\src\\Services\\Billing\\CMS.BillingService.API\\Properties\\launchSettings.json",
-              "RelativeToolTip": "src\\Services\\Billing\\CMS.BillingService.API\\Properties\\launchSettings.json",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAIAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2026-04-18T09:28:59.183Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 27,
               "Title": "CMS.ApiGateway.csproj",
               "DocumentMoniker": "D:\\Files\\CMS\\CargoManagementSystem\\src\\Gateway\\CMS.ApiGateway\\CMS.ApiGateway.csproj",
               "RelativeDocumentMoniker": "src\\Gateway\\CMS.ApiGateway\\CMS.ApiGateway.csproj",
@@ -535,19 +448,259 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 26,
-              "Title": "Program.cs",
-              "DocumentMoniker": "D:\\Files\\CMS\\CargoManagementSystem\\src\\Gateway\\CMS.ApiGateway\\Program.cs",
-              "RelativeDocumentMoniker": "src\\Gateway\\CMS.ApiGateway\\Program.cs",
-              "ToolTip": "D:\\Files\\CMS\\CargoManagementSystem\\src\\Gateway\\CMS.ApiGateway\\Program.cs",
-              "RelativeToolTip": "src\\Gateway\\CMS.ApiGateway\\Program.cs",
-              "ViewState": "AgIAAJMAAAAAAAAAAAAiwJcAAAAAAAAAAAAAAA==",
+              "DocumentIndex": 20,
+              "Title": "appsettings.Development.json",
+              "DocumentMoniker": "D:\\Files\\CMS\\CargoManagementSystem\\src\\Services\\Identity\\CMS.IdentityService.API\\appsettings.Development.json",
+              "RelativeDocumentMoniker": "src\\Services\\Identity\\CMS.IdentityService.API\\appsettings.Development.json",
+              "ToolTip": "D:\\Files\\CMS\\CargoManagementSystem\\src\\Services\\Identity\\CMS.IdentityService.API\\appsettings.Development.json",
+              "RelativeToolTip": "src\\Services\\Identity\\CMS.IdentityService.API\\appsettings.Development.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2026-04-21T12:45:01.717Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "launchSettings.json",
+              "DocumentMoniker": "D:\\Files\\CMS\\CargoManagementSystem\\src\\Services\\Identity\\CMS.IdentityService.API\\Properties\\launchSettings.json",
+              "RelativeDocumentMoniker": "src\\Services\\Identity\\CMS.IdentityService.API\\Properties\\launchSettings.json",
+              "ToolTip": "D:\\Files\\CMS\\CargoManagementSystem\\src\\Services\\Identity\\CMS.IdentityService.API\\Properties\\launchSettings.json",
+              "RelativeToolTip": "src\\Services\\Identity\\CMS.IdentityService.API\\Properties\\launchSettings.json",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAABAAAAAcAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2026-04-21T06:24:36.301Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "MiddlewareExtensions.cs",
+              "DocumentMoniker": "D:\\Files\\CMS\\CargoManagementSystem\\src\\Shared\\CMS.Shared\\Extensions\\MiddlewareExtensions.cs",
+              "RelativeDocumentMoniker": "src\\Shared\\CMS.Shared\\Extensions\\MiddlewareExtensions.cs",
+              "ToolTip": "D:\\Files\\CMS\\CargoManagementSystem\\src\\Shared\\CMS.Shared\\Extensions\\MiddlewareExtensions.cs",
+              "RelativeToolTip": "src\\Shared\\CMS.Shared\\Extensions\\MiddlewareExtensions.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-21T06:31:18.311Z"
+              "WhenOpened": "2026-04-21T12:20:47.656Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "D:\\Files\\CMS\\CargoManagementSystem\\src\\Services\\Identity\\CMS.IdentityService.API\\appsettings.json",
+              "RelativeDocumentMoniker": "src\\Services\\Identity\\CMS.IdentityService.API\\appsettings.json",
+              "ToolTip": "D:\\Files\\CMS\\CargoManagementSystem\\src\\Services\\Identity\\CMS.IdentityService.API\\appsettings.json",
+              "RelativeToolTip": "src\\Services\\Identity\\CMS.IdentityService.API\\appsettings.json",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2026-04-21T12:19:59.971Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "CMS.IdentityService.API.http",
+              "DocumentMoniker": "D:\\Files\\CMS\\CargoManagementSystem\\src\\Services\\Identity\\CMS.IdentityService.API\\CMS.IdentityService.API.http",
+              "RelativeDocumentMoniker": "src\\Services\\Identity\\CMS.IdentityService.API\\CMS.IdentityService.API.http",
+              "ToolTip": "D:\\Files\\CMS\\CargoManagementSystem\\src\\Services\\Identity\\CMS.IdentityService.API\\CMS.IdentityService.API.http",
+              "RelativeToolTip": "src\\Services\\Identity\\CMS.IdentityService.API\\CMS.IdentityService.API.http",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003502|",
+              "WhenOpened": "2026-04-21T12:20:05.756Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 23,
+              "Title": "InvalidCredentialsException.cs",
+              "DocumentMoniker": "D:\\Files\\CMS\\CargoManagementSystem\\src\\Services\\Identity\\CMS.IdentityService.Domain\\Exceptions\\InvalidCredentialsException.cs",
+              "RelativeDocumentMoniker": "src\\Services\\Identity\\CMS.IdentityService.Domain\\Exceptions\\InvalidCredentialsException.cs",
+              "ToolTip": "D:\\Files\\CMS\\CargoManagementSystem\\src\\Services\\Identity\\CMS.IdentityService.Domain\\Exceptions\\InvalidCredentialsException.cs",
+              "RelativeToolTip": "src\\Services\\Identity\\CMS.IdentityService.Domain\\Exceptions\\InvalidCredentialsException.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-21T12:17:43.568Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 24,
+              "Title": "TokenExpiredException.cs",
+              "DocumentMoniker": "D:\\Files\\CMS\\CargoManagementSystem\\src\\Services\\Identity\\CMS.IdentityService.Domain\\Exceptions\\TokenExpiredException.cs",
+              "RelativeDocumentMoniker": "src\\Services\\Identity\\CMS.IdentityService.Domain\\Exceptions\\TokenExpiredException.cs",
+              "ToolTip": "D:\\Files\\CMS\\CargoManagementSystem\\src\\Services\\Identity\\CMS.IdentityService.Domain\\Exceptions\\TokenExpiredException.cs",
+              "RelativeToolTip": "src\\Services\\Identity\\CMS.IdentityService.Domain\\Exceptions\\TokenExpiredException.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-21T12:17:37.743Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 25,
+              "Title": "IRefreshTokenRepository.cs",
+              "DocumentMoniker": "D:\\Files\\CMS\\CargoManagementSystem\\src\\Services\\Identity\\CMS.IdentityService.Domain\\Interfaces\\IRefreshTokenRepository.cs",
+              "RelativeDocumentMoniker": "src\\Services\\Identity\\CMS.IdentityService.Domain\\Interfaces\\IRefreshTokenRepository.cs",
+              "ToolTip": "D:\\Files\\CMS\\CargoManagementSystem\\src\\Services\\Identity\\CMS.IdentityService.Domain\\Interfaces\\IRefreshTokenRepository.cs",
+              "RelativeToolTip": "src\\Services\\Identity\\CMS.IdentityService.Domain\\Interfaces\\IRefreshTokenRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-21T12:17:29.905Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 26,
+              "Title": "UserRegisteredEventHandler.cs",
+              "DocumentMoniker": "D:\\Files\\CMS\\CargoManagementSystem\\src\\Services\\Identity\\CMS.IdentityService.Application\\EventHandlers\\UserRegisteredEventHandler.cs",
+              "RelativeDocumentMoniker": "src\\Services\\Identity\\CMS.IdentityService.Application\\EventHandlers\\UserRegisteredEventHandler.cs",
+              "ToolTip": "D:\\Files\\CMS\\CargoManagementSystem\\src\\Services\\Identity\\CMS.IdentityService.Application\\EventHandlers\\UserRegisteredEventHandler.cs",
+              "RelativeToolTip": "src\\Services\\Identity\\CMS.IdentityService.Application\\EventHandlers\\UserRegisteredEventHandler.cs",
+              "ViewState": "AgIAAA0AAAAAAAAAAAAQwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-21T12:17:08.771Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 27,
+              "Title": "RegisterUserRequest.cs",
+              "DocumentMoniker": "D:\\Files\\CMS\\CargoManagementSystem\\src\\Services\\Identity\\CMS.IdentityService.Application\\DTOs\\RegisterUserRequest.cs",
+              "RelativeDocumentMoniker": "src\\Services\\Identity\\CMS.IdentityService.Application\\DTOs\\RegisterUserRequest.cs",
+              "ToolTip": "D:\\Files\\CMS\\CargoManagementSystem\\src\\Services\\Identity\\CMS.IdentityService.Application\\DTOs\\RegisterUserRequest.cs",
+              "RelativeToolTip": "src\\Services\\Identity\\CMS.IdentityService.Application\\DTOs\\RegisterUserRequest.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-21T12:17:00.108Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 29,
+              "Title": "LoginResponse.cs",
+              "DocumentMoniker": "D:\\Files\\CMS\\CargoManagementSystem\\src\\Services\\Identity\\CMS.IdentityService.Application\\DTOs\\LoginResponse.cs",
+              "RelativeDocumentMoniker": "src\\Services\\Identity\\CMS.IdentityService.Application\\DTOs\\LoginResponse.cs",
+              "ToolTip": "D:\\Files\\CMS\\CargoManagementSystem\\src\\Services\\Identity\\CMS.IdentityService.Application\\DTOs\\LoginResponse.cs",
+              "RelativeToolTip": "src\\Services\\Identity\\CMS.IdentityService.Application\\DTOs\\LoginResponse.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-21T12:16:54.638Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 30,
+              "Title": "LoginRequest.cs",
+              "DocumentMoniker": "D:\\Files\\CMS\\CargoManagementSystem\\src\\Services\\Identity\\CMS.IdentityService.Application\\DTOs\\LoginRequest.cs",
+              "RelativeDocumentMoniker": "src\\Services\\Identity\\CMS.IdentityService.Application\\DTOs\\LoginRequest.cs",
+              "ToolTip": "D:\\Files\\CMS\\CargoManagementSystem\\src\\Services\\Identity\\CMS.IdentityService.Application\\DTOs\\LoginRequest.cs",
+              "RelativeToolTip": "src\\Services\\Identity\\CMS.IdentityService.Application\\DTOs\\LoginRequest.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-21T12:16:52.396Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 28,
+              "Title": "RefreshTokenRequest.cs",
+              "DocumentMoniker": "D:\\Files\\CMS\\CargoManagementSystem\\src\\Services\\Identity\\CMS.IdentityService.Application\\DTOs\\RefreshTokenRequest.cs",
+              "RelativeDocumentMoniker": "src\\Services\\Identity\\CMS.IdentityService.Application\\DTOs\\RefreshTokenRequest.cs",
+              "ToolTip": "D:\\Files\\CMS\\CargoManagementSystem\\src\\Services\\Identity\\CMS.IdentityService.Application\\DTOs\\RefreshTokenRequest.cs",
+              "RelativeToolTip": "src\\Services\\Identity\\CMS.IdentityService.Application\\DTOs\\RefreshTokenRequest.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-21T12:16:46.655Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 31,
+              "Title": "RefreshTokenCommandValidator.cs",
+              "DocumentMoniker": "D:\\Files\\CMS\\CargoManagementSystem\\src\\Services\\Identity\\CMS.IdentityService.Application\\Commands\\RefreshToken\\RefreshTokenCommandValidator.cs",
+              "RelativeDocumentMoniker": "src\\Services\\Identity\\CMS.IdentityService.Application\\Commands\\RefreshToken\\RefreshTokenCommandValidator.cs",
+              "ToolTip": "D:\\Files\\CMS\\CargoManagementSystem\\src\\Services\\Identity\\CMS.IdentityService.Application\\Commands\\RefreshToken\\RefreshTokenCommandValidator.cs",
+              "RelativeToolTip": "src\\Services\\Identity\\CMS.IdentityService.Application\\Commands\\RefreshToken\\RefreshTokenCommandValidator.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-21T12:16:36.727Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 32,
+              "Title": "RefreshTokenCommandHandler.cs",
+              "DocumentMoniker": "D:\\Files\\CMS\\CargoManagementSystem\\src\\Services\\Identity\\CMS.IdentityService.Application\\Commands\\RefreshToken\\RefreshTokenCommandHandler.cs",
+              "RelativeDocumentMoniker": "src\\Services\\Identity\\CMS.IdentityService.Application\\Commands\\RefreshToken\\RefreshTokenCommandHandler.cs",
+              "ToolTip": "D:\\Files\\CMS\\CargoManagementSystem\\src\\Services\\Identity\\CMS.IdentityService.Application\\Commands\\RefreshToken\\RefreshTokenCommandHandler.cs",
+              "RelativeToolTip": "src\\Services\\Identity\\CMS.IdentityService.Application\\Commands\\RefreshToken\\RefreshTokenCommandHandler.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-21T12:16:05.882Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 33,
+              "Title": "RefreshTokenCommand.cs",
+              "DocumentMoniker": "D:\\Files\\CMS\\CargoManagementSystem\\src\\Services\\Identity\\CMS.IdentityService.Application\\Commands\\RefreshToken\\RefreshTokenCommand.cs",
+              "RelativeDocumentMoniker": "src\\Services\\Identity\\CMS.IdentityService.Application\\Commands\\RefreshToken\\RefreshTokenCommand.cs",
+              "ToolTip": "D:\\Files\\CMS\\CargoManagementSystem\\src\\Services\\Identity\\CMS.IdentityService.Application\\Commands\\RefreshToken\\RefreshTokenCommand.cs",
+              "RelativeToolTip": "src\\Services\\Identity\\CMS.IdentityService.Application\\Commands\\RefreshToken\\RefreshTokenCommand.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-21T12:16:02.662Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 34,
+              "Title": "ValidationBehavior.cs",
+              "DocumentMoniker": "D:\\Files\\CMS\\CargoManagementSystem\\src\\Services\\Identity\\CMS.IdentityService.Application\\Behaviors\\ValidationBehavior.cs",
+              "RelativeDocumentMoniker": "src\\Services\\Identity\\CMS.IdentityService.Application\\Behaviors\\ValidationBehavior.cs",
+              "ToolTip": "D:\\Files\\CMS\\CargoManagementSystem\\src\\Services\\Identity\\CMS.IdentityService.Application\\Behaviors\\ValidationBehavior.cs",
+              "RelativeToolTip": "src\\Services\\Identity\\CMS.IdentityService.Application\\Behaviors\\ValidationBehavior.cs",
+              "ViewState": "AgIAABUAAAAAAAAAAAAYwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-21T12:15:44.972Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 35,
+              "Title": "LoggingBehavior.cs",
+              "DocumentMoniker": "D:\\Files\\CMS\\CargoManagementSystem\\src\\Services\\Identity\\CMS.IdentityService.Application\\Behaviors\\LoggingBehavior.cs",
+              "RelativeDocumentMoniker": "src\\Services\\Identity\\CMS.IdentityService.Application\\Behaviors\\LoggingBehavior.cs",
+              "ToolTip": "D:\\Files\\CMS\\CargoManagementSystem\\src\\Services\\Identity\\CMS.IdentityService.Application\\Behaviors\\LoggingBehavior.cs",
+              "RelativeToolTip": "src\\Services\\Identity\\CMS.IdentityService.Application\\Behaviors\\LoggingBehavior.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-21T12:15:34.455Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 40,
+              "Title": "launchSettings.json",
+              "DocumentMoniker": "D:\\Files\\CMS\\CargoManagementSystem\\src\\Services\\Customer\\CMS.CustomerService.API\\Properties\\launchSettings.json",
+              "RelativeDocumentMoniker": "src\\Services\\Customer\\CMS.CustomerService.API\\Properties\\launchSettings.json",
+              "ToolTip": "D:\\Files\\CMS\\CargoManagementSystem\\src\\Services\\Customer\\CMS.CustomerService.API\\Properties\\launchSettings.json",
+              "RelativeToolTip": "src\\Services\\Customer\\CMS.CustomerService.API\\Properties\\launchSettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAcAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2026-04-18T09:28:44.894Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 37,
+              "Title": "launchSettings.json",
+              "DocumentMoniker": "D:\\Files\\CMS\\CargoManagementSystem\\src\\Services\\Fleet\\CMS.FleetService.API\\Properties\\launchSettings.json",
+              "RelativeDocumentMoniker": "src\\Services\\Fleet\\CMS.FleetService.API\\Properties\\launchSettings.json",
+              "ToolTip": "D:\\Files\\CMS\\CargoManagementSystem\\src\\Services\\Fleet\\CMS.FleetService.API\\Properties\\launchSettings.json",
+              "RelativeToolTip": "src\\Services\\Fleet\\CMS.FleetService.API\\Properties\\launchSettings.json",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAABAAAAAcAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2026-04-19T12:25:50.086Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 38,
+              "Title": "launchSettings.json",
+              "DocumentMoniker": "D:\\Files\\CMS\\CargoManagementSystem\\src\\Services\\Billing\\CMS.BillingService.API\\Properties\\launchSettings.json",
+              "RelativeDocumentMoniker": "src\\Services\\Billing\\CMS.BillingService.API\\Properties\\launchSettings.json",
+              "ToolTip": "D:\\Files\\CMS\\CargoManagementSystem\\src\\Services\\Billing\\CMS.BillingService.API\\Properties\\launchSettings.json",
+              "RelativeToolTip": "src\\Services\\Billing\\CMS.BillingService.API\\Properties\\launchSettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2026-04-18T09:28:59.183Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 39,
               "Title": "launchSettings.json",
               "DocumentMoniker": "D:\\Files\\CMS\\CargoManagementSystem\\src\\Services\\Notification\\CMS.NotificationService.API\\Properties\\launchSettings.json",
               "RelativeDocumentMoniker": "src\\Services\\Notification\\CMS.NotificationService.API\\Properties\\launchSettings.json",
@@ -559,7 +712,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 30,
+              "DocumentIndex": 41,
               "Title": "launchSettings.json",
               "DocumentMoniker": "D:\\Files\\CMS\\CargoManagementSystem\\src\\Services\\Reporting\\CMS.ReportingService.API\\Properties\\launchSettings.json",
               "RelativeDocumentMoniker": "src\\Services\\Reporting\\CMS.ReportingService.API\\Properties\\launchSettings.json",
@@ -571,7 +724,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 31,
+              "DocumentIndex": 42,
               "Title": "launchSettings.json",
               "DocumentMoniker": "D:\\Files\\CMS\\CargoManagementSystem\\src\\Services\\Shipment\\CMS.ShipmentService.API\\Properties\\launchSettings.json",
               "RelativeDocumentMoniker": "src\\Services\\Shipment\\CMS.ShipmentService.API\\Properties\\launchSettings.json",
@@ -583,7 +736,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 32,
+              "DocumentIndex": 43,
               "Title": "launchSettings.json",
               "DocumentMoniker": "D:\\Files\\CMS\\CargoManagementSystem\\src\\Services\\Warehouse\\CMS.WarehouseService.API\\Properties\\launchSettings.json",
               "RelativeDocumentMoniker": "src\\Services\\Warehouse\\CMS.WarehouseService.API\\Properties\\launchSettings.json",
@@ -595,7 +748,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 33,
+              "DocumentIndex": 44,
               "Title": "appsettings.json",
               "DocumentMoniker": "D:\\Files\\CMS\\CargoManagementSystem\\src\\Services\\Reporting\\CMS.ReportingService.API\\appsettings.json",
               "RelativeDocumentMoniker": "src\\Services\\Reporting\\CMS.ReportingService.API\\appsettings.json",
@@ -607,7 +760,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 35,
+              "DocumentIndex": 46,
               "Title": "20260419122043_IntialCreate.cs",
               "DocumentMoniker": "D:\\Files\\CMS\\CargoManagementSystem\\src\\Services\\Warehouse\\CMS.WarehouseService.Infrastructure\\Migrations\\20260419122043_IntialCreate.cs",
               "RelativeDocumentMoniker": "src\\Services\\Warehouse\\CMS.WarehouseService.Infrastructure\\Migrations\\20260419122043_IntialCreate.cs",
@@ -619,7 +772,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 36,
+              "DocumentIndex": 47,
               "Title": "20260419121841_dataUpdate.cs",
               "DocumentMoniker": "D:\\Files\\CMS\\CargoManagementSystem\\src\\Services\\Reporting\\CMS.ReportingService.Infrastructure\\Migrations\\20260419121841_dataUpdate.cs",
               "RelativeDocumentMoniker": "src\\Services\\Reporting\\CMS.ReportingService.Infrastructure\\Migrations\\20260419121841_dataUpdate.cs",
@@ -631,7 +784,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 37,
+              "DocumentIndex": 48,
               "Title": "20260419121709_updatedata.cs",
               "DocumentMoniker": "D:\\Files\\CMS\\CargoManagementSystem\\src\\Services\\Notification\\CMS.NotificationService.Infrastructure\\Migrations\\20260419121709_updatedata.cs",
               "RelativeDocumentMoniker": "src\\Services\\Notification\\CMS.NotificationService.Infrastructure\\Migrations\\20260419121709_updatedata.cs",
@@ -643,7 +796,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 38,
+              "DocumentIndex": 49,
               "Title": "20260419121525_InitialCreate.cs",
               "DocumentMoniker": "D:\\Files\\CMS\\CargoManagementSystem\\src\\Services\\Fleet\\CMS.FleetService.Infrastructure\\Migrations\\20260419121525_InitialCreate.cs",
               "RelativeDocumentMoniker": "src\\Services\\Fleet\\CMS.FleetService.Infrastructure\\Migrations\\20260419121525_InitialCreate.cs",
@@ -655,7 +808,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 34,
+              "DocumentIndex": 45,
               "Title": "20260418093547_newdataupdated.cs",
               "DocumentMoniker": "D:\\Files\\CMS\\CargoManagementSystem\\src\\Services\\Shipment\\CMS.ShipmentService.Infrastructure\\Migrations\\20260418093547_newdataupdated.cs",
               "RelativeDocumentMoniker": "src\\Services\\Shipment\\CMS.ShipmentService.Infrastructure\\Migrations\\20260418093547_newdataupdated.cs",

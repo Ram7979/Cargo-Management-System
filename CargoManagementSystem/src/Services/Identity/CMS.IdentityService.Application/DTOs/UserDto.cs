@@ -9,3 +9,9 @@ public class UserDto
     public bool IsActive { get; set; }
     public IEnumerable<string> Roles { get; set; } = Enumerable.Empty<string>();
 }
+
+public class UpdateUserRequest
+{
+    public string? FirstName { get; set; }
+    public string? LastName { get; set; }
+}

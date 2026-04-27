@@ -53,7 +53,7 @@ public class CustomersController : ControllerBase
 
     /// <summary>Get customer by ID.</summary>
     [HttpGet("{customerId:guid}")]
-    [Authorize]
+    [Authorize(Roles = "OpsManager,Support,FinanceOfficer,Customer,SuperAdmin")]
     public async Task<IActionResult> GetCustomer(Guid customerId)
     {
         var result = await _mediator.Send(new GetCustomerQuery(customerId));

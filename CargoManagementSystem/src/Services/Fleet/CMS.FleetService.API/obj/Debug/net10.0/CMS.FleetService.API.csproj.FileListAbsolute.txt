@@ -176,10 +176,10 @@ D:\Files\CMS\CargoManagementSystem\src\Services\Fleet\CMS.FleetService.API\obj\D
 D:\Files\CMS\CargoManagementSystem\src\Services\Fleet\CMS.FleetService.API\obj\Debug\net10.0\staticwebassets.development.json
 D:\Files\CMS\CargoManagementSystem\src\Services\Fleet\CMS.FleetService.API\obj\Debug\net10.0\staticwebassets.build.endpoints.json
 D:\Files\CMS\CargoManagementSystem\src\Services\Fleet\CMS.FleetService.API\obj\Debug\net10.0\swae.build.ex.cache
-D:\Files\CMS\CargoManagementSystem\src\Services\Fleet\CMS.FleetService.API\obj\Debug\net10.0\staticwebassets.upToDateCheck.txt
 D:\Files\CMS\CargoManagementSystem\src\Services\Fleet\CMS.FleetService.API\obj\Debug\net10.0\CMS.Flee.844E46B2.Up2Date
 D:\Files\CMS\CargoManagementSystem\src\Services\Fleet\CMS.FleetService.API\obj\Debug\net10.0\CMS.FleetService.API.dll
 D:\Files\CMS\CargoManagementSystem\src\Services\Fleet\CMS.FleetService.API\obj\Debug\net10.0\refint\CMS.FleetService.API.dll
 D:\Files\CMS\CargoManagementSystem\src\Services\Fleet\CMS.FleetService.API\obj\Debug\net10.0\CMS.FleetService.API.pdb
 D:\Files\CMS\CargoManagementSystem\src\Services\Fleet\CMS.FleetService.API\obj\Debug\net10.0\CMS.FleetService.API.genruntimeconfig.cache
 D:\Files\CMS\CargoManagementSystem\src\Services\Fleet\CMS.FleetService.API\obj\Debug\net10.0\ref\CMS.FleetService.API.dll
+D:\Files\CMS\CargoManagementSystem\src\Services\Fleet\CMS.FleetService.API\obj\Debug\net10.0\staticwebassets.upToDateCheck.txt

@@ -74,7 +74,6 @@ public class GlobalExceptionMiddleware
 
     private static (int statusCode, ApiResponse<object> response) HandleUnknownException(Exception exception)
     {
-        // Never expose stack traces or internal details
         return (StatusCodes.Status500InternalServerError,
                 ApiResponse<object>.Fail("An unexpected error occurred. Please try again later."));
     }

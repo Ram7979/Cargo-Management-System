@@ -20,7 +20,6 @@ public class AuditBehavior<TRequest, TResponse> : IPipelineBehavior<TRequest, TR
 
     public async Task<TResponse> Handle(TRequest request, RequestHandlerDelegate<TResponse> next, CancellationToken cancellationToken)
     {
-        // Only audit commands (not queries) — queries have "Query" in their name
         var requestName = typeof(TRequest).Name;
         var isQuery = requestName.EndsWith("Query", StringComparison.OrdinalIgnoreCase);
 
@@ -47,7 +46,6 @@ public class AuditBehavior<TRequest, TResponse> : IPipelineBehavior<TRequest, TR
         }
         catch
         {
-            // Audit logging should never break the main flow
         }
 
         return response;

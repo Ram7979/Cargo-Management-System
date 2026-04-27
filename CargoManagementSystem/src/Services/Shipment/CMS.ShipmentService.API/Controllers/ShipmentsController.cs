@@ -6,6 +6,7 @@ using CMS.ShipmentService.Application.Commands.UpdateShipmentStatus;
 using CMS.ShipmentService.Application.DTOs;
 using CMS.ShipmentService.Application.Queries.CalculateRate;
 using CMS.ShipmentService.Application.Queries.GetShipment;
+using CMS.ShipmentService.Application.Queries.GetShipmentStatusHistory;
 using CMS.ShipmentService.Application.Queries.GetShipments;
 using CMS.ShipmentService.Application.Queries.TrackShipment;
 using MediatR;
@@ -38,7 +39,7 @@ public class ShipmentsController : ControllerBase
 
     /// <summary>Get shipment by ID.</summary>
     [HttpGet("{shipmentId:guid}")]
-    [Authorize]
+    [Authorize(Roles = "OpsManager,Dispatcher,Driver,Customer,Support,FinanceOfficer,WarehouseManager,SuperAdmin")]
     public async Task<IActionResult> GetShipment(Guid shipmentId)
     {
         var result = await _mediator.Send(new GetShipmentQuery(shipmentId));
@@ -75,7 +76,7 @@ public class ShipmentsController : ControllerBase
 
     /// <summary>Update GPS location for a shipment (Driver only).</summary>
     [HttpPatch("{shipmentId:guid}/location")]
-    [Authorize(Roles = "Driver")]
+    [Authorize(Roles = "Driver,SuperAdmin")]
     public async Task<IActionResult> UpdateLocation(Guid shipmentId, [FromBody] UpdateLocationRequest request)
     {
         var result = await _mediator.Send(new UpdateLocationCommand(shipmentId, request));
@@ -126,5 +127,14 @@ public class ShipmentsController : ControllerBase
         if (string.IsNullOrWhiteSpace(result.Data.PodImageUrl))
             return NotFound(new { message = "POD document not available." });
         return Ok(new { podImageUrl = result.Data.PodImageUrl, podSignatureData = result.Data.PodImageUrl });
+    }
+
+    /// <summary>Get full status history timeline for a shipment (GAP-004).</summary>
+    [HttpGet("{shipmentId:guid}/status-history")]
+    [AllowAnonymous]
+    public async Task<IActionResult> GetStatusHistory(Guid shipmentId)
+    {
+        var result = await _mediator.Send(new GetShipmentStatusHistoryQuery(shipmentId));
+        return Ok(result);
     }
 }

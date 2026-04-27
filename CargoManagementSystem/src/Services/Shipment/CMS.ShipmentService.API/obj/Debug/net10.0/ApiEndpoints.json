@@ -225,6 +225,22 @@
   },
   {
     "ContainingType": "CMS.ShipmentService.API.Controllers.ShipmentsController",
+    "Method": "GetStatusHistory",
+    "RelativePath": "api/v1/shipments/{shipmentId}/status-history",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "shipmentId",
+        "Type": "System.Guid",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CMS.ShipmentService.API.Controllers.ShipmentsController",
     "Method": "TrackShipment",
     "RelativePath": "api/v1/shipments/track/{trackingNumber}",
     "HttpMethod": "GET",

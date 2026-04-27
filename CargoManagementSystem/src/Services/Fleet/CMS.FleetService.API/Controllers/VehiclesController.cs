@@ -7,6 +7,7 @@ using CMS.FleetService.Application.Commands.UpdateVehicleStatus;
 using CMS.FleetService.Application.DTOs;
 using CMS.FleetService.Application.Queries.GetAvailableVehicles;
 using CMS.FleetService.Application.Queries.GetLiveLocations;
+using CMS.FleetService.Application.Queries.GetMaintenanceLogs;
 using CMS.FleetService.Application.Queries.GetVehicle;
 using CMS.FleetService.Application.Queries.GetVehicleRoute;
 using CMS.FleetService.Application.Queries.GetVehicles;
@@ -118,7 +119,7 @@ public class VehiclesController : ControllerBase
 
     /// <summary>Submit GPS update from driver.</summary>
     [HttpPost("{vehicleId:guid}/gps")]
-    [Authorize(Roles = "Driver")]
+    [Authorize(Roles = "Driver,SuperAdmin")]
     public async Task<IActionResult> SubmitGpsUpdate(Guid vehicleId, [FromBody] SubmitGpsUpdateRequest request)
     {
         var driverIdClaim = User.FindFirstValue(ClaimTypes.NameIdentifier);
@@ -126,6 +127,18 @@ public class VehiclesController : ControllerBase
             return Unauthorized();
 
         var result = await _mediator.Send(new SubmitGpsUpdateCommand(vehicleId, driverId, request));
+        return Ok(result);
+    }
+
+    /// <summary>Get maintenance history for a vehicle (GAP-005).</summary>
+    [HttpGet("{vehicleId:guid}/maintenance")]
+    [Authorize(Roles = "OpsManager,SuperAdmin")]
+    public async Task<IActionResult> GetMaintenanceLogs(
+        Guid vehicleId,
+        [FromQuery] int page = 1,
+        [FromQuery] int pageSize = 20)
+    {
+        var result = await _mediator.Send(new GetMaintenanceLogsQuery(vehicleId, page, pageSize));
         return Ok(result);
     }
 }

@@ -735,10 +735,10 @@
     },
     "securitySchemes": {
       "Bearer": {
-        "type": "apiKey",
-        "description": "JWT Authorization header using the Bearer scheme. Enter 'Bearer {token}'",
-        "name": "Authorization",
-        "in": "header"
+        "type": "http",
+        "description": "JWT Bearer token. Enter your token below.",
+        "scheme": "bearer",
+        "bearerFormat": "JWT"
       }
     }
   },

@@ -94,10 +94,10 @@ D:\Files\CMS\CargoManagementSystem\src\Gateway\CMS.ApiGateway\obj\Debug\net10.0\
 D:\Files\CMS\CargoManagementSystem\src\Gateway\CMS.ApiGateway\obj\Debug\net10.0\staticwebassets.development.json
 D:\Files\CMS\CargoManagementSystem\src\Gateway\CMS.ApiGateway\obj\Debug\net10.0\staticwebassets.build.endpoints.json
 D:\Files\CMS\CargoManagementSystem\src\Gateway\CMS.ApiGateway\obj\Debug\net10.0\swae.build.ex.cache
+D:\Files\CMS\CargoManagementSystem\src\Gateway\CMS.ApiGateway\obj\Debug\net10.0\staticwebassets.upToDateCheck.txt
 D:\Files\CMS\CargoManagementSystem\src\Gateway\CMS.ApiGateway\obj\Debug\net10.0\CMS.ApiG.5E58EB41.Up2Date
 D:\Files\CMS\CargoManagementSystem\src\Gateway\CMS.ApiGateway\obj\Debug\net10.0\CMS.ApiGateway.dll
 D:\Files\CMS\CargoManagementSystem\src\Gateway\CMS.ApiGateway\obj\Debug\net10.0\refint\CMS.ApiGateway.dll
 D:\Files\CMS\CargoManagementSystem\src\Gateway\CMS.ApiGateway\obj\Debug\net10.0\CMS.ApiGateway.pdb
 D:\Files\CMS\CargoManagementSystem\src\Gateway\CMS.ApiGateway\obj\Debug\net10.0\CMS.ApiGateway.genruntimeconfig.cache
 D:\Files\CMS\CargoManagementSystem\src\Gateway\CMS.ApiGateway\obj\Debug\net10.0\ref\CMS.ApiGateway.dll
-D:\Files\CMS\CargoManagementSystem\src\Gateway\CMS.ApiGateway\obj\Debug\net10.0\staticwebassets.upToDateCheck.txt

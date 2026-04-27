@@ -59,3 +59,26 @@ public class RefundPaymentRequest
     public decimal Amount { get; set; }
     public string Reason { get; set; } = string.Empty;
 }
+
+/// <summary>
+/// Request body for PUT /api/v1/rates/{rateCardId}.
+/// Updates pricing fields on an existing rate card.
+/// ServiceType, ZoneFrom, ZoneTo are immutable — create a new card to change those.
+/// </summary>
+public class UpdateRateCardRequest
+{
+    /// <summary>New base rate per kilogram of chargeable weight.</summary>
+    public decimal BaseRatePerKg { get; set; }
+
+    /// <summary>Fuel surcharge as a percentage of base freight (e.g. 8 = 8%).</summary>
+    public decimal FuelSurchargePercent { get; set; }
+
+    /// <summary>Flat handling fee added to every shipment.</summary>
+    public decimal HandlingFeeFlat { get; set; }
+
+    /// <summary>Tax percentage applied to the subtotal (e.g. 18 = 18% GST).</summary>
+    public decimal TaxPercent { get; set; } = 18m;
+
+    /// <summary>Optional end date for this rate card. Null means no expiry.</summary>
+    public DateTime? EffectiveTo { get; set; }
+}

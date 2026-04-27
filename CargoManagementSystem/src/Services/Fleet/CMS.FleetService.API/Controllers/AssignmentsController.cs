@@ -52,7 +52,7 @@ public class AssignmentsController : ControllerBase
 
     /// <summary>Get assignment by ID.</summary>
     [HttpGet("{assignmentId:guid}")]
-    [Authorize]
+    [Authorize(Roles = "Dispatcher,OpsManager,Driver,SuperAdmin")]
     public async Task<IActionResult> GetAssignment(Guid assignmentId)
     {
         var result = await _mediator.Send(new GetAssignmentQuery(assignmentId));

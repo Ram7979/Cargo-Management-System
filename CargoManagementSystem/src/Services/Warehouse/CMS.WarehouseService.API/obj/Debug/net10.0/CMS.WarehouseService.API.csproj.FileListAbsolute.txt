@@ -174,10 +174,10 @@ D:\Files\CMS\CargoManagementSystem\src\Services\Warehouse\CMS.WarehouseService.A
 D:\Files\CMS\CargoManagementSystem\src\Services\Warehouse\CMS.WarehouseService.API\obj\Debug\net10.0\staticwebassets.development.json
 D:\Files\CMS\CargoManagementSystem\src\Services\Warehouse\CMS.WarehouseService.API\obj\Debug\net10.0\staticwebassets.build.endpoints.json
 D:\Files\CMS\CargoManagementSystem\src\Services\Warehouse\CMS.WarehouseService.API\obj\Debug\net10.0\swae.build.ex.cache
-D:\Files\CMS\CargoManagementSystem\src\Services\Warehouse\CMS.WarehouseService.API\obj\Debug\net10.0\staticwebassets.upToDateCheck.txt
 D:\Files\CMS\CargoManagementSystem\src\Services\Warehouse\CMS.WarehouseService.API\obj\Debug\net10.0\CMS.Ware.44E22522.Up2Date
 D:\Files\CMS\CargoManagementSystem\src\Services\Warehouse\CMS.WarehouseService.API\obj\Debug\net10.0\CMS.WarehouseService.API.dll
 D:\Files\CMS\CargoManagementSystem\src\Services\Warehouse\CMS.WarehouseService.API\obj\Debug\net10.0\refint\CMS.WarehouseService.API.dll
 D:\Files\CMS\CargoManagementSystem\src\Services\Warehouse\CMS.WarehouseService.API\obj\Debug\net10.0\CMS.WarehouseService.API.pdb
 D:\Files\CMS\CargoManagementSystem\src\Services\Warehouse\CMS.WarehouseService.API\obj\Debug\net10.0\CMS.WarehouseService.API.genruntimeconfig.cache
 D:\Files\CMS\CargoManagementSystem\src\Services\Warehouse\CMS.WarehouseService.API\obj\Debug\net10.0\ref\CMS.WarehouseService.API.dll
+D:\Files\CMS\CargoManagementSystem\src\Services\Warehouse\CMS.WarehouseService.API\obj\Debug\net10.0\staticwebassets.upToDateCheck.txt

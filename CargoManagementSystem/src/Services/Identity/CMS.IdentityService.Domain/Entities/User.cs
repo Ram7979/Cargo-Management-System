@@ -35,6 +35,16 @@ public class User : BaseEntity
     public void Deactivate() => IsActive = false;
     public void Activate() => IsActive = true;
 
+    /// <summary>
+    /// Updates editable profile fields. Only non-null values are applied.
+    /// </summary>
+    public void UpdateProfile(string? firstName, string? lastName)
+    {
+        if (firstName != null) FirstName = firstName;
+        if (lastName != null) LastName = lastName;
+        UpdatedAt = DateTime.UtcNow;
+    }
+
     public void UpdateRoles(IEnumerable<string> roles)
     {
         _roles.Clear();
