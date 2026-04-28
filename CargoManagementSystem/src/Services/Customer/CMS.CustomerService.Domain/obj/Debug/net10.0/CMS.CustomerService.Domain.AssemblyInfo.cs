@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("CMS.CustomerService.Domain")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+eb0f3bb16347f3bf2e016e2df8bd46f5f4893c5a")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+bed5aa08928b27e4630aba4c46113ee0c5161911")]
 [assembly: System.Reflection.AssemblyProductAttribute("CMS.CustomerService.Domain")]
 [assembly: System.Reflection.AssemblyTitleAttribute("CMS.CustomerService.Domain")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
