@@ -1,0 +1,44 @@
+.detail-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+  margin-top: 24px;
+}
+
+.info-row {
+  display: flex;
+  justify-content: space-between;
+  padding: 12px 0;
+  border-bottom: 1px solid #f0f0f0;
+  
+  &:last-child { border-bottom: none; }
+  
+  .label { color: #666; font-weight: 500; }
+  .value { font-weight: 600; color: #333; }
+}
+
+.status-badge {
+  padding: 4px 12px;
+  border-radius: 12px;
+  font-size: 0.8rem;
+  background: #eee;
+  
+  &.active {
+    background: #e6fffa;
+    color: #2c7a7b;
+  }
+}
+
+.history-card {
+  margin-bottom: 40px;
+}
+
+.w-100 { width: 100%; }
+.mt-4 { margin-top: 24px; }
+
+.empty-state {
+  padding: 40px;
+  text-align: center;
+  color: #999;
+  mat-icon { font-size: 48px; width: 48px; height: 48px; }
+}

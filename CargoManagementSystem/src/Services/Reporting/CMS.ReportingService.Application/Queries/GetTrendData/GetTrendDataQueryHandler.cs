@@ -39,13 +39,12 @@ public class GetTrendDataQueryHandler
 
         var revenueTrend = (await revenueTrendTask).Select(r => new RevenueTrendPointDto
         {
-            Period = r.Date.ToString(request.GroupBy == "month" ? "yyyy-MM" : "yyyy-MM-dd"),
-            Revenue = r.Revenue
+            Date = r.Date.ToString(request.GroupBy == "month" ? "yyyy-MM" : "yyyy-MM-dd"),
+            Value = r.Revenue
         }).ToList();
 
         var statusTrend = (await statusTrendTask).Select(s => new StatusTrendPointDto
         {
-            Period = s.Date.ToString(request.GroupBy == "month" ? "yyyy-MM" : "yyyy-MM-dd"),
             Status = s.Status,
             Count = s.Count
         }).ToList();
@@ -69,7 +68,7 @@ public class GetTrendDataQueryHandler
         var dto = new TrendDataDto
         {
             RevenueTrend = revenueTrend,
-            ShipmentsByStatusOverTime = statusTrend,
+            ShipmentsByStatus = statusTrend,
             CargoTypeBreakdown = cargoBreakdown,
             GeographicVolume = geoVolume
         };

@@ -1,0 +1,94 @@
+.dashboard-container {
+  padding: 8px;
+}
+
+.kpi-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 24px;
+  margin-bottom: 32px;
+}
+
+.kpi-card {
+  border-radius: 16px;
+  border: none;
+  transition: transform 0.3s;
+  
+  &:hover { transform: translateY(-5px); }
+  
+  mat-card-content {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 24px !important;
+  }
+}
+
+.kpi-icon {
+  width: 56px;
+  height: 56px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+  mat-icon { font-size: 28px; width: 28px; height: 28px; color: white; }
+}
+
+.revenue .kpi-icon { background: linear-gradient(135deg, #48bb78 0%, #2f855a 100%); }
+.shipments .kpi-icon { background: linear-gradient(135deg, #4299e1 0%, #2b6cb0 100%); }
+.warehouse .kpi-icon { background: linear-gradient(135deg, #f6ad55 0%, #dd6b20 100%); }
+.fleet .kpi-icon { background: linear-gradient(135deg, #9f7aea 0%, #6b46c1 100%); }
+
+.kpi-info {
+  .kpi-label { font-size: 0.85rem; color: #718096; font-weight: 600; text-transform: uppercase; }
+  .kpi-value { font-size: 1.75rem; font-weight: 800; color: #2d3748; margin: 4px 0; }
+  .kpi-trend { 
+    font-size: 0.75rem; color: #a0aec0; display: flex; align-items: center; gap: 4px; 
+    &.positive { color: #48bb78; }
+    mat-progress-bar { height: 6px; border-radius: 3px; margin-top: 8px; width: 120px; }
+  }
+}
+
+.charts-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 24px;
+}
+
+.secondary-charts {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.chart-card {
+  border-radius: 16px;
+  padding: 16px;
+  
+  mat-card-title { font-size: 1rem; font-weight: 700; margin-bottom: 16px; }
+}
+
+/* Skeleton Loading Effect */
+.skeleton {
+  background-color: #f7fafc;
+  overflow: hidden;
+  position: relative;
+  
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0; right: 0; bottom: 0; left: 0;
+    transform: translateX(-100%);
+    background: linear-gradient(90deg, rgba(255,255,255,0) 0, rgba(255,255,255,0.4) 50%, rgba(255,255,255,0) 100%);
+    animation: shimmer 2s infinite;
+  }
+}
+
+@keyframes shimmer {
+  100% { transform: translateX(100%); }
+}
+
+@media (max-width: 1024px) {
+  .charts-grid { grid-template-columns: 1fr; }
+}

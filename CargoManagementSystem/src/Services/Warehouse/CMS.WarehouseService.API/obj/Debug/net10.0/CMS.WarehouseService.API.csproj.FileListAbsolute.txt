@@ -180,4 +180,3 @@ D:\Files\CMS\CargoManagementSystem\src\Services\Warehouse\CMS.WarehouseService.A
 D:\Files\CMS\CargoManagementSystem\src\Services\Warehouse\CMS.WarehouseService.API\obj\Debug\net10.0\CMS.WarehouseService.API.pdb
 D:\Files\CMS\CargoManagementSystem\src\Services\Warehouse\CMS.WarehouseService.API\obj\Debug\net10.0\CMS.WarehouseService.API.genruntimeconfig.cache
 D:\Files\CMS\CargoManagementSystem\src\Services\Warehouse\CMS.WarehouseService.API\obj\Debug\net10.0\ref\CMS.WarehouseService.API.dll
-D:\Files\CMS\CargoManagementSystem\src\Services\Warehouse\CMS.WarehouseService.API\obj\Debug\net10.0\staticwebassets.upToDateCheck.txt

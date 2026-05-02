@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("CMS.WarehouseService.Application")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+bed5aa08928b27e4630aba4c46113ee0c5161911")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+b725e68fe6bc9fb99e9dad25cbfdf9440aabcfa6")]
 [assembly: System.Reflection.AssemblyProductAttribute("CMS.WarehouseService.Application")]
 [assembly: System.Reflection.AssemblyTitleAttribute("CMS.WarehouseService.Application")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

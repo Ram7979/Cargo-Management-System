@@ -39,8 +39,12 @@ public class UpdateShipmentStatusCommandHandler : IRequestHandler<UpdateShipment
         var shipment = await _shipmentRepository.GetByIdAsync(command.ShipmentId)
             ?? throw new NotFoundException("Shipment", command.ShipmentId);
 
-        if (!Enum.TryParse<ShipmentStatus>(command.Request.Status, ignoreCase: true, out var targetStatus))
-            throw new ValidationException(new[] { $"'{command.Request.Status}' is not a valid shipment status." });
+        var normalizedStatus = command.Request.Status?.Replace("_", "").Replace(" ", "");
+        if (!Enum.TryParse<ShipmentStatus>(normalizedStatus, ignoreCase: true, out var targetStatus))
+        {
+            var allowedValues = string.Join(", ", Enum.GetNames<ShipmentStatus>().Select(n => n.ToUpper()));
+            throw new ValidationException(new[] { $"'{command.Request.Status}' is not a valid shipment status. Allowed values: {allowedValues}" });
+        }
 
         if (!ShipmentStateMachine.CanTransition(shipment.Status, targetStatus))
             throw new UnprocessableException($"Cannot transition from {shipment.Status} to {targetStatus}.");

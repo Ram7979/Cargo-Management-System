@@ -1,0 +1,84 @@
+<div class="page-header" *ngIf="vehicle">
+  <div class="header-left">
+    <button mat-icon-button routerLink="/fleet" class="back-btn">
+      <mat-icon>arrow_back</mat-icon>
+    </button>
+    <h2>Vehicle Detail: {{ vehicle.plateNumber }}</h2>
+  </div>
+  <div class="header-actions">
+    <button mat-stroked-button color="warn" class="me-2" (click)="updateStatus('Maintenance')">
+      <mat-icon>build</mat-icon> Set Maintenance
+    </button>
+    <button mat-raised-button color="primary" (click)="updateStatus('Available')" *ngIf="vehicle.status === 'Maintenance'">
+      <mat-icon>check_circle</mat-icon> Set Available
+    </button>
+  </div>
+</div>
+
+<div class="content-container" *ngIf="vehicle">
+  <div class="grid-layout">
+    <!-- Status Card -->
+    <mat-card class="status-card">
+      <mat-card-header>
+        <mat-card-title>Operational Status</mat-card-title>
+      </mat-card-header>
+      <mat-card-content>
+        <div class="status-display">
+          <div class="status-value" [ngClass]="vehicle.status.toLowerCase().replace(' ', '-')">
+            {{ vehicle.status }}
+          </div>
+          <div class="status-since">Since: {{ vehicle.lastMaintenanceDate | date:'medium' }}</div>
+        </div>
+        
+        <div class="trip-indicator" *ngIf="vehicle.status === 'On Trip'">
+          <div class="indicator-label">Current Trip Progress</div>
+          <mat-progress-bar mode="indeterminate" color="accent"></mat-progress-bar>
+        </div>
+      </mat-card-content>
+    </mat-card>
+
+    <!-- Specs Card -->
+    <mat-card class="specs-card">
+      <mat-card-header>
+        <mat-card-title>Vehicle Specifications</mat-card-title>
+      </mat-card-header>
+      <mat-card-content>
+        <div class="info-list">
+          <div class="info-item">
+            <span class="label">Type</span>
+            <span class="value">{{ vehicle.vehicleType }}</span>
+          </div>
+          <div class="info-item">
+            <span class="label">Capacity</span>
+            <span class="value">{{ vehicle.capacityKg }} KG</span>
+          </div>
+          <div class="info-item">
+            <span class="label">Plate Number</span>
+            <span class="value">{{ vehicle.plateNumber }}</span>
+          </div>
+        </div>
+      </mat-card-content>
+    </mat-card>
+
+    <!-- Assignment Card -->
+    <mat-card class="assignment-card">
+      <mat-card-header>
+        <mat-card-title>Active Assignment</mat-card-title>
+      </mat-card-header>
+      <mat-card-content>
+        <div class="driver-profile">
+          <div class="avatar-bg">
+            <mat-icon>person</mat-icon>
+          </div>
+          <div class="driver-details">
+            <div class="name">{{ vehicle.currentDriverName || 'No active driver' }}</div>
+            <div class="id" *ngIf="vehicle.currentDriverId">ID: {{ vehicle.currentDriverId }}</div>
+          </div>
+        </div>
+        <button mat-stroked-button color="primary" class="full-width mt-3">
+          <mat-icon>swap_horiz</mat-icon> Reassign Driver
+        </button>
+      </mat-card-content>
+    </mat-card>
+  </div>
+</div>

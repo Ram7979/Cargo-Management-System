@@ -103,16 +103,55 @@ public class ShipmentsController : ControllerBase
         return Ok(result);
     }
 
-    /// <summary>Get BOL document URL for a shipment.</summary>
+    /// <summary>Get BOL document for a shipment (Generates PDF).</summary>
     [HttpGet("{shipmentId:guid}/document/bol")]
     [Authorize(Roles = "OpsManager,Customer,Dispatcher,SuperAdmin")]
     public async Task<IActionResult> GetBolDocument(Guid shipmentId)
     {
         var result = await _mediator.Send(new GetShipmentQuery(shipmentId));
         if (!result.Success || result.Data == null) return NotFound(result);
-        if (string.IsNullOrWhiteSpace(result.Data.BolDocumentUrl))
-            return NotFound(new { message = "BOL document not available." });
-        return Ok(new { bolUrl = result.Data.BolDocumentUrl });
+
+        var shipment = result.Data;
+
+        // Mock PDF Generation
+        // In a real app, use QuestPDF, iTextSharp or similar
+        using (var ms = new MemoryStream())
+        {
+            using (var writer = new StreamWriter(ms))
+            {
+                writer.WriteLine("%PDF-1.4");
+                writer.WriteLine("1 0 obj <</Type /Catalog /Pages 2 0 R>> endobj");
+                writer.WriteLine("2 0 obj <</Type /Pages /Kids [3 0 R] /Count 1>> endobj");
+                writer.WriteLine("3 0 obj <</Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Contents 4 0 R /Resources <<>>>> endobj");
+                
+                var content = $"BT /F1 12 Tf 100 700 Td (BILL OF LADING) Tj " +
+                              $"0 -20 Td (Shipment ID: {shipment.Id}) Tj " +
+                              $"0 -20 Td (Tracking: {shipment.TrackingNumber}) Tj " +
+                              $"0 -20 Td (Sender: {shipment.SenderName}) Tj " +
+                              $"0 -20 Td (Recipient: {shipment.RecipientName}) Tj " +
+                              $"0 -20 Td (Cargo: {shipment.CargoType} - {shipment.WeightKg}KG) Tj " +
+                              $"0 -20 Td (Status: {shipment.Status}) Tj " +
+                              $"0 -20 Td (Date: {DateTime.UtcNow:yyyy-MM-dd}) Tj ET";
+                              
+                writer.WriteLine($"4 0 obj <</Length {content.Length}>> stream");
+                writer.WriteLine(content);
+                writer.WriteLine("endstream endobj");
+                writer.WriteLine("xref");
+                writer.WriteLine("0 5");
+                writer.WriteLine("0000000000 65535 f");
+                writer.WriteLine("0000000010 00000 n");
+                writer.WriteLine("0000000060 00000 n");
+                writer.WriteLine("0000000115 00000 n");
+                writer.WriteLine("0000000210 00000 n");
+                writer.WriteLine("trailer <</Size 5 /Root 1 0 R>>");
+                writer.WriteLine("startxref");
+                writer.WriteLine("300");
+                writer.WriteLine("%%EOF");
+                writer.Flush();
+            }
+            
+            return File(ms.ToArray(), "application/pdf", $"BOL_{shipment.TrackingNumber}.pdf");
+        }
     }
 
     /// <summary>Get POD document for a delivered shipment.</summary>

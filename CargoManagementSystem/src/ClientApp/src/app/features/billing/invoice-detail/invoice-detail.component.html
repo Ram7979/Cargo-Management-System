@@ -1,0 +1,83 @@
+<div class="page-header" *ngIf="invoice">
+  <div class="header-left">
+    <button mat-icon-button routerLink="/billing" class="back-btn">
+      <mat-icon>arrow_back</mat-icon>
+    </button>
+    <h2>Invoice: {{ invoice.invoiceNumber }}</h2>
+  </div>
+  <div class="header-actions">
+    <button mat-stroked-button color="primary" class="me-2" (click)="downloadPdf()">
+      <mat-icon>picture_as_pdf</mat-icon> Download PDF
+    </button>
+    <button mat-raised-button color="primary" *ngIf="invoice.status === 'Pending'" (click)="onPay()">
+      <mat-icon>payment</mat-icon> Mark as Paid
+    </button>
+  </div>
+</div>
+
+<div class="invoice-wrapper" *ngIf="invoice">
+  <mat-card class="invoice-card">
+    <mat-card-content>
+      <div class="invoice-header">
+        <div class="company-logo">
+          <mat-icon color="primary">flight_takeoff</mat-icon>
+          <span>CMS Cargo</span>
+        </div>
+        <div class="status-info">
+          <app-status-chip [status]="invoice.status"></app-status-chip>
+          <div class="invoice-date">Date: {{ invoice.createdAt | date:'longDate' }}</div>
+        </div>
+      </div>
+
+      <mat-divider class="my-4"></mat-divider>
+
+      <div class="billing-grid">
+        <div class="bill-to">
+          <div class="label">Bill To:</div>
+          <div class="value name">{{ invoice.customerName }}</div>
+          <div class="value">{{ invoice.customerAddress }}</div>
+          <div class="value">Email: {{ invoice.customerEmail }}</div>
+        </div>
+        <div class="shipment-ref">
+          <div class="label">Shipment Reference:</div>
+          <div class="value">Tracking #: {{ invoice.shipmentTrackingNumber }}</div>
+          <div class="value">Service: {{ invoice.serviceType }}</div>
+        </div>
+      </div>
+
+      <div class="item-table">
+        <div class="table-header">
+          <span class="desc">Description</span>
+          <span class="qty">Qty</span>
+          <span class="price">Unit Price</span>
+          <span class="total">Total</span>
+        </div>
+        <mat-divider></mat-divider>
+        <div class="table-row">
+          <span class="desc">Freight Charges ({{ invoice.cargoType }}) - {{ invoice.weightKg }} KG</span>
+          <span class="qty">1</span>
+          <span class="price">{{ invoice.totalAmount | currency }}</span>
+          <span class="total">{{ invoice.totalAmount | currency }}</span>
+        </div>
+        <!-- Additional charges if any -->
+        <div class="table-row" *ngIf="(invoice.insuranceAmount || 0) > 0">
+          <span class="desc">Cargo Insurance</span>
+          <span class="qty">1</span>
+          <span class="price">{{ invoice.insuranceAmount | currency }}</span>
+          <span class="total">{{ invoice.insuranceAmount | currency }}</span>
+        </div>
+      </div>
+
+      <div class="totals-section">
+        <div class="total-row">
+          <span>Subtotal</span>
+          <span>{{ invoice.totalAmount | currency }}</span>
+        </div>
+        <div class="total-row grand-total">
+          <span>Amount Due</span>
+          <span>{{ (invoice.totalAmount + (invoice.insuranceAmount || 0)) | currency }}</span>
+        </div>
+      </div>
+    </mat-card-content>
+  </mat-card>
+</div>

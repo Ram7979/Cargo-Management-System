@@ -1,0 +1,93 @@
+<div class="page-header">
+  <h2>Operational Reports</h2>
+  <div class="header-actions">
+    <button mat-stroked-button color="primary" class="me-2" (click)="exportData()" [disabled]="reportData.length === 0">
+      <mat-icon>download</mat-icon> Export CSV
+    </button>
+  </div>
+</div>
+
+<div class="report-container">
+  <!-- Filter Card -->
+  <mat-card class="filter-card">
+    <mat-card-content>
+      <form [formGroup]="filterForm" class="filter-grid" (ngSubmit)="generateReport()">
+        <mat-form-field appearance="outline">
+          <mat-label>From Date</mat-label>
+          <input matInput [matDatepicker]="fromPicker" formControlName="fromDate">
+          <mat-datepicker-toggle matSuffix [for]="fromPicker"></mat-datepicker-toggle>
+          <mat-datepicker #fromPicker></mat-datepicker>
+        </mat-form-field>
+
+        <mat-form-field appearance="outline">
+          <mat-label>To Date</mat-label>
+          <input matInput [matDatepicker]="toPicker" formControlName="toDate">
+          <mat-datepicker-toggle matSuffix [for]="toPicker"></mat-datepicker-toggle>
+          <mat-datepicker #toPicker></mat-datepicker>
+        </mat-form-field>
+
+        <mat-form-field appearance="outline">
+          <mat-label>Status</mat-label>
+          <mat-select formControlName="status">
+            <mat-option *ngFor="let opt of statusOptions" [value]="opt">{{ opt }}</mat-option>
+          </mat-select>
+        </mat-form-field>
+
+        <div class="filter-actions">
+          <button mat-raised-button color="primary" type="submit" [disabled]="isLoading">
+            <mat-icon>analytics</mat-icon> Run Report
+          </button>
+        </div>
+      </form>
+    </mat-card-content>
+  </mat-card>
+
+  <!-- Results Card -->
+  <mat-card class="results-card">
+    <div class="loading-shade" *ngIf="isLoading">
+      <mat-spinner diameter="40"></mat-spinner>
+    </div>
+
+    <table mat-table [dataSource]="reportData" class="w-100" *ngIf="reportData.length > 0">
+      <ng-container matColumnDef="trackingNumber">
+        <th mat-header-cell *matHeaderCellDef>Tracking #</th>
+        <td mat-cell *matCellDef="let row"> <b>{{ row.trackingNumber }}</b> </td>
+      </ng-container>
+
+      <ng-container matColumnDef="status">
+        <th mat-header-cell *matHeaderCellDef>Status</th>
+        <td mat-cell *matCellDef="let row">
+          <span class="status-chip" [ngClass]="row.status.toLowerCase().replace(' ', '-')">{{ row.status }}</span>
+        </td>
+      </ng-container>
+
+      <ng-container matColumnDef="sender">
+        <th mat-header-cell *matHeaderCellDef>Sender</th>
+        <td mat-cell *matCellDef="let row"> {{ row.senderName }} </td>
+      </ng-container>
+
+      <ng-container matColumnDef="recipient">
+        <th mat-header-cell *matHeaderCellDef>Recipient</th>
+        <td mat-cell *matCellDef="let row"> {{ row.recipientName }} </td>
+      </ng-container>
+
+      <ng-container matColumnDef="weight">
+        <th mat-header-cell *matHeaderCellDef>Weight</th>
+        <td mat-cell *matCellDef="let row"> {{ row.weightKg }} KG </td>
+      </ng-container>
+
+      <ng-container matColumnDef="date">
+        <th mat-header-cell *matHeaderCellDef>Created Date</th>
+        <td mat-cell *matCellDef="let row"> {{ row.createdAt | date:'shortDate' }} </td>
+      </ng-container>
+
+      <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+      <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+    </table>
+
+    <div class="empty-state" *ngIf="!isLoading && reportData.length === 0">
+      <mat-icon>insert_drive_file</mat-icon>
+      <p>No data found for the selected criteria.</p>
+    </div>
+  </mat-card>
+</div>

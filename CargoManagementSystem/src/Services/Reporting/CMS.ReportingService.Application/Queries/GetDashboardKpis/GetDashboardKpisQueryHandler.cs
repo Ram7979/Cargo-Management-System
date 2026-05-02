@@ -7,7 +7,7 @@ using MediatR;
 namespace CMS.ReportingService.Application.Queries.GetDashboardKpis;
 
 public class GetDashboardKpisQueryHandler
-    : IRequestHandler<GetDashboardKpisQuery, ApiResponse<IEnumerable<DashboardKpiDto>>>
+    : IRequestHandler<GetDashboardKpisQuery, ApiResponse<DashboardKpisDto>>
 {
     private static readonly TimeSpan CacheTtl = TimeSpan.FromSeconds(60);
 
@@ -25,46 +25,40 @@ public class GetDashboardKpisQueryHandler
         _invoiceClient = invoiceClient;
     }
 
-    public async Task<ApiResponse<IEnumerable<DashboardKpiDto>>> Handle(
+    public async Task<ApiResponse<DashboardKpisDto>> Handle(
         GetDashboardKpisQuery request,
         CancellationToken cancellationToken)
     {
-        var fromStr = request.FromDate?.ToString("yyyyMMdd") ?? "all";
-        var toStr = request.ToDate?.ToString("yyyyMMdd") ?? "all";
-        var cacheKey = $"dashboard:kpis:{fromStr}:{toStr}";
+        var cacheKey = $"dashboard:kpis:v2:{request.FromDate:yyyyMMdd}:{request.ToDate:yyyyMMdd}";
 
-        var cached = await _cache.GetAsync<IEnumerable<DashboardKpiDto>>(cacheKey);
+        var cached = await _cache.GetAsync<DashboardKpisDto>(cacheKey);
         if (cached is not null)
-            return ApiResponse<IEnumerable<DashboardKpiDto>>.Ok(cached);
+            return ApiResponse<DashboardKpisDto>.Ok(cached);
 
         var today = DateTime.UtcNow.Date;
         var monthStart = new DateTime(today.Year, today.Month, 1, 0, 0, 0, DateTimeKind.Utc);
 
         var statusCountsTask = _repository.GetStatusCountsAsync(request.FromDate, request.ToDate);
-        var deliveredTodayTask = _repository.CountByStatusAsync("Delivered", today, today.AddDays(1).AddTicks(-1));
         var revenueTask = _invoiceClient.GetRevenueAsync(monthStart, today.AddDays(1).AddTicks(-1));
 
-        await Task.WhenAll(statusCountsTask, deliveredTodayTask, revenueTask);
+        await Task.WhenAll(statusCountsTask, revenueTask);
 
         var statusCounts = await statusCountsTask;
-        var deliveredToday = await deliveredTodayTask;
         var revenue = await revenueTask;
 
-        statusCounts.TryGetValue("Pending", out var pendingPickups);
         statusCounts.TryGetValue("InTransit", out var inTransit);
-        statusCounts.TryGetValue("FailedDelivery", out var failedDeliveries);
+        statusCounts.TryGetValue("Pending", out var pending);
 
-        var kpis = new List<DashboardKpiDto>
+        var dto = new DashboardKpisDto
         {
-            new() { Label = "Delivered Today",    Value = deliveredToday,  Unit = "shipments", Trend = "flat" },
-            new() { Label = "Pending Pickups",    Value = pendingPickups,  Unit = "shipments", Trend = "flat" },
-            new() { Label = "In Transit",         Value = inTransit,       Unit = "shipments", Trend = "flat" },
-            new() { Label = "Failed Deliveries",  Value = failedDeliveries, Unit = "shipments", Trend = "flat" },
-            new() { Label = "Revenue This Month", Value = revenue,         Unit = "USD",       Trend = "flat" }
+            TotalRevenue = revenue,
+            ActiveShipments = inTransit + pending,
+            WarehouseUtilization = 72.5, // Mocked for now
+            FleetAvailability = 88.0      // Mocked for now
         };
 
-        await _cache.SetAsync(cacheKey, kpis, CacheTtl);
+        await _cache.SetAsync(cacheKey, dto, CacheTtl);
 
-        return ApiResponse<IEnumerable<DashboardKpiDto>>.Ok(kpis);
+        return ApiResponse<DashboardKpisDto>.Ok(dto);
     }
 }

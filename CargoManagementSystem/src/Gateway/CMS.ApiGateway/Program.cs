@@ -33,11 +33,16 @@ try
             ctx.Configuration["Seq:Url"] ?? "http://localhost:5341",
             restrictedToMinimumLevel: Serilog.Events.LogEventLevel.Information));
 
-    // CORS — allows Swagger UI to fetch downstream swagger.json docs cross-origin
+    // CORS — explicitly allow frontend and gateway swagger
     builder.Services.AddCors(options =>
     {
         options.AddDefaultPolicy(policy =>
-            policy.AllowAnyOrigin().AllowAnyMethod().AllowAnyHeader());
+        {
+            policy.WithOrigins("http://localhost:4200")
+                  .AllowAnyMethod()
+                  .AllowAnyHeader()
+                  .AllowCredentials();
+        });
     });
 
     // Required by SwaggerForOcelot

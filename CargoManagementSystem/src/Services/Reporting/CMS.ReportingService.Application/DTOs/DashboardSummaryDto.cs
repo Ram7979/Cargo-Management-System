@@ -15,6 +15,14 @@ public class DashboardSummaryDto
     public DateTime? ToDate { get; set; }
 }
 
+public class DashboardKpisDto
+{
+    public decimal TotalRevenue { get; set; }
+    public int ActiveShipments { get; set; }
+    public double WarehouseUtilization { get; set; }
+    public double FleetAvailability { get; set; }
+}
+
 public class DashboardKpiDto
 {
     public string Label { get; set; } = string.Empty;
@@ -27,20 +35,19 @@ public class DashboardKpiDto
 public class TrendDataDto
 {
     public IEnumerable<RevenueTrendPointDto> RevenueTrend { get; set; } = new List<RevenueTrendPointDto>();
-    public IEnumerable<StatusTrendPointDto> ShipmentsByStatusOverTime { get; set; } = new List<StatusTrendPointDto>();
+    public IEnumerable<StatusTrendPointDto> ShipmentsByStatus { get; set; } = new List<StatusTrendPointDto>();
     public IEnumerable<CargoTypeBreakdownDto> CargoTypeBreakdown { get; set; } = new List<CargoTypeBreakdownDto>();
     public IEnumerable<GeographicVolumeDto> GeographicVolume { get; set; } = new List<GeographicVolumeDto>();
 }
 
 public class RevenueTrendPointDto
 {
-    public string Period { get; set; } = string.Empty;
-    public decimal Revenue { get; set; }
+    public string Date { get; set; } = string.Empty;
+    public decimal Value { get; set; }
 }
 
 public class StatusTrendPointDto
 {
-    public string Period { get; set; } = string.Empty;
     public string Status { get; set; } = string.Empty;
     public int Count { get; set; }
 }

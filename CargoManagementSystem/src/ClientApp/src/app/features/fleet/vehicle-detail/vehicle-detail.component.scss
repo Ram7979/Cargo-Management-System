@@ -1,0 +1,75 @@
+.grid-layout {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 24px;
+}
+
+.status-display {
+  text-align: center;
+  padding: 24px 0;
+  
+  .status-value {
+    font-size: 2rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    margin-bottom: 8px;
+    
+    &.available { color: #166534; }
+    &.on-trip { color: #1e40af; }
+    &.maintenance { color: #991b1b; }
+  }
+  
+  .status-since {
+    color: #718096;
+    font-size: 0.85rem;
+  }
+}
+
+.trip-indicator {
+  margin-top: 16px;
+  .indicator-label { font-size: 0.75rem; color: #4a5568; margin-bottom: 4px; }
+}
+
+.info-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding: 16px 0;
+  
+  .info-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #edf2f7;
+    padding-bottom: 8px;
+    
+    .label { color: #718096; font-size: 0.9rem; }
+    .value { font-weight: 600; color: #2d3748; }
+  }
+}
+
+.driver-profile {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 16px 0;
+  
+  .avatar-bg {
+    width: 48px;
+    height: 48px;
+    background-color: #ebf8ff;
+    color: #3182ce;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .driver-details {
+    .name { font-weight: 600; font-size: 1rem; }
+    .id { font-size: 0.8rem; color: #a0aec0; }
+  }
+}
+
+.full-width { width: 100%; }
+.mt-3 { margin-top: 12px; }

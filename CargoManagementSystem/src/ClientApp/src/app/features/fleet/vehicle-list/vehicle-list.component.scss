@@ -1,0 +1,80 @@
+.fleet-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 24px;
+  margin-top: 24px;
+}
+
+.vehicle-card {
+  cursor: pointer;
+  transition: transform 0.2s, box-shadow 0.2s;
+  border-radius: 12px;
+  overflow: hidden;
+
+  &:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 24px rgba(0,0,0,0.12);
+  }
+}
+
+.vehicle-icon-box {
+  background: #f0f4f8;
+  color: #1a73e8;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+  width: 40px;
+  height: 40px;
+}
+
+.info-row {
+  display: flex;
+  justify-content: space-between;
+  margin: 16px 0;
+  font-size: 0.9rem;
+  
+  .label { color: #666; }
+  .value { font-weight: 600; color: #333; }
+}
+
+.capacity-section {
+  margin: 16px 0;
+  .capacity-label {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.8rem;
+    margin-bottom: 8px;
+    color: #666;
+  }
+}
+
+.status-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 16px;
+  padding-top: 16px;
+  border-top: 1px solid #f0f0f0;
+
+  .location {
+    display: flex;
+    align-items: center;
+    font-size: 0.75rem;
+    color: #34a853;
+    mat-icon { font-size: 14px; width: 14px; height: 14px; margin-right: 4px; }
+  }
+}
+
+.loading-shade {
+  display: flex;
+  justify-content: center;
+  padding: 40px;
+}
+
+.empty-state {
+  text-align: center;
+  padding: 80px 40px;
+  color: #999;
+  mat-icon { font-size: 64px; width: 64px; height: 64px; margin-bottom: 16px; }
+}

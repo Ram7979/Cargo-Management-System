@@ -1,0 +1,98 @@
+<div class="page-header">
+  <h2>Warehouse Operations: Receive Cargo</h2>
+</div>
+
+<div class="content-container">
+  <div class="grid-layout">
+    <!-- Search and Action Card -->
+    <mat-card class="action-card">
+      <mat-card-header>
+        <mat-card-title>Scanning & Check-in</mat-card-title>
+      </mat-card-header>
+      <mat-card-content>
+        <form [formGroup]="receiveForm" (ngSubmit)="onSubmit()">
+          <div class="search-section">
+            <mat-form-field appearance="outline" class="full-width">
+              <mat-label>Scan Tracking Number</mat-label>
+              <input matInput formControlName="trackingNumber" placeholder="e.g. CMS-123456" (keyup.enter)="searchShipment()">
+              <button type="button" mat-icon-button matSuffix (click)="searchShipment()" [disabled]="isSearching">
+                <mat-icon>{{ isSearching ? 'sync' : 'search' }}</mat-icon>
+              </button>
+              <mat-hint>Enter tracking number or scan barcode</mat-hint>
+            </mat-form-field>
+          </div>
+
+          <div class="bin-section" *ngIf="foundShipment">
+            <mat-form-field appearance="outline" class="full-width">
+              <mat-label>Warehouse *</mat-label>
+              <mat-select formControlName="warehouseId">
+                <mat-option *ngFor="let w of warehouses" [value]="w.id">{{ w.name }} - {{ w.city }}</mat-option>
+                <mat-option *ngIf="warehouses.length === 0" disabled>No warehouses configured</mat-option>
+              </mat-select>
+              <mat-icon matPrefix>warehouse</mat-icon>
+              <mat-error>Warehouse is required</mat-error>
+            </mat-form-field>
+
+            <mat-form-field appearance="outline" class="full-width">
+              <mat-label>Remarks / Condition</mat-label>
+              <textarea matInput formControlName="remarks" rows="3" placeholder="e.g. Box slightly damaged, all items intact"></textarea>
+            </mat-form-field>
+
+            <button mat-raised-button color="primary" class="full-width submit-btn" type="submit" [disabled]="receiveForm.invalid || isSubmitting">
+              <mat-icon>check_circle</mat-icon> Confirm Receipt
+            </button>
+          </div>
+        </form>
+      </mat-card-content>
+    </mat-card>
+
+    <!-- Shipment Preview Card -->
+    <div class="preview-container" *ngIf="foundShipment">
+      <mat-card class="preview-card">
+        <mat-card-header>
+          <div mat-card-avatar class="preview-avatar">
+            <mat-icon>inventory_2</mat-icon>
+          </div>
+          <mat-card-title>{{ foundShipment.trackingNumber }}</mat-card-title>
+          <mat-card-subtitle>{{ foundShipment.cargoType }}</mat-card-subtitle>
+        </mat-card-header>
+        <mat-card-content>
+          <div class="info-grid">
+            <div class="info-item">
+              <span class="label">Sender:</span>
+              <span class="value">{{ foundShipment.senderName }}</span>
+            </div>
+            <div class="info-item">
+              <span class="label">Recipient:</span>
+              <span class="value">{{ foundShipment.recipientName }}</span>
+            </div>
+            <div class="info-item">
+              <span class="label">Destination:</span>
+              <span class="value">{{ foundShipment.recipientCity }}, {{ foundShipment.recipientCountry }}</span>
+            </div>
+            <div class="info-item">
+              <span class="label">Total Weight:</span>
+              <span class="value">{{ foundShipment.weightKg }} KG</span>
+            </div>
+          </div>
+          
+          <div class="status-indicator">
+            <span class="dot" [ngClass]="foundShipment.status.toLowerCase()"></span>
+            Current Status: <b>{{ foundShipment.status }}</b>
+          </div>
+        </mat-card-content>
+      </mat-card>
+
+      <div class="alert-box warning" *ngIf="foundShipment.status === 'Delivered'">
+        <mat-icon>warning</mat-icon>
+        <span>This shipment is already marked as Delivered. Please verify.</span>
+      </div>
+    </div>
+
+    <!-- Empty State -->
+    <div class="empty-preview" *ngIf="!foundShipment && !isSearching">
+      <mat-icon>qr_code_scanner</mat-icon>
+      <p>Scan a shipment to begin the warehouse check-in process.</p>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,90 @@
+<div class="page-header">
+  <h2>Invoices & Billing</h2>
+  <div class="header-actions">
+    <button mat-stroked-button color="primary" class="me-2" (click)="loadData()">
+      <mat-icon>refresh</mat-icon> Refresh
+    </button>
+    <button mat-raised-button color="primary">
+      <mat-icon>add</mat-icon> Create Invoice
+    </button>
+  </div>
+</div>
+
+<div class="card-container">
+  <!-- Loading State -->
+  <div class="loading-container" *ngIf="isLoading">
+    <mat-spinner diameter="40"></mat-spinner>
+    <p>Loading invoices...</p>
+  </div>
+
+  <!-- Empty State -->
+  <div class="empty-state" *ngIf="!isLoading && dataSource.length === 0">
+    <mat-icon class="empty-icon">receipt_long</mat-icon>
+    <h3>No invoices found</h3>
+    <p>Invoices will appear here once shipments are billed.</p>
+    <button mat-raised-button color="primary">
+      <mat-icon>add</mat-icon> Create Invoice
+    </button>
+  </div>
+
+  <!-- Data Table -->
+  <table mat-table [dataSource]="dataSource" class="w-100" *ngIf="!isLoading && dataSource.length > 0">
+    <ng-container matColumnDef="invoiceNumber">
+      <th mat-header-cell *matHeaderCellDef>Invoice #</th>
+      <td mat-cell *matCellDef="let inv"> <b>{{ inv.invoiceNumber }}</b> </td>
+    </ng-container>
+
+    <ng-container matColumnDef="customer">
+      <th mat-header-cell *matHeaderCellDef>Customer</th>
+      <td mat-cell *matCellDef="let inv"> {{ inv.customerName }} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="shipment">
+      <th mat-header-cell *matHeaderCellDef>Shipment</th>
+      <td mat-cell *matCellDef="let inv"> 
+        <a [routerLink]="['/shipments', inv.shipmentId]" class="tracking-link">
+          {{ inv.shipmentTrackingNumber }}
+        </a>
+      </td>
+    </ng-container>
+
+    <ng-container matColumnDef="amount">
+      <th mat-header-cell *matHeaderCellDef>Amount</th>
+      <td mat-cell *matCellDef="let inv"> {{ inv.totalAmount | currency }} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="status">
+      <th mat-header-cell *matHeaderCellDef>Status</th>
+      <td mat-cell *matCellDef="let inv">
+        <app-status-chip [status]="inv.status"></app-status-chip>
+      </td>
+    </ng-container>
+
+    <ng-container matColumnDef="dueDate">
+      <th mat-header-cell *matHeaderCellDef>Due Date</th>
+      <td mat-cell *matCellDef="let inv"> {{ inv.dueDate | date:'mediumDate' }} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="actions">
+      <th mat-header-cell *matHeaderCellDef>Actions</th>
+      <td mat-cell *matCellDef="let inv">
+        <button mat-icon-button color="primary" matTooltip="Download PDF" (click)="downloadPdf(inv)">
+          <mat-icon>picture_as_pdf</mat-icon>
+        </button>
+        <button mat-icon-button color="accent" matTooltip="View Details" [routerLink]="['/billing', inv.id]">
+          <mat-icon>visibility</mat-icon>
+        </button>
+      </td>
+    </ng-container>
+
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+  </table>
+
+  <mat-paginator *ngIf="!isLoading && dataSource.length > 0"
+                 [length]="totalItems"
+                 [pageSize]="pageSize"
+                 [pageSizeOptions]="[5, 10, 20]"
+                 (page)="onPageChange($event)">
+  </mat-paginator>
+</div>

@@ -41,21 +41,18 @@ public class GetDashboardSummaryQueryHandler
         var today = DateTime.UtcNow.Date;
         var monthStart = new DateTime(today.Year, today.Month, 1, 0, 0, 0, DateTimeKind.Utc);
 
-        // Run all DB counts in parallel using a single GROUP BY query
-        var statusCountsTask = _repository.GetStatusCountsAsync(request.FromDate, request.ToDate);
-        var activeCountTask = _repository.CountActiveAsync();
-        var todayCountTask = _repository.CountByStatusAsync(string.Empty, today, today.AddDays(1).AddTicks(-1));
-        var deliveredTodayTask = _repository.CountByStatusAsync("Delivered", today, today.AddDays(1).AddTicks(-1));
+        // Run DB counts sequentially to avoid DbContext concurrency issues
+        var statusCounts = await _repository.GetStatusCountsAsync(request.FromDate, request.ToDate);
+        var totalActive = await _repository.CountActiveAsync();
+        var totalToday = await _repository.CountByStatusAsync(string.Empty, today, today.AddDays(1).AddTicks(-1));
+        var deliveredToday = await _repository.CountByStatusAsync("Delivered", today, today.AddDays(1).AddTicks(-1));
+
+        // External service calls can still be parallel
         var pendingInvoicesTask = _invoiceClient.GetPendingInvoicesCountAsync();
         var revenueTask = _invoiceClient.GetRevenueAsync(monthStart, today.AddDays(1).AddTicks(-1));
 
-        await Task.WhenAll(statusCountsTask, activeCountTask, todayCountTask,
-            deliveredTodayTask, pendingInvoicesTask, revenueTask);
+        await Task.WhenAll(pendingInvoicesTask, revenueTask);
 
-        var statusCounts = await statusCountsTask;
-        var totalActive = await activeCountTask;
-        var totalToday = await todayCountTask;
-        var deliveredToday = await deliveredTodayTask;
         var pendingInvoices = await pendingInvoicesTask;
         var revenueThisMonth = await revenueTask;
 
