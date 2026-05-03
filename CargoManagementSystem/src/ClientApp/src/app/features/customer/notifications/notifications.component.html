@@ -1,0 +1,41 @@
+<div class="notifications-container">
+  <div class="header-section">
+    <h1>Notifications</h1>
+    <p>Stay updated with your shipment status and account alerts.</p>
+  </div>
+
+  <div class="content-card">
+    <div class="loading-state" *ngIf="isLoading">
+      <span>Loading alerts...</span>
+    </div>
+
+    <div class="empty-state" *ngIf="!isLoading && notifications().length === 0">
+      <mat-icon>notifications_off</mat-icon>
+      <h3>All caught up!</h3>
+      <p>No new notifications at this time.</p>
+    </div>
+
+    <div class="notification-list" *ngIf="!isLoading && notifications().length > 0">
+      <div class="notification-item" *ngFor="let note of notifications()" [class.unread]="!note.isRead">
+        <div class="icon-area" [ngClass]="note.type.toLowerCase()">
+          <mat-icon *ngIf="note.type.toLowerCase() === 'success'">check_circle</mat-icon>
+          <mat-icon *ngIf="note.type.toLowerCase() === 'info'">info</mat-icon>
+          <mat-icon *ngIf="note.type.toLowerCase() === 'warning'">update</mat-icon>
+          <mat-icon *ngIf="note.type.toLowerCase() === 'error'">error</mat-icon>
+        </div>
+        <div class="content-area" (click)="markAsRead(note.id)">
+          <div class="note-header">
+            <h4>{{ note.title }}</h4>
+            <span class="time">{{ note.createdAt | date:'medium' }}</span>
+          </div>
+          <p>{{ note.message }}</p>
+        </div>
+        <div class="action-area">
+          <button mat-icon-button (click)="deleteNotification(note)" matTooltip="Remove">
+            <mat-icon>close</mat-icon>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

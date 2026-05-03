@@ -29,9 +29,12 @@ export class CustomerDetailComponent implements OnInit {
 
   ngOnInit() {
     const id = this.route.snapshot.paramMap.get('id');
-    if (id) {
+    if (id && id !== 'undefined' && id !== 'null') {
       this.loadCustomer(id);
       this.loadShipments(id);
+    } else {
+      this.notification.error('Invalid Customer ID');
+      this.isLoading = false;
     }
   }
 

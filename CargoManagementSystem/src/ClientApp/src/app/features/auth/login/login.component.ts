@@ -31,10 +31,11 @@ export class LoginComponent {
 
   isLoading = false;
   hidePassword = true;
-  returnUrl: string;
+  errorMessage = '';
+  returnUrl: string = '';
 
   constructor() {
-    this.returnUrl = this.route.snapshot.queryParams['returnUrl'] || '/dashboard';
+    this.returnUrl = this.route.snapshot.queryParams['returnUrl'];
   }
 
   onSubmit() {
@@ -43,22 +44,32 @@ export class LoginComponent {
     }
 
     this.isLoading = true;
-    this.authService.login(this.loginForm.value).subscribe({
+    this.errorMessage = '';
+    const { email, password } = this.loginForm.value;
+
+    this.authService.login(email!, password!).subscribe({
       next: (res) => {
         this.isLoading = false;
-        if (res.success) {
-          this.router.navigateByUrl(this.returnUrl);
+        const role = this.authService.getUserRole();
+        
+        if (role === 'Customer') {
+          if (this.returnUrl && this.returnUrl.startsWith('/user')) {
+            this.router.navigateByUrl(this.returnUrl);
+          } else {
+            this.router.navigate(['/user/dashboard']);
+          }
         } else {
-          this.snackBar.open(res.message || 'Login failed. Please check your credentials.', 'Close', {
-            duration: 5000,
-            panelClass: ['error-snackbar']
-          });
+          if (this.returnUrl && this.returnUrl !== '/' && !this.returnUrl.startsWith('/user')) {
+            this.router.navigateByUrl(this.returnUrl);
+          } else {
+            this.router.navigate(['/dashboard']);
+          }
         }
       },
       error: (err) => {
         this.isLoading = false;
-        const msg = err?.error?.message || err?.message || 'Invalid email or password. Please try again.';
-        this.snackBar.open(msg, 'Close', {
+        this.errorMessage = err;
+        this.snackBar.open(this.errorMessage, 'Close', {
           duration: 5000,
           panelClass: ['error-snackbar']
         });

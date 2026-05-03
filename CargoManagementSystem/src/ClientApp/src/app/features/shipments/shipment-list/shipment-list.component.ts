@@ -67,17 +67,22 @@ export class ShipmentListComponent implements OnInit {
   }
 
   onDelete(id: string) {
-    if (confirm('Are you sure you want to cancel this shipment?')) {
-      this.shipmentService.cancel(id, 'User request').subscribe({
-        next: (res) => {
-          if (res.success) {
-            this.notification.success('Shipment cancelled successfully');
-            this.loadShipments();
-          }
-        },
-        error: (err) => this.notification.error(err.message || 'Cancellation failed')
-      });
-    }
+    if (!confirm('Are you sure you want to cancel this shipment?')) return;
+    this.shipmentService.cancel(id, 'Cancelled by admin').subscribe({
+      next: (res) => {
+        if (res.success) {
+          this.notification.success('Shipment cancelled successfully');
+          this.loadShipments();
+        } else {
+          const msg = (res as any).errors?.join(', ') || (res as any).message || 'Cancellation failed';
+          this.notification.error(msg);
+        }
+      },
+      error: (err) => {
+        const msg = err.error?.errors?.join(', ') || err.error?.message || err.message || 'Cancellation failed';
+        this.notification.error(msg);
+      }
+    });
   }
 
   onPageChange(event: PageEvent) {

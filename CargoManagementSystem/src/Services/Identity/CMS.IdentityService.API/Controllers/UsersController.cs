@@ -39,7 +39,7 @@ public class UsersController : ControllerBase
 
     /// <summary>Get paginated list of all users with optional filters.</summary>
     [HttpGet]
-    [Authorize(Roles = "SuperAdmin,OpsManager")]
+    [Authorize(Roles = "SuperAdmin,OpsManager,Admin")]
     public async Task<IActionResult> GetUsers(
         [FromQuery] int page = 1,
         [FromQuery] int pageSize = 20,
@@ -52,50 +52,57 @@ public class UsersController : ControllerBase
     }
 
     /// <summary>Get a single user by ID.</summary>
-    [HttpGet("{userId:guid}")]
-    [Authorize(Roles = "SuperAdmin")]
-    public async Task<IActionResult> GetUser(Guid userId)
+    [HttpGet("{userId}")]
+    [Authorize(Roles = "SuperAdmin,Admin")]
+    public async Task<IActionResult> GetUser(string userId)
     {
+        // Convert string to Guid for the query if needed
+        if (!Guid.TryParse(userId, out var userGuid))
+        {
+            // Try finding by string ID directly using GetUsersQuery with search
+            var byId = await _mediator.Send(new GetUserQuery(userId));
+            return byId.Success ? Ok(byId) : NotFound(byId);
+        }
         var result = await _mediator.Send(new GetUserQuery(userId));
         return result.Success ? Ok(result) : NotFound(result);
     }
 
     /// <summary>Update a user's profile fields (FirstName, LastName).</summary>
-    [HttpPatch("{userId:guid}")]
-    [Authorize(Roles = "SuperAdmin,OpsManager")]
-    public async Task<IActionResult> UpdateUser(Guid userId, [FromBody] UpdateUserRequest request)
+    [HttpPatch("{userId}")]
+    [Authorize(Roles = "SuperAdmin,OpsManager,Admin")]
+    public async Task<IActionResult> UpdateUser(string userId, [FromBody] UpdateUserRequest request)
     {
         var result = await _mediator.Send(new UpdateUserCommand(userId, request, ActorId, IpAddress));
         return result.Success ? Ok(result) : BadRequest(result);
     }
 
     /// <summary>Assign roles to a user (replaces all existing roles).</summary>
-    [HttpPut("{userId:guid}/roles")]
+    [HttpPut("{userId}/roles")]
     [Authorize(Roles = "SuperAdmin")]
-    public async Task<IActionResult> UpdateRoles(Guid userId, [FromBody] UpdateUserRolesRequest request)
+    public async Task<IActionResult> UpdateRoles(string userId, [FromBody] UpdateUserRolesRequest request)
     {
         var result = await _mediator.Send(new UpdateUserRolesCommand(userId, request, ActorId, IpAddress));
         return result.Success ? Ok(result) : BadRequest(result);
     }
 
     /// <summary>Deactivate (soft-delete) a user account.</summary>
-    [HttpDelete("{userId:guid}")]
+    [HttpDelete("{userId}")]
     [Authorize(Roles = "SuperAdmin")]
-    public async Task<IActionResult> DeactivateUser(Guid userId)
+    public async Task<IActionResult> DeactivateUser(string userId)
     {
         var result = await _mediator.Send(new DeactivateUserCommand(userId, ActorId, IpAddress));
         return result.Success ? Ok(result) : BadRequest(result);
     }
 
     /// <summary>Get paginated audit log for a specific user.</summary>
-    [HttpGet("{userId:guid}/audit-logs")]
+    [HttpGet("{userId}/audit-logs")]
     [Authorize(Roles = "SuperAdmin")]
     public async Task<IActionResult> GetAuditLogs(
-        Guid userId,
+        string userId,
         [FromQuery] int page = 1,
         [FromQuery] int pageSize = 20)
     {
-        var result = await _mediator.Send(new GetAuditLogsQuery(userId.ToString(), page, pageSize));
+        var result = await _mediator.Send(new GetAuditLogsQuery(userId, page, pageSize));
         return Ok(result);
     }
 }

@@ -6,12 +6,12 @@ namespace CMS.IdentityService.Application.Commands.UpdateUserRoles;
 
 public class UpdateUserRolesCommand : IRequest<ApiResponse<UserDto>>
 {
-    public Guid UserId { get; }
+    public string UserId { get; }
     public UpdateUserRolesRequest Request { get; }
     public string ActorId { get; }
     public string IpAddress { get; }
 
-    public UpdateUserRolesCommand(Guid userId, UpdateUserRolesRequest request, string actorId, string ipAddress)
+    public UpdateUserRolesCommand(string userId, UpdateUserRolesRequest request, string actorId, string ipAddress)
     {
         UserId = userId;
         Request = request;

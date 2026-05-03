@@ -1,16 +1,29 @@
+export interface UserProfile {
+  id: string;
+  email: string;
+  firstName: string;
+  lastName: string;
+  role: string;
+  roles: string[]; // Add back for compatibility
+  phone?: string;
+  company?: string;
+  address?: string;
+}
+
 export interface User {
-  userId: string;
+  id: string;
   firstName: string;
   lastName: string;
   email: string;
   phone?: string;
   isActive: boolean;
-  roles: string[];
+  role: string;
+  roles: string[]; // Add back for compatibility
 }
 
 export interface AuthResponse {
   accessToken: string;
   refreshToken: string;
-  user: User;
-  roles: string[];
+  expiresIn: number;
+  user: UserProfile;
 }

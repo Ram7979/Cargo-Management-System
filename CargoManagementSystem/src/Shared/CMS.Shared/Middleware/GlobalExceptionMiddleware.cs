@@ -58,6 +58,10 @@ public class GlobalExceptionMiddleware
                 (StatusCodes.Status403Forbidden,
                  ApiResponse<object>.Fail(ex.Message)),
 
+            InvalidStatusTransitionException ex =>
+                (StatusCodes.Status400BadRequest,
+                 ApiResponse<object>.Fail(ex.Message)),
+
             _ => HandleUnknownException(exception)
         };
 

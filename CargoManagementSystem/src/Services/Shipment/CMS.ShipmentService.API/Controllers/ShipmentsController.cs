@@ -57,6 +57,7 @@ public class ShipmentsController : ControllerBase
 
     /// <summary>Update shipment status. Includes GPS, failure reason, re-delivery scheduling.</summary>
     [HttpPatch("{shipmentId:guid}/status")]
+    [HttpPut("{shipmentId:guid}/status")]
     [Authorize(Roles = "OpsManager,Driver,Dispatcher,SuperAdmin")]
     public async Task<IActionResult> UpdateStatus(Guid shipmentId, [FromBody] UpdateShipmentStatusRequest request)
     {

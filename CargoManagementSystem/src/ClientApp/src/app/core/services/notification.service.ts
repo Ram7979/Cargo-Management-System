@@ -44,6 +44,16 @@ export class NotificationService {
     });
   }
 
+  markAllAsRead() {
+    return this.http.patch<ApiResponse<any>>(`${this.apiUrl}/read-all`, {}).subscribe(res => {
+      if (res.success) {
+        this.notificationsSignal.update(notes =>
+          notes.map(n => ({ ...n, isRead: true }))
+        );
+      }
+    });
+  }
+
   success(message: string) {
     this.snackBar.open(message, 'Close', { duration: 3000, panelClass: ['success-snackbar'] });
   }
@@ -58,5 +68,14 @@ export class NotificationService {
 
   warn(message: string) {
     this.snackBar.open(message, 'Close', { duration: 4000, panelClass: ['warn-snackbar'] });
+  }
+
+  warning(message: string) {
+    this.snackBar.open(message, 'Close', {
+      duration: 4000,
+      panelClass: ['warning-snackbar'],
+      horizontalPosition: 'right',
+      verticalPosition: 'top'
+    });
   }
 }

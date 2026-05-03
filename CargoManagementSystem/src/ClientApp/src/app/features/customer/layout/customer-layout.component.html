@@ -1,0 +1,107 @@
+<div class="customer-portal">
+  <!-- Animated Background Mesh -->
+  <div class="bg-mesh"></div>
+
+  <!-- Sidebar -->
+  <aside class="sidebar" [class.collapsed]="isSidebarCollapsed">
+    <div class="sidebar-header">
+      <div class="logo">
+        <mat-icon class="logo-icon">flight_takeoff</mat-icon>
+        <span class="logo-text">CargoPro</span>
+      </div>
+    </div>
+
+    <nav class="sidebar-nav">
+      <a routerLink="/user/dashboard" routerLinkActive="active" class="nav-link">
+        <mat-icon>grid_view</mat-icon>
+        <span>Dashboard</span>
+      </a>
+      <a routerLink="/user/shipments" routerLinkActive="active" class="nav-link">
+        <mat-icon>inventory_2</mat-icon>
+        <span>My Shipments</span>
+      </a>
+      <a routerLink="/user/track" routerLinkActive="active" class="nav-link track-link">
+        <mat-icon>radar</mat-icon>
+        <span>Track Package</span>
+      </a>
+      <a routerLink="/user/book-shipment" routerLinkActive="active" class="nav-link">
+        <mat-icon>add_circle_outline</mat-icon>
+        <span>Book Shipment</span>
+      </a>
+      <a routerLink="/user/invoices" routerLinkActive="active" class="nav-link">
+        <mat-icon>receipt_long</mat-icon>
+        <span>Invoices & Payments</span>
+      </a>
+      <a routerLink="/user/notifications" routerLinkActive="active" class="nav-link">
+        <mat-icon [matBadge]="notificationCount" matBadgeColor="warn" [matBadgeHidden]="notificationCount === 0">notifications</mat-icon>
+        <span>Notifications</span>
+      </a>
+      <a routerLink="/user/profile" routerLinkActive="active" class="nav-link">
+        <mat-icon>person_outline</mat-icon>
+        <span>My Profile</span>
+      </a>
+    </nav>
+
+    <div class="sidebar-footer">
+      <div class="user-info" *ngIf="user$ | async as user">
+        <div class="avatar">
+          {{ user.firstName[0] }}{{ user.lastName[0] }}
+        </div>
+        <div class="user-details">
+          <span class="user-name">{{ user.firstName }} {{ user.lastName }}</span>
+          <span class="user-role">Customer</span>
+        </div>
+        <button mat-icon-button (click)="logout()" title="Logout" class="logout-btn">
+          <mat-icon>logout</mat-icon>
+        </button>
+      </div>
+    </div>
+  </aside>
+
+  <!-- Main Content Wrapper -->
+  <div class="main-wrapper">
+    <!-- Header -->
+    <header class="header">
+      <div class="header-left">
+        <button mat-icon-button class="mobile-menu-btn" (click)="toggleSidebar()">
+          <mat-icon>menu</mat-icon>
+        </button>
+        <h1 class="page-title">{{ pageTitle }}</h1>
+      </div>
+
+      <div class="header-center">
+        <div class="search-bar">
+          <mat-icon>search</mat-icon>
+          <input type="text" placeholder="Track your shipment..." (keyup.enter)="onTrackSearch($event)">
+        </div>
+      </div>
+
+      <div class="header-right">
+        <button mat-icon-button class="notification-btn">
+          <mat-icon [matBadge]="notificationCount" matBadgeColor="warn" [matBadgeHidden]="notificationCount === 0">notifications_none</mat-icon>
+        </button>
+        <div class="user-avatar-dropdown" [matMenuTriggerFor]="userMenu">
+          <div class="avatar-small" *ngIf="user$ | async as user">
+            {{ user.firstName[0] }}{{ user.lastName[0] }}
+          </div>
+          <mat-icon>expand_more</mat-icon>
+        </div>
+        <mat-menu #userMenu="matMenu" class="dark-menu">
+          <button mat-menu-item routerLink="/user/profile">
+            <mat-icon>person</mat-icon>
+            <span>Profile</span>
+          </button>
+          <button mat-menu-item (click)="logout()">
+            <mat-icon>logout</mat-icon>
+            <span>Logout</span>
+          </button>
+        </mat-menu>
+      </div>
+    </header>
+
+    <!-- Content Area -->
+    <main class="content">
+      <router-outlet></router-outlet>
+    </main>
+  </div>
+</div>

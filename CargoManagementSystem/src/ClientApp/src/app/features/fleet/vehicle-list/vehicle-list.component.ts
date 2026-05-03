@@ -10,6 +10,9 @@ import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 import { VehicleService, Vehicle } from '../../../core/services/vehicle.service';
 import { NotificationService } from '../../../core/services/notification.service';
 import { StatusChipComponent } from '../../../shared/components/status-chip/status-chip.component';
+import { AssignmentService } from '../../../core/services/assignment.service';
+import { DriverService } from '../../../core/services/driver.service';
+import { forkJoin } from 'rxjs';
 
 @Component({
   selector: 'app-vehicle-list',
@@ -20,6 +23,8 @@ import { StatusChipComponent } from '../../../shared/components/status-chip/stat
 })
 export class VehicleListComponent implements OnInit {
   private vehicleService = inject(VehicleService);
+  private assignmentService = inject(AssignmentService);
+  private driverService = inject(DriverService);
   private notification = inject(NotificationService);
 
   vehicles: Vehicle[] = [];
@@ -35,12 +40,44 @@ export class VehicleListComponent implements OnInit {
       next: (res) => {
         if (res.success) {
           this.vehicles = res.data.items;
+          this.loadDriversForVehicles();
+        } else {
+          this.isLoading = false;
         }
-        this.isLoading = false;
       },
       error: () => {
         this.isLoading = false;
         this.notification.error('Failed to load fleet data');
+      }
+    });
+  }
+
+  loadDriversForVehicles() {
+    this.assignmentService.getAll(1, 100).subscribe({
+      next: (assignRes) => {
+        const assignments = assignRes?.data?.items || [];
+        const activeAssignments = assignments.filter((a: any) => 
+          a.status === 'Active' || a.status === 'InProgress' || a.status === 'Assigned'
+        );
+
+        this.vehicles.forEach(vehicle => {
+          const assignment = activeAssignments.find((a: any) => a.vehicleId === vehicle.id);
+          if (assignment && assignment.driverId) {
+            this.driverService.getById(assignment.driverId).subscribe({
+              next: (driverRes) => {
+                if (driverRes.success && driverRes.data) {
+                  const driver = driverRes.data;
+                  vehicle.currentDriverName = `${driver.firstName || ''} ${driver.lastName || ''}`.trim() || driver.employeeId;
+                }
+              }
+            });
+          }
+        });
+        
+        this.isLoading = false;
+      },
+      error: () => {
+        this.isLoading = false;
       }
     });
   }

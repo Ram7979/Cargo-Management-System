@@ -87,7 +87,25 @@ public class ShipmentRepository : IShipmentRepository
 
     public async Task UpdateAsync(Shipment shipment)
     {
-        _context.Shipments.Update(shipment);
+        // Ensure the shipment entity is marked as modified
+        var entry = _context.Entry(shipment);
+        if (entry.State == EntityState.Detached)
+        {
+            _context.Shipments.Attach(shipment);
+        }
+        entry.State = EntityState.Modified;
+
+        // Ensure new StatusHistory entries are marked as Added (not Modified)
+        foreach (var historyEntry in shipment.StatusHistory)
+        {
+            var historyState = _context.Entry(historyEntry);
+            if (historyState.State == EntityState.Modified && 
+                !await _context.ShipmentStatusHistories.AnyAsync(h => h.Id == historyEntry.Id))
+            {
+                historyState.State = EntityState.Added;
+            }
+        }
+
         await _context.SaveChangesAsync();
     }
 

@@ -45,21 +45,21 @@ export class BillingService extends BaseApiService<Invoice> {
     super(inject(HttpClient), `${environment.apiUrl}/invoices`);
   }
 
+  override create(payload: any): Observable<ApiResponse<Invoice>> {
+    return this.http.post<ApiResponse<Invoice>>(this.apiUrl, payload);
+  }
+
   processPayment(payment: PaymentRequest): Observable<ApiResponse<any>> {
     return this.http.post<ApiResponse<any>>(`${environment.apiUrl}/payments`, payment);
   }
 
-  getInvoicePdf(invoiceId: string): Observable<Blob> {
-    return this.http.get(`${this.apiUrl}/${invoiceId}/pdf`, { responseType: 'blob' });
+  // The backend /pdf endpoint returns JSON { pdfUrl: "..." } not a byte stream
+  getInvoicePdfUrl(invoiceId: string): Observable<ApiResponse<{ pdfUrl: string }>> {
+    return this.http.get<ApiResponse<{ pdfUrl: string }>>(`${this.apiUrl}/${invoiceId}/pdf`);
   }
 
-  getPdfUrl(invoiceId: string): Observable<ApiResponse<{ pdfUrl: string }>> {
-    return this.getInvoicePdf(invoiceId).pipe(
-      map(blob => {
-        const url = window.URL.createObjectURL(blob);
-        return { success: true, message: '', data: { pdfUrl: url }, errors: null };
-      })
-    );
+  downloadPdfBlob(url: string): Observable<Blob> {
+    return this.http.get(url, { responseType: 'blob' });
   }
 
   getStatistics(): Observable<ApiResponse<any>> {

@@ -4,7 +4,7 @@ namespace CMS.IdentityService.Domain.Entities;
 
 public class RefreshToken : BaseEntity
 {
-    public Guid UserId { get; private set; }
+    public string UserId { get; private set; } = string.Empty;
     public string Token { get; private set; } = string.Empty;
     public string TokenFamily { get; private set; } = string.Empty;
     public DateTime ExpiresAt { get; private set; }
@@ -13,7 +13,7 @@ public class RefreshToken : BaseEntity
 
     private RefreshToken() { }
 
-    public static RefreshToken Create(Guid userId, string token, string tokenFamily, DateTime expiresAt)
+    public static RefreshToken Create(string userId, string token, string tokenFamily, DateTime expiresAt)
     {
         return new RefreshToken
         {

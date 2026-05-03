@@ -7,13 +7,20 @@ import { ApiResponse } from '../models/api-response.model';
 
 export interface Driver {
   id: string;
-  firstName: string;
-  lastName: string;
+  userId: string;
+  employeeId: string;
   licenseNumber: string;
+  licenseExpiry: string;
   phone: string;
-  status: string; // Active, OnTrip, Leave
-  assignedVehicleId?: string;
-  assignedVehiclePlate?: string;
+  profilePhotoUrl?: string;
+  dateJoined: string;
+  status: string;
+  isLicenseExpired?: boolean;
+  firstName?: string;
+  lastName?: string;
+  // These are NOT from API — populated by frontend from assignments:
+  currentVehiclePlate?: string;
+  currentVehicleId?: string;
 }
 
 @Injectable({ providedIn: 'root' })
@@ -26,6 +33,7 @@ export class DriverService extends BaseApiService<Driver> {
     return this.http.patch<ApiResponse<any>>(`${this.apiUrl}/${id}/status`, { status });
   }
 
+  // Returns ApiResponse<Driver[]> (not paged — all available drivers)
   getAvailable(): Observable<ApiResponse<Driver[]>> {
     return this.http.get<ApiResponse<Driver[]>>(`${this.apiUrl}/available`);
   }

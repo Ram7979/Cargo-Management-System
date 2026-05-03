@@ -1,4 +1,4 @@
-import { Component, Inject, inject, OnInit } from '@angular/core';
+import { Component, Inject, inject } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ReactiveFormsModule, FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { MAT_DIALOG_DATA, MatDialogRef, MatDialogModule } from '@angular/material/dialog';
@@ -6,7 +6,6 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { MatSelectModule } from '@angular/material/select';
 import { MatButtonModule } from '@angular/material/button';
-import { Shipment } from '../../../core/services/shipment.service';
 
 @Component({
   selector: 'app-shipment-status-dialog',
@@ -17,11 +16,12 @@ import { Shipment } from '../../../core/services/shipment.service';
     <mat-dialog-content>
       <form [formGroup]="statusForm">
         <mat-form-field appearance="outline" class="w-100">
-          <mat-label>Status</mat-label>
+          <mat-label>New Status</mat-label>
           <mat-select formControlName="status">
             <mat-option *ngFor="let s of statuses" [value]="s">{{ s }}</mat-option>
           </mat-select>
         </mat-form-field>
+
         <mat-form-field appearance="outline" class="w-100">
           <mat-label>Notes</mat-label>
           <textarea matInput formControlName="notes" rows="3"></textarea>
@@ -35,26 +35,26 @@ import { Shipment } from '../../../core/services/shipment.service';
   `,
   styles: [`.w-100 { width: 100%; }`]
 })
-export class ShipmentStatusDialogComponent implements OnInit {
+export class ShipmentStatusDialogComponent {
   private fb = inject(FormBuilder);
-  statusForm: FormGroup;
+  
   statuses = ['Pending', 'In Transit', 'Out for Delivery', 'Delivered', 'Cancelled', 'On Hold'];
+
+  statusForm: FormGroup = this.fb.group({
+    status: ['', Validators.required],
+    notes: ['']
+  });
 
   constructor(
     public dialogRef: MatDialogRef<ShipmentStatusDialogComponent>,
-    @Inject(MAT_DIALOG_DATA) public data: { shipment: Shipment }
+    @Inject(MAT_DIALOG_DATA) public data: { shipment: any }
   ) {
-    this.statusForm = this.fb.group({
-      status: [data.shipment.status, Validators.required],
-      notes: ['']
-    });
+    if (data.shipment) {
+      this.statusForm.patchValue({ status: data.shipment.status });
+    }
   }
 
-  ngOnInit() {}
-
-  onCancel() {
-    this.dialogRef.close();
-  }
+  onCancel() { this.dialogRef.close(); }
 
   onConfirm() {
     if (this.statusForm.valid) {

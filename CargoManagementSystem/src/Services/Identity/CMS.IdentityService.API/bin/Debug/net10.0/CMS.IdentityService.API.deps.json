@@ -12,6 +12,7 @@
           "CMS.IdentityService.Infrastructure": "1.0.0",
           "CMS.Shared": "1.0.0",
           "Microsoft.AspNetCore.Authentication.JwtBearer": "10.0.5",
+          "Microsoft.AspNetCore.Identity.EntityFrameworkCore": "9.0.5",
           "Microsoft.EntityFrameworkCore.Design": "9.0.5",
           "Serilog.AspNetCore": "10.0.0",
           "Serilog.Enrichers.Environment": "3.0.1",
@@ -57,14 +58,6 @@
           "lib/netstandard2.0/Azure.Identity.dll": {
             "assemblyVersion": "1.11.4.0",
             "fileVersion": "1.1100.424.31005"
-          }
-        }
-      },
-      "BCrypt.Net-Next/4.0.3": {
-        "runtime": {
-          "lib/net6.0/BCrypt.Net-Next.dll": {
-            "assemblyVersion": "4.0.3.0",
-            "fileVersion": "4.0.3.0"
           }
         }
       },
@@ -123,6 +116,17 @@
           "lib/net10.0/Microsoft.AspNetCore.Authentication.JwtBearer.dll": {
             "assemblyVersion": "10.0.5.0",
             "fileVersion": "10.0.526.15411"
+          }
+        }
+      },
+      "Microsoft.AspNetCore.Identity.EntityFrameworkCore/9.0.5": {
+        "dependencies": {
+          "Microsoft.EntityFrameworkCore.Relational": "9.0.5"
+        },
+        "runtime": {
+          "lib/net9.0/Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll": {
+            "assemblyVersion": "9.0.5.0",
+            "fileVersion": "9.0.525.22904"
           }
         }
       },
@@ -1062,7 +1066,6 @@
       "CMS.IdentityService.Application/1.0.0": {
         "dependencies": {
           "AutoMapper": "16.1.1",
-          "BCrypt.Net-Next": "4.0.3",
           "CMS.IdentityService.Domain": "1.0.0",
           "CMS.Shared": "1.0.0",
           "FluentValidation": "11.11.0",
@@ -1094,6 +1097,7 @@
           "CMS.IdentityService.Application": "1.0.0",
           "CMS.IdentityService.Domain": "1.0.0",
           "CMS.Shared": "1.0.0",
+          "Microsoft.AspNetCore.Identity.EntityFrameworkCore": "9.0.5",
           "Microsoft.EntityFrameworkCore.SqlServer": "9.0.5",
           "Microsoft.Extensions.Caching.StackExchangeRedis": "9.0.5",
           "Microsoft.IdentityModel.Tokens": "8.14.0",
@@ -1149,13 +1153,6 @@
       "path": "azure.identity/1.11.4",
       "hashPath": "azure.identity.1.11.4.nupkg.sha512"
     },
-    "BCrypt.Net-Next/4.0.3": {
-      "type": "package",
-      "serviceable": true,
-      "sha512": "sha512-W+U9WvmZQgi5cX6FS5GDtDoPzUCV4LkBLkywq/kRZhuDwcbavOzcDAr3LXJFqHUi952Yj3LEYoWW0jbEUQChsA==",
-      "path": "bcrypt.net-next/4.0.3",
-      "hashPath": "bcrypt.net-next.4.0.3.nupkg.sha512"
-    },
     "FluentValidation/11.11.0": {
       "type": "package",
       "serviceable": true,
@@ -1197,6 +1194,13 @@
       "sha512": "sha512-fZzXogChrwQ/SfifQJgeW7AtR8hUv5+LH9oLWjm5OqfnVt3N8MwcMHHMdawvqqdjP79lIZgetnSpj77BLsSI1g==",
       "path": "microsoft.aspnetcore.authentication.jwtbearer/10.0.5",
       "hashPath": "microsoft.aspnetcore.authentication.jwtbearer.10.0.5.nupkg.sha512"
+    },
+    "Microsoft.AspNetCore.Identity.EntityFrameworkCore/9.0.5": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-SJcjUt+vTK3VpltheGY53IzYxVjYt63gPk1bc+NGm6A37gGe6BzRcSJF62wL4PsAW4MZiClA6IwVo/aDBVCk/g==",
+      "path": "microsoft.aspnetcore.identity.entityframeworkcore/9.0.5",
+      "hashPath": "microsoft.aspnetcore.identity.entityframeworkcore.9.0.5.nupkg.sha512"
     },
     "Microsoft.Bcl.AsyncInterfaces/7.0.0": {
       "type": "package",

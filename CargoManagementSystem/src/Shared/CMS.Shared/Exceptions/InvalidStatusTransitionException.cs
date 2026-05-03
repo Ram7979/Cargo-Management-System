@@ -1,4 +1,4 @@
-namespace CMS.ShipmentService.Domain.Exceptions;
+namespace CMS.Shared.Exceptions;
 
 public class InvalidStatusTransitionException : Exception
 {

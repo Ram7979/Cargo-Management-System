@@ -1,7 +1,7 @@
 import { Component, OnInit, inject } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ReactiveFormsModule, FormBuilder, FormGroup, Validators } from '@angular/forms';
-import { Router } from '@angular/router';
+import { Router, ActivatedRoute } from '@angular/router';
 import { MatStepperModule } from '@angular/material/stepper';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
@@ -40,6 +40,7 @@ export class ShipmentCreateComponent implements OnInit {
   private notification = inject(NotificationService);
   private authService = inject(AuthService);
   private router = inject(Router);
+  private route = inject(ActivatedRoute);
 
   senderFormGroup: FormGroup;
   recipientFormGroup: FormGroup;
@@ -86,18 +87,22 @@ export class ShipmentCreateComponent implements OnInit {
 
   ngOnInit() {
     this.loadCustomers();
+    const preCustomerId = this.route.snapshot.queryParamMap.get('customerId');
+    if (preCustomerId) {
+      this.senderFormGroup.patchValue({ customerId: preCustomerId });
+    }
   }
 
   loadCustomers() {
-    this.customerService.getAll(1, 100).subscribe({
+    this.customerService.getAll(1, 200).subscribe({
       next: (res) => {
-        if (res.success) {
+        if (res.success && res.data?.items?.length) {
           this.customers = res.data.items;
+        } else {
+          this.notification.warning('No customers found. Please add a customer first.');
         }
       },
-      error: () => {
-        // If customers fail to load, still allow manual entry
-      }
+      error: () => this.notification.error('Failed to load customer list. Check your connection.')
     });
   }
 
@@ -149,7 +154,8 @@ export class ShipmentCreateComponent implements OnInit {
       next: (res: any) => {
         if (res.success) {
           this.notification.success('Shipment created successfully!');
-          this.router.navigate(['/shipments', res.data?.id || res.data?.shipmentId]);
+          const createdId = res.data?.id || res.data?.shipmentId;
+          this.router.navigate(['/shipments', createdId]);
         } else {
           const errors = res.errors?.join(', ') || res.message || 'Failed to create shipment';
           this.notification.error(errors);

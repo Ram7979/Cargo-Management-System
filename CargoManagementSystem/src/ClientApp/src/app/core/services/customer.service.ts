@@ -2,7 +2,7 @@ import { Injectable, inject } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { environment } from '../../../environments/environment';
 import { BaseApiService } from './base-api.service';
-import { Observable } from 'rxjs';
+import { Observable, of } from 'rxjs';
 import { ApiResponse } from '../models/api-response.model';
 
 export interface Customer {
@@ -40,18 +40,22 @@ export class CustomerService extends BaseApiService<Customer> {
   }
 
   getShipments(customerId: string, page = 1, pageSize = 10): Observable<any> {
+    if (!customerId || customerId === 'undefined') return of({ success: false, message: 'Invalid ID', data: { items: [], totalCount: 0 }, errors: null });
     return this.http.get<any>(`${this.apiUrl}/${customerId}/shipments?page=${page}&pageSize=${pageSize}`);
   }
 
   getDocuments(customerId: string): Observable<ApiResponse<KycDocument[]>> {
+    if (!customerId || customerId === 'undefined') return of({ success: false, message: 'Invalid ID', data: [], errors: null });
     return this.http.get<ApiResponse<KycDocument[]>>(`${this.apiUrl}/${customerId}/documents`);
   }
 
   uploadDocument(customerId: string, doc: { documentType: string, blobReference: string }): Observable<ApiResponse<KycDocument>> {
+    if (!customerId || customerId === 'undefined') return of({ success: false, message: 'Invalid customer ID', data: null as any, errors: null });
     return this.http.post<ApiResponse<KycDocument>>(`${this.apiUrl}/${customerId}/documents`, doc);
   }
 
   deleteDocument(customerId: string, documentId: string): Observable<ApiResponse<any>> {
+    if (!customerId || !documentId || customerId === 'undefined') return of({ success: false, message: 'Invalid ID', data: null, errors: null });
     return this.http.delete<ApiResponse<any>>(`${this.apiUrl}/${customerId}/documents/${documentId}`);
   }
 }

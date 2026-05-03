@@ -185,4 +185,3 @@ D:\Files\CMS\CargoManagementSystem\src\Services\Customer\CMS.CustomerService.API
 D:\Files\CMS\CargoManagementSystem\src\Services\Customer\CMS.CustomerService.API\obj\Debug\net10.0\CMS.CustomerService.API.pdb
 D:\Files\CMS\CargoManagementSystem\src\Services\Customer\CMS.CustomerService.API\obj\Debug\net10.0\CMS.CustomerService.API.genruntimeconfig.cache
 D:\Files\CMS\CargoManagementSystem\src\Services\Customer\CMS.CustomerService.API\obj\Debug\net10.0\ref\CMS.CustomerService.API.dll
-D:\Files\CMS\CargoManagementSystem\src\Services\Customer\CMS.CustomerService.API\obj\Debug\net10.0\staticwebassets.upToDateCheck.txt

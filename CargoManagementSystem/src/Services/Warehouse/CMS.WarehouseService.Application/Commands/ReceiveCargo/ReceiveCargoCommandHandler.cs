@@ -53,10 +53,11 @@ public class ReceiveCargoCommandHandler : IRequestHandler<ReceiveCargoCommand, A
         var warehouse = await _warehouseRepository.GetByIdAsync(command.Request.WarehouseId)
             ?? throw new NotFoundException("Warehouse", command.Request.WarehouseId);
 
-        // 3. Validate shipment status
-        if (shipmentDetail.Status != "PickedUp" && shipmentDetail.Status != "InTransit")
+        // 3. Validate shipment status — reject terminal statuses only
+        var rejectedStatuses = new[] { "Delivered", "Cancelled" };
+        if (rejectedStatuses.Contains(shipmentDetail.Status, StringComparer.OrdinalIgnoreCase))
             throw new UnprocessableException(
-                $"Shipment is in status '{shipmentDetail.Status}'. Only 'PickedUp' or 'InTransit' shipments can be received.");
+                $"Shipment is in status '{shipmentDetail.Status}'. Cannot receive a '{shipmentDetail.Status}' shipment.");
 
         // 4. Resolve bin — operator-selected or auto-assign
         Bin bin;

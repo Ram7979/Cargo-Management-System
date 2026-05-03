@@ -4,6 +4,8 @@ using CMS.FleetService.Application.Commands.AddVehicle;
 using CMS.FleetService.Application.Commands.SubmitGpsUpdate;
 using CMS.FleetService.Application.Commands.UpdateVehicle;
 using CMS.FleetService.Application.Commands.UpdateVehicleStatus;
+using CMS.FleetService.Application.Commands.CreateAssignment;
+using CMS.FleetService.Domain.Interfaces;
 using CMS.FleetService.Application.DTOs;
 using CMS.FleetService.Application.Queries.GetAvailableVehicles;
 using CMS.FleetService.Application.Queries.GetLiveLocations;
@@ -141,4 +143,65 @@ public class VehiclesController : ControllerBase
         var result = await _mediator.Send(new GetMaintenanceLogsQuery(vehicleId, page, pageSize));
         return Ok(result);
     }
+
+    /// <summary>Assign or reassign a driver to a vehicle.</summary>
+    [HttpPatch("{vehicleId:guid}/driver")]
+    [Authorize(Roles = "Dispatcher,OpsManager,SuperAdmin")]
+    public async Task<IActionResult> AssignDriver(
+        Guid vehicleId,
+        [FromBody] AssignDriverToVehicleRequest request,
+        [FromServices] IDriverRepository driverRepository,
+        [FromServices] IVehicleRepository vehicleRepository,
+        [FromServices] IAssignmentRepository assignmentRepository)
+    {
+        try
+        {
+            var vehicle = await vehicleRepository.GetByIdAsync(vehicleId);
+            if (vehicle == null)
+                return NotFound(new { success = false, message = "Vehicle not found" });
+
+            var driver = await driverRepository.GetByIdAsync(request.DriverId);
+            if (driver == null)
+                return NotFound(new { success = false, message = "Driver not found" });
+
+            // Create the assignment record
+            var assignment = CMS.FleetService.Domain.Entities.Assignment.Create(
+                Guid.Empty, // No shipment — direct driver-vehicle link
+                request.DriverId,
+                vehicleId,
+                null,
+                "Driver assigned to vehicle via fleet management");
+
+            // Update statuses
+            driver.SetStatus(CMS.FleetService.Domain.Enums.DriverStatus.OnDuty);
+            vehicle.SetStatus(CMS.FleetService.Domain.Enums.VehicleStatus.InUse);
+
+            await assignmentRepository.AddAsync(assignment);
+            await driverRepository.UpdateAsync(driver);
+            await vehicleRepository.UpdateAsync(vehicle);
+
+            return Ok(new
+            {
+                success = true,
+                message = "Driver assigned to vehicle successfully",
+                data = new
+                {
+                    assignmentId = assignment.Id,
+                    vehicleId,
+                    driverId = request.DriverId,
+                    status = "Active"
+                }
+            });
+        }
+        catch (Exception ex)
+        {
+            return BadRequest(new { success = false, message = $"Failed to assign driver: {ex.Message}" });
+        }
+    }
 }
+
+public class AssignDriverToVehicleRequest
+{
+    public Guid DriverId { get; set; }
+}
+

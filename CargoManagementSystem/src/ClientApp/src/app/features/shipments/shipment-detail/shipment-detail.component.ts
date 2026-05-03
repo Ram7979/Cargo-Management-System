@@ -126,35 +126,90 @@ export class ShipmentDetailComponent implements OnInit, OnDestroy {
           },
           error: (err) => {
             this.isUpdatingStatus = false;
-            this.notification.error(err.error?.message || 'Failed to update status');
+            const msg = err.error?.message || err.error?.errors?.join(', ') || 'Failed to update status';
+            this.notification.error(msg);
           }
         });
       }
     });
   }
 
+  private downloadBlob(blob: Blob, fileName: string) {
+    const url = window.URL.createObjectURL(blob);
+    const link = document.createElement('a');
+    link.href = url;
+    link.download = fileName;
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+    window.URL.revokeObjectURL(url);
+  }
+
   printLabel() {
     if (!this.shipment) return;
     this.isPrinting = true;
-    this.shipmentService.printLabel(this.shipment.id).subscribe({
-      next: (blob) => {
-        const url = window.URL.createObjectURL(blob);
-        window.open(url, '_blank');
-        this.isPrinting = false;
-        this.notification.success('Label generated successfully');
+    this.shipmentService.getPrintLabelInfo(this.shipment.id).subscribe({
+      next: (res) => {
+        if (res.success && res.data?.bolUrl) {
+          // Construct full URL and download
+          const fullUrl = res.data.bolUrl.startsWith('http') 
+            ? res.data.bolUrl 
+            : `${environment.apiUrl}/${res.data.bolUrl}`;
+          
+          const link = document.createElement('a');
+          link.href = fullUrl;
+          link.target = '_blank';
+          link.download = `Label_${this.shipment!.trackingNumber}.pdf`;
+          link.click();
+          this.isPrinting = false;
+          this.notification.success('Label opened in new tab');
+        } else {
+          this.notification.warning('PDF info missing. Generating fallback...');
+          this.downloadFallbackDocument('bol');
+        }
       },
       error: (err) => {
         this.isPrinting = false;
-        this.notification.error('Failed to generate label');
-        console.error(err);
+        this.notification.warning('PDF Generation failed. Generating text fallback...');
+        this.downloadFallbackDocument('bol');
       }
     });
   }
 
   openDoc(type: 'bol' | 'pod') {
     if (!this.shipment) return;
+    // Attempt direct URL first for "normal save/view" behavior
     const url = `${environment.apiUrl}/shipments/${this.shipment.id}/document/${type}`;
-    window.open(url, '_blank');
+    const win = window.open(url, '_blank');
+    
+    // If blocked or fails, we provide the fallback
+    if (!win) {
+      this.notification.warning('Pop-up blocked or failed. Generating fallback document...');
+      this.downloadFallbackDocument(type);
+    }
+  }
+
+  private downloadFallbackDocument(type: string) {
+    if (!this.shipment) return;
+    const content = `
+      CARGO MANAGEMENT SYSTEM - ${type.toUpperCase()} FALLBACK
+      --------------------------------------------------
+      Tracking Number: ${this.shipment.trackingNumber}
+      Status: ${this.shipment.status}
+      Sender: ${this.shipment.senderName} (${this.shipment.originAddress}, ${this.shipment.senderCity})
+      Recipient: ${this.shipment.recipientName} (${this.shipment.destinationAddress}, ${this.shipment.recipientCity})
+      Cargo: ${this.shipment.cargoType} - ${this.shipment.cargoDescription}
+      Weight: ${this.shipment.weightKg} KG
+      Date: ${new Date().toLocaleString()}
+      --------------------------------------------------
+    `;
+    const blob = new Blob([content], { type: 'text/plain' });
+    const blobUrl = window.URL.createObjectURL(blob);
+    const link = document.createElement('a');
+    link.href = blobUrl;
+    link.download = `${type.toUpperCase()}_${this.shipment.trackingNumber}_Fallback.txt`;
+    link.click();
+    window.URL.revokeObjectURL(blobUrl);
   }
 
   updateMapLocation(lat: number, lng: number) {

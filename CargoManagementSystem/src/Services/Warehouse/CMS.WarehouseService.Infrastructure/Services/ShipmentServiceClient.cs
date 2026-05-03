@@ -43,7 +43,13 @@ public class ShipmentServiceClient : IShipmentServiceClient
         var content = await response.Content.ReadAsStringAsync();
         using var doc = JsonDocument.Parse(content);
 
-        var data = doc.RootElement.GetProperty("data");
+        var dataElement = doc.RootElement.GetProperty("data");
+
+        // Track endpoint returns { data: { shipment: {...}, timeline: [...] } }
+        // The actual shipment fields are inside data.shipment
+        var data = dataElement.TryGetProperty("shipment", out var shipmentElement)
+            ? shipmentElement
+            : dataElement;
 
         return new ShipmentLookupDto
         {

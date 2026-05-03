@@ -4,6 +4,6 @@ using MediatR;
 namespace CMS.IdentityService.Application.Commands.DeactivateUser;
 
 public record DeactivateUserCommand(
-    Guid UserId,
+    string UserId,
     string ActorId,
     string IpAddress) : IRequest<ApiResponse<bool>>;

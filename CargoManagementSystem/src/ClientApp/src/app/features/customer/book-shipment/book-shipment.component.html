@@ -1,0 +1,176 @@
+<div class="book-container">
+  <div class="header-section">
+    <h1>Book a Shipment</h1>
+    <p>Fill in the details below to schedule your next cargo delivery.</p>
+  </div>
+
+  <mat-card class="stepper-card">
+    <mat-stepper [linear]="isLinear" #stepper>
+      <!-- Step 1: Sender Info -->
+      <mat-step [stepControl]="senderForm">
+        <form [formGroup]="senderForm">
+          <ng-template matStepLabel>Pickup Details</ng-template>
+          <div class="step-content">
+            <h3>Sender Information</h3>
+            <div class="form-grid">
+              <mat-form-field appearance="outline">
+                <mat-label>Full Name</mat-label>
+                <input matInput formControlName="senderName" placeholder="Your name or company">
+              </mat-form-field>
+              <mat-form-field appearance="outline">
+                <mat-label>Email Address</mat-label>
+                <input matInput formControlName="senderEmail" type="email" placeholder="email@example.com">
+              </mat-form-field>
+              <mat-form-field appearance="outline">
+                <mat-label>Phone Number</mat-label>
+                <input matInput formControlName="senderPhone" placeholder="+1 234 567 890">
+              </mat-form-field>
+              <mat-form-field appearance="outline" class="full-width">
+                <mat-label>Origin Address</mat-label>
+                <input matInput formControlName="originAddress" placeholder="Street, building, suite">
+              </mat-form-field>
+              <mat-form-field appearance="outline">
+                <mat-label>City</mat-label>
+                <input matInput formControlName="senderCity" placeholder="Mumbai">
+              </mat-form-field>
+              <mat-form-field appearance="outline">
+                <mat-label>Country</mat-label>
+                <input matInput formControlName="senderCountry" placeholder="India">
+              </mat-form-field>
+            </div>
+            <div class="actions">
+              <button mat-flat-button color="primary" matStepperNext>Continue to Recipient</button>
+            </div>
+          </div>
+        </form>
+      </mat-step>
+
+      <!-- Step 2: Recipient Info -->
+      <mat-step [stepControl]="recipientForm">
+        <form [formGroup]="recipientForm">
+          <ng-template matStepLabel>Delivery Details</ng-template>
+          <div class="step-content">
+            <h3>Recipient Information</h3>
+            <div class="form-grid">
+              <mat-form-field appearance="outline">
+                <mat-label>Recipient Name</mat-label>
+                <input matInput formControlName="recipientName" placeholder="Recipient's name or company">
+              </mat-form-field>
+              <mat-form-field appearance="outline">
+                <mat-label>Email Address</mat-label>
+                <input matInput formControlName="recipientEmail" type="email" placeholder="recipient@example.com">
+              </mat-form-field>
+              <mat-form-field appearance="outline">
+                <mat-label>Phone Number</mat-label>
+                <input matInput formControlName="recipientPhone" placeholder="+1 234 567 890">
+              </mat-form-field>
+              <mat-form-field appearance="outline" class="full-width">
+                <mat-label>Destination Address</mat-label>
+                <input matInput formControlName="destinationAddress" placeholder="Street, building, suite">
+              </mat-form-field>
+              <mat-form-field appearance="outline">
+                <mat-label>City</mat-label>
+                <input matInput formControlName="recipientCity" placeholder="Dubai">
+              </mat-form-field>
+              <mat-form-field appearance="outline">
+                <mat-label>Country</mat-label>
+                <input matInput formControlName="recipientCountry" placeholder="UAE">
+              </mat-form-field>
+            </div>
+            <div class="actions">
+              <button mat-button matStepperPrevious>Back</button>
+              <button mat-flat-button color="primary" matStepperNext>Continue to Cargo</button>
+            </div>
+          </div>
+        </form>
+      </mat-step>
+
+      <!-- Step 3: Cargo Details -->
+      <mat-step [stepControl]="cargoForm">
+        <form [formGroup]="cargoForm">
+          <ng-template matStepLabel>Cargo Info</ng-template>
+          <div class="step-content">
+            <h3>Cargo Specifications</h3>
+            <div class="form-grid">
+              <mat-form-field appearance="outline">
+                <mat-label>Cargo Type</mat-label>
+                <mat-select formControlName="cargoType">
+                  <mat-option *ngFor="let type of cargoTypes" [value]="type">{{ type }}</mat-option>
+                </mat-select>
+              </mat-form-field>
+              <mat-form-field appearance="outline">
+                <mat-label>Quantity (Pcs)</mat-label>
+                <input matInput type="number" formControlName="quantity">
+              </mat-form-field>
+              <mat-form-field appearance="outline">
+                <mat-label>Weight (KG)</mat-label>
+                <input matInput type="number" formControlName="weightKg">
+              </mat-form-field>
+              <mat-form-field appearance="outline">
+                <mat-label>Volume (CBM)</mat-label>
+                <input matInput type="number" formControlName="volumeCbm">
+              </mat-form-field>
+              <mat-form-field appearance="outline" class="full-width">
+                <mat-label>Description</mat-label>
+                <textarea matInput formControlName="cargoDescription" rows="3" placeholder="Briefly describe the contents..."></textarea>
+              </mat-form-field>
+            </div>
+            <div class="actions">
+              <button mat-button matStepperPrevious>Back</button>
+              <button mat-flat-button color="primary" matStepperNext>Continue to Service</button>
+            </div>
+          </div>
+        </form>
+      </mat-step>
+
+      <!-- Step 4: Service & Review -->
+      <mat-step [stepControl]="serviceForm">
+        <form [formGroup]="serviceForm">
+          <ng-template matStepLabel>Service & Review</ng-template>
+          <div class="step-content">
+            <h3>Choose Service Type</h3>
+            <div class="service-options">
+              <div class="service-card" *ngFor="let service of serviceTypes" 
+                   [class.selected]="serviceForm.get('serviceType')?.value === service.value"
+                   (click)="serviceForm.get('serviceType')?.setValue(service.value)">
+                <mat-icon>{{ service.icon }}</mat-icon>
+                <span class="label">{{ service.label }}</span>
+                <div class="check" *ngIf="serviceForm.get('serviceType')?.value === service.value">
+                  <mat-icon>check_circle</mat-icon>
+                </div>
+              </div>
+            </div>
+
+            <div class="summary-box">
+              <h4>Shipment Summary</h4>
+              <div class="summary-row">
+                <span>From:</span>
+                <strong>{{ senderForm.get('senderCity')?.value }}, {{ senderForm.get('senderCountry')?.value }}</strong>
+              </div>
+              <div class="summary-row">
+                <span>To:</span>
+                <strong>{{ recipientForm.get('recipientCity')?.value }}, {{ recipientForm.get('recipientCountry')?.value }}</strong>
+              </div>
+              <div class="summary-row">
+                <span>Cargo:</span>
+                <strong>{{ cargoForm.get('cargoType')?.value }} ({{ cargoForm.get('weightKg')?.value }} KG)</strong>
+              </div>
+              <div class="summary-row">
+                <span>Service:</span>
+                <strong>{{ serviceForm.get('serviceType')?.value || 'Not selected' }}</strong>
+              </div>
+            </div>
+
+            <div class="actions">
+              <button mat-button matStepperPrevious>Back</button>
+              <button mat-flat-button color="accent" class="btn-confirm" (click)="onSubmit()" [disabled]="isLoading">
+                <span *ngIf="!isLoading">Confirm & Book Shipment</span>
+                <mat-spinner diameter="20" *ngIf="isLoading"></mat-spinner>
+              </button>
+            </div>
+          </div>
+        </form>
+      </mat-step>
+    </mat-stepper>
+  </mat-card>
+</div>

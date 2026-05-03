@@ -1,1 +1,66 @@
-<p>user-detail works!</p>
+<div class="page-header">
+  <button mat-icon-button routerLink="/users">
+    <mat-icon>arrow_back</mat-icon>
+  </button>
+  <h2>User Detail</h2>
+</div>
+
+<div class="loading-shade" *ngIf="isLoading">
+  <mat-spinner></mat-spinner>
+</div>
+
+<div class="detail-grid" *ngIf="!isLoading && user">
+  <!-- Profile Card -->
+  <mat-card>
+    <mat-card-header>
+      <div class="user-avatar-lg">{{ user.firstName[0] }}{{ user.lastName[0] }}</div>
+      <mat-card-title>{{ user.firstName }} {{ user.lastName }}</mat-card-title>
+      <mat-card-subtitle>{{ user.email }}</mat-card-subtitle>
+    </mat-card-header>
+    <mat-divider></mat-divider>
+    <mat-card-content>
+      <form [formGroup]="profileForm" class="edit-form">
+        <mat-form-field appearance="outline" class="full-width">
+          <mat-label>First Name</mat-label>
+          <input matInput formControlName="firstName">
+        </mat-form-field>
+        <mat-form-field appearance="outline" class="full-width">
+          <mat-label>Last Name</mat-label>
+          <input matInput formControlName="lastName">
+        </mat-form-field>
+      </form>
+    </mat-card-content>
+    <mat-card-actions>
+      <button mat-flat-button color="primary" [disabled]="isSaving || profileForm.invalid" (click)="saveProfile()">
+        {{ isSaving ? 'Saving...' : 'Save Profile' }}
+      </button>
+    </mat-card-actions>
+  </mat-card>
+
+  <!-- Roles Card -->
+  <mat-card>
+    <mat-card-header>
+      <mat-card-title>Roles</mat-card-title>
+      <mat-card-subtitle>Click a role to toggle assignment</mat-card-subtitle>
+    </mat-card-header>
+    <mat-divider></mat-divider>
+    <mat-card-content>
+      <div class="roles-grid">
+        <mat-chip-listbox multiple>
+          <mat-chip-option *ngFor="let role of allRoles"
+                    [selected]="isRoleSelected(role)"
+                    (click)="toggleRole(role)"
+                    [color]="isRoleSelected(role) ? 'primary' : ''"
+                    class="role-chip">
+            {{ role }}
+          </mat-chip-option>
+        </mat-chip-listbox>
+      </div>
+    </mat-card-content>
+    <mat-card-actions>
+      <button mat-flat-button color="accent" [disabled]="isUpdatingRoles" (click)="saveRoles()">
+        {{ isUpdatingRoles ? 'Updating...' : 'Save Roles' }}
+      </button>
+    </mat-card-actions>
+  </mat-card>
+</div>

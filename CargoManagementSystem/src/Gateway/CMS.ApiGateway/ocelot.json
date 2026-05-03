@@ -202,6 +202,22 @@
       }
     },
     {
+      "DownstreamPathTemplate": "/api/v1/warehouse",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [{ "Host": "localhost", "Port": 5005 }],
+      "UpstreamPathTemplate": "/api/v1/warehouse",
+      "UpstreamHttpMethod": [ "GET", "POST" ],
+      "SwaggerKey": "warehouse",
+      "AuthenticationOptions": { "AuthenticationProviderKey": "Bearer" },
+      "RateLimitOptions": {
+        "ClientWhitelist": [],
+        "EnableRateLimiting": true,
+        "Period": "1m",
+        "PeriodTimespan": 60,
+        "Limit": 100
+      }
+    },
+    {
       "DownstreamPathTemplate": "/api/v1/warehouse/{everything}",
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [{ "Host": "localhost", "Port": 5005 }],

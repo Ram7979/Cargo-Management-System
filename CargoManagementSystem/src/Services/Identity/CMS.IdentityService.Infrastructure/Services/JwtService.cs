@@ -18,26 +18,22 @@ public class JwtService : IJwtService
         _configuration = configuration;
     }
 
-    public string GenerateAccessToken(User user)
+    public string GenerateAccessToken(ApplicationUser user, IList<string> roles)
     {
-        var secret = _configuration["Jwt:Secret"]
-            ?? throw new InvalidOperationException("Jwt:Secret is not configured.");
-        var issuer = _configuration["Jwt:Issuer"]
-            ?? throw new InvalidOperationException("Jwt:Issuer is not configured.");
-        var audience = _configuration["Jwt:Audience"]
-            ?? throw new InvalidOperationException("Jwt:Audience is not configured.");
+        var jwtSettings = _configuration.GetSection("JwtSettings");
+        var secret = jwtSettings["Secret"] ?? throw new InvalidOperationException("JwtSettings:Secret is not configured.");
+        var issuer = jwtSettings["Issuer"] ?? throw new InvalidOperationException("JwtSettings:Issuer is not configured.");
+        var audience = jwtSettings["Audience"] ?? throw new InvalidOperationException("JwtSettings:Audience is not configured.");
+        var expiryMinutes = int.Parse(jwtSettings["AccessTokenExpiryMinutes"] ?? "15");
 
         var key = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(secret));
         var credentials = new SigningCredentials(key, SecurityAlgorithms.HmacSha256);
 
-        var roles = user.Roles.Select(r => r.RoleName).ToArray();
-
         var claims = new List<Claim>
         {
-            new(JwtRegisteredClaimNames.Sub, user.Id.ToString()),
-            new(JwtRegisteredClaimNames.Email, user.Email),
-            new(JwtRegisteredClaimNames.GivenName, user.FirstName),
-            new(JwtRegisteredClaimNames.FamilyName, user.LastName),
+            new(ClaimTypes.NameIdentifier, user.Id),
+            new(ClaimTypes.Email, user.Email!),
+            new("FullName", $"{user.FirstName} {user.LastName}"),
             new(JwtRegisteredClaimNames.Jti, Guid.NewGuid().ToString()),
         };
 
@@ -48,7 +44,7 @@ public class JwtService : IJwtService
             issuer: issuer,
             audience: audience,
             claims: claims,
-            expires: DateTime.UtcNow.AddMinutes(45),
+            expires: DateTime.UtcNow.AddMinutes(expiryMinutes),
             signingCredentials: credentials);
 
         return new JwtSecurityTokenHandler().WriteToken(token);
@@ -60,13 +56,6 @@ public class JwtService : IJwtService
         using var rng = RandomNumberGenerator.Create();
         rng.GetBytes(randomBytes);
         return Convert.ToBase64String(randomBytes);
-    }
-
-    public string HashToken(string token)
-    {
-        var bytes = Encoding.UTF8.GetBytes(token);
-        var hash = SHA256.HashData(bytes);
-        return Convert.ToBase64String(hash);
     }
 
     public string GetTokenFamily()

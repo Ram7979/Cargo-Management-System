@@ -4,10 +4,10 @@ namespace CMS.IdentityService.Domain.Interfaces;
 
 public interface IUserRepository
 {
-    Task<User?> GetByIdAsync(Guid id);
-    Task<User?> GetByEmailAsync(string email);
-    Task<IEnumerable<User>> GetAllAsync();
-    Task AddAsync(User user);
-    Task UpdateAsync(User user);
+    Task<ApplicationUser?> GetByIdAsync(string id);
+    Task<ApplicationUser?> GetByEmailAsync(string email);
+    Task<IEnumerable<ApplicationUser>> GetAllAsync();
+    Task AddAsync(ApplicationUser user);
+    Task UpdateAsync(ApplicationUser user);
     Task<bool> ExistsAsync(string email);
 }

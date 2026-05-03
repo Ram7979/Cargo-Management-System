@@ -11,5 +11,6 @@ public enum ShipmentStatus
     Delivered,
     FailedDelivery,
     ReturnedToWarehouse,
-    Cancelled
+    Cancelled,
+    OnHold
 }

@@ -4,7 +4,7 @@
     <button mat-stroked-button color="primary" class="me-2" (click)="loadData()">
       <mat-icon>refresh</mat-icon> Refresh
     </button>
-    <button mat-raised-button color="primary">
+    <button mat-raised-button color="primary" routerLink="/billing/new">
       <mat-icon>add</mat-icon> Create Invoice
     </button>
   </div>
@@ -22,7 +22,7 @@
     <mat-icon class="empty-icon">receipt_long</mat-icon>
     <h3>No invoices found</h3>
     <p>Invoices will appear here once shipments are billed.</p>
-    <button mat-raised-button color="primary">
+    <button mat-raised-button color="primary" routerLink="/billing/new">
       <mat-icon>add</mat-icon> Create Invoice
     </button>
   </div>

@@ -29,18 +29,23 @@ public static class DependencyInjection
         services.AddScoped<ICargoReceiptRepository, CargoReceiptRepository>();
         services.AddScoped<IDamageReportRepository, DamageReportRepository>();
 
+        // Service-to-service auth handler (generates system JWT for outgoing calls)
+        services.AddTransient<ServiceAuthDelegatingHandler>();
+
         // HTTP clients
         services.AddHttpClient<IShipmentServiceClient, ShipmentServiceClient>(client =>
         {
             client.BaseAddress = new Uri(configuration["ShipmentService:BaseUrl"]!);
-            client.Timeout = TimeSpan.FromSeconds(5);
-        });
+            client.Timeout = TimeSpan.FromSeconds(10);
+        })
+        .AddHttpMessageHandler<ServiceAuthDelegatingHandler>();
 
         services.AddHttpClient<INotificationServiceClient, NotificationServiceClient>(client =>
         {
             client.BaseAddress = new Uri(configuration["NotificationService:BaseUrl"]!);
-            client.Timeout = TimeSpan.FromSeconds(5);
-        });
+            client.Timeout = TimeSpan.FromSeconds(10);
+        })
+        .AddHttpMessageHandler<ServiceAuthDelegatingHandler>();
 
         return services;
     }

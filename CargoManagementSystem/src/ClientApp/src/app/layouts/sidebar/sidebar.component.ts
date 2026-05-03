@@ -19,11 +19,13 @@ export class SidebarComponent {
     { path: '/dashboard', icon: 'dashboard', label: 'Dashboard', roles: [] },
     { path: '/shipments', icon: 'local_shipping', label: 'Shipments', roles: [] },
     { path: '/fleet', icon: 'directions_car', label: 'Fleet Management', roles: ['SuperAdmin', 'OpsManager', 'Dispatcher', 'FleetManager'] },
+    { path: '/drivers', icon: 'badge', label: 'Drivers', roles: ['SuperAdmin', 'OpsManager', 'Dispatcher', 'FleetManager'] },
     { path: '/warehouse', icon: 'warehouse', label: 'Warehouse', roles: ['SuperAdmin', 'OpsManager', 'WarehouseManager', 'WarehouseOperator'] },
     { path: '/customers', icon: 'people', label: 'Customers', roles: ['SuperAdmin', 'OpsManager', 'Support'] },
     { path: '/billing', icon: 'receipt', label: 'Billing & Payments', roles: ['SuperAdmin', 'FinanceOfficer', 'OpsManager'] },
     { path: '/reports', icon: 'bar_chart', label: 'Reports', roles: ['SuperAdmin', 'OpsManager', 'FinanceOfficer'] },
-    { path: '/users', icon: 'admin_panel_settings', label: 'User Management', roles: ['SuperAdmin'] }
+    { path: '/users', icon: 'admin_panel_settings', label: 'User Management', roles: ['SuperAdmin'] },
+    { path: '/profile', icon: 'account_circle', label: 'My Profile', roles: [] }
   ];
 
   get visibleMenuItems() {

@@ -42,4 +42,8 @@ export class VehicleService extends BaseApiService<Vehicle> {
   updateStatus(id: string, status: string): Observable<ApiResponse<any>> {
     return this.http.patch<ApiResponse<any>>(`${this.apiUrl}/${id}/status`, { status });
   }
+
+  assignDriver(vehicleId: string, driverId: string): Observable<ApiResponse<any>> {
+    return this.http.patch<ApiResponse<any>>(`${this.apiUrl}/${vehicleId}/driver`, { driverId });
+  }
 }

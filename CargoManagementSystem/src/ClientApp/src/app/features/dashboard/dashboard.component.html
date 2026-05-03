@@ -65,8 +65,7 @@
       <mat-card-header><mat-card-title>Revenue Trend</mat-card-title></mat-card-header>
       <mat-card-content>
         <canvas baseChart
-          [datasets]="lineChartData"
-          [labels]="lineChartLabels"
+          [data]="lineChartData"
           [options]="lineChartOptions"
           [type]="'line'">
         </canvas>
@@ -78,8 +77,7 @@
         <mat-card-header><mat-card-title>Shipments by Status</mat-card-title></mat-card-header>
         <mat-card-content>
           <canvas baseChart
-            [datasets]="barChartData"
-            [labels]="barChartLabels"
+            [data]="barChartData"
             [options]="barChartOptions"
             [type]="'bar'">
           </canvas>
@@ -90,8 +88,7 @@
         <mat-card-header><mat-card-title>Cargo Type Distribution</mat-card-title></mat-card-header>
         <mat-card-content>
           <canvas baseChart
-            [datasets]="pieChartData"
-            [labels]="pieChartLabels"
+            [data]="pieChartData"
             [options]="pieChartOptions"
             [type]="'pie'">
           </canvas>

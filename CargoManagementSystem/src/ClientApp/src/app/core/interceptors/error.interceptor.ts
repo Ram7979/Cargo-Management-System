@@ -69,7 +69,7 @@ function handle401Error(req: HttpRequest<unknown>, next: HttpHandlerFn, authServ
     return authService.refreshTokens().pipe(
       switchMap((response) => {
         isRefreshing = false;
-        const newToken = response.data?.accessToken || '';
+        const newToken = response.accessToken || '';
         refreshTokenSubject.next(newToken);
         
         return next(req.clone({

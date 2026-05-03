@@ -1,8 +1,15 @@
 <div class="page-header" *ngIf="customer">
   <h2>Customer: {{ customer.companyName || customer.contactPerson }}</h2>
-  <button mat-stroked-button color="primary" routerLink="/customers">
-    <mat-icon>arrow_back</mat-icon> Back to List
-  </button>
+  <div class="header-actions">
+    <button mat-raised-button color="primary"
+            [routerLink]="['/shipments/new']"
+            [queryParams]="{ customerId: customer.id || customer.customerId }">
+      <mat-icon>add_shopping_cart</mat-icon> Complete Booking
+    </button>
+    <button mat-stroked-button routerLink="/customers">
+      <mat-icon>arrow_back</mat-icon> Back
+    </button>
+  </div>
 </div>
 
 <div class="detail-grid" *ngIf="customer">

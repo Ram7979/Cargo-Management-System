@@ -6,9 +6,9 @@ namespace CMS.IdentityService.Application.Queries.GetUser;
 
 public class GetUserQuery : IRequest<ApiResponse<UserDto>>
 {
-    public Guid UserId { get; }
+    public string UserId { get; }
 
-    public GetUserQuery(Guid userId)
+    public GetUserQuery(string userId)
     {
         UserId = userId;
     }

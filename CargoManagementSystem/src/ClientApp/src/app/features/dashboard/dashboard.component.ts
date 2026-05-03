@@ -7,6 +7,7 @@ import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 import { MatProgressBarModule } from '@angular/material/progress-bar';
 import { DashboardService, DashboardSummary } from '../../core/services/dashboard.service';
 import { BaseChartDirective, provideCharts, withDefaultRegisterables } from 'ng2-charts';
+import { ChartData, ChartType } from 'chart.js';
 
 import { MatButtonModule } from '@angular/material/button';
 import { MatChipsModule } from '@angular/material/chips';
@@ -29,16 +30,13 @@ export class DashboardComponent implements OnInit {
 
   // Chart configuration
   public barChartOptions = { responsive: true };
-  public barChartLabels: string[] = [];
-  public barChartData: any[] = [];
+  public barChartData: ChartData<'bar'> = { labels: [], datasets: [] };
   
   public lineChartOptions = { responsive: true };
-  public lineChartLabels: string[] = [];
-  public lineChartData: any[] = [];
+  public lineChartData: ChartData<'line'> = { labels: [], datasets: [] };
 
   public pieChartOptions = { responsive: true };
-  public pieChartLabels: string[] = [];
-  public pieChartData: any[] = [];
+  public pieChartData: ChartData<'pie'> = { labels: [], datasets: [] };
 
   ngOnInit() {
     this.loadDashboardData();
@@ -144,32 +142,24 @@ export class DashboardComponent implements OnInit {
 
   initCharts() {
     if (!this.summary) return;
+    setTimeout(() => {
+      const statusData = this.summary!.shipmentsByStatus || [];
+      this.barChartData = {
+        labels: statusData.map(s => s.status),
+        datasets: [{ data: statusData.map(s => s.count), label: 'Shipments', backgroundColor: ['#4299e1','#48bb78','#f6ad55','#f56565','#a0aec0'] }]
+      };
 
-    const statusData = Array.isArray(this.summary.shipmentsByStatus) ? this.summary.shipmentsByStatus : [];
-    this.barChartLabels = statusData.map((s: any) => s.status);
-    this.barChartData = [{ 
-      data: statusData.map((s: any) => s.count), 
-      label: 'Shipments',
-      backgroundColor: ['#4299e1', '#48bb78', '#f6ad55', '#f56565', '#a0aec0'] 
-    }];
+      const trendData = this.summary!.revenueTrend || [];
+      this.lineChartData = {
+        labels: trendData.map(r => r.date),
+        datasets: [{ data: trendData.map(r => r.value ?? r.amount ?? 0), label: 'Revenue', tension: 0.4, borderColor: '#4299e1', fill: true, backgroundColor: 'rgba(66,153,225,0.1)' }]
+      };
 
-    const trendData = Array.isArray(this.summary.revenueTrend) ? this.summary.revenueTrend : [];
-    this.lineChartLabels = trendData.map((r: any) => r.date);
-    this.lineChartData = [{ 
-      data: trendData.map((r: any) => r.value), 
-      label: 'Revenue', 
-      tension: 0.4,
-      borderColor: '#4299e1',
-      fill: true,
-      backgroundColor: 'rgba(66, 153, 225, 0.1)'
-    }];
-
-    const typeData = Array.isArray(this.summary.cargoTypes) ? this.summary.cargoTypes : [];
-    this.pieChartLabels = typeData.map((c: any) => c.cargoType || c.type);
-    this.pieChartData = [{ 
-      data: typeData.map((c: any) => c.count), 
-      label: 'Cargo Types',
-      backgroundColor: ['#4299e1', '#48bb78', '#f6ad55', '#f56565', '#a0aec0'] 
-    }];
+      const typeData = this.summary!.cargoTypes || [];
+      this.pieChartData = {
+        labels: typeData.map(c => c.cargoType ?? c.type),
+        datasets: [{ data: typeData.map(c => c.count), label: 'Cargo Types', backgroundColor: ['#4299e1','#48bb78','#f6ad55','#f56565','#a0aec0'] }]
+      };
+    }, 0);
   }
 }

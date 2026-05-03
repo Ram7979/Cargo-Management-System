@@ -7,7 +7,7 @@ import { MatMenuModule } from '@angular/material/menu';
 import { MatBadgeModule } from '@angular/material/badge';
 import { MatDividerModule } from '@angular/material/divider';
 import { FormsModule } from '@angular/forms';
-import { Router } from '@angular/router';
+import { Router, RouterModule } from '@angular/router';
 import { AuthService } from '../../core/services/auth.service';
 import { NotificationService } from '../../core/services/notification.service';
 
@@ -22,7 +22,8 @@ import { NotificationService } from '../../core/services/notification.service';
     MatMenuModule, 
     MatBadgeModule, 
     MatDividerModule,
-    FormsModule
+    FormsModule,
+    RouterModule
   ],
   templateUrl: './topbar.component.html',
   styleUrls: ['./topbar.component.scss']
@@ -38,6 +39,8 @@ export class TopbarComponent implements OnInit {
 
   ngOnInit() {
     this.notificationService.loadNotifications();
+    // Poll for new notifications every 60 seconds
+    setInterval(() => this.notificationService.loadNotifications(), 60000);
   }
 
   onSearch() {

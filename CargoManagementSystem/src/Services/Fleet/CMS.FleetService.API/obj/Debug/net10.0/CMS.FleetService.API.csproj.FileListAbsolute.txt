@@ -182,4 +182,3 @@ D:\Files\CMS\CargoManagementSystem\src\Services\Fleet\CMS.FleetService.API\obj\D
 D:\Files\CMS\CargoManagementSystem\src\Services\Fleet\CMS.FleetService.API\obj\Debug\net10.0\CMS.FleetService.API.pdb
 D:\Files\CMS\CargoManagementSystem\src\Services\Fleet\CMS.FleetService.API\obj\Debug\net10.0\CMS.FleetService.API.genruntimeconfig.cache
 D:\Files\CMS\CargoManagementSystem\src\Services\Fleet\CMS.FleetService.API\obj\Debug\net10.0\ref\CMS.FleetService.API.dll
-D:\Files\CMS\CargoManagementSystem\src\Services\Fleet\CMS.FleetService.API\obj\Debug\net10.0\staticwebassets.upToDateCheck.txt

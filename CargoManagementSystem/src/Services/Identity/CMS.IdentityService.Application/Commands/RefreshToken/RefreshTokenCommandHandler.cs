@@ -1,6 +1,5 @@
 using System.Security.Cryptography;
 using System.Text;
-using AutoMapper;
 using CMS.IdentityService.Application.DTOs;
 using CMS.IdentityService.Application.Interfaces;
 using CMS.IdentityService.Domain.Entities;
@@ -8,77 +7,70 @@ using CMS.IdentityService.Domain.Exceptions;
 using CMS.IdentityService.Domain.Interfaces;
 using CMS.Shared.Responses;
 using MediatR;
+using Microsoft.AspNetCore.Identity;
 
 namespace CMS.IdentityService.Application.Commands.RefreshToken;
 
 public class RefreshTokenCommandHandler : IRequestHandler<RefreshTokenCommand, ApiResponse<LoginResponse>>
 {
     private readonly IRefreshTokenRepository _refreshTokenRepository;
-    private readonly IUserRepository _userRepository;
+    private readonly UserManager<ApplicationUser> _userManager;
     private readonly IJwtService _jwtService;
-    private readonly IMapper _mapper;
 
     public RefreshTokenCommandHandler(
         IRefreshTokenRepository refreshTokenRepository,
-        IUserRepository userRepository,
-        IJwtService jwtService,
-        IMapper mapper)
+        UserManager<ApplicationUser> userManager,
+        IJwtService jwtService)
     {
         _refreshTokenRepository = refreshTokenRepository;
-        _userRepository = userRepository;
+        _userManager = userManager;
         _jwtService = jwtService;
-        _mapper = mapper;
     }
 
     public async Task<ApiResponse<LoginResponse>> Handle(RefreshTokenCommand command, CancellationToken cancellationToken)
     {
-        var hashedToken = HashToken(command.Token);
-        var existingToken = await _refreshTokenRepository.GetByTokenAsync(hashedToken);
+        var existingToken = await _refreshTokenRepository.GetByTokenAsync(command.Token);
 
         if (existingToken == null || !existingToken.IsActive())
         {
-            // Replay attack detected — revoke entire family if token exists
             if (existingToken != null)
                 await _refreshTokenRepository.RevokeAllInFamilyAsync(existingToken.TokenFamily);
 
             throw new TokenExpiredException("The refresh token is invalid or has expired.");
         }
 
-        var user = await _userRepository.GetByIdAsync(existingToken.UserId);
+        var user = await _userManager.FindByIdAsync(existingToken.UserId);
         if (user == null)
             throw new TokenExpiredException("The refresh token is invalid.");
 
-        // Mark old token as used
         existingToken.MarkUsed();
         await _refreshTokenRepository.UpdateAsync(existingToken);
 
-        // Issue new tokens in the same family
-        var newAccessToken = _jwtService.GenerateAccessToken(user);
+        var roles = await _userManager.GetRolesAsync(user);
+        var newAccessToken = _jwtService.GenerateAccessToken(user, roles);
         var rawNewRefreshToken = _jwtService.GenerateRefreshToken();
-        var hashedNewToken = HashToken(rawNewRefreshToken);
 
         var newRefreshToken = Domain.Entities.RefreshToken.Create(
             user.Id,
-            hashedNewToken,
+            rawNewRefreshToken,
             existingToken.TokenFamily,
             DateTime.UtcNow.AddDays(7));
 
         await _refreshTokenRepository.AddAsync(newRefreshToken);
 
-        var userDto = _mapper.Map<UserDto>(user);
         var response = new LoginResponse
         {
             AccessToken = newAccessToken,
             RefreshToken = rawNewRefreshToken,
-            User = userDto
+            User = new UserDto 
+            { 
+                Id = user.Id, 
+                Email = user.Email!, 
+                FirstName = user.FirstName, 
+                LastName = user.LastName 
+            }
         };
 
         return ApiResponse<LoginResponse>.Ok(response, "Token refreshed successfully.");
-    }
-
-    private static string HashToken(string token)
-    {
-        var bytes = SHA256.HashData(Encoding.UTF8.GetBytes(token));
-        return Convert.ToBase64String(bytes);
     }
 }

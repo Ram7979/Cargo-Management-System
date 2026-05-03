@@ -1,6 +1,6 @@
 using CMS.Shared.Entities;
 using CMS.ShipmentService.Domain.Enums;
-using CMS.ShipmentService.Domain.Exceptions;
+using CMS.Shared.Exceptions;
 using CMS.ShipmentService.Domain.StateMachine;
 using CMS.ShipmentService.Domain.ValueObjects;
 
@@ -65,7 +65,7 @@ public class Shipment : BaseEntity
     public DateTime? ReDeliveryScheduledAt { get; private set; }
 
     private readonly List<ShipmentStatusHistory> _statusHistory = new();
-    public ICollection<ShipmentStatusHistory> StatusHistory => _statusHistory.AsReadOnly();
+    public ICollection<ShipmentStatusHistory> StatusHistory => _statusHistory;
 
     private Shipment() { }
 

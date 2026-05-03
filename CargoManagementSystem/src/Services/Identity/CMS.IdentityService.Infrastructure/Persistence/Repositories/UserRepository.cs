@@ -13,36 +13,31 @@ public class UserRepository : IUserRepository
         _context = context;
     }
 
-    public async Task<User?> GetByIdAsync(Guid id)
+    public async Task<ApplicationUser?> GetByIdAsync(string id)
     {
         return await _context.Users
-            .Include(u => u.Roles)
-            .Include(u => u.RefreshTokens)
             .FirstOrDefaultAsync(u => u.Id == id);
     }
 
-    public async Task<User?> GetByEmailAsync(string email)
+    public async Task<ApplicationUser?> GetByEmailAsync(string email)
     {
         return await _context.Users
-            .Include(u => u.Roles)
-            .Include(u => u.RefreshTokens)
             .FirstOrDefaultAsync(u => u.Email == email);
     }
 
-    public async Task<IEnumerable<User>> GetAllAsync()
+    public async Task<IEnumerable<ApplicationUser>> GetAllAsync()
     {
         return await _context.Users
-            .Include(u => u.Roles)
             .ToListAsync();
     }
 
-    public async Task AddAsync(User user)
+    public async Task AddAsync(ApplicationUser user)
     {
         await _context.Users.AddAsync(user);
         await _context.SaveChangesAsync();
     }
 
-    public async Task UpdateAsync(User user)
+    public async Task UpdateAsync(ApplicationUser user)
     {
         _context.Users.Update(user);
         await _context.SaveChangesAsync();

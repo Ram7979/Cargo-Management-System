@@ -110,6 +110,16 @@ try
 
     app.MapControllers();
 
+    // Ensure PATCH methods are allowed
+    app.Use(async (context, next) =>
+    {
+        if (context.Request.Method == HttpMethods.Patch && !context.Request.Headers.ContainsKey("Access-Control-Allow-Methods"))
+        {
+            context.Response.Headers.Add("Access-Control-Allow-Methods", "GET, POST, PUT, DELETE, PATCH");
+        }
+        await next.Invoke();
+    });
+
     Log.Information("CMS Shipment Service started. Swagger: http://localhost:5002/swagger");
 
     app.Run();

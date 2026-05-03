@@ -50,16 +50,52 @@ export class InvoiceDetailComponent implements OnInit {
 
   downloadPdf() {
     if (!this.invoice) return;
-    this.billingService.getInvoicePdf(this.invoice.id).subscribe({
-      next: (blob) => {
-        const url = window.URL.createObjectURL(blob);
-        const link = document.createElement('a');
-        link.href = url;
-        link.download = `Invoice_${this.invoice?.invoiceNumber}.pdf`;
-        link.click();
+    this.notification.info('Retrieving PDF...');
+    this.billingService.getInvoicePdfUrl(this.invoice.id).subscribe({
+      next: (res: any) => {
+        if (res.success && res.data?.pdfUrl) {
+          this.billingService.downloadPdfBlob(res.data.pdfUrl).subscribe({
+            next: (blob) => this.downloadBlob(blob, `Invoice_${this.invoice!.invoiceNumber}.pdf`),
+            error: () => {
+              this.notification.warning('PDF access blocked. Generating text fallback...');
+              this.downloadFallback();
+            }
+          });
+        } else {
+          this.notification.warning('PDF generation pending. Using text fallback...');
+          this.downloadFallback();
+        }
       },
-      error: () => this.notification.error('Failed to download PDF')
+      error: () => this.downloadFallback()
     });
+  }
+
+  private downloadBlob(blob: Blob, fileName: string) {
+    const url = window.URL.createObjectURL(blob);
+    const link = document.createElement('a');
+    link.href = url;
+    link.download = fileName;
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+    window.URL.revokeObjectURL(url);
+  }
+
+  private downloadFallback() {
+    if (!this.invoice) return;
+    const content = `
+      INVOICE: ${this.invoice.invoiceNumber}
+      ---------------------------------
+      Customer: ${this.invoice.customerName}
+      Date: ${new Date(this.invoice.createdAt).toLocaleDateString()}
+      Due Date: ${new Date(this.invoice.dueDate).toLocaleDateString()}
+      Total Amount: ${this.invoice.totalAmount}
+      Status: ${this.invoice.status}
+      ---------------------------------
+      (Fallback text version)
+    `;
+    const blob = new Blob([content], { type: 'text/plain' });
+    this.downloadBlob(blob, `Invoice_${this.invoice.invoiceNumber}_Fallback.txt`);
   }
 
   processPayment() {

@@ -5,7 +5,7 @@ using MediatR;
 namespace CMS.IdentityService.Application.Commands.UpdateUser;
 
 public record UpdateUserCommand(
-    Guid UserId,
+    string UserId,
     UpdateUserRequest Request,
     string ActorId,
     string IpAddress) : IRequest<ApiResponse<UserDto>>;

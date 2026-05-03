@@ -12,6 +12,10 @@ export class UserService extends BaseCrudService<User> {
     super(inject(HttpClient), `${environment.apiUrl}/users`);
   }
 
+  override update(id: string | number, data: any): Observable<ApiResponse<any>> {
+    return this.http.patch<ApiResponse<any>>(`${this.apiUrl}/${id}`, data);
+  }
+
   updateRoles(userId: string, roles: string[]): Observable<ApiResponse<any>> {
     return this.http.put<ApiResponse<any>>(`${this.apiUrl}/${userId}/roles`, { roles });
   }

@@ -1,0 +1,111 @@
+<div class="tracking-container">
+  <div class="search-header">
+    <h1>Track Your Shipment</h1>
+    <p>Enter your tracking number to get real-time updates on your cargo.</p>
+    
+    <div class="search-form">
+      <div class="input-wrapper">
+        <mat-icon>search</mat-icon>
+        <input type="text" [(ngModel)]="trackingId" placeholder="e.g. CMS-2025-0001" (keyup.enter)="trackShipment()">
+      </div>
+      <button mat-flat-button color="primary" (click)="trackShipment()" [disabled]="isLoading">
+        <span *ngIf="!isLoading">Track Now</span>
+        <mat-spinner diameter="20" *ngIf="isLoading"></mat-spinner>
+      </button>
+    </div>
+  </div>
+
+  <div class="error-msg" *ngIf="error">
+    <mat-icon>error_outline</mat-icon>
+    <span>{{ error }}</span>
+  </div>
+
+  <div class="tracking-content" *ngIf="shipment && !isLoading">
+    <div class="shipment-summary">
+      <div class="summary-card">
+        <div class="s-header">
+          <div class="s-title">
+            <span class="label">Status</span>
+            <span class="value" [class.active]="shipment.status !== 'Delivered'">{{ shipment.status }}</span>
+          </div>
+          <div class="s-title">
+            <span class="label">Estimated Delivery</span>
+            <span class="value">{{ shipment.estimatedDeliveryDate || 'TBD' | date:'mediumDate' }}</span>
+          </div>
+        </div>
+        
+        <div class="s-body">
+          <div class="route">
+            <div class="point">
+              <span class="city">{{ shipment.senderCity }}</span>
+              <span class="country">{{ shipment.senderCountry }}</span>
+            </div>
+            <div class="line-wrapper">
+              <div class="line"></div>
+              <mat-icon>local_shipping</mat-icon>
+            </div>
+            <div class="point">
+              <span class="city">{{ shipment.recipientCity }}</span>
+              <span class="country">{{ shipment.recipientCountry }}</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="details-card">
+        <h3>Shipment Details</h3>
+        <div class="details-grid">
+          <div class="d-item">
+            <span class="l">Service Type</span>
+            <span class="v">{{ shipment.serviceType }}</span>
+          </div>
+          <div class="d-item">
+            <span class="l">Cargo Type</span>
+            <span class="v">{{ shipment.cargoType }}</span>
+          </div>
+          <div class="d-item">
+            <span class="l">Weight</span>
+            <span class="v">{{ shipment.weightKg }} KG</span>
+          </div>
+          <div class="d-item">
+            <span class="l">Quantity</span>
+            <span class="v">{{ shipment.quantity }} Pcs</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="tracking-timeline">
+      <h3>Tracking History</h3>
+      <div class="timeline-wrapper">
+        <div class="timeline-item" *ngFor="let step of trackingHistory; let last = last" [class.completed]="step.completed">
+          <div class="time-point">
+            <span class="date">{{ step.date | date:'MMM dd' }}</span>
+            <span class="time">{{ step.date | date:'HH:mm' }}</span>
+          </div>
+          <div class="marker">
+            <div class="icon-circle">
+              <mat-icon>{{ step.icon }}</mat-icon>
+            </div>
+            <div class="line" *ngIf="!last"></div>
+          </div>
+          <div class="info">
+            <h4 class="status">{{ step.status }}</h4>
+            <p class="location">{{ step.location }}</p>
+            <p class="desc">{{ step.description }}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Initial / Empty State -->
+  <div class="empty-track" *ngIf="!shipment && !isLoading && !error">
+    <div class="graphic">
+      <mat-icon>radar</mat-icon>
+      <div class="pulse"></div>
+    </div>
+    <h3>Ready to track?</h3>
+    <p>Enter your tracking ID above to see the journey of your shipment.</p>
+  </div>
+</div>

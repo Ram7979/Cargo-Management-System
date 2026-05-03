@@ -1,51 +1,40 @@
 using AutoMapper;
 using CMS.IdentityService.Application.DTOs;
 using CMS.IdentityService.Domain.Entities;
-using CMS.IdentityService.Domain.Interfaces;
 using CMS.Shared.Exceptions;
 using CMS.Shared.Responses;
 using MediatR;
+using Microsoft.AspNetCore.Identity;
 
 namespace CMS.IdentityService.Application.Commands.UpdateUser;
 
 public class UpdateUserCommandHandler : IRequestHandler<UpdateUserCommand, ApiResponse<UserDto>>
 {
-    private readonly IUserRepository _userRepository;
-    private readonly IAuditLogRepository _auditLogRepository;
+    private readonly UserManager<ApplicationUser> _userManager;
     private readonly IMapper _mapper;
 
-    public UpdateUserCommandHandler(
-        IUserRepository userRepository,
-        IAuditLogRepository auditLogRepository,
-        IMapper mapper)
+    public UpdateUserCommandHandler(UserManager<ApplicationUser> userManager, IMapper mapper)
     {
-        _userRepository = userRepository;
-        _auditLogRepository = auditLogRepository;
+        _userManager = userManager;
         _mapper = mapper;
     }
 
     public async Task<ApiResponse<UserDto>> Handle(UpdateUserCommand command, CancellationToken cancellationToken)
     {
-        var user = await _userRepository.GetByIdAsync(command.UserId)
-            ?? throw new NotFoundException("User", command.UserId);
+        var user = await _userManager.FindByIdAsync(command.UserId);
+        if (user == null)
+            throw new NotFoundException("User", command.UserId);
 
-        user.UpdateProfile(
-            command.Request.FirstName,
-            command.Request.LastName);
+        user.FirstName = command.Request.FirstName ?? user.FirstName;
+        user.LastName = command.Request.LastName ?? user.LastName;
 
-        await _userRepository.UpdateAsync(user);
+        var result = await _userManager.UpdateAsync(user);
+        if (!result.Succeeded)
+            throw new Exception("Failed to update user.");
 
-        var auditLog = AuditLog.Create(
-            actorId: command.ActorId,
-            action: "UpdateUser",
-            resourceType: "User",
-            resourceId: user.Id.ToString(),
-            ipAddress: command.IpAddress,
-            payload: $"{{\"userId\":\"{user.Id}\",\"updatedFields\":\"profile\"}}");
+        var userDto = _mapper.Map<UserDto>(user);
+        userDto.Roles = await _userManager.GetRolesAsync(user);
 
-        await _auditLogRepository.AddAsync(auditLog);
-
-        var dto = _mapper.Map<UserDto>(user);
-        return ApiResponse<UserDto>.Ok(dto, "User profile updated successfully.");
+        return ApiResponse<UserDto>.Ok(userDto, "User updated successfully.");
     }
 }

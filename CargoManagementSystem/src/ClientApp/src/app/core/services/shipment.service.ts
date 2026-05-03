@@ -51,11 +51,25 @@ export class ShipmentService extends BaseApiService<Shipment> {
   }
 
   updateStatus(id: string, status: string, notes?: string): Observable<ApiResponse<any>> {
-    return this.http.patch<ApiResponse<any>>(`${this.apiUrl}/${id}/status`, { status, notes });
+    const body = { 
+      status: status, 
+      notes: notes || '' 
+    };
+    console.log(`[Shipment Status] Updating ${id} to ${status}`, body);
+    return this.http.patch<ApiResponse<any>>(`${this.apiUrl}/${id}/status`, body);
+  }
+
+  getPrintLabelInfo(id: string): Observable<ApiResponse<{ bolUrl: string }>> {
+    return this.http.get<ApiResponse<{ bolUrl: string }>>(`${this.apiUrl}/${id}/document/bol`);
   }
 
   printLabel(id: string): Observable<Blob> {
-    return this.http.get(`${this.apiUrl}/${id}/document/bol`, {
+    // Keep this for direct blob fetch if needed, but we'll primarily use the URL approach in the component
+    return this.http.get(`${this.apiUrl}/${id}/document/bol`, { responseType: 'blob' });
+  }
+
+  downloadDocument(id: string, type: 'bol' | 'pod'): Observable<Blob> {
+    return this.http.get(`${this.apiUrl}/${id}/document/${type}`, {
       responseType: 'blob'
     });
   }

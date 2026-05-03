@@ -30,6 +30,13 @@ public class RedisCacheService : ICacheService
 
     public async Task RemoveAsync(string key)
     {
-        await _database.KeyDeleteAsync(key);
+        try
+        {
+            await _database.KeyDeleteAsync(key);
+        }
+        catch
+        {
+            // Fail silently - cache should not break the business logic
+        }
     }
 }

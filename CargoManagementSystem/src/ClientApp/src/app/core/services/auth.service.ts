@@ -1,10 +1,9 @@
-import { Injectable, signal, computed, inject } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
+import { Injectable, inject, signal, computed } from '@angular/core';
+import { HttpClient, HttpErrorResponse } from '@angular/common/http';
 import { environment } from '../../../environments/environment';
-import { AuthResponse, User } from '../models/user.model';
-import { ApiResponse } from '../models/api-response.model';
+import { AuthResponse, UserProfile } from '../models/user.model';
+import { BehaviorSubject, Observable, throwError } from 'rxjs';
 import { tap, catchError } from 'rxjs/operators';
-import { throwError, Observable } from 'rxjs';
 import { Router } from '@angular/router';
 
 @Injectable({
@@ -13,129 +12,134 @@ import { Router } from '@angular/router';
 export class AuthService {
   private http = inject(HttpClient);
   private router = inject(Router);
-  
   private apiUrl = `${environment.apiUrl}/auth`;
 
   // State
-  private currentUserSignal = signal<User | null>(null);
-  private accessTokenSignal = signal<string | null>(null);
-  private refreshTokenSignal = signal<string | null>(null);
-
-  // Computed
+  private currentUserSubject = new BehaviorSubject<UserProfile | null>(null);
+  public currentUser$ = this.currentUserSubject.asObservable();
+  
+  // Keep signals for template compatibility and performance
+  private currentUserSignal = signal<UserProfile | null>(null);
   public currentUser = computed(() => this.currentUserSignal());
-  public isAuthenticated = computed(() => !!this.accessTokenSignal());
-  public userRoles = computed(() => this.currentUserSignal()?.roles || []);
 
   constructor() {
-    this.loadTokens();
+    this.loadSession();
   }
 
-  private loadTokens() {
-    const token = localStorage.getItem('accessToken');
-    const refresh = localStorage.getItem('refreshToken');
+  private loadSession() {
     const userStr = localStorage.getItem('user');
-
-    if (token && refresh && userStr) {
+    if (userStr && userStr !== 'undefined' && userStr !== 'null') {
       try {
-        if (userStr === 'undefined' || userStr === 'null') {
-           this.logout();
-           return;
-        }
         const user = JSON.parse(userStr);
-        this.accessTokenSignal.set(token);
-        this.refreshTokenSignal.set(refresh);
+        this.currentUserSubject.next(user);
         this.currentUserSignal.set(user);
       } catch (e) {
-        console.error('AuthService: Failed to parse user session', e);
         this.logout();
       }
     }
   }
 
-  public getAccessToken(): string | null {
-    return this.accessTokenSignal();
-  }
-
-  public getRefreshToken(): string | null {
-    return this.refreshTokenSignal();
-  }
-
-  public refreshTokens(): Observable<ApiResponse<AuthResponse>> {
-    const refreshToken = this.getRefreshToken();
-    if (!refreshToken) return throwError(() => new Error('No refresh token available'));
-
-    return this.http.post<ApiResponse<AuthResponse>>(`${this.apiUrl}/refresh`, { refreshToken }).pipe(
+  login(email: string, password: string): Observable<AuthResponse> {
+    return this.http.post<AuthResponse>(`${this.apiUrl}/login`, { email, password }).pipe(
       tap(response => {
-        if (response.success && response.data) {
-          this.setSession(response.data);
-        }
+        this.setSession(response);
       }),
-      catchError(err => {
-        this.logout();
-        return throwError(() => err);
-      })
+      catchError(this.handleError)
     );
   }
 
-  public login(credentials: any): Observable<ApiResponse<AuthResponse>> {
-    return this.http.post<ApiResponse<AuthResponse>>(`${this.apiUrl}/login`, credentials).pipe(
-      tap(response => {
-        if (response.success && response.data) {
-          this.setSession(response.data);
-        }
-      })
-    );
+  // Alias for compatibility
+  refreshTokens(): Observable<AuthResponse> {
+    return this.refresh();
   }
 
-  public register(userDto: any): Observable<ApiResponse<any>> {
-    return this.http.post<ApiResponse<any>>(`${environment.apiUrl}/users`, userDto);
-  }
-
-  public logout() {
+  refresh(): Observable<AuthResponse> {
     const refreshToken = this.getRefreshToken();
-    if (refreshToken) {
-      this.http.post(`${this.apiUrl}/logout`, { refreshToken }).subscribe();
-    }
-
-    this.accessTokenSignal.set(null);
-    this.refreshTokenSignal.set(null);
-    this.currentUserSignal.set(null);
-    localStorage.removeItem('accessToken');
-    localStorage.removeItem('refreshToken');
-    localStorage.removeItem('user');
-    this.router.navigate(['/auth/login']);
+    return this.http.post<AuthResponse>(`${this.apiUrl}/refresh`, { refreshToken }).pipe(
+      tap(response => {
+        this.setSession(response);
+      })
+    );
   }
 
   private setSession(authResult: AuthResponse) {
-    console.log('AuthService: Setting session with result:', authResult);
-    if (!authResult || !authResult.accessToken || !authResult.user) {
-      console.error('AuthService: Invalid auth result structure. Missing accessToken or user.', {
-        hasToken: !!authResult?.accessToken,
-        hasUser: !!authResult?.user,
-        result: authResult
-      });
-      return;
-    }
-
-    this.accessTokenSignal.set(authResult.accessToken);
-    this.refreshTokenSignal.set(authResult.refreshToken);
-    this.currentUserSignal.set(authResult.user);
-
     localStorage.setItem('accessToken', authResult.accessToken);
     localStorage.setItem('refreshToken', authResult.refreshToken);
     localStorage.setItem('user', JSON.stringify(authResult.user));
-  }
-  
-  public hasRole(role: string): boolean {
-    const roles = this.userRoles();
-    return roles.includes('SuperAdmin') || roles.includes(role);
+    this.currentUserSubject.next(authResult.user);
+    this.currentUserSignal.set(authResult.user);
   }
 
-  public forgotPassword(email: string): Observable<ApiResponse<any>> {
-    return this.http.post<ApiResponse<any>>(`${this.apiUrl}/forgot-password`, { email });
+  isLoggedIn(): boolean {
+    return !!localStorage.getItem('accessToken');
   }
 
-  public resetPassword(data: any): Observable<ApiResponse<any>> {
-    return this.http.post<ApiResponse<any>>(`${this.apiUrl}/reset-password`, data);
+  // Alias for compatibility
+  isAuthenticated(): boolean {
+    return this.isLoggedIn();
+  }
+
+  getUserRole(): string {
+    return this.currentUserSubject.value?.role || '';
+  }
+
+  hasRole(role: string): boolean {
+    const userRole = this.getUserRole();
+    return userRole === 'SuperAdmin' || userRole === 'Admin' || userRole === role;
+  }
+
+  logout() {
+    localStorage.removeItem('accessToken');
+    localStorage.removeItem('refreshToken');
+    localStorage.removeItem('user');
+    this.currentUserSubject.next(null);
+    this.currentUserSignal.set(null);
+    this.router.navigate(['/auth/login']);
+  }
+
+  forgotPassword(email: string): Observable<any> {
+    return this.http.post<any>(`${this.apiUrl}/forgot-password`, { email }).pipe(
+      catchError(this.handleError)
+    );
+  }
+
+  resetPassword(data: any): Observable<any> {
+    return this.http.post<any>(`${this.apiUrl}/reset-password`, data).pipe(
+      catchError(this.handleError)
+    );
+  }
+
+  register(dto: any): Observable<any> {
+    return this.http.post<any>(`${this.apiUrl}/register`, dto).pipe(
+      catchError(this.handleError)
+    );
+  }
+
+  getAccessToken(): string | null {
+    return localStorage.getItem('accessToken');
+  }
+
+  getRefreshToken(): string | null {
+    return localStorage.getItem('refreshToken');
+  }
+
+  private handleError(error: HttpErrorResponse) {
+    let errorMessage = 'An unexpected error occurred.';
+    
+    if (error.error instanceof ErrorEvent) {
+      errorMessage = `Cannot connect. Check your connection.`;
+    } else {
+      if (error.status === 401) {
+        errorMessage = 'Invalid email or password.';
+      } else if (error.status === 403) {
+        errorMessage = error.error?.message || 'Access denied.';
+      } else if (error.status === 500) {
+        errorMessage = 'Server error, please try again.';
+      } else {
+        errorMessage = error.error?.message || 'Something went wrong. Please try again later.';
+      }
+    }
+    
+    return throwError(() => errorMessage);
   }
 }

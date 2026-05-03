@@ -1,0 +1,92 @@
+<div class="page-header">
+  <button mat-icon-button routerLink="/billing"><mat-icon>arrow_back</mat-icon></button>
+  <h2>Create Invoice</h2>
+</div>
+
+<div class="create-grid">
+  <mat-card class="form-card">
+    <mat-card-header><mat-card-title>Invoice Details</mat-card-title></mat-card-header>
+    <mat-card-content>
+      <form [formGroup]="form" class="form-grid">
+        <mat-form-field appearance="outline">
+          <mat-label>Shipment *</mat-label>
+          <mat-select formControlName="shipmentId">
+            <mat-option *ngFor="let s of shipments" [value]="s.id">
+              {{ s.trackingNumber }} — {{ s.senderName }} → {{ s.recipientName }}
+            </mat-option>
+          </mat-select>
+        </mat-form-field>
+
+        <mat-form-field appearance="outline">
+          <mat-label>Customer *</mat-label>
+          <mat-select formControlName="customerId">
+            <mat-option *ngFor="let c of customers" [value]="c.id">
+              {{ c.companyName || c.contactPerson }}
+            </mat-option>
+          </mat-select>
+        </mat-form-field>
+
+        <mat-form-field appearance="outline">
+          <mat-label>Base Freight Charge (₹) *</mat-label>
+          <input matInput type="number" formControlName="baseFreightCharge">
+        </mat-form-field>
+
+        <mat-form-field appearance="outline">
+          <mat-label>Fuel Surcharge (₹)</mat-label>
+          <input matInput type="number" formControlName="fuelSurcharge">
+        </mat-form-field>
+
+        <mat-form-field appearance="outline">
+          <mat-label>Handling Fee (₹)</mat-label>
+          <input matInput type="number" formControlName="handlingFee">
+        </mat-form-field>
+
+        <mat-form-field appearance="outline">
+          <mat-label>Insurance Amount (₹)</mat-label>
+          <input matInput type="number" formControlName="insuranceAmount">
+        </mat-form-field>
+
+        <mat-form-field appearance="outline">
+          <mat-label>Tax Rate (e.g. 0.18 = 18%)</mat-label>
+          <input matInput type="number" formControlName="taxRate" step="0.01">
+        </mat-form-field>
+
+        <mat-form-field appearance="outline">
+          <mat-label>Due Date</mat-label>
+          <input matInput [matDatepicker]="picker" formControlName="dueDate">
+          <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+          <mat-datepicker #picker></mat-datepicker>
+        </mat-form-field>
+
+        <mat-form-field appearance="outline" class="full-col">
+          <mat-label>Notes</mat-label>
+          <textarea matInput formControlName="notes" rows="3"></textarea>
+        </mat-form-field>
+      </form>
+    </mat-card-content>
+  </mat-card>
+
+  <!-- Running Total Card -->
+  <mat-card class="total-card">
+    <mat-card-header><mat-card-title>Invoice Summary</mat-card-title></mat-card-header>
+    <mat-card-content>
+      <div class="total-line"><span>Base Freight:</span><span>₹{{ form.get('baseFreightCharge')?.value | number:'1.2-2' }}</span></div>
+      <div class="total-line"><span>Fuel Surcharge:</span><span>₹{{ form.get('fuelSurcharge')?.value | number:'1.2-2' }}</span></div>
+      <div class="total-line"><span>Handling Fee:</span><span>₹{{ form.get('handlingFee')?.value | number:'1.2-2' }}</span></div>
+      <div class="total-line"><span>Insurance:</span><span>₹{{ form.get('insuranceAmount')?.value | number:'1.2-2' }}</span></div>
+      <div class="total-line tax"><span>Tax ({{ (form.get('taxRate')?.value || 0) * 100 | number:'1.0-0' }}%):</span>
+        <span>₹{{ ((form.get('baseFreightCharge')?.value||0) + (form.get('fuelSurcharge')?.value||0) + (form.get('handlingFee')?.value||0) + (form.get('insuranceAmount')?.value||0)) * (form.get('taxRate')?.value||0) | number:'1.2-2' }}</span>
+      </div>
+      <mat-divider></mat-divider>
+      <div class="total-line grand-total"><span>Total:</span><span>₹{{ computedTotal | number:'1.2-2' }}</span></div>
+
+      <div class="form-actions mt-4">
+        <button mat-flat-button color="primary" [disabled]="isSubmitting || form.invalid" (click)="onSubmit()">
+          <mat-icon>receipt</mat-icon>
+          {{ isSubmitting ? 'Creating...' : 'Create Invoice' }}
+        </button>
+        <button mat-stroked-button routerLink="/billing">Cancel</button>
+      </div>
+    </mat-card-content>
+  </mat-card>
+</div>

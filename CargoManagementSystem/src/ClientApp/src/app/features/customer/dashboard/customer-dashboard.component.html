@@ -1,0 +1,167 @@
+<div class="dashboard-container" *ngIf="summary$ | async as summary; else loading">
+  <!-- Welcome Banner -->
+  <section class="welcome-banner">
+    <div class="banner-content">
+      <h2>Welcome back, {{ user?.firstName }} 👋</h2>
+      <p>Here's what's happening with your cargo today.</p>
+      <div class="quick-actions">
+        <button mat-flat-button class="btn-book" routerLink="/user/book-shipment">
+          <mat-icon>add_circle</mat-icon>
+          Book Shipment
+        </button>
+        <button mat-stroked-button class="btn-track" routerLink="/user/track">
+          <mat-icon>radar</mat-icon>
+          Track Package
+        </button>
+      </div>
+    </div>
+    <div class="banner-illustration">
+      <!-- Airplane SVG placeholder -->
+      <mat-icon class="bg-icon">flight</mat-icon>
+    </div>
+  </section>
+
+  <!-- Stats Row -->
+  <div class="stats-grid">
+    <div class="stat-card blue">
+      <div class="stat-header">
+        <div class="stat-icon">
+          <mat-icon>local_shipping</mat-icon>
+        </div>
+        <div class="stat-trend">+12% vs last month</div>
+      </div>
+      <div class="stat-value">{{ summary.activeShipments }}</div>
+      <div class="stat-label">Active Shipments</div>
+    </div>
+
+    <div class="stat-card green">
+      <div class="stat-header">
+        <div class="stat-icon">
+          <mat-icon>check_circle</mat-icon>
+        </div>
+        <div class="stat-trend">+5%</div>
+      </div>
+      <div class="stat-value">{{ summary.deliveredThisMonth }}</div>
+      <div class="stat-label">Delivered This Month</div>
+    </div>
+
+    <div class="stat-card amber">
+      <div class="stat-header">
+        <div class="stat-icon">
+          <mat-icon>receipt</mat-icon>
+        </div>
+      </div>
+      <div class="stat-value">{{ summary.pendingInvoicesAmount | currency }}</div>
+      <div class="stat-label">{{ summary.pendingInvoicesCount }} Pending Invoices</div>
+    </div>
+
+    <div class="stat-card violet">
+      <div class="stat-header">
+        <div class="stat-icon">
+          <mat-icon>inventory_2</mat-icon>
+        </div>
+      </div>
+      <div class="stat-value">{{ summary.totalShipments }}</div>
+      <div class="stat-label">Total Shipments</div>
+    </div>
+  </div>
+
+  <div class="dashboard-grid">
+    <!-- Recent Shipments Table -->
+    <div class="grid-main">
+      <div class="content-card recent-shipments">
+        <div class="card-header">
+          <h3>Recent Shipments</h3>
+          <a routerLink="/user/shipments" class="view-all">View All →</a>
+        </div>
+        <div class="table-container">
+          <table class="cms-table">
+            <thead>
+              <tr>
+                <th>Tracking No</th>
+                <th>Origin → Destination</th>
+                <th>Service</th>
+                <th>Status</th>
+                <th>Action</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let shipment of summary.recentShipments">
+                <td><span class="tracking-no">{{ shipment.trackingNumber }}</span></td>
+                <td>
+                  <div class="route">
+                    {{ shipment.origin }} <mat-icon>arrow_forward</mat-icon> {{ shipment.destination }}
+                  </div>
+                </td>
+                <td>{{ shipment.serviceType }}</td>
+                <td>
+                  <span class="status-badge" [ngClass]="getStatusClass(shipment.status)">
+                    {{ shipment.status }}
+                  </span>
+                </td>
+                <td>
+                  <button mat-button class="track-btn" [routerLink]="['/user/track']" [queryParams]="{tracking: shipment.trackingNumber}">Track</button>
+                </td>
+              </tr>
+              <tr *ngIf="summary.recentShipments.length === 0">
+                <td colspan="5" class="empty-row">No recent shipments found.</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+
+    <!-- Active Tracking & Notifications -->
+    <div class="grid-side">
+      <!-- Active Tracking Mini-Card -->
+      <div class="content-card mini-tracking" *ngIf="summary.recentShipments[0] as active">
+        <div class="card-header">
+          <h3>Active Tracking</h3>
+        </div>
+        <div class="tracking-summary">
+          <div class="tracking-id">{{ active.trackingNumber }}</div>
+          <div class="tracking-status">In Transit</div>
+          
+          <div class="mini-timeline">
+            <div class="step completed"><div class="dot"></div></div>
+            <div class="step active"><div class="dot pulsing"></div></div>
+            <div class="step"><div class="dot"></div></div>
+            <div class="step"><div class="dot"></div></div>
+          </div>
+          
+          <a [routerLink]="['/user/track']" [queryParams]="{tracking: active.trackingNumber}" class="view-full">View Full Tracking →</a>
+        </div>
+      </div>
+
+      <!-- Notifications Panel -->
+      <div class="content-card notifications-panel">
+        <div class="card-header">
+          <h3>Notifications</h3>
+          <a routerLink="/user/notifications" class="view-all">View All</a>
+        </div>
+        <div class="notification-list">
+          <div class="notification-item" *ngFor="let note of summary.recentNotifications">
+            <div class="note-icon" [ngClass]="note.type">
+              <mat-icon>notifications</mat-icon>
+            </div>
+            <div class="note-content">
+              <p>{{ note.message }}</p>
+              <span class="time">{{ note.createdAt | date:'shortTime' }}</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<ng-template #loading>
+  <div class="skeleton-dashboard">
+    <!-- Skeleton Loading placeholders -->
+    <div class="skeleton-banner"></div>
+    <div class="skeleton-stats">
+      <div class="skeleton-card" *ngFor="let i of [1,2,3,4]"></div>
+    </div>
+  </div>
+</ng-template>

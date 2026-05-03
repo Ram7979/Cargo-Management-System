@@ -1,7 +1,7 @@
 <div class="page-header">
   <h2>Driver Management</h2>
   <div class="header-actions">
-    <button mat-raised-button color="primary">
+    <button mat-raised-button color="primary" (click)="openRegisterDriver()">
       <mat-icon>person_add</mat-icon> Register Driver
     </button>
   </div>
@@ -33,7 +33,7 @@
       <th mat-header-cell *matHeaderCellDef>Assigned Vehicle</th>
       <td mat-cell *matCellDef="let driver"> 
         <span *ngIf="driver.currentVehiclePlate" class="plate-tag">{{ driver.currentVehiclePlate }}</span>
-        <span *ngIf="!driver.currentVehiclePlate" class="muted">None</span>
+        <span *ngIf="!driver.currentVehiclePlate" class="muted">Unassigned</span>
       </td>
     </ng-container>
 

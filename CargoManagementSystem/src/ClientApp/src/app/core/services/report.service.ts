@@ -20,8 +20,14 @@ export class ReportService extends BaseApiService<any> {
   }
 
   getShipmentReport(filters: ReportFilter): Observable<ApiResponse<any[]>> {
-    const params = { ...filters };
-    return this.http.get<ApiResponse<any[]>>(`${this.apiUrl}/shipments`, { params: params as any });
+    // Backend expects DateTime-compatible ISO strings, not raw Date objects
+    const params: any = {};
+    if (filters.fromDate) params['fromDate'] = new Date(filters.fromDate).toISOString();
+    if (filters.toDate)   params['toDate']   = new Date(filters.toDate + 'T23:59:59').toISOString();
+    if (filters.status && filters.status !== 'All') params['status'] = filters.status;
+    if (filters.originCity)      params['origin']      = filters.originCity;
+    if (filters.destinationCity) params['destination'] = filters.destinationCity;
+    return this.http.get<ApiResponse<any[]>>(`${this.apiUrl}/shipments`, { params });
   }
 
   exportToCsv(data: any[], fileName: string) {

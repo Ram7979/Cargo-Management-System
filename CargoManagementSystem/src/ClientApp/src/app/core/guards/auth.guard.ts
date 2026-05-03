@@ -6,12 +6,11 @@ export const authGuard: CanActivateFn = (route, state) => {
   const authService = inject(AuthService);
   const router = inject(Router);
 
-  if (authService.isAuthenticated()) {
-    // Check if route requires specific role
-    const requiredRoles = route.data['roles'] as Array<string>;
-    if (requiredRoles) {
-      const hasRole = requiredRoles.some(role => authService.hasRole(role));
-      if (!hasRole) {
+  if (authService.isLoggedIn()) {
+    const requiredRole = route.data['role'] as string;
+    if (requiredRole) {
+      const userRole = authService.getUserRole();
+      if (userRole !== requiredRole && userRole !== 'Admin' && userRole !== 'SuperAdmin') {
         router.navigate(['/unauthorized']);
         return false;
       }
@@ -19,7 +18,6 @@ export const authGuard: CanActivateFn = (route, state) => {
     return true;
   }
 
-  // Not logged in, redirect to login page with the return url
   router.navigate(['/auth/login'], { queryParams: { returnUrl: state.url } });
   return false;
 };

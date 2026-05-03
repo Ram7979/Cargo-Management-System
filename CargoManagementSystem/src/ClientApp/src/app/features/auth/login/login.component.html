@@ -6,6 +6,11 @@
       <p>Please login to your account</p>
     </div>
 
+    <div *ngIf="errorMessage" class="error-alert">
+      <mat-icon>error_outline</mat-icon>
+      <span>{{ errorMessage }}</span>
+    </div>
+
     <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
       <mat-form-field appearance="outline" class="full-width">
         <mat-label>Email</mat-label>
