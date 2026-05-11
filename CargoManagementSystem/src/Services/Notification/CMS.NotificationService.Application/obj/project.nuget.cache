@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "sP9Fi0BXhAA=",
+  "dgSpecHash": "ULRka0Ykeuo=",
   "success": true,
-  "projectFilePath": "D:\\Files\\CMS\\CargoManagementSystem\\src\\Services\\Notification\\CMS.NotificationService.Application\\CMS.NotificationService.Application.csproj",
+  "projectFilePath": "d:\\Files\\CMS\\CargoManagementSystem\\src\\Services\\Notification\\CMS.NotificationService.Application\\CMS.NotificationService.Application.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\HP\\.nuget\\packages\\automapper\\16.1.1\\automapper.16.1.1.nupkg.sha512",
     "C:\\Users\\HP\\.nuget\\packages\\fluentvalidation\\11.11.0\\fluentvalidation.11.11.0.nupkg.sha512",
@@ -45,9 +45,9 @@
       "code": "NU1903",
       "level": "Warning",
       "message": "Package 'Newtonsoft.Json' 11.0.1 has a known high severity vulnerability, https://github.com/advisories/GHSA-5crp-9r3c-p9vr",
-      "projectPath": "D:\\Files\\CMS\\CargoManagementSystem\\src\\Services\\Notification\\CMS.NotificationService.Application\\CMS.NotificationService.Application.csproj",
+      "projectPath": "d:\\Files\\CMS\\CargoManagementSystem\\src\\Services\\Notification\\CMS.NotificationService.Application\\CMS.NotificationService.Application.csproj",
       "warningLevel": 1,
-      "filePath": "D:\\Files\\CMS\\CargoManagementSystem\\src\\Services\\Notification\\CMS.NotificationService.Application\\CMS.NotificationService.Application.csproj",
+      "filePath": "d:\\Files\\CMS\\CargoManagementSystem\\src\\Services\\Notification\\CMS.NotificationService.Application\\CMS.NotificationService.Application.csproj",
       "libraryId": "Newtonsoft.Json",
       "targetGraphs": [
         "net10.0"

@@ -1,0 +1,145 @@
+<div class="page-header">
+  <div class="header-left">
+    <button mat-icon-button routerLink="/shipments" class="back-btn">
+      <mat-icon>arrow_back</mat-icon>
+    </button>
+    <h2>Shipment Detail: {{ shipment?.trackingNumber }}</h2>
+  </div>
+  <div class="header-actions" *ngIf="shipment">
+    <button mat-stroked-button color="primary" class="me-2" (click)="printLabel()" [disabled]="isPrinting">
+      <mat-icon *ngIf="!isPrinting">print</mat-icon>
+      <mat-spinner diameter="18" *ngIf="isPrinting" class="inline-spinner"></mat-spinner>
+      Print Label
+    </button>
+    <button mat-raised-button color="primary" (click)="openStatusDialog()" [disabled]="isUpdatingStatus">
+      <mat-icon *ngIf="!isUpdatingStatus">edit</mat-icon>
+      <mat-spinner diameter="18" *ngIf="isUpdatingStatus" class="inline-spinner"></mat-spinner>
+      Update Status
+    </button>
+  </div>
+</div>
+
+<div class="loading-shade" *ngIf="isLoading">
+  <mat-spinner></mat-spinner>
+</div>
+
+<div class="content-grid" *ngIf="shipment">
+  <div class="main-info">
+    <div class="card-container status-card">
+      <div class="status-header">
+        <div class="status-label">Current Status</div>
+        <div class="status-badge" [ngClass]="getStatusClass(shipment.status)">
+          {{ shipment.status }}
+        </div>
+      </div>
+      <div class="estimated-delivery" *ngIf="shipment.estimatedDeliveryDate">
+        <mat-icon>event</mat-icon>
+        <span>Estimated Delivery: <b>{{ shipment.estimatedDeliveryDate | date:'mediumDate' }}</b></span>
+      </div>
+    </div>
+
+    <div class="grid-row">
+      <div class="card-container info-card">
+        <h3><mat-icon>sender</mat-icon> Sender Information</h3>
+        <mat-divider></mat-divider>
+        <div class="info-content">
+          <div class="info-item">
+            <span class="label">Name:</span>
+            <span class="value">{{ shipment.senderName }}</span>
+          </div>
+          <div class="info-item">
+            <span class="label">Address:</span>
+            <span class="value">{{ shipment.originAddress }}</span>
+          </div>
+          <div class="info-item">
+            <span class="label">Location:</span>
+            <span class="value">{{ shipment.senderCity }}, {{ shipment.senderCountry }}</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="card-container info-card">
+        <h3><mat-icon>call_received</mat-icon> Recipient Information</h3>
+        <mat-divider></mat-divider>
+        <div class="info-content">
+          <div class="info-item">
+            <span class="label">Name:</span>
+            <span class="value">{{ shipment.recipientName }}</span>
+          </div>
+          <div class="info-item">
+            <span class="label">Address:</span>
+            <span class="value">{{ shipment.destinationAddress }}</span>
+          </div>
+          <div class="info-item">
+            <span class="label">Location:</span>
+            <span class="value">{{ shipment.recipientCity }}, {{ shipment.recipientCountry }}</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="card-container info-card">
+      <h3><mat-icon>inventory_2</mat-icon> Cargo Details</h3>
+      <mat-divider></mat-divider>
+      <div class="cargo-grid">
+        <div class="cargo-item">
+          <span class="label">Type:</span>
+          <span class="value">{{ shipment.cargoType }}</span>
+        </div>
+        <div class="cargo-item">
+          <span class="label">Weight:</span>
+          <span class="value">{{ shipment.weightKg }} KG</span>
+        </div>
+        <div class="cargo-item">
+          <span class="label">Volume:</span>
+          <span class="value">{{ shipment.volumeCbm }} CBM</span>
+        </div>
+        <div class="cargo-item">
+          <span class="label">Quantity:</span>
+          <span class="value">{{ shipment.quantity }} Pcs</span>
+        </div>
+      </div>
+      <div class="description-box">
+        <span class="label">Description:</span>
+        <p>{{ shipment.cargoDescription }}</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="side-panel">
+    <div class="card-container map-card">
+      <div class="map-header">
+        <h3><mat-icon>map</mat-icon> Live Tracking</h3>
+        <span class="live-indicator" *ngIf="shipment.status === 'In Transit'">
+          <span class="dot"></span> Live
+        </span>
+      </div>
+      <div id="map" class="tracking-map"></div>
+      <div class="last-seen" *ngIf="shipment.lastKnownLocation">
+        Last updated: {{ shipment.lastKnownLocation.recordedAt | date:'medium' }}
+      </div>
+    </div>
+
+    <div class="card-container document-card">
+      <h3><mat-icon>description</mat-icon> Documents</h3>
+      <mat-divider></mat-divider>
+      <div class="document-list">
+        <a (click)="openDoc('bol')" href="javascript:void(0)" class="doc-item">
+          <mat-icon>picture_as_pdf</mat-icon>
+          <span>Bill of Lading (BOL)</span>
+          <mat-icon class="download-icon">open_in_new</mat-icon>
+        </a>
+        <div class="doc-item disabled" *ngIf="!shipment.podImageUrl">
+          <mat-icon>verified</mat-icon>
+          <span>Proof of Delivery (POD)</span>
+          <span class="status-text">Pending</span>
+        </div>
+        <a (click)="openDoc('pod')" href="javascript:void(0)" class="doc-item" *ngIf="shipment.podImageUrl">
+          <mat-icon>verified</mat-icon>
+          <span>Proof of Delivery (POD)</span>
+          <mat-icon class="download-icon">open_in_new</mat-icon>
+        </a>
+      </div>
+    </div>
+  </div>
+</div>

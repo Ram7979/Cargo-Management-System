@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "L7/RQc/rWGg=",
+  "dgSpecHash": "T8kuoFbjmeM=",
   "success": true,
-  "projectFilePath": "D:\\Files\\CMS\\CargoManagementSystem\\src\\Gateway\\CMS.ApiGateway\\CMS.ApiGateway.csproj",
+  "projectFilePath": "d:\\Files\\CMS\\CargoManagementSystem\\src\\Gateway\\CMS.ApiGateway\\CMS.ApiGateway.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\HP\\.nuget\\packages\\azure.core\\1.25.0\\azure.core.1.25.0.nupkg.sha512",
     "C:\\Users\\HP\\.nuget\\packages\\azure.identity\\1.7.0\\azure.identity.1.7.0.nupkg.sha512",
@@ -68,9 +68,9 @@
       "code": "NU1603",
       "level": "Warning",
       "message": "CMS.ApiGateway depends on MMLib.SwaggerForOcelot (>= 8.2.2) but MMLib.SwaggerForOcelot 8.2.2 was not found. MMLib.SwaggerForOcelot 8.3.0 was resolved instead.",
-      "projectPath": "D:\\Files\\CMS\\CargoManagementSystem\\src\\Gateway\\CMS.ApiGateway\\CMS.ApiGateway.csproj",
+      "projectPath": "d:\\Files\\CMS\\CargoManagementSystem\\src\\Gateway\\CMS.ApiGateway\\CMS.ApiGateway.csproj",
       "warningLevel": 1,
-      "filePath": "D:\\Files\\CMS\\CargoManagementSystem\\src\\Gateway\\CMS.ApiGateway\\CMS.ApiGateway.csproj",
+      "filePath": "d:\\Files\\CMS\\CargoManagementSystem\\src\\Gateway\\CMS.ApiGateway\\CMS.ApiGateway.csproj",
       "libraryId": "MMLib.SwaggerForOcelot",
       "targetGraphs": [
         "net10.0"
@@ -80,9 +80,9 @@
       "code": "NU1903",
       "level": "Warning",
       "message": "Package 'Azure.Identity' 1.7.0 has a known high severity vulnerability, https://github.com/advisories/GHSA-5mfx-4wcx-rv27",
-      "projectPath": "D:\\Files\\CMS\\CargoManagementSystem\\src\\Gateway\\CMS.ApiGateway\\CMS.ApiGateway.csproj",
+      "projectPath": "d:\\Files\\CMS\\CargoManagementSystem\\src\\Gateway\\CMS.ApiGateway\\CMS.ApiGateway.csproj",
       "warningLevel": 1,
-      "filePath": "D:\\Files\\CMS\\CargoManagementSystem\\src\\Gateway\\CMS.ApiGateway\\CMS.ApiGateway.csproj",
+      "filePath": "d:\\Files\\CMS\\CargoManagementSystem\\src\\Gateway\\CMS.ApiGateway\\CMS.ApiGateway.csproj",
       "libraryId": "Azure.Identity",
       "targetGraphs": [
         "net10.0"
@@ -92,9 +92,9 @@
       "code": "NU1902",
       "level": "Warning",
       "message": "Package 'Azure.Identity' 1.7.0 has a known moderate severity vulnerability, https://github.com/advisories/GHSA-m5vv-6r4h-3vj9",
-      "projectPath": "D:\\Files\\CMS\\CargoManagementSystem\\src\\Gateway\\CMS.ApiGateway\\CMS.ApiGateway.csproj",
+      "projectPath": "d:\\Files\\CMS\\CargoManagementSystem\\src\\Gateway\\CMS.ApiGateway\\CMS.ApiGateway.csproj",
       "warningLevel": 1,
-      "filePath": "D:\\Files\\CMS\\CargoManagementSystem\\src\\Gateway\\CMS.ApiGateway\\CMS.ApiGateway.csproj",
+      "filePath": "d:\\Files\\CMS\\CargoManagementSystem\\src\\Gateway\\CMS.ApiGateway\\CMS.ApiGateway.csproj",
       "libraryId": "Azure.Identity",
       "targetGraphs": [
         "net10.0"
@@ -104,9 +104,9 @@
       "code": "NU1902",
       "level": "Warning",
       "message": "Package 'Azure.Identity' 1.7.0 has a known moderate severity vulnerability, https://github.com/advisories/GHSA-wvxc-855f-jvrv",
-      "projectPath": "D:\\Files\\CMS\\CargoManagementSystem\\src\\Gateway\\CMS.ApiGateway\\CMS.ApiGateway.csproj",
+      "projectPath": "d:\\Files\\CMS\\CargoManagementSystem\\src\\Gateway\\CMS.ApiGateway\\CMS.ApiGateway.csproj",
       "warningLevel": 1,
-      "filePath": "D:\\Files\\CMS\\CargoManagementSystem\\src\\Gateway\\CMS.ApiGateway\\CMS.ApiGateway.csproj",
+      "filePath": "d:\\Files\\CMS\\CargoManagementSystem\\src\\Gateway\\CMS.ApiGateway\\CMS.ApiGateway.csproj",
       "libraryId": "Azure.Identity",
       "targetGraphs": [
         "net10.0"
@@ -116,9 +116,9 @@
       "code": "NU1903",
       "level": "Warning",
       "message": "Package 'Microsoft.Data.SqlClient' 5.1.0 has a known high severity vulnerability, https://github.com/advisories/GHSA-98g6-xh36-x2p7",
-      "projectPath": "D:\\Files\\CMS\\CargoManagementSystem\\src\\Gateway\\CMS.ApiGateway\\CMS.ApiGateway.csproj",
+      "projectPath": "d:\\Files\\CMS\\CargoManagementSystem\\src\\Gateway\\CMS.ApiGateway\\CMS.ApiGateway.csproj",
       "warningLevel": 1,
-      "filePath": "D:\\Files\\CMS\\CargoManagementSystem\\src\\Gateway\\CMS.ApiGateway\\CMS.ApiGateway.csproj",
+      "filePath": "d:\\Files\\CMS\\CargoManagementSystem\\src\\Gateway\\CMS.ApiGateway\\CMS.ApiGateway.csproj",
       "libraryId": "Microsoft.Data.SqlClient",
       "targetGraphs": [
         "net10.0"

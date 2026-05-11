@@ -1,0 +1,61 @@
+<div class="page-header">
+  <div class="header-title">
+    <h2>Fleet Overview</h2>
+    <p>Monitor vehicle status, drivers, and capacity utilization</p>
+  </div>
+  <div class="header-actions">
+    <button mat-stroked-button color="primary" (click)="loadVehicles()">
+      <mat-icon>refresh</mat-icon> Refresh
+    </button>
+    <button mat-raised-button color="primary" routerLink="/fleet/new">
+      <mat-icon>add</mat-icon> Add Vehicle
+    </button>
+  </div>
+</div>
+
+<div class="loading-shade" *ngIf="isLoading">
+  <mat-spinner diameter="40"></mat-spinner>
+</div>
+
+<div class="fleet-grid" *ngIf="!isLoading">
+  <mat-card class="vehicle-card" *ngFor="let vehicle of vehicles" [routerLink]="['/fleet', vehicle.id]">
+    <mat-card-header>
+      <div mat-card-avatar class="vehicle-icon-box">
+        <mat-icon>{{ getVehicleIcon(vehicle.type) }}</mat-icon>
+      </div>
+      <mat-card-title>{{ vehicle.plateNumber }}</mat-card-title>
+      <mat-card-subtitle>{{ vehicle.make }} {{ vehicle.model }} ({{ vehicle.type }})</mat-card-subtitle>
+    </mat-card-header>
+    
+    <mat-card-content>
+      <div class="info-row">
+        <span class="label">Driver:</span>
+        <span class="value">{{ vehicle.currentDriverName || 'Unassigned' }}</span>
+      </div>
+      
+      <div class="capacity-section">
+        <div class="capacity-label">
+          <span>Capacity Usage</span>
+          <span>{{ vehicle.capacityKg }} kg</span>
+        </div>
+        <mat-progress-bar mode="determinate" value="0"></mat-progress-bar>
+      </div>
+
+      <div class="status-footer">
+        <app-status-chip [status]="vehicle.status"></app-status-chip>
+        <span class="location" *ngIf="vehicle.currentLatitude">
+          <mat-icon>location_on</mat-icon> Tracking Live
+        </span>
+      </div>
+    </mat-card-content>
+  </mat-card>
+</div>
+
+<div class="empty-state" *ngIf="!isLoading && vehicles.length === 0">
+  <mat-icon>no_transportation</mat-icon>
+  <h3>No vehicles found</h3>
+  <p>Your fleet is currently empty. Add your first vehicle to get started.</p>
+  <button mat-raised-button color="primary" routerLink="/fleet/new">
+    <mat-icon>add</mat-icon> Add Vehicle
+  </button>
+</div>

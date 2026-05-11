@@ -1,0 +1,6 @@
+@CMS.BillingService.API_HostAddress = http://localhost:5063
+
+GET {{CMS.BillingService.API_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

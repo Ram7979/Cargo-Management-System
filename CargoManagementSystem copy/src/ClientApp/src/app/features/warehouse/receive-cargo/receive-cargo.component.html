@@ -1,0 +1,310 @@
+<div class="receive-cargo-page">
+  <!-- Page Header -->
+  <div class="page-header">
+    <div class="header-content">
+      <div class="title-area">
+        <mat-icon class="header-icon">local_shipping</mat-icon>
+        <div>
+          <h2>Warehouse Operations: Receive Cargo</h2>
+          <p class="subtitle">Scan, verify, and check-in incoming shipments</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="content-grid">
+    <!-- ─── LEFT PANEL: Scanning & Check-in ─── -->
+    <div class="left-panel">
+      <mat-card class="action-card" id="receive-cargo-form-card">
+        <mat-card-header>
+          <mat-icon mat-card-avatar class="card-header-icon">qr_code_scanner</mat-icon>
+          <mat-card-title>Scanning &amp; Check-in</mat-card-title>
+          <mat-card-subtitle>Scan barcode or enter tracking number</mat-card-subtitle>
+        </mat-card-header>
+
+        <mat-divider></mat-divider>
+
+        <mat-card-content>
+          <form [formGroup]="receiveForm" (ngSubmit)="onSubmit()">
+
+            <!-- Step 1: Tracking Number Search -->
+            <div class="form-section">
+              <div class="section-label">
+                <span class="step-badge">1</span>
+                <span>Scan Tracking Number</span>
+              </div>
+              <mat-form-field appearance="outline" class="full-width">
+                <mat-label>Tracking Number</mat-label>
+                <input matInput
+                       formControlName="trackingNumber"
+                       placeholder="e.g. CMS-2026-000004"
+                       (keyup.enter)="searchShipment()"
+                       id="tracking-number-input">
+                <button type="button" mat-icon-button matSuffix
+                        (click)="searchShipment()"
+                        [disabled]="isSearching"
+                        matTooltip="Search Shipment"
+                        id="search-shipment-btn">
+                  <mat-icon *ngIf="!isSearching">search</mat-icon>
+                  <mat-icon *ngIf="isSearching" class="spin-icon">sync</mat-icon>
+                </button>
+                <mat-hint>Enter tracking number or scan barcode</mat-hint>
+              </mat-form-field>
+            </div>
+
+            <!-- Step 2: Warehouse Selection (visible after shipment found) -->
+            <div class="form-section" *ngIf="foundShipment">
+              <div class="section-label">
+                <span class="step-badge">2</span>
+                <span>Select Warehouse</span>
+              </div>
+
+              <div *ngIf="isLoadingWarehouses" class="loading-inline">
+                <mat-spinner diameter="20"></mat-spinner>
+                <span>Loading warehouses…</span>
+              </div>
+
+              <mat-form-field appearance="outline" class="full-width" *ngIf="!isLoadingWarehouses">
+                <mat-label>Warehouse</mat-label>
+                <mat-select formControlName="warehouseId" id="warehouse-select">
+                  <mat-option *ngFor="let w of warehouses" [value]="w.id">
+                    <div class="warehouse-option">
+                      <span class="wh-name">{{ w.name }}</span>
+                      <span class="wh-location">{{ w.city }}<span *ngIf="w.country">, {{ w.country }}</span></span>
+                      <span class="wh-bins" *ngIf="w.totalBins">{{ w.availableBins }}/{{ w.totalBins }} bins free</span>
+                    </div>
+                  </mat-option>
+                </mat-select>
+                <mat-icon matPrefix>warehouse</mat-icon>
+                <mat-error *ngIf="receiveForm.get('warehouseId')?.hasError('required')">Warehouse is required</mat-error>
+              </mat-form-field>
+
+              <div class="no-data-hint" *ngIf="!isLoadingWarehouses && warehouses.length === 0">
+                <mat-icon>warning_amber</mat-icon>
+                <span>No warehouses available. Please configure warehouses in the admin panel.</span>
+              </div>
+            </div>
+
+            <!-- Step 3: Bin Location (visible after warehouse selected) -->
+            <div class="form-section" *ngIf="foundShipment && receiveForm.get('warehouseId')?.value">
+              <div class="section-label">
+                <span class="step-badge">3</span>
+                <span>Bin Location</span>
+              </div>
+
+              <div *ngIf="isLoadingBins" class="loading-inline">
+                <mat-spinner diameter="20"></mat-spinner>
+                <span>Loading available bins…</span>
+              </div>
+
+              <mat-form-field appearance="outline" class="full-width" *ngIf="!isLoadingBins">
+                <mat-label>Bin Location (optional)</mat-label>
+                <mat-select formControlName="binId" id="bin-select">
+                  <mat-option value="">Auto-assign available bin</mat-option>
+                  <mat-option *ngFor="let b of bins" [value]="b.id">
+                    {{ b.binCode }} <span class="bin-detail" *ngIf="b.zone"> — Zone: {{ b.zone }}</span>
+                    <span class="bin-detail" *ngIf="b.capacityKg"> ({{ b.capacityKg }} kg)</span>
+                  </mat-option>
+                </mat-select>
+                <mat-icon matPrefix>grid_view</mat-icon>
+                <mat-hint *ngIf="bins.length > 0">{{ bins.length }} bin(s) available</mat-hint>
+                <mat-hint *ngIf="bins.length === 0">No free bins — will be auto-assigned</mat-hint>
+              </mat-form-field>
+            </div>
+
+            <!-- Step 4: Remarks & Damage -->
+            <div class="form-section" *ngIf="foundShipment && receiveForm.get('warehouseId')?.value">
+              <div class="section-label">
+                <span class="step-badge">4</span>
+                <span>Remarks &amp; Condition</span>
+              </div>
+
+              <mat-form-field appearance="outline" class="full-width">
+                <mat-label>Remarks / Condition Notes</mat-label>
+                <textarea matInput formControlName="remarks" rows="3"
+                          placeholder="e.g. Box slightly damaged, all items intact"
+                          id="remarks-input"></textarea>
+                <mat-hint>Optional notes about cargo condition</mat-hint>
+              </mat-form-field>
+
+              <div class="damage-section">
+                <mat-checkbox formControlName="hasDamageReport" color="warn" id="damage-checkbox">
+                  <mat-icon class="damage-icon">report_problem</mat-icon>
+                  Report Damage
+                </mat-checkbox>
+
+                <mat-form-field appearance="outline" class="full-width"
+                                *ngIf="receiveForm.get('hasDamageReport')?.value">
+                  <mat-label>Damage Details</mat-label>
+                  <textarea matInput formControlName="damageNotes" rows="3"
+                            placeholder="Describe the damage in detail…"
+                            id="damage-notes-input"></textarea>
+                  <mat-error>Damage notes are required when reporting damage</mat-error>
+                </mat-form-field>
+              </div>
+            </div>
+
+            <!-- Submit Button -->
+            <div class="submit-area" *ngIf="foundShipment && receiveForm.get('warehouseId')?.value">
+              <button mat-raised-button color="primary"
+                      class="full-width submit-btn"
+                      type="submit"
+                      [disabled]="receiveForm.invalid || isSubmitting || !foundShipment"
+                      id="confirm-receipt-btn">
+                <mat-icon *ngIf="!isSubmitting">check_circle</mat-icon>
+                <mat-spinner *ngIf="isSubmitting" diameter="20" class="btn-spinner"></mat-spinner>
+                <span>{{ isSubmitting ? 'Processing…' : 'Confirm Receipt' }}</span>
+              </button>
+            </div>
+          </form>
+        </mat-card-content>
+      </mat-card>
+    </div>
+
+    <!-- ─── RIGHT PANEL: Preview & Receipt ─── -->
+    <div class="right-panel">
+
+      <!-- Shipment Preview Card -->
+      <mat-card class="preview-card" *ngIf="foundShipment" id="shipment-preview-card">
+        <mat-card-header>
+          <div mat-card-avatar class="preview-avatar">
+            <mat-icon>inventory_2</mat-icon>
+          </div>
+          <mat-card-title>{{ foundShipment.trackingNumber }}</mat-card-title>
+          <mat-card-subtitle>{{ foundShipment.cargoType || 'Standard Cargo' }}</mat-card-subtitle>
+        </mat-card-header>
+
+        <mat-divider></mat-divider>
+
+        <mat-card-content>
+          <div class="info-grid">
+            <div class="info-item">
+              <mat-icon class="info-icon">person</mat-icon>
+              <div>
+                <span class="label">Sender</span>
+                <span class="value">{{ foundShipment.senderName || '—' }}</span>
+              </div>
+            </div>
+            <div class="info-item">
+              <mat-icon class="info-icon">person_outline</mat-icon>
+              <div>
+                <span class="label">Recipient</span>
+                <span class="value">{{ foundShipment.recipientName || '—' }}</span>
+              </div>
+            </div>
+            <div class="info-item">
+              <mat-icon class="info-icon">place</mat-icon>
+              <div>
+                <span class="label">Origin</span>
+                <span class="value">{{ foundShipment.senderCity || foundShipment.originAddress || '—' }}</span>
+              </div>
+            </div>
+            <div class="info-item">
+              <mat-icon class="info-icon">flag</mat-icon>
+              <div>
+                <span class="label">Destination</span>
+                <span class="value">{{ foundShipment.recipientCity || foundShipment.destinationAddress || '—' }}<span *ngIf="foundShipment.recipientCountry">, {{ foundShipment.recipientCountry }}</span></span>
+              </div>
+            </div>
+            <div class="info-item">
+              <mat-icon class="info-icon">scale</mat-icon>
+              <div>
+                <span class="label">Total Weight</span>
+                <span class="value">{{ foundShipment.weightKg || 0 }} KG</span>
+              </div>
+            </div>
+            <div class="info-item">
+              <mat-icon class="info-icon">straighten</mat-icon>
+              <div>
+                <span class="label">Volume</span>
+                <span class="value">{{ foundShipment.volumeCbm || 0 }} CBM</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="status-indicator" [ngClass]="foundShipment.status.toLowerCase()">
+            <span class="dot" [ngClass]="foundShipment.status.toLowerCase()"></span>
+            <span>Current Status: <b>{{ foundShipment.status }}</b></span>
+          </div>
+        </mat-card-content>
+      </mat-card>
+
+      <!-- Warning: Already delivered -->
+      <div class="alert-box warning" *ngIf="foundShipment?.status === 'Delivered'">
+        <mat-icon>warning</mat-icon>
+        <span>This shipment is already marked as <strong>Delivered</strong>. Please verify before receiving.</span>
+      </div>
+
+      <!-- Warning: Already at warehouse -->
+      <div class="alert-box info" *ngIf="foundShipment?.status === 'AtWarehouse'">
+        <mat-icon>info</mat-icon>
+        <span>This shipment is already marked as <strong>At Warehouse</strong>. It may have been received before.</span>
+      </div>
+
+      <!-- ─── Receipt Generated Card ─── -->
+      <mat-card class="receipt-card" *ngIf="receiptResult" id="receipt-card">
+        <mat-card-header>
+          <div mat-card-avatar class="receipt-avatar">
+            <mat-icon>receipt_long</mat-icon>
+          </div>
+          <mat-card-title>Receipt Generated</mat-card-title>
+          <mat-card-subtitle>Cargo successfully received</mat-card-subtitle>
+        </mat-card-header>
+
+        <mat-divider></mat-divider>
+
+        <mat-card-content>
+          <div class="receipt-details">
+            <div class="receipt-row">
+              <span class="receipt-label">Receipt ID</span>
+              <span class="receipt-value mono">{{ receiptResult.id }}</span>
+            </div>
+            <div class="receipt-row">
+              <span class="receipt-label">Tracking #</span>
+              <span class="receipt-value">{{ receiptResult.trackingNumber }}</span>
+            </div>
+            <div class="receipt-row">
+              <span class="receipt-label">Warehouse</span>
+              <span class="receipt-value">{{ getSelectedWarehouseName() || receiptResult.warehouseId }}</span>
+            </div>
+            <div class="receipt-row">
+              <span class="receipt-label">Bin Assigned</span>
+              <span class="receipt-value">{{ receiptResult.binId }}</span>
+            </div>
+            <div class="receipt-row">
+              <span class="receipt-label">Received At</span>
+              <span class="receipt-value">{{ receiptResult.receivedAt | date:'medium' }}</span>
+            </div>
+            <div class="receipt-row" *ngIf="receiptResult.hasReport">
+              <span class="receipt-label">Damage Report</span>
+              <span class="receipt-value damage-flag">⚠ Damage Reported</span>
+            </div>
+          </div>
+
+          <div class="receipt-actions">
+            <button mat-stroked-button color="primary" (click)="resetForm()" id="receive-another-btn">
+              <mat-icon>add_circle_outline</mat-icon>
+              Receive Another
+            </button>
+          </div>
+        </mat-card-content>
+      </mat-card>
+
+      <!-- Empty State -->
+      <div class="empty-preview" *ngIf="!foundShipment && !isSearching && !receiptResult">
+        <div class="empty-icon-container">
+          <mat-icon>qr_code_scanner</mat-icon>
+        </div>
+        <h3>Ready to Scan</h3>
+        <p>Scan a shipment barcode or enter a tracking number to begin the warehouse check-in process.</p>
+      </div>
+
+      <!-- Searching State -->
+      <div class="empty-preview searching" *ngIf="isSearching">
+        <mat-spinner diameter="48"></mat-spinner>
+        <h3>Searching…</h3>
+        <p>Looking up the shipment in the system.</p>
+      </div>
+    </div>
+  </div>
+</div>

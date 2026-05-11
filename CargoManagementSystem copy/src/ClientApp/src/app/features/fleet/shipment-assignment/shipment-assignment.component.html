@@ -1,0 +1,88 @@
+<div class="page-header">
+  <h2>Dispatch Center</h2>
+</div>
+
+<div class="dispatch-grid">
+  <!-- Pending List -->
+  <mat-card class="pending-card">
+    <mat-card-header>
+      <mat-card-title>Pending Assignments ({{ pendingShipments.length }})</mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+      <div class="pending-list">
+        <div class="shipment-item" 
+             *ngFor="let s of pendingShipments" 
+             [class.selected]="selectedShipment?.id === s.id"
+             (click)="selectShipment(s)">
+          <div class="item-header">
+            <span class="tracking">{{ s.trackingNumber }}</span>
+            <span class="cargo-type">{{ s.cargoType }}</span>
+          </div>
+          <div class="item-route">
+            <span>{{ s.senderCity }}</span>
+            <mat-icon>arrow_forward</mat-icon>
+            <span>{{ s.recipientCity }}</span>
+          </div>
+          <div class="item-meta">
+            <span>{{ s.weightKg }} KG</span>
+            <span>Created: {{ s.createdAt | date:'shortDate' }}</span>
+          </div>
+        </div>
+      </div>
+      <div class="empty-state" *ngIf="pendingShipments.length === 0">
+        <mat-icon>done_all</mat-icon>
+        <p>All shipments have been assigned.</p>
+      </div>
+    </mat-card-content>
+  </mat-card>
+
+  <!-- Assignment Panel -->
+  <mat-card class="action-card">
+    <mat-card-header>
+      <mat-card-title>Allocation Workflow</mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+      <div *ngIf="!selectedShipment" class="no-selection">
+        <mat-icon>touch_app</mat-icon>
+        <p>Select a shipment from the left to begin assignment.</p>
+      </div>
+
+      <div *ngIf="selectedShipment" class="assignment-form">
+        <div class="summary-box">
+          <div class="label">Shipment Selected</div>
+          <div class="value">{{ selectedShipment.trackingNumber }}</div>
+          <div class="sub-value">Destination: {{ selectedShipment.recipientCity }}, {{ selectedShipment.recipientCountry }}</div>
+        </div>
+
+        <mat-form-field appearance="outline" class="w-100 mt-4">
+          <mat-label>Available Vehicles</mat-label>
+          <mat-select [(ngModel)]="selectedVehicleId">
+            <mat-option *ngFor="let v of availableVehicles" [value]="v.id">
+              {{ v.plateNumber }} ({{ v.vehicleType }} - {{ v.capacityKg }}kg)
+            </mat-option>
+          </mat-select>
+          <mat-icon matPrefix>local_shipping</mat-icon>
+        </mat-form-field>
+
+        <mat-form-field appearance="outline" class="w-100">
+          <mat-label>Available Drivers</mat-label>
+          <mat-select [(ngModel)]="selectedDriverId">
+            <mat-option *ngFor="let d of availableDrivers" [value]="d.id">
+              {{ d.firstName }} {{ d.lastName }} (Lic: {{ d.licenseNumber }})
+            </mat-option>
+          </mat-select>
+          <mat-icon matPrefix>person</mat-icon>
+        </mat-form-field>
+
+        <div class="form-actions">
+          <button mat-button (click)="resetSelection()">Cancel</button>
+          <button mat-raised-button color="primary" 
+                  [disabled]="!selectedVehicleId || !selectedDriverId || isSubmitting"
+                  (click)="onDispatch()">
+            <mat-icon>send</mat-icon> Finalize & Dispatch
+          </button>
+        </div>
+      </div>
+    </mat-card-content>
+  </mat-card>
+</div>

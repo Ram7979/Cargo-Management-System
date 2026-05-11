@@ -1703,11 +1703,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Files\\CMS\\CargoManagementSystem\\src\\Services\\Shipment\\CMS.ShipmentService.Application\\CMS.ShipmentService.Application.csproj",
+      "projectUniqueName": "d:\\Files\\CMS\\CargoManagementSystem\\src\\Services\\Shipment\\CMS.ShipmentService.Application\\CMS.ShipmentService.Application.csproj",
       "projectName": "CMS.ShipmentService.Application",
-      "projectPath": "D:\\Files\\CMS\\CargoManagementSystem\\src\\Services\\Shipment\\CMS.ShipmentService.Application\\CMS.ShipmentService.Application.csproj",
+      "projectPath": "d:\\Files\\CMS\\CargoManagementSystem\\src\\Services\\Shipment\\CMS.ShipmentService.Application\\CMS.ShipmentService.Application.csproj",
       "packagesPath": "C:\\Users\\HP\\.nuget\\packages\\",
-      "outputPath": "D:\\Files\\CMS\\CargoManagementSystem\\src\\Services\\Shipment\\CMS.ShipmentService.Application\\obj\\",
+      "outputPath": "d:\\Files\\CMS\\CargoManagementSystem\\src\\Services\\Shipment\\CMS.ShipmentService.Application\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -1728,11 +1728,11 @@
         "net10.0": {
           "targetAlias": "net10.0",
           "projectReferences": {
-            "D:\\Files\\CMS\\CargoManagementSystem\\src\\Services\\Shipment\\CMS.ShipmentService.Domain\\CMS.ShipmentService.Domain.csproj": {
-              "projectPath": "D:\\Files\\CMS\\CargoManagementSystem\\src\\Services\\Shipment\\CMS.ShipmentService.Domain\\CMS.ShipmentService.Domain.csproj"
+            "d:\\Files\\CMS\\CargoManagementSystem\\src\\Services\\Shipment\\CMS.ShipmentService.Domain\\CMS.ShipmentService.Domain.csproj": {
+              "projectPath": "d:\\Files\\CMS\\CargoManagementSystem\\src\\Services\\Shipment\\CMS.ShipmentService.Domain\\CMS.ShipmentService.Domain.csproj"
             },
-            "D:\\Files\\CMS\\CargoManagementSystem\\src\\Shared\\CMS.Shared\\CMS.Shared.csproj": {
-              "projectPath": "D:\\Files\\CMS\\CargoManagementSystem\\src\\Shared\\CMS.Shared\\CMS.Shared.csproj"
+            "d:\\Files\\CMS\\CargoManagementSystem\\src\\Shared\\CMS.Shared\\CMS.Shared.csproj": {
+              "projectPath": "d:\\Files\\CMS\\CargoManagementSystem\\src\\Shared\\CMS.Shared\\CMS.Shared.csproj"
             }
           }
         }

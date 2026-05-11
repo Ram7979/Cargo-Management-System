@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Files\\CMS\\CargoManagementSystem\\src\\Services\\Shipment\\CMS.ShipmentService.API\\CMS.ShipmentService.API.csproj": {}
+    "d:\\Files\\CMS\\CargoManagementSystem\\src\\Services\\Shipment\\CMS.ShipmentService.API\\CMS.ShipmentService.API.csproj": {}
   },
   "projects": {
-    "D:\\Files\\CMS\\CargoManagementSystem\\src\\Services\\Shipment\\CMS.ShipmentService.API\\CMS.ShipmentService.API.csproj": {
+    "d:\\Files\\CMS\\CargoManagementSystem\\src\\Services\\Shipment\\CMS.ShipmentService.API\\CMS.ShipmentService.API.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Files\\CMS\\CargoManagementSystem\\src\\Services\\Shipment\\CMS.ShipmentService.API\\CMS.ShipmentService.API.csproj",
+        "projectUniqueName": "d:\\Files\\CMS\\CargoManagementSystem\\src\\Services\\Shipment\\CMS.ShipmentService.API\\CMS.ShipmentService.API.csproj",
         "projectName": "CMS.ShipmentService.API",
-        "projectPath": "D:\\Files\\CMS\\CargoManagementSystem\\src\\Services\\Shipment\\CMS.ShipmentService.API\\CMS.ShipmentService.API.csproj",
+        "projectPath": "d:\\Files\\CMS\\CargoManagementSystem\\src\\Services\\Shipment\\CMS.ShipmentService.API\\CMS.ShipmentService.API.csproj",
         "packagesPath": "C:\\Users\\HP\\.nuget\\packages\\",
-        "outputPath": "D:\\Files\\CMS\\CargoManagementSystem\\src\\Services\\Shipment\\CMS.ShipmentService.API\\obj\\",
+        "outputPath": "d:\\Files\\CMS\\CargoManagementSystem\\src\\Services\\Shipment\\CMS.ShipmentService.API\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -32,14 +32,14 @@
           "net10.0": {
             "targetAlias": "net10.0",
             "projectReferences": {
-              "D:\\Files\\CMS\\CargoManagementSystem\\src\\Services\\Shipment\\CMS.ShipmentService.Application\\CMS.ShipmentService.Application.csproj": {
-                "projectPath": "D:\\Files\\CMS\\CargoManagementSystem\\src\\Services\\Shipment\\CMS.ShipmentService.Application\\CMS.ShipmentService.Application.csproj"
+              "d:\\Files\\CMS\\CargoManagementSystem\\src\\Services\\Shipment\\CMS.ShipmentService.Application\\CMS.ShipmentService.Application.csproj": {
+                "projectPath": "d:\\Files\\CMS\\CargoManagementSystem\\src\\Services\\Shipment\\CMS.ShipmentService.Application\\CMS.ShipmentService.Application.csproj"
               },
-              "D:\\Files\\CMS\\CargoManagementSystem\\src\\Services\\Shipment\\CMS.ShipmentService.Infrastructure\\CMS.ShipmentService.Infrastructure.csproj": {
-                "projectPath": "D:\\Files\\CMS\\CargoManagementSystem\\src\\Services\\Shipment\\CMS.ShipmentService.Infrastructure\\CMS.ShipmentService.Infrastructure.csproj"
+              "d:\\Files\\CMS\\CargoManagementSystem\\src\\Services\\Shipment\\CMS.ShipmentService.Infrastructure\\CMS.ShipmentService.Infrastructure.csproj": {
+                "projectPath": "d:\\Files\\CMS\\CargoManagementSystem\\src\\Services\\Shipment\\CMS.ShipmentService.Infrastructure\\CMS.ShipmentService.Infrastructure.csproj"
               },
-              "D:\\Files\\CMS\\CargoManagementSystem\\src\\Shared\\CMS.Shared\\CMS.Shared.csproj": {
-                "projectPath": "D:\\Files\\CMS\\CargoManagementSystem\\src\\Shared\\CMS.Shared\\CMS.Shared.csproj"
+              "d:\\Files\\CMS\\CargoManagementSystem\\src\\Shared\\CMS.Shared\\CMS.Shared.csproj": {
+                "projectPath": "d:\\Files\\CMS\\CargoManagementSystem\\src\\Shared\\CMS.Shared\\CMS.Shared.csproj"
               }
             }
           }
@@ -524,14 +524,14 @@
         }
       }
     },
-    "D:\\Files\\CMS\\CargoManagementSystem\\src\\Services\\Shipment\\CMS.ShipmentService.Application\\CMS.ShipmentService.Application.csproj": {
+    "d:\\Files\\CMS\\CargoManagementSystem\\src\\Services\\Shipment\\CMS.ShipmentService.Application\\CMS.ShipmentService.Application.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Files\\CMS\\CargoManagementSystem\\src\\Services\\Shipment\\CMS.ShipmentService.Application\\CMS.ShipmentService.Application.csproj",
+        "projectUniqueName": "d:\\Files\\CMS\\CargoManagementSystem\\src\\Services\\Shipment\\CMS.ShipmentService.Application\\CMS.ShipmentService.Application.csproj",
         "projectName": "CMS.ShipmentService.Application",
-        "projectPath": "D:\\Files\\CMS\\CargoManagementSystem\\src\\Services\\Shipment\\CMS.ShipmentService.Application\\CMS.ShipmentService.Application.csproj",
+        "projectPath": "d:\\Files\\CMS\\CargoManagementSystem\\src\\Services\\Shipment\\CMS.ShipmentService.Application\\CMS.ShipmentService.Application.csproj",
         "packagesPath": "C:\\Users\\HP\\.nuget\\packages\\",
-        "outputPath": "D:\\Files\\CMS\\CargoManagementSystem\\src\\Services\\Shipment\\CMS.ShipmentService.Application\\obj\\",
+        "outputPath": "d:\\Files\\CMS\\CargoManagementSystem\\src\\Services\\Shipment\\CMS.ShipmentService.Application\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -552,11 +552,11 @@
           "net10.0": {
             "targetAlias": "net10.0",
             "projectReferences": {
-              "D:\\Files\\CMS\\CargoManagementSystem\\src\\Services\\Shipment\\CMS.ShipmentService.Domain\\CMS.ShipmentService.Domain.csproj": {
-                "projectPath": "D:\\Files\\CMS\\CargoManagementSystem\\src\\Services\\Shipment\\CMS.ShipmentService.Domain\\CMS.ShipmentService.Domain.csproj"
+              "d:\\Files\\CMS\\CargoManagementSystem\\src\\Services\\Shipment\\CMS.ShipmentService.Domain\\CMS.ShipmentService.Domain.csproj": {
+                "projectPath": "d:\\Files\\CMS\\CargoManagementSystem\\src\\Services\\Shipment\\CMS.ShipmentService.Domain\\CMS.ShipmentService.Domain.csproj"
               },
-              "D:\\Files\\CMS\\CargoManagementSystem\\src\\Shared\\CMS.Shared\\CMS.Shared.csproj": {
-                "projectPath": "D:\\Files\\CMS\\CargoManagementSystem\\src\\Shared\\CMS.Shared\\CMS.Shared.csproj"
+              "d:\\Files\\CMS\\CargoManagementSystem\\src\\Shared\\CMS.Shared\\CMS.Shared.csproj": {
+                "projectPath": "d:\\Files\\CMS\\CargoManagementSystem\\src\\Shared\\CMS.Shared\\CMS.Shared.csproj"
               }
             }
           }
@@ -900,14 +900,14 @@
         }
       }
     },
-    "D:\\Files\\CMS\\CargoManagementSystem\\src\\Services\\Shipment\\CMS.ShipmentService.Domain\\CMS.ShipmentService.Domain.csproj": {
+    "d:\\Files\\CMS\\CargoManagementSystem\\src\\Services\\Shipment\\CMS.ShipmentService.Domain\\CMS.ShipmentService.Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Files\\CMS\\CargoManagementSystem\\src\\Services\\Shipment\\CMS.ShipmentService.Domain\\CMS.ShipmentService.Domain.csproj",
+        "projectUniqueName": "d:\\Files\\CMS\\CargoManagementSystem\\src\\Services\\Shipment\\CMS.ShipmentService.Domain\\CMS.ShipmentService.Domain.csproj",
         "projectName": "CMS.ShipmentService.Domain",
-        "projectPath": "D:\\Files\\CMS\\CargoManagementSystem\\src\\Services\\Shipment\\CMS.ShipmentService.Domain\\CMS.ShipmentService.Domain.csproj",
+        "projectPath": "d:\\Files\\CMS\\CargoManagementSystem\\src\\Services\\Shipment\\CMS.ShipmentService.Domain\\CMS.ShipmentService.Domain.csproj",
         "packagesPath": "C:\\Users\\HP\\.nuget\\packages\\",
-        "outputPath": "D:\\Files\\CMS\\CargoManagementSystem\\src\\Services\\Shipment\\CMS.ShipmentService.Domain\\obj\\",
+        "outputPath": "d:\\Files\\CMS\\CargoManagementSystem\\src\\Services\\Shipment\\CMS.ShipmentService.Domain\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -928,8 +928,8 @@
           "net10.0": {
             "targetAlias": "net10.0",
             "projectReferences": {
-              "D:\\Files\\CMS\\CargoManagementSystem\\src\\Shared\\CMS.Shared\\CMS.Shared.csproj": {
-                "projectPath": "D:\\Files\\CMS\\CargoManagementSystem\\src\\Shared\\CMS.Shared\\CMS.Shared.csproj"
+              "d:\\Files\\CMS\\CargoManagementSystem\\src\\Shared\\CMS.Shared\\CMS.Shared.csproj": {
+                "projectPath": "d:\\Files\\CMS\\CargoManagementSystem\\src\\Shared\\CMS.Shared\\CMS.Shared.csproj"
               }
             }
           }
@@ -1243,14 +1243,14 @@
         }
       }
     },
-    "D:\\Files\\CMS\\CargoManagementSystem\\src\\Services\\Shipment\\CMS.ShipmentService.Infrastructure\\CMS.ShipmentService.Infrastructure.csproj": {
+    "d:\\Files\\CMS\\CargoManagementSystem\\src\\Services\\Shipment\\CMS.ShipmentService.Infrastructure\\CMS.ShipmentService.Infrastructure.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Files\\CMS\\CargoManagementSystem\\src\\Services\\Shipment\\CMS.ShipmentService.Infrastructure\\CMS.ShipmentService.Infrastructure.csproj",
+        "projectUniqueName": "d:\\Files\\CMS\\CargoManagementSystem\\src\\Services\\Shipment\\CMS.ShipmentService.Infrastructure\\CMS.ShipmentService.Infrastructure.csproj",
         "projectName": "CMS.ShipmentService.Infrastructure",
-        "projectPath": "D:\\Files\\CMS\\CargoManagementSystem\\src\\Services\\Shipment\\CMS.ShipmentService.Infrastructure\\CMS.ShipmentService.Infrastructure.csproj",
+        "projectPath": "d:\\Files\\CMS\\CargoManagementSystem\\src\\Services\\Shipment\\CMS.ShipmentService.Infrastructure\\CMS.ShipmentService.Infrastructure.csproj",
         "packagesPath": "C:\\Users\\HP\\.nuget\\packages\\",
-        "outputPath": "D:\\Files\\CMS\\CargoManagementSystem\\src\\Services\\Shipment\\CMS.ShipmentService.Infrastructure\\obj\\",
+        "outputPath": "d:\\Files\\CMS\\CargoManagementSystem\\src\\Services\\Shipment\\CMS.ShipmentService.Infrastructure\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -1271,14 +1271,14 @@
           "net10.0": {
             "targetAlias": "net10.0",
             "projectReferences": {
-              "D:\\Files\\CMS\\CargoManagementSystem\\src\\Services\\Shipment\\CMS.ShipmentService.Application\\CMS.ShipmentService.Application.csproj": {
-                "projectPath": "D:\\Files\\CMS\\CargoManagementSystem\\src\\Services\\Shipment\\CMS.ShipmentService.Application\\CMS.ShipmentService.Application.csproj"
+              "d:\\Files\\CMS\\CargoManagementSystem\\src\\Services\\Shipment\\CMS.ShipmentService.Application\\CMS.ShipmentService.Application.csproj": {
+                "projectPath": "d:\\Files\\CMS\\CargoManagementSystem\\src\\Services\\Shipment\\CMS.ShipmentService.Application\\CMS.ShipmentService.Application.csproj"
               },
-              "D:\\Files\\CMS\\CargoManagementSystem\\src\\Services\\Shipment\\CMS.ShipmentService.Domain\\CMS.ShipmentService.Domain.csproj": {
-                "projectPath": "D:\\Files\\CMS\\CargoManagementSystem\\src\\Services\\Shipment\\CMS.ShipmentService.Domain\\CMS.ShipmentService.Domain.csproj"
+              "d:\\Files\\CMS\\CargoManagementSystem\\src\\Services\\Shipment\\CMS.ShipmentService.Domain\\CMS.ShipmentService.Domain.csproj": {
+                "projectPath": "d:\\Files\\CMS\\CargoManagementSystem\\src\\Services\\Shipment\\CMS.ShipmentService.Domain\\CMS.ShipmentService.Domain.csproj"
               },
-              "D:\\Files\\CMS\\CargoManagementSystem\\src\\Shared\\CMS.Shared\\CMS.Shared.csproj": {
-                "projectPath": "D:\\Files\\CMS\\CargoManagementSystem\\src\\Shared\\CMS.Shared\\CMS.Shared.csproj"
+              "d:\\Files\\CMS\\CargoManagementSystem\\src\\Shared\\CMS.Shared\\CMS.Shared.csproj": {
+                "projectPath": "d:\\Files\\CMS\\CargoManagementSystem\\src\\Shared\\CMS.Shared\\CMS.Shared.csproj"
               }
             }
           }
@@ -1616,14 +1616,14 @@
         }
       }
     },
-    "D:\\Files\\CMS\\CargoManagementSystem\\src\\Shared\\CMS.Shared\\CMS.Shared.csproj": {
+    "d:\\Files\\CMS\\CargoManagementSystem\\src\\Shared\\CMS.Shared\\CMS.Shared.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Files\\CMS\\CargoManagementSystem\\src\\Shared\\CMS.Shared\\CMS.Shared.csproj",
+        "projectUniqueName": "d:\\Files\\CMS\\CargoManagementSystem\\src\\Shared\\CMS.Shared\\CMS.Shared.csproj",
         "projectName": "CMS.Shared",
-        "projectPath": "D:\\Files\\CMS\\CargoManagementSystem\\src\\Shared\\CMS.Shared\\CMS.Shared.csproj",
+        "projectPath": "d:\\Files\\CMS\\CargoManagementSystem\\src\\Shared\\CMS.Shared\\CMS.Shared.csproj",
         "packagesPath": "C:\\Users\\HP\\.nuget\\packages\\",
-        "outputPath": "D:\\Files\\CMS\\CargoManagementSystem\\src\\Shared\\CMS.Shared\\obj\\",
+        "outputPath": "d:\\Files\\CMS\\CargoManagementSystem\\src\\Shared\\CMS.Shared\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

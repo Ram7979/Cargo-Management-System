@@ -1,0 +1,68 @@
+<mat-toolbar color="primary" class="topbar">
+  <button mat-icon-button (click)="toggleSidebar.emit()">
+    <mat-icon>menu</mat-icon>
+  </button>
+  
+  <span class="brand-title">Cargo MS</span>
+
+  <div class="search-container">
+    <mat-icon class="search-icon">search</mat-icon>
+    <input type="text" 
+           placeholder="Track Shipment..." 
+           [(ngModel)]="searchQuery"
+           (keyup.enter)="onSearch()"
+           class="search-input">
+  </div>
+
+  <span class="spacer"></span>
+
+  <div class="topbar-actions">
+    <!-- Notification Bell -->
+    <button mat-icon-button [matMenuTriggerFor]="notificationMenu" class="me-2">
+      <mat-icon [matBadge]="notificationService.unreadCount()" 
+                [matBadgeHidden]="notificationService.unreadCount() === 0" 
+                matBadgeColor="warn">notifications</mat-icon>
+    </button>
+    <mat-menu #notificationMenu="matMenu" class="notification-menu">
+      <div class="menu-header">
+        <span>Notifications</span>
+        <button mat-button color="primary" (click)="$event.stopPropagation(); notificationService.markAllAsRead()">Mark all read</button>
+      </div>
+      <mat-divider></mat-divider>
+      <div class="notification-list">
+        <div class="notification-item" *ngFor="let note of notificationService.notifications()" [class.unread]="!note.isRead">
+          <div class="note-icon" [ngClass]="note.type.toLowerCase()">
+            <mat-icon>{{ getNoteIcon(note.type) }}</mat-icon>
+          </div>
+          <div class="note-content">
+            <div class="note-title">{{ note.title }}</div>
+            <div class="note-msg">{{ note.message }}</div>
+            <div class="note-time">{{ note.createdAt | date:'short' }}</div>
+          </div>
+        </div>
+        <div class="empty-notes" *ngIf="notificationService.notifications().length === 0">
+          No new notifications
+        </div>
+      </div>
+    </mat-menu>
+
+    <!-- User Profile -->
+    <div class="user-info" *ngIf="authService.currentUser() as user">
+      <span class="user-name">{{ user.firstName }} {{ user.lastName }}</span>
+      <button mat-icon-button [matMenuTriggerFor]="profileMenu">
+        <mat-icon>account_circle</mat-icon>
+      </button>
+      <mat-menu #profileMenu="matMenu">
+        <button mat-menu-item routerLink="/profile">
+          <mat-icon>account_circle</mat-icon>
+          My Profile
+        </button>
+        <mat-divider></mat-divider>
+        <button mat-menu-item (click)="onLogout()">
+          <mat-icon>exit_to_app</mat-icon>
+          <span>Logout</span>
+        </button>
+      </mat-menu>
+    </div>
+  </div>
+</mat-toolbar>

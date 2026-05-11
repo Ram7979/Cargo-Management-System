@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "5lZUzFnEghM=",
+  "dgSpecHash": "xg7d0QPZmbg=",
   "success": true,
-  "projectFilePath": "D:\\Files\\CMS\\CargoManagementSystem\\src\\Services\\Notification\\CMS.NotificationService.Domain\\CMS.NotificationService.Domain.csproj",
+  "projectFilePath": "d:\\Files\\CMS\\CargoManagementSystem\\src\\Services\\Notification\\CMS.NotificationService.Domain\\CMS.NotificationService.Domain.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\HP\\.nuget\\packages\\mediatr\\14.1.0\\mediatr.14.1.0.nupkg.sha512",
     "C:\\Users\\HP\\.nuget\\packages\\mediatr.contracts\\2.0.1\\mediatr.contracts.2.0.1.nupkg.sha512",

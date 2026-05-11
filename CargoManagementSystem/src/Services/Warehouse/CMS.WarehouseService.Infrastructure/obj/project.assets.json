@@ -4582,11 +4582,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Files\\CMS\\CargoManagementSystem\\src\\Services\\Warehouse\\CMS.WarehouseService.Infrastructure\\CMS.WarehouseService.Infrastructure.csproj",
+      "projectUniqueName": "d:\\Files\\CMS\\CargoManagementSystem\\src\\Services\\Warehouse\\CMS.WarehouseService.Infrastructure\\CMS.WarehouseService.Infrastructure.csproj",
       "projectName": "CMS.WarehouseService.Infrastructure",
-      "projectPath": "D:\\Files\\CMS\\CargoManagementSystem\\src\\Services\\Warehouse\\CMS.WarehouseService.Infrastructure\\CMS.WarehouseService.Infrastructure.csproj",
+      "projectPath": "d:\\Files\\CMS\\CargoManagementSystem\\src\\Services\\Warehouse\\CMS.WarehouseService.Infrastructure\\CMS.WarehouseService.Infrastructure.csproj",
       "packagesPath": "C:\\Users\\HP\\.nuget\\packages\\",
-      "outputPath": "D:\\Files\\CMS\\CargoManagementSystem\\src\\Services\\Warehouse\\CMS.WarehouseService.Infrastructure\\obj\\",
+      "outputPath": "d:\\Files\\CMS\\CargoManagementSystem\\src\\Services\\Warehouse\\CMS.WarehouseService.Infrastructure\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -4607,14 +4607,14 @@
         "net10.0": {
           "targetAlias": "net10.0",
           "projectReferences": {
-            "D:\\Files\\CMS\\CargoManagementSystem\\src\\Services\\Warehouse\\CMS.WarehouseService.Application\\CMS.WarehouseService.Application.csproj": {
-              "projectPath": "D:\\Files\\CMS\\CargoManagementSystem\\src\\Services\\Warehouse\\CMS.WarehouseService.Application\\CMS.WarehouseService.Application.csproj"
+            "d:\\Files\\CMS\\CargoManagementSystem\\src\\Services\\Warehouse\\CMS.WarehouseService.Application\\CMS.WarehouseService.Application.csproj": {
+              "projectPath": "d:\\Files\\CMS\\CargoManagementSystem\\src\\Services\\Warehouse\\CMS.WarehouseService.Application\\CMS.WarehouseService.Application.csproj"
             },
-            "D:\\Files\\CMS\\CargoManagementSystem\\src\\Services\\Warehouse\\CMS.WarehouseService.Domain\\CMS.WarehouseService.Domain.csproj": {
-              "projectPath": "D:\\Files\\CMS\\CargoManagementSystem\\src\\Services\\Warehouse\\CMS.WarehouseService.Domain\\CMS.WarehouseService.Domain.csproj"
+            "d:\\Files\\CMS\\CargoManagementSystem\\src\\Services\\Warehouse\\CMS.WarehouseService.Domain\\CMS.WarehouseService.Domain.csproj": {
+              "projectPath": "d:\\Files\\CMS\\CargoManagementSystem\\src\\Services\\Warehouse\\CMS.WarehouseService.Domain\\CMS.WarehouseService.Domain.csproj"
             },
-            "D:\\Files\\CMS\\CargoManagementSystem\\src\\Shared\\CMS.Shared\\CMS.Shared.csproj": {
-              "projectPath": "D:\\Files\\CMS\\CargoManagementSystem\\src\\Shared\\CMS.Shared\\CMS.Shared.csproj"
+            "d:\\Files\\CMS\\CargoManagementSystem\\src\\Shared\\CMS.Shared\\CMS.Shared.csproj": {
+              "projectPath": "d:\\Files\\CMS\\CargoManagementSystem\\src\\Shared\\CMS.Shared\\CMS.Shared.csproj"
             }
           }
         }

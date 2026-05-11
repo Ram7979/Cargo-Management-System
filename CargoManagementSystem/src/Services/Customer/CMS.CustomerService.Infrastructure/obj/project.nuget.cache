@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "c27YVYpIsHY=",
+  "dgSpecHash": "k6yE+lvFvGg=",
   "success": true,
-  "projectFilePath": "D:\\Files\\CMS\\CargoManagementSystem\\src\\Services\\Customer\\CMS.CustomerService.Infrastructure\\CMS.CustomerService.Infrastructure.csproj",
+  "projectFilePath": "d:\\Files\\CMS\\CargoManagementSystem\\src\\Services\\Customer\\CMS.CustomerService.Infrastructure\\CMS.CustomerService.Infrastructure.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\HP\\.nuget\\packages\\automapper\\16.1.1\\automapper.16.1.1.nupkg.sha512",
     "C:\\Users\\HP\\.nuget\\packages\\azure.core\\1.44.1\\azure.core.1.44.1.nupkg.sha512",

@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Files\\CMS\\CargoManagementSystem\\src\\Gateway\\CMS.ApiGateway\\CMS.ApiGateway.csproj": {}
+    "d:\\Files\\CMS\\CargoManagementSystem\\src\\Gateway\\CMS.ApiGateway\\CMS.ApiGateway.csproj": {}
   },
   "projects": {
-    "D:\\Files\\CMS\\CargoManagementSystem\\src\\Gateway\\CMS.ApiGateway\\CMS.ApiGateway.csproj": {
+    "d:\\Files\\CMS\\CargoManagementSystem\\src\\Gateway\\CMS.ApiGateway\\CMS.ApiGateway.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Files\\CMS\\CargoManagementSystem\\src\\Gateway\\CMS.ApiGateway\\CMS.ApiGateway.csproj",
+        "projectUniqueName": "d:\\Files\\CMS\\CargoManagementSystem\\src\\Gateway\\CMS.ApiGateway\\CMS.ApiGateway.csproj",
         "projectName": "CMS.ApiGateway",
-        "projectPath": "D:\\Files\\CMS\\CargoManagementSystem\\src\\Gateway\\CMS.ApiGateway\\CMS.ApiGateway.csproj",
+        "projectPath": "d:\\Files\\CMS\\CargoManagementSystem\\src\\Gateway\\CMS.ApiGateway\\CMS.ApiGateway.csproj",
         "packagesPath": "C:\\Users\\HP\\.nuget\\packages\\",
-        "outputPath": "D:\\Files\\CMS\\CargoManagementSystem\\src\\Gateway\\CMS.ApiGateway\\obj\\",
+        "outputPath": "d:\\Files\\CMS\\CargoManagementSystem\\src\\Gateway\\CMS.ApiGateway\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -32,8 +32,8 @@
           "net10.0": {
             "targetAlias": "net10.0",
             "projectReferences": {
-              "D:\\Files\\CMS\\CargoManagementSystem\\src\\Shared\\CMS.Shared\\CMS.Shared.csproj": {
-                "projectPath": "D:\\Files\\CMS\\CargoManagementSystem\\src\\Shared\\CMS.Shared\\CMS.Shared.csproj"
+              "d:\\Files\\CMS\\CargoManagementSystem\\src\\Shared\\CMS.Shared\\CMS.Shared.csproj": {
+                "projectPath": "d:\\Files\\CMS\\CargoManagementSystem\\src\\Shared\\CMS.Shared\\CMS.Shared.csproj"
               }
             }
           }
@@ -524,14 +524,14 @@
         }
       }
     },
-    "D:\\Files\\CMS\\CargoManagementSystem\\src\\Shared\\CMS.Shared\\CMS.Shared.csproj": {
+    "d:\\Files\\CMS\\CargoManagementSystem\\src\\Shared\\CMS.Shared\\CMS.Shared.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Files\\CMS\\CargoManagementSystem\\src\\Shared\\CMS.Shared\\CMS.Shared.csproj",
+        "projectUniqueName": "d:\\Files\\CMS\\CargoManagementSystem\\src\\Shared\\CMS.Shared\\CMS.Shared.csproj",
         "projectName": "CMS.Shared",
-        "projectPath": "D:\\Files\\CMS\\CargoManagementSystem\\src\\Shared\\CMS.Shared\\CMS.Shared.csproj",
+        "projectPath": "d:\\Files\\CMS\\CargoManagementSystem\\src\\Shared\\CMS.Shared\\CMS.Shared.csproj",
         "packagesPath": "C:\\Users\\HP\\.nuget\\packages\\",
-        "outputPath": "D:\\Files\\CMS\\CargoManagementSystem\\src\\Shared\\CMS.Shared\\obj\\",
+        "outputPath": "d:\\Files\\CMS\\CargoManagementSystem\\src\\Shared\\CMS.Shared\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

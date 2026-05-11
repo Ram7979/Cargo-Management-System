@@ -4779,11 +4779,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Files\\CMS\\CargoManagementSystem\\src\\Services\\Customer\\CMS.CustomerService.Infrastructure\\CMS.CustomerService.Infrastructure.csproj",
+      "projectUniqueName": "d:\\Files\\CMS\\CargoManagementSystem\\src\\Services\\Customer\\CMS.CustomerService.Infrastructure\\CMS.CustomerService.Infrastructure.csproj",
       "projectName": "CMS.CustomerService.Infrastructure",
-      "projectPath": "D:\\Files\\CMS\\CargoManagementSystem\\src\\Services\\Customer\\CMS.CustomerService.Infrastructure\\CMS.CustomerService.Infrastructure.csproj",
+      "projectPath": "d:\\Files\\CMS\\CargoManagementSystem\\src\\Services\\Customer\\CMS.CustomerService.Infrastructure\\CMS.CustomerService.Infrastructure.csproj",
       "packagesPath": "C:\\Users\\HP\\.nuget\\packages\\",
-      "outputPath": "D:\\Files\\CMS\\CargoManagementSystem\\src\\Services\\Customer\\CMS.CustomerService.Infrastructure\\obj\\",
+      "outputPath": "d:\\Files\\CMS\\CargoManagementSystem\\src\\Services\\Customer\\CMS.CustomerService.Infrastructure\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -4804,14 +4804,14 @@
         "net10.0": {
           "targetAlias": "net10.0",
           "projectReferences": {
-            "D:\\Files\\CMS\\CargoManagementSystem\\src\\Services\\Customer\\CMS.CustomerService.Application\\CMS.CustomerService.Application.csproj": {
-              "projectPath": "D:\\Files\\CMS\\CargoManagementSystem\\src\\Services\\Customer\\CMS.CustomerService.Application\\CMS.CustomerService.Application.csproj"
+            "d:\\Files\\CMS\\CargoManagementSystem\\src\\Services\\Customer\\CMS.CustomerService.Application\\CMS.CustomerService.Application.csproj": {
+              "projectPath": "d:\\Files\\CMS\\CargoManagementSystem\\src\\Services\\Customer\\CMS.CustomerService.Application\\CMS.CustomerService.Application.csproj"
             },
-            "D:\\Files\\CMS\\CargoManagementSystem\\src\\Services\\Customer\\CMS.CustomerService.Domain\\CMS.CustomerService.Domain.csproj": {
-              "projectPath": "D:\\Files\\CMS\\CargoManagementSystem\\src\\Services\\Customer\\CMS.CustomerService.Domain\\CMS.CustomerService.Domain.csproj"
+            "d:\\Files\\CMS\\CargoManagementSystem\\src\\Services\\Customer\\CMS.CustomerService.Domain\\CMS.CustomerService.Domain.csproj": {
+              "projectPath": "d:\\Files\\CMS\\CargoManagementSystem\\src\\Services\\Customer\\CMS.CustomerService.Domain\\CMS.CustomerService.Domain.csproj"
             },
-            "D:\\Files\\CMS\\CargoManagementSystem\\src\\Shared\\CMS.Shared\\CMS.Shared.csproj": {
-              "projectPath": "D:\\Files\\CMS\\CargoManagementSystem\\src\\Shared\\CMS.Shared\\CMS.Shared.csproj"
+            "d:\\Files\\CMS\\CargoManagementSystem\\src\\Shared\\CMS.Shared\\CMS.Shared.csproj": {
+              "projectPath": "d:\\Files\\CMS\\CargoManagementSystem\\src\\Shared\\CMS.Shared\\CMS.Shared.csproj"
             }
           }
         }

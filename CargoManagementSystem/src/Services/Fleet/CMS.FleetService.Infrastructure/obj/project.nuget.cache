@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "jYrkcbYi4s4=",
+  "dgSpecHash": "7T93wLCGNiQ=",
   "success": true,
-  "projectFilePath": "D:\\Files\\CMS\\CargoManagementSystem\\src\\Services\\Fleet\\CMS.FleetService.Infrastructure\\CMS.FleetService.Infrastructure.csproj",
+  "projectFilePath": "d:\\Files\\CMS\\CargoManagementSystem\\src\\Services\\Fleet\\CMS.FleetService.Infrastructure\\CMS.FleetService.Infrastructure.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\HP\\.nuget\\packages\\automapper\\16.1.1\\automapper.16.1.1.nupkg.sha512",
     "C:\\Users\\HP\\.nuget\\packages\\azure.core\\1.38.0\\azure.core.1.38.0.nupkg.sha512",
@@ -99,9 +99,9 @@
       "code": "NU1903",
       "level": "Warning",
       "message": "Package 'Newtonsoft.Json' 11.0.2 has a known high severity vulnerability, https://github.com/advisories/GHSA-5crp-9r3c-p9vr",
-      "projectPath": "D:\\Files\\CMS\\CargoManagementSystem\\src\\Services\\Fleet\\CMS.FleetService.Infrastructure\\CMS.FleetService.Infrastructure.csproj",
+      "projectPath": "d:\\Files\\CMS\\CargoManagementSystem\\src\\Services\\Fleet\\CMS.FleetService.Infrastructure\\CMS.FleetService.Infrastructure.csproj",
       "warningLevel": 1,
-      "filePath": "D:\\Files\\CMS\\CargoManagementSystem\\src\\Services\\Fleet\\CMS.FleetService.Infrastructure\\CMS.FleetService.Infrastructure.csproj",
+      "filePath": "d:\\Files\\CMS\\CargoManagementSystem\\src\\Services\\Fleet\\CMS.FleetService.Infrastructure\\CMS.FleetService.Infrastructure.csproj",
       "libraryId": "Newtonsoft.Json",
       "targetGraphs": [
         "net10.0"

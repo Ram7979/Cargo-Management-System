@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Files\\CMS\\CargoManagementSystem\\src\\Services\\Fleet\\CMS.FleetService.Infrastructure\\CMS.FleetService.Infrastructure.csproj": {}
+    "d:\\Files\\CMS\\CargoManagementSystem\\src\\Services\\Fleet\\CMS.FleetService.Infrastructure\\CMS.FleetService.Infrastructure.csproj": {}
   },
   "projects": {
-    "D:\\Files\\CMS\\CargoManagementSystem\\src\\Services\\Fleet\\CMS.FleetService.Application\\CMS.FleetService.Application.csproj": {
+    "d:\\Files\\CMS\\CargoManagementSystem\\src\\Services\\Fleet\\CMS.FleetService.Application\\CMS.FleetService.Application.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Files\\CMS\\CargoManagementSystem\\src\\Services\\Fleet\\CMS.FleetService.Application\\CMS.FleetService.Application.csproj",
+        "projectUniqueName": "d:\\Files\\CMS\\CargoManagementSystem\\src\\Services\\Fleet\\CMS.FleetService.Application\\CMS.FleetService.Application.csproj",
         "projectName": "CMS.FleetService.Application",
-        "projectPath": "D:\\Files\\CMS\\CargoManagementSystem\\src\\Services\\Fleet\\CMS.FleetService.Application\\CMS.FleetService.Application.csproj",
+        "projectPath": "d:\\Files\\CMS\\CargoManagementSystem\\src\\Services\\Fleet\\CMS.FleetService.Application\\CMS.FleetService.Application.csproj",
         "packagesPath": "C:\\Users\\HP\\.nuget\\packages\\",
-        "outputPath": "D:\\Files\\CMS\\CargoManagementSystem\\src\\Services\\Fleet\\CMS.FleetService.Application\\obj\\",
+        "outputPath": "d:\\Files\\CMS\\CargoManagementSystem\\src\\Services\\Fleet\\CMS.FleetService.Application\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -32,11 +32,11 @@
           "net10.0": {
             "targetAlias": "net10.0",
             "projectReferences": {
-              "D:\\Files\\CMS\\CargoManagementSystem\\src\\Services\\Fleet\\CMS.FleetService.Domain\\CMS.FleetService.Domain.csproj": {
-                "projectPath": "D:\\Files\\CMS\\CargoManagementSystem\\src\\Services\\Fleet\\CMS.FleetService.Domain\\CMS.FleetService.Domain.csproj"
+              "d:\\Files\\CMS\\CargoManagementSystem\\src\\Services\\Fleet\\CMS.FleetService.Domain\\CMS.FleetService.Domain.csproj": {
+                "projectPath": "d:\\Files\\CMS\\CargoManagementSystem\\src\\Services\\Fleet\\CMS.FleetService.Domain\\CMS.FleetService.Domain.csproj"
               },
-              "D:\\Files\\CMS\\CargoManagementSystem\\src\\Shared\\CMS.Shared\\CMS.Shared.csproj": {
-                "projectPath": "D:\\Files\\CMS\\CargoManagementSystem\\src\\Shared\\CMS.Shared\\CMS.Shared.csproj"
+              "d:\\Files\\CMS\\CargoManagementSystem\\src\\Shared\\CMS.Shared\\CMS.Shared.csproj": {
+                "projectPath": "d:\\Files\\CMS\\CargoManagementSystem\\src\\Shared\\CMS.Shared\\CMS.Shared.csproj"
               }
             }
           }
@@ -376,14 +376,14 @@
         }
       }
     },
-    "D:\\Files\\CMS\\CargoManagementSystem\\src\\Services\\Fleet\\CMS.FleetService.Domain\\CMS.FleetService.Domain.csproj": {
+    "d:\\Files\\CMS\\CargoManagementSystem\\src\\Services\\Fleet\\CMS.FleetService.Domain\\CMS.FleetService.Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Files\\CMS\\CargoManagementSystem\\src\\Services\\Fleet\\CMS.FleetService.Domain\\CMS.FleetService.Domain.csproj",
+        "projectUniqueName": "d:\\Files\\CMS\\CargoManagementSystem\\src\\Services\\Fleet\\CMS.FleetService.Domain\\CMS.FleetService.Domain.csproj",
         "projectName": "CMS.FleetService.Domain",
-        "projectPath": "D:\\Files\\CMS\\CargoManagementSystem\\src\\Services\\Fleet\\CMS.FleetService.Domain\\CMS.FleetService.Domain.csproj",
+        "projectPath": "d:\\Files\\CMS\\CargoManagementSystem\\src\\Services\\Fleet\\CMS.FleetService.Domain\\CMS.FleetService.Domain.csproj",
         "packagesPath": "C:\\Users\\HP\\.nuget\\packages\\",
-        "outputPath": "D:\\Files\\CMS\\CargoManagementSystem\\src\\Services\\Fleet\\CMS.FleetService.Domain\\obj\\",
+        "outputPath": "d:\\Files\\CMS\\CargoManagementSystem\\src\\Services\\Fleet\\CMS.FleetService.Domain\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -404,8 +404,8 @@
           "net10.0": {
             "targetAlias": "net10.0",
             "projectReferences": {
-              "D:\\Files\\CMS\\CargoManagementSystem\\src\\Shared\\CMS.Shared\\CMS.Shared.csproj": {
-                "projectPath": "D:\\Files\\CMS\\CargoManagementSystem\\src\\Shared\\CMS.Shared\\CMS.Shared.csproj"
+              "d:\\Files\\CMS\\CargoManagementSystem\\src\\Shared\\CMS.Shared\\CMS.Shared.csproj": {
+                "projectPath": "d:\\Files\\CMS\\CargoManagementSystem\\src\\Shared\\CMS.Shared\\CMS.Shared.csproj"
               }
             }
           }
@@ -719,14 +719,14 @@
         }
       }
     },
-    "D:\\Files\\CMS\\CargoManagementSystem\\src\\Services\\Fleet\\CMS.FleetService.Infrastructure\\CMS.FleetService.Infrastructure.csproj": {
+    "d:\\Files\\CMS\\CargoManagementSystem\\src\\Services\\Fleet\\CMS.FleetService.Infrastructure\\CMS.FleetService.Infrastructure.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Files\\CMS\\CargoManagementSystem\\src\\Services\\Fleet\\CMS.FleetService.Infrastructure\\CMS.FleetService.Infrastructure.csproj",
+        "projectUniqueName": "d:\\Files\\CMS\\CargoManagementSystem\\src\\Services\\Fleet\\CMS.FleetService.Infrastructure\\CMS.FleetService.Infrastructure.csproj",
         "projectName": "CMS.FleetService.Infrastructure",
-        "projectPath": "D:\\Files\\CMS\\CargoManagementSystem\\src\\Services\\Fleet\\CMS.FleetService.Infrastructure\\CMS.FleetService.Infrastructure.csproj",
+        "projectPath": "d:\\Files\\CMS\\CargoManagementSystem\\src\\Services\\Fleet\\CMS.FleetService.Infrastructure\\CMS.FleetService.Infrastructure.csproj",
         "packagesPath": "C:\\Users\\HP\\.nuget\\packages\\",
-        "outputPath": "D:\\Files\\CMS\\CargoManagementSystem\\src\\Services\\Fleet\\CMS.FleetService.Infrastructure\\obj\\",
+        "outputPath": "d:\\Files\\CMS\\CargoManagementSystem\\src\\Services\\Fleet\\CMS.FleetService.Infrastructure\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -747,14 +747,14 @@
           "net10.0": {
             "targetAlias": "net10.0",
             "projectReferences": {
-              "D:\\Files\\CMS\\CargoManagementSystem\\src\\Services\\Fleet\\CMS.FleetService.Application\\CMS.FleetService.Application.csproj": {
-                "projectPath": "D:\\Files\\CMS\\CargoManagementSystem\\src\\Services\\Fleet\\CMS.FleetService.Application\\CMS.FleetService.Application.csproj"
+              "d:\\Files\\CMS\\CargoManagementSystem\\src\\Services\\Fleet\\CMS.FleetService.Application\\CMS.FleetService.Application.csproj": {
+                "projectPath": "d:\\Files\\CMS\\CargoManagementSystem\\src\\Services\\Fleet\\CMS.FleetService.Application\\CMS.FleetService.Application.csproj"
               },
-              "D:\\Files\\CMS\\CargoManagementSystem\\src\\Services\\Fleet\\CMS.FleetService.Domain\\CMS.FleetService.Domain.csproj": {
-                "projectPath": "D:\\Files\\CMS\\CargoManagementSystem\\src\\Services\\Fleet\\CMS.FleetService.Domain\\CMS.FleetService.Domain.csproj"
+              "d:\\Files\\CMS\\CargoManagementSystem\\src\\Services\\Fleet\\CMS.FleetService.Domain\\CMS.FleetService.Domain.csproj": {
+                "projectPath": "d:\\Files\\CMS\\CargoManagementSystem\\src\\Services\\Fleet\\CMS.FleetService.Domain\\CMS.FleetService.Domain.csproj"
               },
-              "D:\\Files\\CMS\\CargoManagementSystem\\src\\Shared\\CMS.Shared\\CMS.Shared.csproj": {
-                "projectPath": "D:\\Files\\CMS\\CargoManagementSystem\\src\\Shared\\CMS.Shared\\CMS.Shared.csproj"
+              "d:\\Files\\CMS\\CargoManagementSystem\\src\\Shared\\CMS.Shared\\CMS.Shared.csproj": {
+                "projectPath": "d:\\Files\\CMS\\CargoManagementSystem\\src\\Shared\\CMS.Shared\\CMS.Shared.csproj"
               }
             }
           }
@@ -1100,14 +1100,14 @@
         }
       }
     },
-    "D:\\Files\\CMS\\CargoManagementSystem\\src\\Shared\\CMS.Shared\\CMS.Shared.csproj": {
+    "d:\\Files\\CMS\\CargoManagementSystem\\src\\Shared\\CMS.Shared\\CMS.Shared.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Files\\CMS\\CargoManagementSystem\\src\\Shared\\CMS.Shared\\CMS.Shared.csproj",
+        "projectUniqueName": "d:\\Files\\CMS\\CargoManagementSystem\\src\\Shared\\CMS.Shared\\CMS.Shared.csproj",
         "projectName": "CMS.Shared",
-        "projectPath": "D:\\Files\\CMS\\CargoManagementSystem\\src\\Shared\\CMS.Shared\\CMS.Shared.csproj",
+        "projectPath": "d:\\Files\\CMS\\CargoManagementSystem\\src\\Shared\\CMS.Shared\\CMS.Shared.csproj",
         "packagesPath": "C:\\Users\\HP\\.nuget\\packages\\",
-        "outputPath": "D:\\Files\\CMS\\CargoManagementSystem\\src\\Shared\\CMS.Shared\\obj\\",
+        "outputPath": "d:\\Files\\CMS\\CargoManagementSystem\\src\\Shared\\CMS.Shared\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

@@ -1,0 +1,29 @@
+<div class="sidebar-container">
+  <div class="sidebar-header">
+    <mat-icon class="logo-icon">flight_takeoff</mat-icon>
+    <span class="logo-text">CargoPro</span>
+  </div>
+
+  <mat-nav-list class="menu-list">
+    <div mat-subheader class="menu-header">Main Menu</div>
+    
+    <a mat-list-item 
+       *ngFor="let item of visibleMenuItems" 
+       [routerLink]="[item.path]" 
+       routerLinkActive="active-link"
+       class="menu-item">
+      <mat-icon matListItemIcon class="menu-icon">{{ item.icon }}</mat-icon>
+      <span matListItemTitle class="menu-label">{{ item.label }}</span>
+    </a>
+  </mat-nav-list>
+
+  <div class="sidebar-footer" *ngIf="authService.currentUser() as user">
+    <div class="user-badge">
+      <div class="user-avatar">{{ user.firstName[0] }}{{ user.lastName[0] }}</div>
+      <div class="user-details">
+        <div class="u-name">{{ user.firstName }}</div>
+        <div class="u-role">{{ user.roles[0] }}</div>
+      </div>
+    </div>
+  </div>
+</div>

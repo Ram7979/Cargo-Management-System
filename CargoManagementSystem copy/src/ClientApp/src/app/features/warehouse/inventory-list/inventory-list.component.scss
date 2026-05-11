@@ -1,0 +1,52 @@
+.bin-badge {
+  background: #e8f0fe;
+  color: #1a73e8;
+  padding: 4px 12px;
+  border-radius: 4px;
+  font-family: 'Roboto Mono', monospace;
+  font-weight: 600;
+  font-size: 0.85rem;
+}
+
+.card-container {
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+  padding: 24px;
+  min-height: 400px;
+  position: relative;
+}
+
+.loading-shade {
+  position: absolute;
+  top: 0; left: 0; bottom: 0; right: 0;
+  background: rgba(255,255,255,0.7);
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.empty-state {
+  text-align: center;
+  padding: 80px 40px;
+  color: #999;
+  mat-icon { font-size: 64px; width: 64px; height: 64px; margin-bottom: 16px; }
+}
+
+table {
+  border-collapse: collapse;
+}
+
+tr.mat-mdc-header-row {
+  height: 56px;
+  background-color: #f8f9fa;
+}
+
+tr.mat-mdc-row {
+  height: 64px;
+  &:hover { background-color: #fcfcfc; }
+}
+
+.mt-4 { margin-top: 24px; }
+.w-100 { width: 100%; }

@@ -1,0 +1,92 @@
+.invoice-wrapper {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 24px 0;
+}
+
+.invoice-card {
+  padding: 40px;
+}
+
+.invoice-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  
+  .company-logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 1.5rem;
+    font-weight: 800;
+    
+    mat-icon { font-size: 32px; width: 32px; height: 32px; }
+  }
+  
+  .status-info {
+    text-align: right;
+    .invoice-date { margin-top: 8px; color: #718096; font-size: 0.85rem; }
+  }
+}
+
+.billing-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 32px;
+  margin: 32px 0;
+  
+  .label { font-size: 0.75rem; color: #a0aec0; text-transform: uppercase; font-weight: 700; margin-bottom: 8px; }
+  .value { font-size: 0.9rem; color: #4a5568; line-height: 1.6; }
+  .name { font-weight: 700; color: #1a202c; font-size: 1rem; }
+}
+
+.item-table {
+  margin: 32px 0;
+  
+  .table-header {
+    display: grid;
+    grid-template-columns: 1fr 60px 100px 100px;
+    gap: 16px;
+    padding: 12px 0;
+    font-size: 0.75rem;
+    font-weight: 700;
+    color: #a0aec0;
+    text-transform: uppercase;
+  }
+  
+  .table-row {
+    display: grid;
+    grid-template-columns: 1fr 60px 100px 100px;
+    gap: 16px;
+    padding: 16px 0;
+    font-size: 0.9rem;
+    color: #4a5568;
+    border-bottom: 1px solid #f7fafc;
+  }
+  
+  .qty, .price, .total { text-align: right; }
+}
+
+.totals-section {
+  width: 250px;
+  margin-left: auto;
+  
+  .total-row {
+    display: flex;
+    justify-content: space-between;
+    padding: 8px 0;
+    font-size: 0.9rem;
+    color: #4a5568;
+    
+    &.grand-total {
+      margin-top: 8px;
+      padding-top: 16px;
+      border-top: 2px solid #1a202c;
+      font-weight: 800;
+      font-size: 1.1rem;
+      color: #1a202c;
+    }
+  }
+}
+
+.my-4 { margin: 24px 0; }

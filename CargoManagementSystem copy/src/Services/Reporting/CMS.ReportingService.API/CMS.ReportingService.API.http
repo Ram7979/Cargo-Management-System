@@ -1,0 +1,6 @@
+@CMS.ReportingService.API_HostAddress = http://localhost:5228
+
+GET {{CMS.ReportingService.API_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

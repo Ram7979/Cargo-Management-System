@@ -1,0 +1,62 @@
+.stepper-container {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.custom-stepper {
+  background: white;
+  border-radius: 12px;
+  box-shadow: var(--card-shadow);
+  overflow: hidden;
+}
+
+.step-content {
+  padding: 24px 12px;
+  
+  h3 {
+    display: flex;
+    align-items: center;
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-bottom: 24px;
+    color: var(--primary-color);
+    
+    mat-icon {
+      margin-right: 12px;
+      color: var(--accent-color);
+    }
+  }
+}
+
+.form-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 16px;
+}
+
+.full-width {
+  width: 100%;
+}
+
+.stepper-actions {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 32px;
+  gap: 12px;
+  
+  button {
+    height: 48px;
+    padding: 0 24px;
+  }
+}
+
+::ng-deep {
+  .mat-step-header .mat-step-icon-selected {
+    background-color: var(--accent-color);
+  }
+  
+  .mat-step-header .mat-step-label.mat-step-label-active {
+    color: var(--primary-color);
+    font-weight: 600;
+  }
+}

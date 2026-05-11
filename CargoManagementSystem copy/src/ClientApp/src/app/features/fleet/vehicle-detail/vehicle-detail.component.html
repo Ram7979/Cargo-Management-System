@@ -1,0 +1,112 @@
+<div class="page-header" *ngIf="vehicle">
+  <div class="header-left">
+    <button mat-icon-button routerLink="/fleet" class="back-btn">
+      <mat-icon>arrow_back</mat-icon>
+    </button>
+    <h2>Vehicle Detail: {{ vehicle.plateNumber }}</h2>
+  </div>
+  <div class="header-actions">
+    <button mat-stroked-button color="warn" class="me-2" (click)="updateStatus('Maintenance')">
+      <mat-icon>build</mat-icon> Set Maintenance
+    </button>
+    <button mat-raised-button color="primary" (click)="updateStatus('Available')" *ngIf="vehicle.status === 'Maintenance'">
+      <mat-icon>check_circle</mat-icon> Set Available
+    </button>
+  </div>
+</div>
+
+<div class="content-container" *ngIf="vehicle">
+  <div class="grid-layout">
+    <!-- Status Card -->
+    <mat-card class="status-card">
+      <mat-card-header>
+        <mat-card-title>Operational Status</mat-card-title>
+      </mat-card-header>
+      <mat-card-content>
+        <div class="status-display">
+          <div class="status-value" [ngClass]="vehicle.status.toLowerCase().replace(' ', '-')">
+            {{ vehicle.status }}
+          </div>
+          <div class="status-since">Since: {{ vehicle.lastMaintenanceDate | date:'medium' }}</div>
+        </div>
+        
+        <div class="trip-indicator" *ngIf="vehicle.status === 'On Trip'">
+          <div class="indicator-label">Current Trip Progress</div>
+          <mat-progress-bar mode="indeterminate" color="accent"></mat-progress-bar>
+        </div>
+      </mat-card-content>
+    </mat-card>
+
+    <!-- Specs Card -->
+    <mat-card class="specs-card">
+      <mat-card-header>
+        <mat-card-title>Vehicle Specifications</mat-card-title>
+      </mat-card-header>
+      <mat-card-content>
+        <div class="info-list">
+          <div class="info-item">
+            <span class="label">Type</span>
+            <span class="value">{{ vehicle.vehicleType || vehicle.type }}</span>
+          </div>
+          <div class="info-item">
+            <span class="label">Capacity</span>
+            <span class="value">{{ vehicle.capacityKg }} KG</span>
+          </div>
+          <div class="info-item">
+            <span class="label">Plate Number</span>
+            <span class="value">{{ vehicle.plateNumber }}</span>
+          </div>
+          <div class="info-item" *ngIf="vehicle.make || vehicle.model">
+            <span class="label">Make / Model</span>
+            <span class="value">{{ vehicle.make }} {{ vehicle.model }}</span>
+          </div>
+          <div class="info-item" *ngIf="vehicle.fuelType">
+            <span class="label">Fuel Type</span>
+            <span class="value">{{ vehicle.fuelType }}</span>
+          </div>
+        </div>
+      </mat-card-content>
+    </mat-card>
+
+    <!-- Assignment Card -->
+    <mat-card class="assignment-card">
+      <mat-card-header>
+        <mat-card-title>Active Assignment</mat-card-title>
+      </mat-card-header>
+      <mat-card-content>
+        <!-- When driver IS assigned -->
+        <div class="driver-profile" *ngIf="hasActiveDriver()">
+          <div class="avatar-bg assigned">
+            <span class="avatar-initials">{{ getDriverInitials() }}</span>
+          </div>
+          <div class="driver-details">
+            <div class="name">{{ getDriverDisplayName() }}</div>
+            <div class="driver-status-badge">
+              <mat-icon>check_circle</mat-icon> Active
+            </div>
+            <div class="id" *ngIf="currentDriver?.employeeId">EID: {{ currentDriver?.employeeId }}</div>
+            <div class="id" *ngIf="currentDriver?.licenseNumber">License: {{ currentDriver?.licenseNumber }}</div>
+          </div>
+        </div>
+
+        <!-- When NO driver is assigned -->
+        <div class="driver-profile empty" *ngIf="!hasActiveDriver()">
+          <div class="avatar-bg empty">
+            <mat-icon>person_off</mat-icon>
+          </div>
+          <div class="driver-details">
+            <div class="name muted">No active driver</div>
+            <div class="hint">Assign a driver to this vehicle</div>
+          </div>
+        </div>
+
+        <button mat-raised-button color="primary" class="full-width mt-3 assign-btn" 
+                (click)="reassignDriver()" [disabled]="isAssigning">
+          <mat-spinner diameter="18" *ngIf="isAssigning" class="btn-spinner"></mat-spinner>
+          <mat-icon *ngIf="!isAssigning">{{ hasActiveDriver() ? 'swap_horiz' : 'person_add' }}</mat-icon>
+          {{ isAssigning ? 'Assigning...' : (hasActiveDriver() ? 'Reassign Driver' : 'Assign Driver') }}
+        </button>
+      </mat-card-content>
+    </mat-card>
+  </div>
+</div>

@@ -1,0 +1,216 @@
+version: '3.8'
+
+services:
+  # ── Infrastructure ──────────────────────────────────────────────────────────
+  sqlserver:
+    image: mcr.microsoft.com/mssql/server:2022-latest
+    environment:
+      SA_PASSWORD: "YourStrong@Passw0rd"
+      ACCEPT_EULA: "Y"
+    ports:
+      - "1433:1433"
+    volumes:
+      - sqlserver_data:/var/opt/mssql
+
+  redis:
+    image: redis:7-alpine
+    ports:
+      - "6379:6379"
+
+  seq:
+    image: datalust/seq:latest
+    environment:
+      ACCEPT_EULA: "Y"
+    ports:
+      - "5341:80"
+    volumes:
+      - seq_data:/data
+
+  # ── Microservices ────────────────────────────────────────────────────────────
+  identity-service:
+    build:
+      context: .
+      dockerfile: src/Services/Identity/CMS.IdentityService.API/Dockerfile
+    ports:
+      - "5001:8080"
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+      - ConnectionStrings__IdentityDb=Server=sqlserver,1433;Database=CMS_Identity;User Id=sa;Password=YourStrong@Passw0rd;TrustServerCertificate=True
+      - ConnectionStrings__Redis=redis:6379
+      - Jwt__Secret=CMS-Super-Secret-Key-That-Is-At-Least-32-Characters-Long!
+      - Jwt__Issuer=CMS.IdentityService
+      - Jwt__Audience=CMS.Clients
+      - Seq__Url=http://seq:80
+    depends_on:
+      - sqlserver
+      - redis
+      - seq
+
+  shipment-service:
+    build:
+      context: .
+      dockerfile: src/Services/Shipment/CMS.ShipmentService.API/Dockerfile
+    ports:
+      - "5002:8080"
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+      - ConnectionStrings__ShipmentDb=Server=sqlserver,1433;Database=CMS_Shipment;User Id=sa;Password=YourStrong@Passw0rd;TrustServerCertificate=True
+      - ConnectionStrings__Redis=redis:6379
+      - Jwt__Secret=CMS-Super-Secret-Key-That-Is-At-Least-32-Characters-Long!
+      - Jwt__Issuer=CMS.IdentityService
+      - Jwt__Audience=CMS.Clients
+      - Seq__Url=http://seq:80
+      - CustomerService__BaseUrl=http://customer-service:8080
+      - NotificationService__BaseUrl=http://notification-service:8080
+    depends_on:
+      - sqlserver
+      - redis
+      - seq
+
+  customer-service:
+    build:
+      context: .
+      dockerfile: src/Services/Customer/CMS.CustomerService.API/Dockerfile
+    ports:
+      - "5003:8080"
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+      - ConnectionStrings__CustomerDb=Server=sqlserver,1433;Database=CMS_Customer;User Id=sa;Password=YourStrong@Passw0rd;TrustServerCertificate=True
+      - ConnectionStrings__Redis=redis:6379
+      - Jwt__Secret=CMS-Super-Secret-Key-That-Is-At-Least-32-Characters-Long!
+      - Jwt__Issuer=CMS.IdentityService
+      - Jwt__Audience=CMS.Clients
+      - Seq__Url=http://seq:80
+      - ShipmentService__BaseUrl=http://shipment-service:8080
+    depends_on:
+      - sqlserver
+      - redis
+      - seq
+
+  fleet-service:
+    build:
+      context: .
+      dockerfile: src/Services/Fleet/CMS.FleetService.API/Dockerfile
+    ports:
+      - "5004:8080"
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+      - ConnectionStrings__FleetDb=Server=sqlserver,1433;Database=CMS_Fleet;User Id=sa;Password=YourStrong@Passw0rd;TrustServerCertificate=True
+      - ConnectionStrings__Redis=redis:6379
+      - Jwt__Secret=CMS-Super-Secret-Key-That-Is-At-Least-32-Characters-Long!
+      - Jwt__Issuer=CMS.IdentityService
+      - Jwt__Audience=CMS.Clients
+      - Seq__Url=http://seq:80
+      - ShipmentService__BaseUrl=http://shipment-service:8080
+    depends_on:
+      - sqlserver
+      - redis
+      - seq
+
+  warehouse-service:
+    build:
+      context: .
+      dockerfile: src/Services/Warehouse/CMS.WarehouseService.API/Dockerfile
+    ports:
+      - "5005:8080"
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+      - ConnectionStrings__WarehouseDb=Server=sqlserver,1433;Database=CMS_Warehouse;User Id=sa;Password=YourStrong@Passw0rd;TrustServerCertificate=True
+      - Jwt__Secret=CMS-Super-Secret-Key-That-Is-At-Least-32-Characters-Long!
+      - Jwt__Issuer=CMS.IdentityService
+      - Jwt__Audience=CMS.Clients
+      - Seq__Url=http://seq:80
+      - ShipmentService__BaseUrl=http://shipment-service:8080
+    depends_on:
+      - sqlserver
+      - seq
+
+  billing-service:
+    build:
+      context: .
+      dockerfile: src/Services/Billing/CMS.BillingService.API/Dockerfile
+    ports:
+      - "5006:8080"
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+      - ConnectionStrings__BillingDb=Server=sqlserver,1433;Database=CMS_Billing;User Id=sa;Password=YourStrong@Passw0rd;TrustServerCertificate=True
+      - Jwt__Secret=CMS-Super-Secret-Key-That-Is-At-Least-32-Characters-Long!
+      - Jwt__Issuer=CMS.IdentityService
+      - Jwt__Audience=CMS.Clients
+      - Seq__Url=http://seq:80
+      - AzureStorage__ConnectionString=
+    depends_on:
+      - sqlserver
+      - seq
+
+  notification-service:
+    build:
+      context: .
+      dockerfile: src/Services/Notification/CMS.NotificationService.API/Dockerfile
+    ports:
+      - "5007:8080"
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+      - ConnectionStrings__NotificationDb=Server=sqlserver,1433;Database=CMS_Notification;User Id=sa;Password=YourStrong@Passw0rd;TrustServerCertificate=True
+      - ConnectionStrings__HangfireDb=Server=sqlserver,1433;Database=CMS_Hangfire_Notification;User Id=sa;Password=YourStrong@Passw0rd;TrustServerCertificate=True
+      - Jwt__Secret=CMS-Super-Secret-Key-That-Is-At-Least-32-Characters-Long!
+      - Jwt__Issuer=CMS.IdentityService
+      - Jwt__Audience=CMS.Clients
+      - Seq__Url=http://seq:80
+      - SendGrid__ApiKey=
+      - SendGrid__FromEmail=noreply@cms.local
+      - Twilio__AccountSid=
+      - Twilio__AuthToken=
+      - Twilio__FromNumber=
+    depends_on:
+      - sqlserver
+      - seq
+
+  reporting-service:
+    build:
+      context: .
+      dockerfile: src/Services/Reporting/CMS.ReportingService.API/Dockerfile
+    ports:
+      - "5008:8080"
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+      - ConnectionStrings__ReportingDb=Server=sqlserver,1433;Database=CMS_Reporting;User Id=sa;Password=YourStrong@Passw0rd;TrustServerCertificate=True
+      - ConnectionStrings__HangfireDb=Server=sqlserver,1433;Database=CMS_Hangfire_Reporting;User Id=sa;Password=YourStrong@Passw0rd;TrustServerCertificate=True
+      - ConnectionStrings__Redis=redis:6379
+      - Jwt__Secret=CMS-Super-Secret-Key-That-Is-At-Least-32-Characters-Long!
+      - Jwt__Issuer=CMS.IdentityService
+      - Jwt__Audience=CMS.Clients
+      - Seq__Url=http://seq:80
+      - BillingService__BaseUrl=http://billing-service:8080
+      - ShipmentService__BaseUrl=http://shipment-service:8080
+      - AzureStorage__ConnectionString=
+    depends_on:
+      - sqlserver
+      - redis
+      - seq
+
+  api-gateway:
+    build:
+      context: .
+      dockerfile: src/Gateway/CMS.ApiGateway/Dockerfile
+    ports:
+      - "5000:8080"
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+      - Jwt__Secret=CMS-Super-Secret-Key-That-Is-At-Least-32-Characters-Long!
+      - Jwt__Issuer=CMS.IdentityService
+      - Jwt__Audience=CMS.Clients
+      - Seq__Url=http://seq:80
+    depends_on:
+      - identity-service
+      - shipment-service
+      - customer-service
+      - fleet-service
+      - warehouse-service
+      - billing-service
+      - notification-service
+      - reporting-service
+
+volumes:
+  sqlserver_data:
+  seq_data:

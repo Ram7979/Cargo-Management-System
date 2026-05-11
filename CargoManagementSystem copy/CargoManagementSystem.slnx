@@ -1,0 +1,58 @@
+<Solution>
+  <Folder Name="/src/" />
+  <Folder Name="/src/Gateway/">
+    <Project Path="src/Gateway/CMS.ApiGateway/CMS.ApiGateway.csproj" />
+  </Folder>
+  <Folder Name="/src/Services/" />
+  <Folder Name="/src/Services/Billing/">
+    <Project Path="src/Services/Billing/CMS.BillingService.API/CMS.BillingService.API.csproj" />
+    <Project Path="src/Services/Billing/CMS.BillingService.Application/CMS.BillingService.Application.csproj" />
+    <Project Path="src/Services/Billing/CMS.BillingService.Domain/CMS.BillingService.Domain.csproj" />
+    <Project Path="src/Services/Billing/CMS.BillingService.Infrastructure/CMS.BillingService.Infrastructure.csproj" />
+  </Folder>
+  <Folder Name="/src/Services/Customer/">
+    <Project Path="src/Services/Customer/CMS.CustomerService.API/CMS.CustomerService.API.csproj" />
+    <Project Path="src/Services/Customer/CMS.CustomerService.Application/CMS.CustomerService.Application.csproj" />
+    <Project Path="src/Services/Customer/CMS.CustomerService.Domain/CMS.CustomerService.Domain.csproj" />
+    <Project Path="src/Services/Customer/CMS.CustomerService.Infrastructure/CMS.CustomerService.Infrastructure.csproj" />
+  </Folder>
+  <Folder Name="/src/Services/Fleet/">
+    <Project Path="src/Services/Fleet/CMS.FleetService.API/CMS.FleetService.API.csproj" />
+    <Project Path="src/Services/Fleet/CMS.FleetService.Application/CMS.FleetService.Application.csproj" />
+    <Project Path="src/Services/Fleet/CMS.FleetService.Domain/CMS.FleetService.Domain.csproj" />
+    <Project Path="src/Services/Fleet/CMS.FleetService.Infrastructure/CMS.FleetService.Infrastructure.csproj" />
+  </Folder>
+  <Folder Name="/src/Services/Identity/">
+    <Project Path="src/Services/Identity/CMS.IdentityService.API/CMS.IdentityService.API.csproj" />
+    <Project Path="src/Services/Identity/CMS.IdentityService.Application/CMS.IdentityService.Application.csproj" />
+    <Project Path="src/Services/Identity/CMS.IdentityService.Domain/CMS.IdentityService.Domain.csproj" />
+    <Project Path="src/Services/Identity/CMS.IdentityService.Infrastructure/CMS.IdentityService.Infrastructure.csproj" />
+  </Folder>
+  <Folder Name="/src/Services/Notification/">
+    <Project Path="src/Services/Notification/CMS.NotificationService.API/CMS.NotificationService.API.csproj" />
+    <Project Path="src/Services/Notification/CMS.NotificationService.Application/CMS.NotificationService.Application.csproj" />
+    <Project Path="src/Services/Notification/CMS.NotificationService.Domain/CMS.NotificationService.Domain.csproj" />
+    <Project Path="src/Services/Notification/CMS.NotificationService.Infrastructure/CMS.NotificationService.Infrastructure.csproj" />
+  </Folder>
+  <Folder Name="/src/Services/Reporting/">
+    <Project Path="src/Services/Reporting/CMS.ReportingService.API/CMS.ReportingService.API.csproj" />
+    <Project Path="src/Services/Reporting/CMS.ReportingService.Application/CMS.ReportingService.Application.csproj" />
+    <Project Path="src/Services/Reporting/CMS.ReportingService.Domain/CMS.ReportingService.Domain.csproj" />
+    <Project Path="src/Services/Reporting/CMS.ReportingService.Infrastructure/CMS.ReportingService.Infrastructure.csproj" />
+  </Folder>
+  <Folder Name="/src/Services/Shipment/">
+    <Project Path="src/Services/Shipment/CMS.ShipmentService.API/CMS.ShipmentService.API.csproj" />
+    <Project Path="src/Services/Shipment/CMS.ShipmentService.Application/CMS.ShipmentService.Application.csproj" />
+    <Project Path="src/Services/Shipment/CMS.ShipmentService.Domain/CMS.ShipmentService.Domain.csproj" />
+    <Project Path="src/Services/Shipment/CMS.ShipmentService.Infrastructure/CMS.ShipmentService.Infrastructure.csproj" />
+  </Folder>
+  <Folder Name="/src/Services/Warehouse/">
+    <Project Path="src/Services/Warehouse/CMS.WarehouseService.API/CMS.WarehouseService.API.csproj" />
+    <Project Path="src/Services/Warehouse/CMS.WarehouseService.Application/CMS.WarehouseService.Application.csproj" />
+    <Project Path="src/Services/Warehouse/CMS.WarehouseService.Domain/CMS.WarehouseService.Domain.csproj" />
+    <Project Path="src/Services/Warehouse/CMS.WarehouseService.Infrastructure/CMS.WarehouseService.Infrastructure.csproj" />
+  </Folder>
+  <Folder Name="/src/Shared/">
+    <Project Path="src/Shared/CMS.Shared/CMS.Shared.csproj" />
+  </Folder>
+</Solution>

@@ -1,0 +1,81 @@
+<div class="page-container">
+  <div class="page-header">
+    <h2>Shipment Management</h2>
+    <div class="header-actions">
+      <button mat-raised-button color="primary" routerLink="/shipments/new">
+        <mat-icon>add</mat-icon> New Shipment
+      </button>
+    </div>
+  </div>
+
+  <div class="card-container">
+    <!-- Loading State -->
+    <div class="loading-container" *ngIf="isLoading">
+      <mat-spinner diameter="40"></mat-spinner>
+      <p>Loading shipments...</p>
+    </div>
+
+    <!-- Empty State -->
+    <div class="empty-state" *ngIf="!isLoading && dataSource.length === 0">
+      <mat-icon class="empty-icon">local_shipping</mat-icon>
+      <h3>No shipments found</h3>
+      <p>Create your first shipment to get started</p>
+      <button mat-raised-button color="primary" routerLink="/shipments/new">
+        <mat-icon>add</mat-icon> Create Shipment
+      </button>
+    </div>
+
+    <!-- Data Table -->
+    <table mat-table [dataSource]="dataSource" class="w-100" *ngIf="!isLoading && dataSource.length > 0">
+
+      <ng-container matColumnDef="trackingNumber">
+        <th mat-header-cell *matHeaderCellDef> Tracking No. </th>
+        <td mat-cell *matCellDef="let element"> <b>{{element.trackingNumber}}</b> </td>
+      </ng-container>
+
+      <ng-container matColumnDef="status">
+        <th mat-header-cell *matHeaderCellDef> Status </th>
+        <td mat-cell *matCellDef="let element">
+          <app-status-chip [status]="element.status"></app-status-chip>
+        </td>
+      </ng-container>
+
+      <ng-container matColumnDef="sender">
+        <th mat-header-cell *matHeaderCellDef> Sender </th>
+        <td mat-cell *matCellDef="let element"> {{element.senderName || element.senderDetails?.name}} </td>
+      </ng-container>
+
+      <ng-container matColumnDef="recipient">
+        <th mat-header-cell *matHeaderCellDef> Recipient </th>
+        <td mat-cell *matCellDef="let element"> {{element.recipientName || element.recipientDetails?.name}} </td>
+      </ng-container>
+
+      <ng-container matColumnDef="date">
+        <th mat-header-cell *matHeaderCellDef> Created At </th>
+        <td mat-cell *matCellDef="let element"> {{element.createdAt | date:'mediumDate'}} </td>
+      </ng-container>
+
+      <ng-container matColumnDef="actions">
+        <th mat-header-cell *matHeaderCellDef></th>
+        <td mat-cell *matCellDef="let element">
+          <button mat-icon-button color="primary" [routerLink]="['/shipments', element.id || element.shipmentId]" matTooltip="View Details">
+            <mat-icon>visibility</mat-icon>
+          </button>
+          <button mat-icon-button color="warn" (click)="onDelete(element.id || element.shipmentId)" *ngIf="element.status !== 'Cancelled' && element.status !== 'Delivered'" matTooltip="Cancel Shipment">
+            <mat-icon>cancel</mat-icon>
+          </button>
+        </td>
+      </ng-container>
+
+      <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+      <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+    </table>
+
+    <mat-paginator *ngIf="!isLoading && dataSource.length > 0"
+      [length]="totalItems"
+      [pageSize]="pageSize"
+      [pageSizeOptions]="[5, 10, 25]"
+      (page)="onPageChange($event)">
+    </mat-paginator>
+  </div>
+</div>

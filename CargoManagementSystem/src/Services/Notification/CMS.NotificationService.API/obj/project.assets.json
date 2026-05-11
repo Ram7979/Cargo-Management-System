@@ -4557,11 +4557,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Files\\CMS\\CargoManagementSystem\\src\\Services\\Notification\\CMS.NotificationService.API\\CMS.NotificationService.API.csproj",
+      "projectUniqueName": "d:\\Files\\CMS\\CargoManagementSystem\\src\\Services\\Notification\\CMS.NotificationService.API\\CMS.NotificationService.API.csproj",
       "projectName": "CMS.NotificationService.API",
-      "projectPath": "D:\\Files\\CMS\\CargoManagementSystem\\src\\Services\\Notification\\CMS.NotificationService.API\\CMS.NotificationService.API.csproj",
+      "projectPath": "d:\\Files\\CMS\\CargoManagementSystem\\src\\Services\\Notification\\CMS.NotificationService.API\\CMS.NotificationService.API.csproj",
       "packagesPath": "C:\\Users\\HP\\.nuget\\packages\\",
-      "outputPath": "D:\\Files\\CMS\\CargoManagementSystem\\src\\Services\\Notification\\CMS.NotificationService.API\\obj\\",
+      "outputPath": "d:\\Files\\CMS\\CargoManagementSystem\\src\\Services\\Notification\\CMS.NotificationService.API\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -4582,14 +4582,14 @@
         "net10.0": {
           "targetAlias": "net10.0",
           "projectReferences": {
-            "D:\\Files\\CMS\\CargoManagementSystem\\src\\Services\\Notification\\CMS.NotificationService.Application\\CMS.NotificationService.Application.csproj": {
-              "projectPath": "D:\\Files\\CMS\\CargoManagementSystem\\src\\Services\\Notification\\CMS.NotificationService.Application\\CMS.NotificationService.Application.csproj"
+            "d:\\Files\\CMS\\CargoManagementSystem\\src\\Services\\Notification\\CMS.NotificationService.Application\\CMS.NotificationService.Application.csproj": {
+              "projectPath": "d:\\Files\\CMS\\CargoManagementSystem\\src\\Services\\Notification\\CMS.NotificationService.Application\\CMS.NotificationService.Application.csproj"
             },
-            "D:\\Files\\CMS\\CargoManagementSystem\\src\\Services\\Notification\\CMS.NotificationService.Infrastructure\\CMS.NotificationService.Infrastructure.csproj": {
-              "projectPath": "D:\\Files\\CMS\\CargoManagementSystem\\src\\Services\\Notification\\CMS.NotificationService.Infrastructure\\CMS.NotificationService.Infrastructure.csproj"
+            "d:\\Files\\CMS\\CargoManagementSystem\\src\\Services\\Notification\\CMS.NotificationService.Infrastructure\\CMS.NotificationService.Infrastructure.csproj": {
+              "projectPath": "d:\\Files\\CMS\\CargoManagementSystem\\src\\Services\\Notification\\CMS.NotificationService.Infrastructure\\CMS.NotificationService.Infrastructure.csproj"
             },
-            "D:\\Files\\CMS\\CargoManagementSystem\\src\\Shared\\CMS.Shared\\CMS.Shared.csproj": {
-              "projectPath": "D:\\Files\\CMS\\CargoManagementSystem\\src\\Shared\\CMS.Shared\\CMS.Shared.csproj"
+            "d:\\Files\\CMS\\CargoManagementSystem\\src\\Shared\\CMS.Shared\\CMS.Shared.csproj": {
+              "projectPath": "d:\\Files\\CMS\\CargoManagementSystem\\src\\Shared\\CMS.Shared\\CMS.Shared.csproj"
             }
           }
         }

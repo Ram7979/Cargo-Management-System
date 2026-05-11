@@ -1,0 +1,87 @@
+<div class="page-header">
+  <h2>Warehouse Operations: Release Cargo</h2>
+</div>
+
+<div class="content-container">
+  <div class="grid-layout">
+    <!-- Action Card -->
+    <mat-card class="action-card">
+      <mat-card-header>
+        <mat-card-title>Outbound Check-out</mat-card-title>
+      </mat-card-header>
+      <mat-card-content>
+        <form [formGroup]="releaseForm" (ngSubmit)="onSubmit()">
+          <div class="search-section">
+            <mat-form-field appearance="outline" class="w-100">
+              <mat-label>Shipment Tracking Number</mat-label>
+              <input matInput formControlName="trackingNumber" (keyup.enter)="searchShipment()">
+              <button type="button" mat-icon-button matSuffix (click)="searchShipment()" [disabled]="isSearching">
+                <mat-icon>{{ isSearching ? 'sync' : 'search' }}</mat-icon>
+              </button>
+            </mat-form-field>
+          </div>
+
+          <div class="release-details" *ngIf="foundShipment">
+            <mat-form-field appearance="outline" class="w-100">
+              <mat-label>Released To (Name)</mat-label>
+              <input matInput formControlName="releasedTo" placeholder="e.g. John Doe (Driver)">
+              <mat-icon matPrefix>person</mat-icon>
+            </mat-form-field>
+
+            <mat-form-field appearance="outline" class="w-100">
+              <mat-label>Receiver ID / Badge #</mat-label>
+              <input matInput formControlName="receiverId">
+              <mat-icon matPrefix>badge</mat-icon>
+            </mat-form-field>
+
+            <mat-form-field appearance="outline" class="w-100">
+              <mat-label>Release Remarks</mat-label>
+              <textarea matInput formControlName="remarks" rows="2"></textarea>
+            </mat-form-field>
+
+            <button mat-raised-button color="accent" class="w-100 submit-btn" type="submit" [disabled]="releaseForm.invalid || isSubmitting">
+              <mat-icon>outbox</mat-icon> Authorize Release
+            </button>
+          </div>
+        </form>
+      </mat-card-content>
+    </mat-card>
+
+    <!-- Shipment Summary -->
+    <div class="preview-container" *ngIf="foundShipment">
+      <mat-card class="preview-card">
+        <mat-card-header>
+          <mat-card-title>Shipment Verified</mat-card-title>
+          <mat-card-subtitle>Current Location: <b>{{ foundShipment.lastKnownLocation?.latitude ? 'In Warehouse' : 'Unknown' }}</b></mat-card-subtitle>
+        </mat-card-header>
+        <mat-card-content>
+          <div class="info-box">
+            <div class="info-row">
+              <span class="label">Recipient:</span>
+              <span class="value">{{ foundShipment.recipientName }}</span>
+            </div>
+            <div class="info-row">
+              <span class="label">Destination:</span>
+              <span class="value">{{ foundShipment.recipientCity }}</span>
+            </div>
+            <div class="info-row">
+              <span class="label">Cargo:</span>
+              <span class="value">{{ foundShipment.cargoType }} ({{ foundShipment.weightKg }}kg)</span>
+            </div>
+          </div>
+
+          <div class="alert-box success">
+            <mat-icon>check_circle</mat-icon>
+            <span>Ready for handover. Verify recipient ID before finalizing.</span>
+          </div>
+        </mat-card-content>
+      </mat-card>
+    </div>
+
+    <!-- Empty State -->
+    <div class="empty-preview" *ngIf="!foundShipment && !isSearching">
+      <mat-icon>exit_to_app</mat-icon>
+      <p>Scan or enter tracking number to authorize outbound cargo.</p>
+    </div>
+  </div>
+</div>
